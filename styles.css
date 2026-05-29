@@ -69,6 +69,7 @@
   --line: #c9d2df;
   --panel: #ffffff;
   --grid-line: #edf0f3;
+  color-scheme: light;
   font-family: "SCDream", "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif;
 }
 * { box-sizing: border-box; }
@@ -181,6 +182,23 @@ button { border: 0; cursor: pointer; }
   background: transparent;
 }
 .graph-svg { position: absolute; z-index: 2; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.relation-line,
+.relation-arrow {
+  transition: stroke .12s ease, fill .12s ease;
+}
+.relation-line.is-selected {
+  stroke: var(--orange);
+}
+.relation-arrow.is-selected {
+  fill: var(--orange);
+}
+.relation-line-hit {
+  pointer-events: stroke;
+  cursor: pointer;
+}
+.relation-line-hit.is-selected {
+  stroke: transparent;
+}
 .endpoint-svg { z-index: 6; }
 .selection-box {
   position: absolute;
@@ -251,8 +269,11 @@ button { border: 0; cursor: pointer; }
 .person-card {
   position: absolute;
   z-index: 3;
-  width: 92px;
-  height: 128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 112px;
+  height: 136px;
   padding: 6px;
   border: 1px solid #626262;
   border-radius: 7px;
@@ -271,6 +292,7 @@ button { border: 0; cursor: pointer; }
   width: 76px;
   height: 76px;
   margin: 0 auto 5px;
+  flex: 0 0 auto;
   border: 1px solid #d7dde8;
   border-radius: 5px;
   background: linear-gradient(135deg, var(--orange), #ffd166 45%, var(--navy));
@@ -357,6 +379,21 @@ button { border: 0; cursor: pointer; }
 .relation-label.is-dragging {
   z-index: 12;
   opacity: .86;
+}
+.relation-hidden-control {
+  position: absolute;
+  z-index: 5;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+}
+.relation-hidden-control.is-selected {
+  outline: 0;
+}
+.relation-hidden-control .target-delete {
+  top: -34px;
+  right: auto;
+  left: -14px;
 }
 .relation-desc {
   display: block;

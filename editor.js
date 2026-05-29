@@ -18,7 +18,7 @@ const forms = {
   relation: document.getElementById('relationForm')
 };
 
-fetch('data.json')
+fetch(`data.json?v=${Date.now()}`, { cache: 'no-store' })
   .then(res => res.json())
   .then(data => {
     state.data = data;
@@ -41,6 +41,7 @@ function normalizeData() {
     relation.fromPosition ||= 'center';
     relation.toPosition ||= 'center';
     relation.lineType ||= 'straight';
+    relation.labelVisible ??= true;
   });
   state.data.groups.forEach(group => {
     group.description ??= '';
@@ -76,7 +77,7 @@ function renderEditor() {
   } else if (state.selected.type && state.selected.id) {
     graph.querySelectorAll(`[data-type="${state.selected.type}"][data-id="${state.selected.id}"]`).forEach(el => {
       el.classList.add('is-selected');
-      attachDeleteButton(el);
+      if (canHostDeleteButton(el)) attachDeleteButton(el);
     });
   }
   updateAnchorToggle();
@@ -92,6 +93,7 @@ function updateAnchorToggle() {
 }
 
 function attachDeleteButton(el) {
+  if (el.querySelector?.('.target-delete')) return;
   const button = document.createElement('button');
   button.type = 'button';
   button.className = 'target-delete';
@@ -107,6 +109,10 @@ function attachDeleteButton(el) {
     deleteSelected();
   });
   el.append(button);
+}
+
+function canHostDeleteButton(el) {
+  return el instanceof HTMLElement && !el.classList.contains('relation-line-hit');
 }
 
 function deleteSelected() {
@@ -170,7 +176,7 @@ function wireElement(el, item, type) {
   if (type === 'group') makeGroupDraggable(el, item, type);
   if (type === 'person') makePersonSortable(el, item, type);
   if (type === 'label') makeLabelDraggable(el, item, type);
-  if (type === 'relation') makeRelationLabelDraggable(el, item, type);
+  if (type === 'relation' && el.classList.contains('relation-label')) makeRelationLabelDraggable(el, item, type);
 }
 
 function makeGroupDraggable(el, group, type) {
@@ -816,6 +822,7 @@ function renderRelationForm() {
       ${input('boxH', '박스 최소 높이', relation.boxH || 0, false, 'number')}
     </div>
     ${input('label', '관계 라벨', relation.label || '')}
+    ${checkbox('labelVisible', '관계 라벨 표기', relation.labelVisible !== false)}
     ${textarea('description', '관계 설명 박스', relation.description || '')}
   ` : '<p>선택한 그룹과 연결된 관계가 없습니다.</p>';
   bindForm(forms.relation, relation);
@@ -1086,6 +1093,7 @@ document.getElementById('addRelation').addEventListener('click', () => {
     boxW: 180,
     boxH: 0,
     label: '새 관계',
+    labelVisible: true,
     description: ''
   });
   state.multiSelected = [];
@@ -1133,7 +1141,7 @@ document.getElementById('saveJson').addEventListener('click', async () => {
     const writable = await state.fileHandle.createWritable();
     await writable.write(JSON.stringify(state.data, null, 2));
     await writable.close();
-    setStatus('data.json에 저장했습니다. 관계도 페이지를 새로고침하면 반영됩니다.');
+    setStatus('data.json에 저장했습니다. 관계도 페이지를 강력 새로고침하면 반영됩니다.');
   } catch (error) {
     if (error.name !== 'AbortError') setStatus('data.json 저장에 실패했습니다.');
   }

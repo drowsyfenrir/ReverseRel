@@ -9,13 +9,13 @@
       "id": "g-system",
       "name": "타임키퍼 소대",
       "description": " '폭풍우 개혁: 증원과 질서' 법안이 통과되면서 정식으로 활동 중인 독립 부대",
-      "x": 941,
+      "x": 930,
       "y": 774,
       "cols": 4,
       "rows": 2,
       "color": "#e2f11d",
-      "w": 536,
-      "h": 568,
+      "w": 556,
+      "h": 592,
       "borderColor": "#061633",
       "borderEnabled": false,
       "parentGroupId": "",
@@ -30,8 +30,8 @@
       "cols": 4,
       "rows": 1,
       "color": "#bde0fe",
-      "w": 584,
-      "h": 1216,
+      "w": 604,
+      "h": 1256,
       "borderColor": "#061633",
       "borderEnabled": false,
       "parentGroupId": "",
@@ -46,8 +46,8 @@
       "cols": 3,
       "rows": 1,
       "color": "#ffd6ff",
-      "w": 404,
-      "h": 232,
+      "w": 424,
+      "h": 240,
       "borderColor": "#061633",
       "borderEnabled": false,
       "parentGroupId": "",
@@ -66,8 +66,8 @@
       "borderEnabled": false,
       "borderColor": "#061633",
       "order": 0,
-      "w": 536,
-      "h": 232,
+      "w": 556,
+      "h": 240,
       "peopleOrder": 0
     },
     {
@@ -76,15 +76,15 @@
       "description": "",
       "parentGroupId": "g-local",
       "x": 62,
-      "y": 1096,
+      "y": 1104,
       "cols": 4,
       "rows": 1,
       "color": "#ffffff",
       "borderEnabled": false,
       "borderColor": "#061633",
       "peopleOrder": 0,
-      "w": 536,
-      "h": 400,
+      "w": 556,
+      "h": 416,
       "order": 1
     },
     {
@@ -93,15 +93,15 @@
       "description": "",
       "parentGroupId": "g-local",
       "x": 62,
-      "y": 1536,
+      "y": 1560,
       "cols": 4,
       "rows": 1,
       "color": "#ffffff",
       "borderEnabled": false,
       "borderColor": "#061633",
       "peopleOrder": 0,
-      "w": 536,
-      "h": 400,
+      "w": 556,
+      "h": 416,
       "order": 2
     },
     {
@@ -117,8 +117,8 @@
       "borderEnabled": false,
       "borderColor": "#061633",
       "peopleOrder": 0,
-      "w": 404,
-      "h": 232
+      "w": 424,
+      "h": 240
     }
   ],
   "people": [
@@ -130,7 +130,7 @@
       "image": "profile/버틴.png",
       "traits": "타임키퍼",
       "description": "",
-      "x": 965,
+      "x": 954,
       "y": 824
     },
     {
@@ -141,7 +141,7 @@
       "image": "profile/소네트.png",
       "traits": "제 1조수",
       "description": "Prioritizes system stability.",
-      "x": 1097,
+      "x": 1086,
       "y": 824
     },
     {
@@ -185,7 +185,7 @@
       "image": "profile/레굴루스.png",
       "traits": "로큰롤 해적",
       "description": "",
-      "x": 1229,
+      "x": 1218,
       "y": 824
     },
     {
@@ -196,8 +196,8 @@
       "image": "profile/드루비스.png",
       "traits": "몰락 귀족",
       "description": "",
-      "x": 965,
-      "y": 992
+      "x": 954,
+      "y": 1000
     },
     {
       "id": "p-1779984259463",
@@ -207,8 +207,8 @@
       "image": "profile/소더비.png",
       "traits": "부잣집 아가씨",
       "description": "",
-      "x": 1097,
-      "y": 992
+      "x": 1086,
+      "y": 1000
     },
     {
       "id": "p-1779984259744",
@@ -218,7 +218,7 @@
       "image": "profile/애플.png",
       "traits": "의식 각성자",
       "description": "",
-      "x": 1361,
+      "x": 1350,
       "y": 824
     },
     {
@@ -229,8 +229,8 @@
       "image": "profile/릴리아.png",
       "traits": "비행 소대 마녀",
       "description": "",
-      "x": 1229,
-      "y": 992
+      "x": 1218,
+      "y": 1000
     },
     {
       "id": "p-1779984260382",
@@ -240,8 +240,8 @@
       "image": "profile/무아상.png",
       "traits": "선생님",
       "description": "",
-      "x": 1361,
-      "y": 992
+      "x": 1350,
+      "y": 1000
     },
     {
       "id": "p-1779984260700",
@@ -251,8 +251,8 @@
       "image": "profile/라디오.png",
       "traits": "의식 각성자",
       "description": "",
-      "x": 965,
-      "y": 1160
+      "x": 954,
+      "y": 1176
     },
     {
       "id": "p-1779984376306",
@@ -260,10 +260,10 @@
       "groupId": "g-system",
       "order": 9,
       "image": "profile/루시.png",
-      "traits": "라플라스 전소장",
+      "traits": "라플라스 전 책임자",
       "description": "",
-      "x": 1097,
-      "y": 1160
+      "x": 1086,
+      "y": 1176
     },
     {
       "id": "p-1779985687341",
@@ -292,30 +292,30 @@
       "name": "카슨",
       "groupId": "",
       "order": 0,
-      "x": 712,
-      "y": 912,
+      "x": 731,
+      "y": 915,
       "image": "profile/카슨.png",
       "traits": "소더비가 집사",
       "description": ""
     },
     {
       "id": "p-1780004110110",
-      "name": "새 인물",
+      "name": "버틴",
       "groupId": "g-1780005793484",
       "order": 0,
       "x": 86,
-      "y": 1146,
+      "y": 1154,
       "image": "",
       "traits": "",
       "description": ""
     },
     {
       "id": "p-1780005961965",
-      "name": "새 인물",
+      "name": "소네트",
       "groupId": "g-1780005793484",
       "order": 1,
       "x": 218,
-      "y": 1146,
+      "y": 1154,
       "image": "",
       "traits": "",
       "description": ""
@@ -326,7 +326,7 @@
       "groupId": "g-1780005793484",
       "order": 2,
       "x": 350,
-      "y": 1146,
+      "y": 1154,
       "image": "",
       "traits": "",
       "description": ""
@@ -337,7 +337,7 @@
       "groupId": "g-1780005793484",
       "order": 3,
       "x": 482,
-      "y": 1146,
+      "y": 1154,
       "image": "",
       "traits": "",
       "description": ""
@@ -348,7 +348,7 @@
       "groupId": "g-1780005793484",
       "order": 4,
       "x": 86,
-      "y": 1314,
+      "y": 1330,
       "image": "",
       "traits": "",
       "description": ""
@@ -359,7 +359,7 @@
       "groupId": "g-1780005793484",
       "order": 5,
       "x": 218,
-      "y": 1314,
+      "y": 1330,
       "image": "",
       "traits": "",
       "description": ""
@@ -370,7 +370,7 @@
       "groupId": "g-1780005793484",
       "order": 6,
       "x": 350,
-      "y": 1314,
+      "y": 1330,
       "image": "",
       "traits": "",
       "description": ""
@@ -381,7 +381,7 @@
       "groupId": "g-1780005793484",
       "order": 7,
       "x": 482,
-      "y": 1314,
+      "y": 1330,
       "image": "",
       "traits": "",
       "description": ""
@@ -392,7 +392,7 @@
       "groupId": "g-1780005799128",
       "order": 0,
       "x": 86,
-      "y": 1586,
+      "y": 1610,
       "image": "",
       "traits": "",
       "description": ""
@@ -403,7 +403,7 @@
       "groupId": "g-1780005799128",
       "order": 1,
       "x": 218,
-      "y": 1586,
+      "y": 1610,
       "image": "",
       "traits": "",
       "description": ""
@@ -414,7 +414,7 @@
       "groupId": "g-1780005799128",
       "order": 2,
       "x": 350,
-      "y": 1586,
+      "y": 1610,
       "image": "",
       "traits": "",
       "description": ""
@@ -425,7 +425,7 @@
       "groupId": "g-1780005799128",
       "order": 3,
       "x": 482,
-      "y": 1586,
+      "y": 1610,
       "image": "",
       "traits": "",
       "description": ""
@@ -436,7 +436,7 @@
       "groupId": "g-1780005799128",
       "order": 4,
       "x": 86,
-      "y": 1754,
+      "y": 1786,
       "image": "",
       "traits": "",
       "description": ""
@@ -447,7 +447,7 @@
       "groupId": "g-1780005799128",
       "order": 5,
       "x": 218,
-      "y": 1754,
+      "y": 1786,
       "image": "",
       "traits": "",
       "description": ""
@@ -458,7 +458,7 @@
       "groupId": "g-1780005799128",
       "order": 6,
       "x": 350,
-      "y": 1754,
+      "y": 1786,
       "image": "",
       "traits": "",
       "description": ""
@@ -469,7 +469,7 @@
       "groupId": "g-1780005799128",
       "order": 7,
       "x": 482,
-      "y": 1754,
+      "y": 1786,
       "image": "",
       "traits": "",
       "description": ""
@@ -532,9 +532,10 @@
       "fromPosition": "left",
       "toPosition": "right",
       "lineType": "straight",
-      "boxW": 140,
+      "boxW": 80,
       "labelOffsetX": -8,
-      "labelOffsetY": 3
+      "labelOffsetY": 3,
+      "labelVisible": true
     },
     {
       "id": "r-1779981784068",
@@ -550,7 +551,8 @@
       "lineType": "straight",
       "boxW": 80,
       "labelOffsetX": 0,
-      "labelOffsetY": 6
+      "labelOffsetY": -1,
+      "labelVisible": true
     },
     {
       "id": "r-1779982556964",
@@ -566,7 +568,8 @@
       "description": "",
       "boxW": 80,
       "labelOffsetX": -14,
-      "labelOffsetY": 6
+      "labelOffsetY": 6,
+      "labelVisible": true
     },
     {
       "id": "r-1779996666418",
@@ -581,7 +584,8 @@
       "boxW": 180,
       "boxH": 0,
       "label": "새 관계",
-      "description": ""
+      "description": "",
+      "labelVisible": true
     },
     {
       "id": "r-1779996680546",
@@ -596,7 +600,8 @@
       "boxW": 180,
       "boxH": 0,
       "label": "새 관계",
-      "description": ""
+      "description": "",
+      "labelVisible": true
     },
     {
       "id": "r-1779996680902",
@@ -611,7 +616,8 @@
       "boxW": 180,
       "boxH": 0,
       "label": "새 관계",
-      "description": ""
+      "description": "",
+      "labelVisible": true
     },
     {
       "id": "r-1779996687872",
@@ -628,7 +634,8 @@
       "label": "하위 기관",
       "description": "팍스 하우스가 상위 기관인지는 확정은 아닌 추정 되는 내용이다.",
       "labelOffsetX": 0,
-      "labelOffsetY": -2
+      "labelOffsetY": -2,
+      "labelVisible": true
     },
     {
       "id": "r-1779998258758",
@@ -645,7 +652,8 @@
       "label": "애정",
       "description": "",
       "labelOffsetX": -101,
-      "labelOffsetY": -8
+      "labelOffsetY": -9,
+      "labelVisible": true
     },
     {
       "id": "r-1780001004526",
@@ -662,7 +670,8 @@
       "label": "사제지간",
       "description": "",
       "labelOffsetX": 1,
-      "labelOffsetY": 24
+      "labelOffsetY": 24,
+      "labelVisible": true
     },
     {
       "id": "r-1780002811955",
@@ -679,7 +688,8 @@
       "label": "하위 기관",
       "description": "",
       "labelOffsetX": 0,
-      "labelOffsetY": 5
+      "labelOffsetY": 5,
+      "labelVisible": true
     },
     {
       "id": "r-1780007823034",
@@ -694,7 +704,8 @@
       "boxW": 180,
       "boxH": 0,
       "label": "새 관계",
-      "description": ""
+      "description": "",
+      "labelVisible": true
     },
     {
       "id": "r-1780009309846",
@@ -711,7 +722,8 @@
       "label": "협력 관계",
       "description": "다만 주도권은 성 파블로프 재단 쪽에 있어\n라플라스 연구 센터 측은 불쾌하게 여기고 있다.",
       "labelOffsetX": 66,
-      "labelOffsetY": 0
+      "labelOffsetY": 0,
+      "labelVisible": true
     },
     {
       "id": "r-1780009762474",
@@ -728,7 +740,8 @@
       "label": "하위 부서",
       "description": "",
       "labelOffsetX": 2,
-      "labelOffsetY": -63
+      "labelOffsetY": -63,
+      "labelVisible": true
     },
     {
       "id": "r-1780010104825",
@@ -744,8 +757,9 @@
       "boxH": 0,
       "label": "신뢰",
       "description": "",
-      "labelOffsetX": 0,
-      "labelOffsetY": -23
+      "labelOffsetX": 1,
+      "labelOffsetY": -26,
+      "labelVisible": true
     },
     {
       "id": "r-1780014923714",
@@ -757,10 +771,11 @@
       "toPosition": "left",
       "direction": "forward",
       "lineType": "straight",
-      "boxW": 70,
+      "boxW": 80,
       "boxH": 0,
       "label": "하위 부서",
-      "description": ""
+      "description": "",
+      "labelVisible": true
     },
     {
       "id": "r-1780014972821",
@@ -775,7 +790,8 @@
       "boxW": 70,
       "boxH": 0,
       "label": "",
-      "description": ""
+      "description": "",
+      "labelVisible": false
     }
   ],
   "labels": [
@@ -802,8 +818,8 @@
       "id": "l-1780002729561",
       "name": "행정부",
       "description": "현장 파견 요원(Field Agent)이 소속된 부서. 의회제 형태인지 위원회 의원들이 자기 휘하에 조사원들을 거느리고 있다.",
-      "x": 859,
-      "y": 521,
+      "x": 858,
+      "y": 520,
       "w": 700,
       "h": 40
     },

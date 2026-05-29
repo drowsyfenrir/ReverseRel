@@ -1,10 +1,12 @@
 (function () {
-  const NODE_W = 92;
-  const NODE_H = 128;
+  const NODE_W = 112;
+  const NODE_H = 136;
   const LABEL_W = 180;
   const LABEL_H = 80;
-  const CELL_W = 132;
-  const CELL_H = 168;
+  const PERSON_GAP_X = 20;
+  const PERSON_GAP_Y = 40;
+  const CELL_W = NODE_W + PERSON_GAP_X;
+  const CELL_H = NODE_H + PERSON_GAP_Y;
   const GROUP_PAD_X = 24;
   const GROUP_TOP = 50;
   const GROUP_BOTTOM = 54;
@@ -326,6 +328,7 @@
     arrow.setAttribute('points', arrowPoints(tip, tail, scale));
     arrow.setAttribute('fill', '#061633');
     svg.append(arrow);
+    return arrow;
   }
 
   function arrowTailForAnchor(tip, fallbackTail, position) {
@@ -427,6 +430,9 @@
       const arrowScale = relation.fromType === 'person' && relation.toType === 'person' ? 0.5 : 1;
       const linePoints = linePointsForArrows(relationLine.points, relation, arrowScale);
       const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.classList.add('relation-line');
+      path.dataset.type = 'relation';
+      path.dataset.id = relation.id;
       path.setAttribute('d', pointsToPath(linePoints));
       path.setAttribute('fill', 'none');
       path.setAttribute('stroke', '#061633');
@@ -438,7 +444,10 @@
         const tail = isOrthogonal 
           ? arrowTailForAnchor(startTip, tangentPoint(relationLine.points, 0, 1), fromPosition)
           : tangentPoint(relationLine.points, 0, 1);
-        appendArrow(svg, startTip, tail, arrowScale);
+        const arrow = appendArrow(svg, startTip, tail, arrowScale);
+        arrow.classList.add('relation-arrow');
+        arrow.dataset.type = 'relation';
+        arrow.dataset.id = relation.id;
       }
       if (relation.direction !== 'none') {
         const endTip = relationLine.points.at(-1);
@@ -446,23 +455,46 @@
         const tail = isOrthogonal
           ? arrowTailForAnchor(endTip, tangentPoint(relationLine.points, relationLine.points.length - 1, -1), toPosition)
           : tangentPoint(relationLine.points, relationLine.points.length - 1, -1);
-        appendArrow(svg, endTip, tail, arrowScale);
+        const arrow = appendArrow(svg, endTip, tail, arrowScale);
+        arrow.classList.add('relation-arrow');
+        arrow.dataset.type = 'relation';
+        arrow.dataset.id = relation.id;
       }
+      const hitPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      hitPath.classList.add('relation-line-hit');
+      hitPath.dataset.type = 'relation';
+      hitPath.dataset.id = relation.id;
+      hitPath.setAttribute('d', pointsToPath(linePoints));
+      hitPath.setAttribute('fill', 'none');
+      hitPath.setAttribute('stroke', 'transparent');
+      hitPath.setAttribute('stroke-width', '18');
+      svg.append(hitPath);
+      options.onElement?.(hitPath, relation, 'relation');
       appendEndpointDot(endpointSvg, relationLine.points[0], showEndpointDots);
       appendEndpointDot(endpointSvg, relationLine.points.at(-1), showEndpointDots);
 
-      const label = document.createElement('div');
-      label.className = 'relation-label';
-      label.dataset.type = 'relation';
-      label.dataset.id = relation.id;
-      const boxW = Number(relation.boxW) || 180;
-      label.style.left = `${relationLine.label.x}px`;
-      label.style.top = `${relationLine.label.y}px`;
-      label.style.width = `${boxW}px`;
-      if (Number(relation.boxH) > 0) label.style.minHeight = `${Number(relation.boxH)}px`;
-      label.innerHTML = `${escapeHtml(relation.label || '관계')}<span class="relation-desc">${escapeHtml(relation.description || '')}</span>`;
-      container.append(label);
-      options.onElement?.(label, relation, 'relation');
+      if (relation.labelVisible !== false) {
+        const label = document.createElement('div');
+        label.className = 'relation-label';
+        label.dataset.type = 'relation';
+        label.dataset.id = relation.id;
+        const boxW = Number(relation.boxW) || 180;
+        label.style.left = `${relationLine.label.x}px`;
+        label.style.top = `${relationLine.label.y}px`;
+        label.style.width = `${boxW}px`;
+        if (Number(relation.boxH) > 0) label.style.minHeight = `${Number(relation.boxH)}px`;
+        label.innerHTML = `${escapeHtml(relation.label || '관계')}<span class="relation-desc">${escapeHtml(relation.description || '')}</span>`;
+        container.append(label);
+        options.onElement?.(label, relation, 'relation');
+      } else {
+        const control = document.createElement('div');
+        control.className = 'relation-hidden-control';
+        control.dataset.type = 'relation';
+        control.dataset.id = relation.id;
+        control.style.left = `${relationLine.label.x}px`;
+        control.style.top = `${relationLine.label.y}px`;
+        container.append(control);
+      }
     });
 
     container.append(svg);
@@ -472,7 +504,8 @@
   }
 
   async function bootViewer({ dataUrl }) {
-    const data = await fetch(dataUrl).then(res => res.json());
+    const url = `${dataUrl}${dataUrl.includes('?') ? '&' : '?'}v=${Date.now()}`;
+    const data = await fetch(url, { cache: 'no-store' }).then(res => res.json());
     const graph = document.getElementById('graph');
     const search = document.getElementById('searchInput');
     const filter = document.getElementById('groupFilter');
