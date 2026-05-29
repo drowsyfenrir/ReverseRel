@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light" />
   <title>관계도</title>
-  <link rel="stylesheet" href="styles.css?v=20260529-person-card-center" />
+  <link rel="stylesheet" href="styles.css?v=20260529-panzoom" />
 </head>
 <body>
   <header class="topbar">
@@ -19,9 +19,92 @@
   <main class="app-shell">
     <section id="graph" class="graph-canvas" aria-label="인물 관계도"></section>
   </main>
-  <script src="graph.js?v=20260529-person-gap-x20-y40"></script>
+  <div class="transform-status" aria-live="polite">
+    <select id="groupJump" aria-label="그룹으로 이동"></select>
+    <span id="zoomStatus">🔎 100%</span>
+  </div>
+  <script src="vendor/panzoom.min.js"></script>
+  <script src="graph.js?v=20260529-panzoom-reset2"></script>
   <script>
-    window.RelationshipGraph.bootViewer({ dataUrl: 'data.json' });
+    window.RelationshipGraph.bootViewer({ dataUrl: 'data.json' }).then(({ data, graph }) => {
+      if (!window.panzoom) return;
+      const initialZoom = 1;
+      const targetGroup = data.groups.find(group => group.name === '타임키퍼 소대');
+      const shell = document.querySelector('.app-shell');
+      const targetElement = targetGroup
+        ? graph.querySelector(`[data-type="group"][data-id="${CSS.escape(targetGroup.id)}"]`)
+        : null;
+      const groupJump = document.getElementById('groupJump');
+      data.groups.filter(group => !group.parentGroupId).forEach(group => {
+        const option = document.createElement('option');
+        option.value = group.id;
+        option.textContent = group.name;
+        if (group.id === targetGroup?.id) option.selected = true;
+        groupJump.append(option);
+      });
+      let panzoomInstance;
+      let initialTransform;
+
+      function isGraphBackground(target) {
+        return target === graph || target.classList.contains('graph-svg') || target.classList.contains('relation-line-hit');
+      }
+
+      function centerOnTarget() {
+        panzoomInstance.zoomAbs(0, 0, initialZoom);
+        panzoomInstance.moveTo(0, 0);
+        centerElement(targetElement || graph);
+      }
+
+      function centerElement(element) {
+        const viewport = shell.getBoundingClientRect();
+        const title = element.classList.contains('group-box') ? element.querySelector('.group-title') : null;
+        const targetRect = (title || element).getBoundingClientRect();
+        const dx = viewport.left + viewport.width / 2 - (targetRect.left + targetRect.width / 2);
+        const dy = viewport.top + viewport.height / 2 - (targetRect.top + targetRect.height / 2);
+        panzoomInstance.moveBy(dx, dy);
+      }
+
+      function resetView() {
+        if (!initialTransform) {
+          centerOnTarget();
+          updateTransformStatus();
+          return;
+        }
+        panzoomInstance.zoomAbs(0, 0, initialTransform.scale);
+        panzoomInstance.moveTo(initialTransform.x, initialTransform.y);
+        updateTransformStatus();
+      }
+
+      function updateTransformStatus() {
+        const transform = panzoomInstance.getTransform();
+        const scale = Math.round(transform.scale * 100);
+        document.getElementById('zoomStatus').textContent = `🔎 ${scale}%`;
+      }
+
+      panzoomInstance = window.panzoom(graph, {
+        maxZoom: 2,
+        minZoom: 0.5,
+        initialZoom,
+        smoothScroll: true,
+        bounds: false,
+        zoomDoubleClickSpeed: 1,
+        onDoubleClick(event) {
+          if (isGraphBackground(event.target)) {
+            resetView();
+          }
+          return false;
+        }
+      });
+      centerOnTarget();
+      initialTransform = { ...panzoomInstance.getTransform() };
+      updateTransformStatus();
+      panzoomInstance.on('transform', updateTransformStatus);
+      groupJump.addEventListener('change', () => {
+        const group = data.groups.find(item => item.id === groupJump.value);
+        const groupElement = group ? graph.querySelector(`[data-type="group"][data-id="${CSS.escape(group.id)}"]`) : null;
+        if (groupElement) centerElement(groupElement);
+      });
+    });
   </script>
 </body>
 </html>

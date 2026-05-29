@@ -527,6 +527,7 @@
     if (search) search.addEventListener('input', draw);
     if (filter) filter.addEventListener('change', draw);
     draw();
+    return { data, graph };
   }
 
   function escapeHtml(value) {

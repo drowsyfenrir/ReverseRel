@@ -3,7 +3,7 @@ setlocal
 cd /d "%~dp0"
 
 set PORT=4173
-set URL=http://127.0.0.1:%PORT%/index.html
+set URL=http://127.0.0.1:%PORT%/editor.html
 
 where python >nul 2>nul
 if errorlevel 1 (
