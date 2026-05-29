@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>관계도 편집기</title>
+  <link rel="stylesheet" href="styles.css?v=20260529-header-logo" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="header-title">
+      <a class="brand" href="index.html"><img src="img/title.png" alt="" /></a>
+      <a href="index.html">관계도</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="https://delirious-gosling-1f7.notion.site/28cad688aef5801d808dc5d1b844ee94" target="_blank" rel="noopener noreferrer">버전 요약</a>
+    </div>
+  </header>
+  <main class="editor-layout">
+    <section id="editorGraph" class="graph-canvas editor-canvas" aria-label="관계도 편집 영역"></section>
+    <div class="editor-sidebar">
+      <div class="panel-actions">
+        <div class="align-actions" aria-label="선택 요소 정렬">
+          <button type="button" data-align="left" title="왼쪽 정렬" aria-label="왼쪽 정렬"><span class="align-icon align-left"></span></button>
+          <button type="button" data-align="center-x" title="가로 중앙 정렬" aria-label="가로 중앙 정렬"><span class="align-icon align-center-x"></span></button>
+          <button type="button" data-align="right" title="오른쪽 정렬" aria-label="오른쪽 정렬"><span class="align-icon align-right"></span></button>
+          <button type="button" data-align="top" title="위쪽 정렬" aria-label="위쪽 정렬"><span class="align-icon align-top"></span></button>
+          <button type="button" data-align="center-y" title="세로 중앙 정렬" aria-label="세로 중앙 정렬"><span class="align-icon align-center-y"></span></button>
+          <button type="button" data-align="bottom" title="아래쪽 정렬" aria-label="아래쪽 정렬"><span class="align-icon align-bottom"></span></button>
+          <button type="button" data-align="distribute-x" title="가로 간격 정렬" aria-label="가로 간격 정렬"><span class="align-icon align-distribute-x"></span></button>
+          <button type="button" data-align="distribute-y" title="세로 간격 정렬" aria-label="세로 간격 정렬"><span class="align-icon align-distribute-y"></span></button>
+        </div>
+        <button id="toggleAnchors" class="anchor-toggle is-active" type="button" aria-pressed="true">앵커 ON</button>
+        <button id="addPerson" type="button">인물 추가</button>
+        <button id="addGroup" type="button">그룹 추가</button>
+        <button id="addChildGroup" type="button">내부 그룹 추가</button>
+        <button id="addLabel" type="button">라벨 추가</button>
+        <button id="addRelation" type="button">관계 추가</button>
+      </div>
+      <aside class="editor-panel">
+        <div class="tabs" role="tablist">
+          <button class="tab is-active" data-tab="person" type="button">인물</button>
+          <button class="tab" data-tab="group" type="button">그룹</button>
+          <button class="tab" data-tab="label" type="button">라벨</button>
+          <button class="tab" data-tab="relation" type="button">관계</button>
+        </div>
+        <form id="personForm" class="edit-form" data-panel="person"></form>
+        <form id="groupForm" class="edit-form is-hidden" data-panel="group"></form>
+        <form id="labelForm" class="edit-form is-hidden" data-panel="label"></form>
+        <form id="relationForm" class="edit-form is-hidden" data-panel="relation"></form>
+        <div class="export-box">
+          <button id="downloadJson" type="button">다운로드</button>
+          <button id="copyJson" type="button">복사</button>
+          <p id="statusText" role="status"></p>
+        </div>
+      </aside>
+      <div class="file-actions">
+        <button id="openJson" type="button">불러오기</button>
+        <button id="saveJson" type="button">저장</button>
+      </div>
+    </div>
+  </main>
+  <script src="graph.js?v=20260529-browser-scroll"></script>
+  <script src="editor.js?v=20260529-simple-image-picker"></script>
+</body>
+</html>
