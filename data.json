@@ -9,8 +9,8 @@
       "id": "g-system",
       "name": "타임키퍼 소대",
       "description": " '폭풍우 개혁: 증원과 질서' 법안이 통과되면서 정식으로 활동 중인 독립 부대",
-      "x": 930,
-      "y": 774,
+      "x": 2245,
+      "y": 1505,
       "cols": 4,
       "rows": 2,
       "color": "#e2f11d",
@@ -25,8 +25,8 @@
       "id": "g-local",
       "name": "제1방어선 학교",
       "description": "성 파블로프 재단에서 운영하는 학교로 학교 부지는 재단 본부에 있다.\n재단에 우호적인 마도학자를 교육시키고 복속 시키는 일종의 사관학교다.",
-      "x": 38,
-      "y": 774,
+      "x": 1353,
+      "y": 1505,
       "cols": 4,
       "rows": 1,
       "color": "#bde0fe",
@@ -41,8 +41,8 @@
       "id": "g-rival",
       "name": "수뇌부",
       "description": "마도학을 과학적으로 연구하는 기관.",
-      "x": 2024,
-      "y": 553,
+      "x": 3339,
+      "y": 1284,
       "cols": 3,
       "rows": 1,
       "color": "#ffd6ff",
@@ -58,8 +58,8 @@
       "name": "교직원",
       "description": "",
       "parentGroupId": "g-local",
-      "x": 62,
-      "y": 824,
+      "x": 1377,
+      "y": 1555,
       "cols": 4,
       "rows": 1,
       "color": "#ffffff",
@@ -75,8 +75,8 @@
       "name": "과거 학생",
       "description": "",
       "parentGroupId": "g-local",
-      "x": 62,
-      "y": 1104,
+      "x": 1377,
+      "y": 1835,
       "cols": 4,
       "rows": 1,
       "color": "#ffffff",
@@ -92,8 +92,8 @@
       "name": "현재 학생",
       "description": "",
       "parentGroupId": "g-local",
-      "x": 62,
-      "y": 1560,
+      "x": 1377,
+      "y": 2291,
       "cols": 4,
       "rows": 1,
       "color": "#ffffff",
@@ -109,8 +109,8 @@
       "name": "재활 센터",
       "description": "어떻게든 살아 있다면 치료비는 무료이며\n치료비의 80%를 보너스로 지급해준다.",
       "parentGroupId": "",
-      "x": 2024,
-      "y": 853,
+      "x": 3339,
+      "y": 1584,
       "cols": 3,
       "rows": 1,
       "color": "#d7e8ff",
@@ -130,8 +130,8 @@
       "image": "profile/버틴.png",
       "traits": "타임키퍼",
       "description": "",
-      "x": 954,
-      "y": 824
+      "x": 2269,
+      "y": 1555
     },
     {
       "id": "p-valdo",
@@ -141,8 +141,8 @@
       "image": "profile/소네트.png",
       "traits": "제 1조수",
       "description": "Prioritizes system stability.",
-      "x": 1086,
-      "y": 824
+      "x": 2401,
+      "y": 1555
     },
     {
       "id": "p-mira",
@@ -152,8 +152,8 @@
       "image": "profile/릴리아.png",
       "traits": "공군 경비대",
       "description": "A mediator who rewrites relationship language.",
-      "x": 218,
-      "y": 874
+      "x": 1533,
+      "y": 1605
     },
     {
       "id": "p-nova",
@@ -163,8 +163,8 @@
       "image": "profile/교장.png",
       "traits": "교장",
       "description": "Interprets outside signals.",
-      "x": 86,
-      "y": 874
+      "x": 1401,
+      "y": 1605
     },
     {
       "id": "p-lucy",
@@ -174,8 +174,8 @@
       "image": "profile/루시.png",
       "traits": "전 총 책임자",
       "description": "The center profile of the rival group.",
-      "x": 2048,
-      "y": 603
+      "x": 3363,
+      "y": 1334
     },
     {
       "id": "p-1779984258455",
@@ -185,8 +185,8 @@
       "image": "profile/레굴루스.png",
       "traits": "로큰롤 해적",
       "description": "",
-      "x": 1218,
-      "y": 824
+      "x": 2533,
+      "y": 1555
     },
     {
       "id": "p-1779984259065",
@@ -196,8 +196,8 @@
       "image": "profile/드루비스.png",
       "traits": "몰락 귀족",
       "description": "",
-      "x": 954,
-      "y": 1000
+      "x": 2269,
+      "y": 1731
     },
     {
       "id": "p-1779984259463",
@@ -207,8 +207,8 @@
       "image": "profile/소더비.png",
       "traits": "부잣집 아가씨",
       "description": "",
-      "x": 1086,
-      "y": 1000
+      "x": 2401,
+      "y": 1731
     },
     {
       "id": "p-1779984259744",
@@ -218,8 +218,8 @@
       "image": "profile/애플.png",
       "traits": "의식 각성자",
       "description": "",
-      "x": 1350,
-      "y": 824
+      "x": 2665,
+      "y": 1555
     },
     {
       "id": "p-1779984260040",
@@ -229,8 +229,8 @@
       "image": "profile/릴리아.png",
       "traits": "비행 소대 마녀",
       "description": "",
-      "x": 1218,
-      "y": 1000
+      "x": 2533,
+      "y": 1731
     },
     {
       "id": "p-1779984260382",
@@ -240,8 +240,8 @@
       "image": "profile/무아상.png",
       "traits": "선생님",
       "description": "",
-      "x": 1350,
-      "y": 1000
+      "x": 2665,
+      "y": 1731
     },
     {
       "id": "p-1779984260700",
@@ -251,8 +251,8 @@
       "image": "profile/라디오.png",
       "traits": "의식 각성자",
       "description": "",
-      "x": 954,
-      "y": 1176
+      "x": 2269,
+      "y": 1907
     },
     {
       "id": "p-1779984376306",
@@ -262,8 +262,8 @@
       "image": "profile/루시.png",
       "traits": "휴가 중",
       "description": "",
-      "x": 1086,
-      "y": 1176
+      "x": 2401,
+      "y": 1907
     },
     {
       "id": "p-1779985687341",
@@ -273,8 +273,8 @@
       "image": "profile/마틸다.png",
       "traits": "규율 보조 교사",
       "description": "",
-      "x": 482,
-      "y": 874
+      "x": 1797,
+      "y": 1605
     },
     {
       "id": "p-1779985700292",
@@ -284,16 +284,16 @@
       "image": "profile/투스페어리.png",
       "traits": "치과 의사",
       "description": "",
-      "x": 350,
-      "y": 874
+      "x": 1665,
+      "y": 1605
     },
     {
       "id": "p-1779998225034",
       "name": "카슨",
       "groupId": "",
       "order": 0,
-      "x": 731,
-      "y": 915,
+      "x": 2033,
+      "y": 1644,
       "image": "profile/카슨.png",
       "traits": "소더비가 집사",
       "description": ""
@@ -303,8 +303,8 @@
       "name": "버틴",
       "groupId": "g-1780005793484",
       "order": 0,
-      "x": 86,
-      "y": 1154,
+      "x": 1401,
+      "y": 1885,
       "image": "profile/과거 버틴.png",
       "traits": "어린 시절",
       "description": ""
@@ -314,8 +314,8 @@
       "name": "소네트",
       "groupId": "g-1780005793484",
       "order": 1,
-      "x": 218,
-      "y": 1154,
+      "x": 1533,
+      "y": 1885,
       "image": "profile/과거 소네트.png",
       "traits": "어린 시절",
       "description": ""
@@ -325,8 +325,8 @@
       "name": "마틸다",
       "groupId": "g-1780005793484",
       "order": 2,
-      "x": 350,
-      "y": 1154,
+      "x": 1665,
+      "y": 1885,
       "image": "profile/과거 마틸다.png",
       "traits": "어린 시절",
       "description": ""
@@ -336,8 +336,8 @@
       "name": "메스머 주니어",
       "groupId": "g-1780005793484",
       "order": 3,
-      "x": 482,
-      "y": 1154,
+      "x": 1797,
+      "y": 1885,
       "image": "profile/과거 메스머주니어.png",
       "traits": "어린 시절",
       "description": ""
@@ -347,8 +347,8 @@
       "name": "고리",
       "groupId": "g-1780005793484",
       "order": 4,
-      "x": 86,
-      "y": 1330,
+      "x": 1401,
+      "y": 2061,
       "image": "profile/고리.png",
       "traits": "버틴의 트라우마",
       "description": ""
@@ -358,8 +358,8 @@
       "name": "이사벨라",
       "groupId": "g-1780005793484",
       "order": 5,
-      "x": 218,
-      "y": 1330,
+      "x": 1533,
+      "y": 2061,
       "image": "profile/이사벨라.png",
       "traits": "노래의 발안자",
       "description": ""
@@ -369,8 +369,8 @@
       "name": "호러피디아",
       "groupId": "g-1780005793484",
       "order": 6,
-      "x": 350,
-      "y": 1330,
+      "x": 1665,
+      "y": 2061,
       "image": "profile/호러피디아.png",
       "traits": "공포 영화를 동경",
       "description": ""
@@ -380,8 +380,8 @@
       "name": "에릭",
       "groupId": "g-1780005799128",
       "order": 0,
-      "x": 86,
-      "y": 1610,
+      "x": 1401,
+      "y": 2341,
       "image": "",
       "traits": "",
       "description": ""
@@ -391,8 +391,8 @@
       "name": "골드키 산초",
       "groupId": "g-1780005799128",
       "order": 1,
-      "x": 218,
-      "y": 1610,
+      "x": 1533,
+      "y": 2341,
       "image": "",
       "traits": "",
       "description": ""
@@ -402,8 +402,8 @@
       "name": "에페",
       "groupId": "g-1780005799128",
       "order": 2,
-      "x": 350,
-      "y": 1610,
+      "x": 1665,
+      "y": 2341,
       "image": "",
       "traits": "",
       "description": ""
@@ -413,8 +413,8 @@
       "name": "제시카",
       "groupId": "g-1780005799128",
       "order": 3,
-      "x": 482,
-      "y": 1610,
+      "x": 1797,
+      "y": 2341,
       "image": "",
       "traits": "",
       "description": ""
@@ -424,8 +424,8 @@
       "name": "폴터가이스트",
       "groupId": "g-1780005799128",
       "order": 4,
-      "x": 86,
-      "y": 1786,
+      "x": 1401,
+      "y": 2517,
       "image": "",
       "traits": "",
       "description": ""
@@ -435,8 +435,8 @@
       "name": "칸지라",
       "groupId": "g-1780005799128",
       "order": 5,
-      "x": 218,
-      "y": 1786,
+      "x": 1533,
+      "y": 2517,
       "image": "",
       "traits": "",
       "description": ""
@@ -446,8 +446,8 @@
       "name": "아부구스트",
       "groupId": "g-1780005799128",
       "order": 6,
-      "x": 350,
-      "y": 1786,
+      "x": 1665,
+      "y": 2517,
       "image": "",
       "traits": "",
       "description": ""
@@ -457,8 +457,8 @@
       "name": "플러터 페이지",
       "groupId": "g-1780005799128",
       "order": 7,
-      "x": 482,
-      "y": 1786,
+      "x": 1797,
+      "y": 2517,
       "image": "",
       "traits": "",
       "description": ""
@@ -468,8 +468,8 @@
       "name": "시몬",
       "groupId": "g-rival",
       "order": 1,
-      "x": 2180,
-      "y": 603,
+      "x": 3495,
+      "y": 1334,
       "image": "profile/시몬.png",
       "traits": "루시의 조수",
       "description": ""
@@ -479,8 +479,8 @@
       "name": "이니그마",
       "groupId": "g-rival",
       "order": 2,
-      "x": 2312,
-      "y": 603,
+      "x": 3627,
+      "y": 1334,
       "image": "profile/이니그마.png",
       "traits": "후임 총 책임자",
       "description": ""
@@ -490,8 +490,8 @@
       "name": "메스머 주니어",
       "groupId": "g-1780014540035",
       "order": 0,
-      "x": 2048,
-      "y": 903,
+      "x": 3363,
+      "y": 1634,
       "image": "profile/메스머주니어.png",
       "traits": "가상몽유 치료 담당",
       "description": ""
@@ -501,8 +501,8 @@
       "name": "도로시아",
       "groupId": "g-1780014540035",
       "order": 1,
-      "x": 2180,
-      "y": 903,
+      "x": 3495,
+      "y": 1634,
       "image": "profile/도로시아.png",
       "traits": "의료 연구원",
       "description": ""
@@ -786,28 +786,28 @@
       "id": "r-1780055720291",
       "fromType": "label",
       "from": "l-1779996528607",
-      "fromPosition": "right",
+      "fromPosition": "left",
       "toType": "label",
       "to": "l-1780055440654",
-      "toPosition": "top",
+      "toPosition": "right",
       "direction": "forward",
-      "lineType": "orthogonal",
+      "lineType": "straight",
       "boxW": 80,
       "boxH": 0,
       "label": "상비군",
       "labelVisible": true,
       "description": "",
-      "labelOffsetX": 0,
-      "labelOffsetY": -104
+      "labelOffsetX": -8,
+      "labelOffsetY": 1
     },
     {
       "id": "r-1780055812770",
       "fromType": "label",
       "from": "l-1779996528607",
-      "fromPosition": "right",
+      "fromPosition": "top",
       "toType": "label",
       "to": "l-1780055445828",
-      "toPosition": "top",
+      "toPosition": "bottom",
       "direction": "both",
       "lineType": "orthogonal",
       "boxW": 80,
@@ -815,16 +815,50 @@
       "label": "적대 관계",
       "labelVisible": true,
       "description": "",
-      "labelOffsetX": 0,
-      "labelOffsetY": 2
+      "labelOffsetX": -1,
+      "labelOffsetY": 1
+    },
+    {
+      "id": "r-1780060737522",
+      "fromType": "label",
+      "from": "l-1780055440654",
+      "fromPosition": "top",
+      "toType": "label",
+      "to": "l-1780055445828",
+      "toPosition": "left",
+      "direction": "both",
+      "lineType": "straight",
+      "boxW": 80,
+      "boxH": 0,
+      "label": "적대 관계",
+      "labelVisible": true,
+      "description": ""
+    },
+    {
+      "id": "r-1780060794286",
+      "fromType": "label",
+      "from": "l-1780055440654",
+      "fromPosition": "right",
+      "toType": "label",
+      "to": "l-1779981234936",
+      "toPosition": "left",
+      "direction": "both",
+      "lineType": "orthogonal",
+      "boxW": 80,
+      "boxH": 0,
+      "label": "협력 관계",
+      "labelVisible": true,
+      "description": "",
+      "labelOffsetX": -206,
+      "labelOffsetY": -7
     }
   ],
   "labels": [
     {
       "id": "l-1779981234936",
       "text": "성 파블로프 재단",
-      "x": 1009,
-      "y": 323,
+      "x": 2324,
+      "y": 1054,
       "w": 400,
       "h": 44,
       "name": "성 파블로프 재단",
@@ -834,8 +868,8 @@
       "id": "l-1779996528607",
       "name": "팍스 하우스",
       "description": "세계관 내 최고 기관,\n팍스 하우스 (Pax House), 하얀 벽돌집(White Marble House), 인류 평화 안전 보장 이사회, 비둘기집 등으로 불린다.\n파블로프 재단, 라플라스 연구소, 제노군보다 더 위로 보인다.",
-      "x": 859,
-      "y": 48,
+      "x": 2174,
+      "y": 779,
       "w": 700,
       "h": 80
     },
@@ -843,8 +877,8 @@
       "id": "l-1780002729561",
       "name": "행정부",
       "description": "현장 파견 요원(Field Agent)이 소속된 부서. 의회제 형태인지 위원회 의원들이 자기 휘하에 조사원들을 거느리고 있다.",
-      "x": 858,
-      "y": 520,
+      "x": 2173,
+      "y": 1251,
       "w": 700,
       "h": 40
     },
@@ -852,8 +886,8 @@
       "id": "l-1780009172682",
       "name": "라플라스 과학 연구 센터",
       "description": "과학 기술과 마도학의 결합을 연구하고\n제4차 산업 혁명을 추진하는 것이 목적이다",
-      "x": 2027,
-      "y": 316,
+      "x": 3342,
+      "y": 1047,
       "w": 400,
       "h": 80
     },
@@ -861,8 +895,8 @@
       "id": "l-1780009693617",
       "name": "본부",
       "description": "",
-      "x": 1694,
-      "y": 651,
+      "x": 3009,
+      "y": 1382,
       "w": 180,
       "h": 40
     },
@@ -870,8 +904,8 @@
       "id": "l-1780055440654",
       "name": "제노",
       "description": "리버스: 1999에 등장하는 군사기관. 팍스 하우스의 상비군으로서\n세계 곳곳에 거점을 두고 범세계적 평화유지군으로서의 역할을 하고 있다.",
-      "x": 2891,
-      "y": 315,
+      "x": 1090,
+      "y": 781,
       "w": 480,
       "h": 80
     },
@@ -879,8 +913,8 @@
       "id": "l-1780055445828",
       "name": "재건의 손",
       "description": "폭풍우를 통해 세상에 순혈 마도학자들만\n존재했던 과거로 돌아가려는 악의 조직.",
-      "x": 3847,
-      "y": 316,
+      "x": 2324,
+      "y": 436,
       "w": 400,
       "h": 80
     }
