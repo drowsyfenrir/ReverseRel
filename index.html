@@ -35,11 +35,23 @@
     <section id="graph" class="graph-canvas" aria-label="인물 관계도"></section>
   </main>
   <div class="transform-status" aria-live="polite">
-    <select id="groupJump" aria-label="그룹으로 이동"></select>
-    <span id="zoomStatus">🔎 100%</span>
+    <div class="nav-menu">
+      <button id="groupJumpButton" class="nav-menu-button" type="button" aria-haspopup="true" aria-expanded="false">그룹 이동</button>
+      <div id="groupJumpOptions" class="nav-menu-options" hidden></div>
+    </div>
+    <div class="zoom-menu">
+      <button id="zoomStatus" class="zoom-status-button" type="button" aria-haspopup="true" aria-expanded="false">🔎 100%</button>
+      <div id="zoomOptions" class="zoom-options" hidden>
+        <button type="button" data-zoom="0.5">50%</button>
+        <button type="button" data-zoom="0.7">70%</button>
+        <button type="button" data-zoom="1">100%</button>
+        <button type="button" data-zoom="1.5">150%</button>
+        <button type="button" data-zoom="2">200%</button>
+      </div>
+    </div>
   </div>
   <script src="vendor/panzoom.min.js"></script>
-  <script src="graph.js?v=20260530-hybrid-lines"></script>
+  <script src="graph.js?v=20260530-zoom-speed"></script>
   <script>
     window.RelationshipGraph.bootViewer({ dataUrl: 'data.json' }).then(({ data, graph }) => {
       if (!window.panzoom) return;
@@ -49,14 +61,19 @@
       const targetElement = targetGroup
         ? graph.querySelector(`[data-type="group"][data-id="${CSS.escape(targetGroup.id)}"]`)
         : null;
-      const groupJump = document.getElementById('groupJump');
-      data.groups.filter(group => !group.parentGroupId).forEach(group => {
-        const option = document.createElement('option');
-        option.value = group.id;
-        option.textContent = group.name;
-        if (group.id === targetGroup?.id) option.selected = true;
-        groupJump.append(option);
+      const groupJumpButton = document.getElementById('groupJumpButton');
+      const groupJumpOptions = document.getElementById('groupJumpOptions');
+      const zoomStatus = document.getElementById('zoomStatus');
+      const zoomOptions = document.getElementById('zoomOptions');
+      const topGroups = data.groups.filter(group => !group.parentGroupId);
+      topGroups.forEach(group => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.dataset.groupId = group.id;
+        button.textContent = group.name;
+        groupJumpOptions.append(button);
       });
+      groupJumpButton.textContent = targetGroup?.name || topGroups[0]?.name || '그룹 이동';
       let panzoomInstance;
       let initialTransform;
 
@@ -93,13 +110,30 @@
       function updateTransformStatus() {
         const transform = panzoomInstance.getTransform();
         const scale = Math.round(transform.scale * 100);
-        document.getElementById('zoomStatus').textContent = `🔎 ${scale}%`;
+        zoomStatus.textContent = `🔎 ${scale}%`;
+      }
+
+      function setZoomMenu(open) {
+        zoomOptions.hidden = !open;
+        zoomStatus.setAttribute('aria-expanded', String(open));
+      }
+
+      function setGroupMenu(open) {
+        groupJumpOptions.hidden = !open;
+        groupJumpButton.setAttribute('aria-expanded', String(open));
+      }
+
+      function zoomTo(scale) {
+        const viewport = shell.getBoundingClientRect();
+        panzoomInstance.zoomAbs(viewport.left + viewport.width / 2, viewport.top + viewport.height / 2, scale);
+        updateTransformStatus();
       }
 
       panzoomInstance = window.panzoom(graph, {
         maxZoom: 2,
         minZoom: 0.5,
         initialZoom,
+        zoomSpeed: 0.05,
         smoothScroll: true,
         bounds: false,
         zoomDoubleClickSpeed: 1,
@@ -114,10 +148,36 @@
       initialTransform = { ...panzoomInstance.getTransform() };
       updateTransformStatus();
       panzoomInstance.on('transform', updateTransformStatus);
-      groupJump.addEventListener('change', () => {
-        const group = data.groups.find(item => item.id === groupJump.value);
+      groupJumpButton.addEventListener('click', event => {
+        event.stopPropagation();
+        setGroupMenu(groupJumpOptions.hidden);
+        setZoomMenu(false);
+      });
+      groupJumpOptions.addEventListener('click', event => {
+        const button = event.target.closest('[data-group-id]');
+        if (!button) return;
+        const group = data.groups.find(item => item.id === button.dataset.groupId);
         const groupElement = group ? graph.querySelector(`[data-type="group"][data-id="${CSS.escape(group.id)}"]`) : null;
-        if (groupElement) centerElement(groupElement);
+        if (groupElement) {
+          groupJumpButton.textContent = group.name;
+          centerElement(groupElement);
+        }
+        setGroupMenu(false);
+      });
+      zoomStatus.addEventListener('click', event => {
+        event.stopPropagation();
+        setZoomMenu(zoomOptions.hidden);
+        setGroupMenu(false);
+      });
+      zoomOptions.addEventListener('click', event => {
+        const button = event.target.closest('[data-zoom]');
+        if (!button) return;
+        zoomTo(Number(button.dataset.zoom));
+        setZoomMenu(false);
+      });
+      document.addEventListener('click', event => {
+        if (!event.target.closest('.nav-menu')) setGroupMenu(false);
+        if (!event.target.closest('.zoom-menu')) setZoomMenu(false);
       });
     });
   </script>

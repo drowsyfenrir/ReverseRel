@@ -206,23 +206,99 @@ button { border: 0; cursor: pointer; }
   line-height: 1;
   backdrop-filter: blur(8px);
 }
-.transform-status select {
+.nav-menu,
+.zoom-menu {
+  position: relative;
+}
+.nav-menu-button,
+.zoom-status-button {
   min-height: 28px;
-  max-width: 180px;
-  border: 1px solid rgba(16, 24, 40, .16);
+  border: 0;
   border-radius: 999px;
-  padding: 3px 26px 3px 10px;
+  padding: 3px 10px;
   color: #343a46;
-  background: #fff;
+  background: transparent;
   font: inherit;
   cursor: pointer;
+  white-space: nowrap;
 }
-.transform-status select:focus,
-.transform-status select:focus-visible,
-.transform-status select:active {
-  border: 1px solid rgba(16, 24, 40, .16);
+.nav-menu-button {
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.nav-menu-button:hover,
+.nav-menu-button:focus-visible,
+.zoom-status-button:hover,
+.zoom-status-button:focus-visible {
+  background: transparent;
   outline: none;
+}
+.nav-menu-options,
+.zoom-options {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  display: grid;
+  min-width: 69px;
+  padding: 6px;
+  border: 1px solid rgba(16, 24, 40, .16);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .98);
   box-shadow: none;
+}
+.nav-menu-options {
+  width: 180px;
+  max-height: 260px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(16, 24, 40, .28) transparent;
+}
+.nav-menu-options[hidden],
+.zoom-options[hidden] {
+  display: none;
+}
+.nav-menu-options button,
+.zoom-options button {
+  border: 0;
+  border-radius: 8px;
+  padding: 7px 10px;
+  color: #343a46;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.zoom-options button {
+  text-align: center;
+}
+.nav-menu-options button {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.nav-menu-options::-webkit-scrollbar {
+  width: 4px;
+}
+.nav-menu-options::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.nav-menu-options::-webkit-scrollbar-track {
+  background: transparent;
+}
+.nav-menu-options::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(16, 24, 40, .28);
+}
+.nav-menu-options button:hover,
+.nav-menu-options button:focus-visible,
+.zoom-options button:hover,
+.zoom-options button:focus-visible {
+  background: rgba(16, 24, 40, .07);
+  outline: none;
 }
 .transform-status span {
   white-space: nowrap;

@@ -1168,7 +1168,7 @@
       "from": "g-system",
       "toType": "group",
       "to": "g-local",
-      "direction": "forward",
+      "direction": "both",
       "label": "협력 관계",
       "description": "",
       "fromPosition": "left",
@@ -1207,7 +1207,7 @@
       "to": "g-local",
       "toPosition": "top",
       "direction": "forward",
-      "lineType": "orthogonal",
+      "lineType": "left-orthogonal",
       "label": "하위 기관",
       "description": "",
       "boxW": 80,
@@ -1374,7 +1374,7 @@
       "boxH": 0,
       "label": "협력 관계",
       "description": "다만 주도권은 성 파블로프 재단 쪽에 있어\n라플라스 연구 센터 측은 불쾌하게 여기고 있다.",
-      "labelOffsetX": 226,
+      "labelOffsetX": 121,
       "labelOffsetY": 0,
       "labelVisible": true,
       "lineColor": "#061633"
@@ -1447,7 +1447,7 @@
       "boxW": 70,
       "boxH": 0,
       "label": "",
-      "description": "",
+      "description": "폭풍우 대책 기술의 개발",
       "labelVisible": false,
       "lineColor": "#061633"
     },
@@ -1763,6 +1763,25 @@
       "description": "",
       "labelOffsetX": 201,
       "labelOffsetY": 70
+    },
+    {
+      "id": "r-1780107686200",
+      "fromType": "group",
+      "from": "g-1780104255790",
+      "fromPosition": "right",
+      "toType": "label",
+      "to": "l-1780009693617",
+      "toPosition": "bottom",
+      "direction": "both",
+      "lineType": "left-orthogonal",
+      "lineColor": "#061633",
+      "boxW": 160,
+      "boxH": 0,
+      "label": "협력 관계",
+      "labelVisible": true,
+      "description": "폭풍우 대책 기술의 개발",
+      "labelOffsetX": 229,
+      "labelOffsetY": 35
     }
   ],
   "labels": [
