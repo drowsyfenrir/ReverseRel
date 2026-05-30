@@ -223,16 +223,37 @@ button { border: 0; cursor: pointer; }
   white-space: nowrap;
 }
 .nav-menu-button {
-  max-width: 180px;
+  position: relative;
+  width: 180px;
+  border: 1px solid rgba(16, 24, 40, .16);
+  padding: 3px 30px 3px 14px;
+  background: #fff;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: left;
+}
+.nav-menu-button::after {
+  content: "";
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid #343a46;
+  border-bottom: 2px solid #343a46;
+  transform: translateY(-65%) rotate(45deg);
+  pointer-events: none;
 }
 .nav-menu-button:hover,
 .nav-menu-button:focus-visible,
 .zoom-status-button:hover,
 .zoom-status-button:focus-visible {
-  background: transparent;
   outline: none;
+}
+.nav-menu-button:hover,
+.nav-menu-button:focus-visible {
+  background: #fff;
+  border-color: rgba(16, 24, 40, .16);
 }
 .nav-menu-options,
 .zoom-options {
