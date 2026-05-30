@@ -247,9 +247,18 @@
     const baseLabel = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
     const label = { x: baseLabel.x + offsetX, y: baseLabel.y + offsetY };
 
-    if (relation.lineType !== 'orthogonal') {
+    if (!['orthogonal', 'left-orthogonal', 'right-orthogonal'].includes(relation.lineType)) {
       const points = offsetX || offsetY ? [a, label, b] : [a, b];
       return { d: pointsToPath(points), label, points };
+    }
+
+    if (relation.lineType === 'left-orthogonal' || relation.lineType === 'right-orthogonal') {
+      const points = hybridOrthogonalPoints(a, b, label, relation.lineType);
+      return {
+        d: pointsToPath(points),
+        points,
+        label
+      };
     }
 
     const fromPos = relation.fromPosition || 'center';
@@ -274,6 +283,50 @@
       points,
       label
     };
+  }
+
+  function hybridOrthogonalPoints(a, b, label, lineType) {
+    const start = segmentToLabel(a, label, bendSide(a, label, lineType));
+    const end = segmentFromLabel(label, b, bendSide(b, label, lineType));
+    const points = [...start, ...end.slice(1)];
+    return dedupePoints(points);
+  }
+
+  function bendSide(point, label, lineType) {
+    const isLeft = point.x < label.x;
+    const isRight = point.x > label.x;
+    const isAbove = point.y < label.y;
+    if (lineType === 'left-orthogonal') {
+      if (isLeft) return 'horizontal';
+      if (isAbove) return 'vertical';
+      return '';
+    }
+    if (isRight) return 'horizontal';
+    if (isAbove) return 'vertical';
+    return '';
+  }
+
+  function segmentToLabel(point, label, bendAxis) {
+    if (!bendAxis) return [point, label];
+    const corner = bendAxis === 'horizontal'
+      ? { x: label.x, y: point.y }
+      : { x: point.x, y: label.y };
+    return [point, corner, label];
+  }
+
+  function segmentFromLabel(label, point, bendAxis) {
+    if (!bendAxis) return [label, point];
+    const corner = bendAxis === 'horizontal'
+      ? { x: point.x, y: label.y }
+      : { x: label.x, y: point.y };
+    return [label, corner, point];
+  }
+
+  function dedupePoints(points) {
+    return points.filter((point, index) => {
+      const prev = points[index - 1];
+      return !prev || Math.abs(prev.x - point.x) > 0.5 || Math.abs(prev.y - point.y) > 0.5;
+    });
   }
 
   function pointsToPath(points) {
@@ -323,10 +376,10 @@
     return tip;
   }
 
-  function appendArrow(svg, tip, tail, scale = 1) {
+  function appendArrow(svg, tip, tail, scale = 1, color = '#061633') {
     const arrow = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
     arrow.setAttribute('points', arrowPoints(tip, tail, scale));
-    arrow.setAttribute('fill', '#061633');
+    arrow.setAttribute('fill', color);
     svg.append(arrow);
     return arrow;
   }
@@ -429,33 +482,34 @@
       const relationLine = relationPath(a, b, relation);
       const arrowScale = relation.fromType === 'person' && relation.toType === 'person' ? 0.5 : 1;
       const linePoints = linePointsForArrows(relationLine.points, relation, arrowScale);
+      const lineColor = normalizeHex(relation.lineColor, '#061633');
       const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
       path.classList.add('relation-line');
       path.dataset.type = 'relation';
       path.dataset.id = relation.id;
       path.setAttribute('d', pointsToPath(linePoints));
       path.setAttribute('fill', 'none');
-      path.setAttribute('stroke', '#061633');
+      path.setAttribute('stroke', lineColor);
       path.setAttribute('stroke-width', '3');
       svg.append(path);
       if (relation.direction === 'both') {
         const startTip = relationLine.points[0];
-        const isOrthogonal = relation.lineType === 'orthogonal';
+        const isOrthogonal = relation.lineType !== 'straight';
         const tail = isOrthogonal 
           ? arrowTailForAnchor(startTip, tangentPoint(relationLine.points, 0, 1), fromPosition)
           : tangentPoint(relationLine.points, 0, 1);
-        const arrow = appendArrow(svg, startTip, tail, arrowScale);
+        const arrow = appendArrow(svg, startTip, tail, arrowScale, lineColor);
         arrow.classList.add('relation-arrow');
         arrow.dataset.type = 'relation';
         arrow.dataset.id = relation.id;
       }
       if (relation.direction !== 'none') {
         const endTip = relationLine.points.at(-1);
-        const isOrthogonal = relation.lineType === 'orthogonal';
+        const isOrthogonal = relation.lineType !== 'straight';
         const tail = isOrthogonal
           ? arrowTailForAnchor(endTip, tangentPoint(relationLine.points, relationLine.points.length - 1, -1), toPosition)
           : tangentPoint(relationLine.points, relationLine.points.length - 1, -1);
-        const arrow = appendArrow(svg, endTip, tail, arrowScale);
+        const arrow = appendArrow(svg, endTip, tail, arrowScale, lineColor);
         arrow.classList.add('relation-arrow');
         arrow.dataset.type = 'relation';
         arrow.dataset.id = relation.id;

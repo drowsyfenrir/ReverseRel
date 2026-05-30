@@ -258,7 +258,7 @@ button { border: 0; cursor: pointer; }
   z-index: 1;
   border: 3px solid var(--group-border-color);
   border-radius: 8px;
-  background: color-mix(in srgb, var(--group-color) 68%, white);
+  background: var(--group-color);
   box-shadow: 0 16px 36px rgba(6, 22, 51, .10);
 }
 .group-box.has-no-border { border-color: transparent; }
