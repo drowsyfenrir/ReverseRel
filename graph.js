@@ -182,7 +182,11 @@
       return purePoint ? outsetEndpoint(purePoint, type, position) : null;
     }
 
-    if (type === 'group') return decoratedEndpoint(container, data, type, id, position, '.group-title', '.group-description');
+    if (type === 'group') {
+      const group = data.groups.find(item => item.id === id);
+      const bottomSelector = group && !group.parentGroupId && group.descriptionEnabled !== false ? '.group-description' : '';
+      return decoratedEndpoint(container, data, type, id, position, '.group-title', bottomSelector);
+    }
     if (type === 'label') return decoratedEndpoint(container, data, type, id, position, '.map-label-title', '.map-label-body');
     
     return endpoint(data, type, id, position);
@@ -307,7 +311,7 @@
   }
 
   function segmentToLabel(point, label, bendAxis) {
-    if (!bendAxis) return [point, label];
+    if (!bendAxis) return orthogonalFallback(point, label);
     const corner = bendAxis === 'horizontal'
       ? { x: label.x, y: point.y }
       : { x: point.x, y: label.y };
@@ -315,11 +319,16 @@
   }
 
   function segmentFromLabel(label, point, bendAxis) {
-    if (!bendAxis) return [label, point];
+    if (!bendAxis) return orthogonalFallback(label, point);
     const corner = bendAxis === 'horizontal'
       ? { x: point.x, y: label.y }
       : { x: label.x, y: point.y };
     return [label, corner, point];
+  }
+
+  function orthogonalFallback(from, to) {
+    if (Math.abs(from.x - to.x) <= 0.5 || Math.abs(from.y - to.y) <= 0.5) return [from, to];
+    return [from, { x: to.x, y: from.y }, to];
   }
 
   function dedupePoints(points) {
@@ -440,7 +449,8 @@
       el.style.setProperty('--group-border-color', normalizeHex(group.borderColor, '#061633'));
       el.classList.toggle('has-no-border', group.borderEnabled === false);
       Object.assign(el.style, { left: `${group.x}px`, top: `${group.y}px`, width: `${group.w}px`, height: `${group.h}px` });
-      el.innerHTML = `<strong class="group-title">${escapeHtml(group.name)}</strong>${group.parentGroupId ? '' : `<p class="group-description">${escapeHtml(group.description || '')}</p>`}`;
+      const showDescription = !group.parentGroupId && group.descriptionEnabled !== false;
+      el.innerHTML = `<strong class="group-title">${escapeHtml(group.name)}</strong>${showDescription ? `<p class="group-description">${escapeHtml(group.description || '')}</p>` : ''}`;
       container.append(el);
       options.onElement?.(el, group, 'group');
     });

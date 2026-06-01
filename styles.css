@@ -352,7 +352,6 @@ button { border: 0; cursor: pointer; }
 }
 .group-box {
   position: absolute;
-  z-index: 1;
   border: 3px solid var(--group-border-color);
   border-radius: 8px;
   background: var(--group-color);
@@ -365,6 +364,7 @@ button { border: 0; cursor: pointer; }
 }
 .group-title {
   position: absolute;
+  z-index: 3;
   left: 50%;
   top: -18px;
   transform: translateX(-50%);
@@ -388,6 +388,7 @@ button { border: 0; cursor: pointer; }
 }
 .group-description {
   position: absolute;
+  z-index: 3;
   left: 50%;
   bottom: 0;
   display: flex;
@@ -594,8 +595,17 @@ button { border: 0; cursor: pointer; }
   min-width: 68px;
   background: #626262;
 }
-.panel-actions > .anchor-toggle.is-active {
+.panel-actions > .lock-toggle {
+  min-width: 56px;
+  background: #626262;
+}
+.panel-actions > .anchor-toggle.is-active,
+.panel-actions > .lock-toggle.is-active {
   background: var(--orange);
+}
+.panel-actions > .lock-toggle:disabled {
+  opacity: .45;
+  cursor: default;
 }
 .align-actions {
   display: flex;
@@ -671,6 +681,24 @@ button { border: 0; cursor: pointer; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
+}
+.edit-form .id-action-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 8px;
+}
+.edit-form .inline-action {
+  min-height: 38px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #fff;
+  background: var(--navy);
+  font-size: 12px;
+  white-space: nowrap;
+}
+.edit-form .inline-action:hover {
+  background: #10244d;
 }
 .edit-form .attach-field {
   display: grid;
