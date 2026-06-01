@@ -1,0 +1,2863 @@
+{
+  "currentPageId": "version-3-5",
+  "pages": [
+    {
+      "id": "version-1-0",
+      "pageName": "1.0",
+      "version": "1.0",
+      "versionName": "빗속의 재연된 과거",
+      "start": {
+        "year": "2023",
+        "month": "10",
+        "day": "26"
+      },
+      "end": {
+        "year": "2023",
+        "month": "11",
+        "day": "9"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "소더비",
+          "profiles": [
+            "X",
+            "찰리"
+          ],
+          "start": {
+            "year": "2023",
+            "month": "10",
+            "day": "26"
+          },
+          "end": {
+            "year": "2023",
+            "month": "11",
+            "day": "2"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2023",
+            "month": "10",
+            "day": "26"
+          },
+          "end": {
+            "year": "2023",
+            "month": "11",
+            "day": "9"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "A나이트",
+          "profiles": [
+            "테넌트",
+            "콘블룸"
+          ],
+          "start": {
+            "year": "2023",
+            "month": "11",
+            "day": "2"
+          },
+          "end": {
+            "year": "2023",
+            "month": "11",
+            "day": "9"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "레굴루스"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": []
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-1-1",
+      "pageName": "1.1",
+      "version": "1.1",
+      "versionName": "쥘 리메 컵 도난 사건",
+      "start": {
+        "year": "2023",
+        "month": "11",
+        "day": "9"
+      },
+      "end": {
+        "year": "2023",
+        "month": "12",
+        "day": "7"
+      },
+      "pickups": {
+        "first": {
+          "enabled": false,
+          "label": "전반기",
+          "name": "멜라니아",
+          "profiles": [
+            "마릴린",
+            "벌룬 파티"
+          ],
+          "start": {
+            "year": "2023",
+            "month": "11",
+            "day": "9"
+          },
+          "end": {
+            "year": "2023",
+            "month": "11",
+            "day": "23"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2023",
+            "month": "11",
+            "day": "9"
+          },
+          "end": {
+            "year": "2023",
+            "month": "12",
+            "day": "7"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "피클즈",
+          "profiles": [
+            "베이비 블루",
+            "디거스"
+          ],
+          "start": {
+            "year": "2023",
+            "month": "11",
+            "day": "23"
+          },
+          "end": {
+            "year": "2023",
+            "month": "12",
+            "day": "7"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "이터니티"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": []
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-1-2",
+      "pageName": "1.2",
+      "version": "1.2",
+      "versionName": "그린 레이크의 악몽",
+      "start": {
+        "year": "2023",
+        "month": "12",
+        "day": "7"
+      },
+      "end": {
+        "year": "2024",
+        "month": "1",
+        "day": "18"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "투스 페어리",
+          "profiles": [
+            "블로니",
+            "사츠키"
+          ],
+          "start": {
+            "year": "2023",
+            "month": "12",
+            "day": "7"
+          },
+          "end": {
+            "year": "2024",
+            "month": "1",
+            "day": "18"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2023",
+            "month": "12",
+            "day": "7"
+          },
+          "end": {
+            "year": "2024",
+            "month": "1",
+            "day": "18"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "제시카",
+          "profiles": [
+            "호러피디아",
+            "네크롤로지스트"
+          ],
+          "start": {
+            "year": "2024",
+            "month": "1",
+            "day": "18"
+          },
+          "end": {
+            "year": "2024",
+            "month": "1",
+            "day": "18"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "소더비"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": []
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-1-3",
+      "pageName": "1.3",
+      "version": "1.3",
+      "versionName": "모르판크로의 여행",
+      "start": {
+        "year": "2024",
+        "month": "1",
+        "day": "18"
+      },
+      "end": {
+        "year": "2024",
+        "month": "2",
+        "day": "29"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "갈라보나",
+          "profiles": [
+            "칸지라",
+            "테넌트"
+          ],
+          "start": {
+            "year": "2024",
+            "month": "1",
+            "day": "18"
+          },
+          "end": {
+            "year": "2024",
+            "month": "2",
+            "day": "8"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2024",
+            "month": "1",
+            "day": "18"
+          },
+          "end": {
+            "year": "2024",
+            "month": "2",
+            "day": "29"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "갈기 모래",
+          "profiles": [
+            "사츠키",
+            "벌룬 파티"
+          ],
+          "start": {
+            "year": "2024",
+            "month": "2",
+            "day": "8"
+          },
+          "end": {
+            "year": "2024",
+            "month": "2",
+            "day": "29"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "보이저"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": []
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-1-4",
+      "pageName": "1.4",
+      "version": "1.4",
+      "versionName": "동굴 속의 죄수",
+      "start": {
+        "year": "2024",
+        "month": "2",
+        "day": "29"
+      },
+      "end": {
+        "year": "2024",
+        "month": "4",
+        "day": "18"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "37",
+          "profiles": [
+            "테넌트",
+            "마릴린"
+          ],
+          "start": {
+            "year": "2024",
+            "month": "2",
+            "day": "29"
+          },
+          "end": {
+            "year": "2024",
+            "month": "3",
+            "day": "28"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2024",
+            "month": "2",
+            "day": "29"
+          },
+          "end": {
+            "year": "2024",
+            "month": "4",
+            "day": "18"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "6",
+          "profiles": [
+            "클릭",
+            "베이비 블루"
+          ],
+          "start": {
+            "year": "2024",
+            "month": "3",
+            "day": "28"
+          },
+          "end": {
+            "year": "2024",
+            "month": "4",
+            "day": "18"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "릴리아"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": []
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-1-5",
+      "pageName": "1.5",
+      "version": "1.5",
+      "versionName": "부활! 울루루 대회",
+      "start": {
+        "year": "2024",
+        "month": "4",
+        "day": "18"
+      },
+      "end": {
+        "year": "2024",
+        "month": "5",
+        "day": "30"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "스파토데아",
+          "profiles": [
+            "울루",
+            "디케"
+          ],
+          "start": {
+            "year": "2024",
+            "month": "4",
+            "day": "18"
+          },
+          "end": {
+            "year": "2024",
+            "month": "5",
+            "day": "9"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2024",
+            "month": "4",
+            "day": "18"
+          },
+          "end": {
+            "year": "2024",
+            "month": "5",
+            "day": "30"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "에즈라",
+          "profiles": [
+            "데저트 플란넬",
+            "사츠키"
+          ],
+          "start": {
+            "year": "2024",
+            "month": "5",
+            "day": "9"
+          },
+          "end": {
+            "year": "2024",
+            "month": "5",
+            "day": "30"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "A나이트"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": []
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-1-6",
+      "pageName": "1.6",
+      "version": "1.6",
+      "versionName": "삭일수기",
+      "start": {
+        "year": "2024",
+        "month": "5",
+        "day": "30"
+      },
+      "end": {
+        "year": "2024",
+        "month": "7",
+        "day": "11"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "곡랑",
+          "profiles": [
+            "예니세이",
+            "클릭"
+          ],
+          "start": {
+            "year": "2024",
+            "month": "5",
+            "day": "30"
+          },
+          "end": {
+            "year": "2024",
+            "month": "7",
+            "day": "11"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2024",
+            "month": "5",
+            "day": "30"
+          },
+          "end": {
+            "year": "2024",
+            "month": "7",
+            "day": "11"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "갈천",
+          "profiles": [
+            "콘블룸",
+            "X"
+          ],
+          "start": {
+            "year": "2024",
+            "month": "7",
+            "day": "11"
+          },
+          "end": {
+            "year": "2024",
+            "month": "7",
+            "day": "11"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "드루비스"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": []
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-1-7",
+      "pageName": "1.7",
+      "version": "1.7",
+      "versionName": "별은 빛나건만",
+      "start": {
+        "year": "2024",
+        "month": "7",
+        "day": "11"
+      },
+      "end": {
+        "year": "2024",
+        "month": "8",
+        "day": "15"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "이졸데",
+          "profiles": [
+            "테넌트",
+            "네크롤로지스트"
+          ],
+          "start": {
+            "year": "2024",
+            "month": "7",
+            "day": "11"
+          },
+          "end": {
+            "year": "2024",
+            "month": "8",
+            "day": "1"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2024",
+            "month": "7",
+            "day": "11"
+          },
+          "end": {
+            "year": "2024",
+            "month": "8",
+            "day": "15"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "마커스",
+          "profiles": [
+            "찰리",
+            "디케"
+          ],
+          "start": {
+            "year": "2024",
+            "month": "8",
+            "day": "1"
+          },
+          "end": {
+            "year": "2024",
+            "month": "8",
+            "day": "15"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "센츄리온"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": []
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-1-8",
+      "pageName": "1.8",
+      "version": "1.8",
+      "versionName": "안녕 라야시키",
+      "start": {
+        "year": "2024",
+        "month": "8",
+        "day": "15"
+      },
+      "end": {
+        "year": "2024",
+        "month": "9",
+        "day": "19"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "빌라",
+          "profiles": [
+            "아구스트",
+            ""
+          ],
+          "start": {
+            "year": "2024",
+            "month": "8",
+            "day": "15"
+          },
+          "end": {
+            "year": "2024",
+            "month": "8",
+            "day": "29"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2024",
+            "month": "8",
+            "day": "15"
+          },
+          "end": {
+            "year": "2024",
+            "month": "9",
+            "day": "19"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "윈드송",
+          "profiles": [
+            "마릴린",
+            "블로니"
+          ],
+          "start": {
+            "year": "2024",
+            "month": "8",
+            "day": "29"
+          },
+          "end": {
+            "year": "2024",
+            "month": "9",
+            "day": "19"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "메디슨 포켓"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": []
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-1-9",
+      "pageName": "1.9",
+      "version": "1.9",
+      "versionName": "고독의 노래",
+      "start": {
+        "year": "2024",
+        "month": "9",
+        "day": "19"
+      },
+      "end": {
+        "year": "2024",
+        "month": "10",
+        "day": "31"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "루시",
+          "profiles": [
+            "네크롤로지스트",
+            "X"
+          ],
+          "start": {
+            "year": "2024",
+            "month": "9",
+            "day": "19"
+          },
+          "end": {
+            "year": "2024",
+            "month": "10",
+            "day": "31"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2024",
+            "month": "9",
+            "day": "19"
+          },
+          "end": {
+            "year": "2024",
+            "month": "10",
+            "day": "31"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "카카니아",
+          "profiles": [
+            "사츠키",
+            "디거스"
+          ],
+          "start": {
+            "year": "2024",
+            "month": "10",
+            "day": "31"
+          },
+          "end": {
+            "year": "2024",
+            "month": "10",
+            "day": "31"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "안안 리"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": []
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-2",
+      "pageName": "2.0",
+      "version": "2.0",
+      "versionName": "질주! 골든 시티로",
+      "start": {
+        "year": "2024",
+        "month": "10",
+        "day": "31"
+      },
+      "end": {
+        "year": "2024",
+        "month": "12",
+        "day": "5"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "머큐리아",
+          "profiles": [
+            "찰리",
+            "클릭"
+          ],
+          "start": {
+            "year": "2024",
+            "month": "10",
+            "day": "31"
+          },
+          "end": {
+            "year": "2024",
+            "month": "11",
+            "day": "21"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2024",
+            "month": "10",
+            "day": "31"
+          },
+          "end": {
+            "year": "2024",
+            "month": "12",
+            "day": "5"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "J",
+          "profiles": [
+            "테넌트",
+            "데저트 플란넬"
+          ],
+          "start": {
+            "year": "2024",
+            "month": "11",
+            "day": "21"
+          },
+          "end": {
+            "year": "2024",
+            "month": "12",
+            "day": "5"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "뉴바벨"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": []
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-2-1",
+      "pageName": "2.1",
+      "version": "2.1",
+      "versionName": "루트 77: 유령의 도로",
+      "start": {
+        "year": "2024",
+        "month": "12",
+        "day": "5"
+      },
+      "end": {
+        "year": "2025",
+        "month": "1",
+        "day": "9"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "튜즈데이",
+          "profiles": [
+            "바바라",
+            ""
+          ],
+          "start": {
+            "year": "2024",
+            "month": "12",
+            "day": "5"
+          },
+          "end": {
+            "year": "2025",
+            "month": "12",
+            "day": "26"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2024",
+            "month": "12",
+            "day": "5"
+          },
+          "end": {
+            "year": "2025",
+            "month": "1",
+            "day": "9"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "아르고스",
+          "profiles": [
+            "테넌트",
+            "사츠키"
+          ],
+          "start": {
+            "year": "2025",
+            "month": "12",
+            "day": "26"
+          },
+          "end": {
+            "year": "2025",
+            "month": "1",
+            "day": "9"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "멜라니아"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": []
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-2-2",
+      "pageName": "2.2",
+      "version": "2.2",
+      "versionName": "슬픈 열대",
+      "start": {
+        "year": "2025",
+        "month": "1",
+        "day": "9"
+      },
+      "end": {
+        "year": "2025",
+        "month": "2",
+        "day": "20"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "안조 날라",
+          "profiles": [
+            "던컨",
+            ""
+          ],
+          "start": {
+            "year": "2025",
+            "month": "1",
+            "day": "9"
+          },
+          "end": {
+            "year": "2025",
+            "month": "2",
+            "day": "20"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2025",
+            "month": "1",
+            "day": "9"
+          },
+          "end": {
+            "year": "2025",
+            "month": "2",
+            "day": "20"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "로페라",
+          "profiles": [
+            "울루",
+            "클릭"
+          ],
+          "start": {
+            "year": "2025",
+            "month": "2",
+            "day": "20"
+          },
+          "end": {
+            "year": "2025",
+            "month": "2",
+            "day": "20"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "피클즈"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": []
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-2-3",
+      "pageName": "2.3",
+      "version": "2.3",
+      "versionName": "울루루 연대기: 런던의 여명",
+      "start": {
+        "year": "2025",
+        "month": "2",
+        "day": "20"
+      },
+      "end": {
+        "year": "2025",
+        "month": "3",
+        "day": "27"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "윌로우",
+          "profiles": [
+            "칸지라",
+            "X"
+          ],
+          "start": {
+            "year": "2025",
+            "month": "2",
+            "day": "20"
+          },
+          "end": {
+            "year": "2025",
+            "month": "3",
+            "day": "6"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2025",
+            "month": "2",
+            "day": "20"
+          },
+          "end": {
+            "year": "2025",
+            "month": "3",
+            "day": "27"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "플러터 페이지",
+          "profiles": [
+            "슬라우치 햇",
+            ""
+          ],
+          "start": {
+            "year": "2025",
+            "month": "3",
+            "day": "6"
+          },
+          "end": {
+            "year": "2025",
+            "month": "3",
+            "day": "27"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "투스 페어리"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            "소더비",
+            "이터니티",
+            "드루비스",
+            "릴리아",
+            "뉴바벨",
+            "갈기 모래"
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-2-4",
+      "pageName": "2.4",
+      "version": "2.4",
+      "versionName": "지구에서의 마지막 밤",
+      "start": {
+        "year": "2025",
+        "month": "3",
+        "day": "27"
+      },
+      "end": {
+        "year": "2025",
+        "month": "4",
+        "day": "24"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "바르카롤라",
+          "profiles": [
+            "네크롤로지스트",
+            "베이비 블루"
+          ],
+          "start": {
+            "year": "2025",
+            "month": "3",
+            "day": "27"
+          },
+          "end": {
+            "year": "2025",
+            "month": "4",
+            "day": "10"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2025",
+            "month": "3",
+            "day": "27"
+          },
+          "end": {
+            "year": "2025",
+            "month": "4",
+            "day": "24"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "파투투",
+          "profiles": [
+            "사츠키",
+            "테넌트"
+          ],
+          "start": {
+            "year": "2025",
+            "month": "4",
+            "day": "10"
+          },
+          "end": {
+            "year": "2025",
+            "month": "4",
+            "day": "24"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "제시카",
+            "칸지라"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            "보이저",
+            "제시카",
+            "릴리아",
+            "뉴바벨"
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-2-5",
+      "pageName": "2.5",
+      "version": "2.5",
+      "versionName": "차이나타운 무비",
+      "start": {
+        "year": "2025",
+        "month": "4",
+        "day": "24"
+      },
+      "end": {
+        "year": "2025",
+        "month": "5",
+        "day": "29"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "양월",
+          "profiles": [
+            "로거헤드",
+            ""
+          ],
+          "start": {
+            "year": "2025",
+            "month": "4",
+            "day": "24"
+          },
+          "end": {
+            "year": "2025",
+            "month": "5",
+            "day": "29"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2025",
+            "month": "4",
+            "day": "24"
+          },
+          "end": {
+            "year": "2025",
+            "month": "5",
+            "day": "29"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "누아르",
+          "profiles": [
+            "마릴린",
+            "찰리"
+          ],
+          "start": {
+            "year": "2025",
+            "month": "5",
+            "day": "29"
+          },
+          "end": {
+            "year": "2025",
+            "month": "5",
+            "day": "29"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "갈기 모래",
+            "찰리"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            "피클즈",
+            "안안 리",
+            "소더비",
+            "드루비스",
+            "제시카"
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-2-6",
+      "pageName": "2.6",
+      "version": "2.6",
+      "versionName": "광기의 역사",
+      "start": {
+        "year": "2025",
+        "month": "5",
+        "day": "29"
+      },
+      "end": {
+        "year": "2025",
+        "month": "7",
+        "day": "3"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "레콜레타",
+          "profiles": [
+            "X",
+            "디거스"
+          ],
+          "start": {
+            "year": "2025",
+            "month": "5",
+            "day": "29"
+          },
+          "end": {
+            "year": "2025",
+            "month": "6",
+            "day": "19"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2025",
+            "month": "5",
+            "day": "29"
+          },
+          "end": {
+            "year": "2025",
+            "month": "7",
+            "day": "3"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "알레프",
+          "profiles": [
+            "사츠키",
+            "디케"
+          ],
+          "start": {
+            "year": "2025",
+            "month": "6",
+            "day": "19"
+          },
+          "end": {
+            "year": "2025",
+            "month": "7",
+            "day": "3"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "갈라보나",
+            "X"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            "갈기 모래",
+            "메디슨 포켓",
+            "멜라니아",
+            "보이저",
+            "이터니티"
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-2-7",
+      "pageName": "2.7",
+      "version": "2.7",
+      "versionName": "1987 우주의 서곡",
+      "start": {
+        "year": "2025",
+        "month": "7",
+        "day": "3"
+      },
+      "end": {
+        "year": "2025",
+        "month": "8",
+        "day": "7"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "히사베스",
+          "profiles": [
+            "네임데이",
+            ""
+          ],
+          "start": {
+            "year": "2025",
+            "month": "7",
+            "day": "3"
+          },
+          "end": {
+            "year": "2025",
+            "month": "7",
+            "day": "24"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "찰리",
+            "호러피디아"
+          ],
+          "start": {
+            "year": "2025",
+            "month": "7",
+            "day": "3"
+          },
+          "end": {
+            "year": "2025",
+            "month": "8",
+            "day": "7"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "키페리나",
+          "profiles": [
+            "찰리",
+            "호러피디아"
+          ],
+          "start": {
+            "year": "2025",
+            "month": "7",
+            "day": "24"
+          },
+          "end": {
+            "year": "2025",
+            "month": "8",
+            "day": "7"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "6",
+            "마릴린"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            "드루비스",
+            "보이저",
+            "안안 리",
+            "에즈라",
+            "제시카"
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-2-9",
+      "pageName": "2.9",
+      "version": "2.9",
+      "versionName": "피렌체의 봄",
+      "start": {
+        "year": "2025",
+        "month": "8",
+        "day": "7"
+      },
+      "end": {
+        "year": "2025",
+        "month": "9",
+        "day": "19"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "에지오",
+          "profiles": [
+            "테넌트",
+            "아부구스트"
+          ],
+          "start": {
+            "year": "2025",
+            "month": "8",
+            "day": "7"
+          },
+          "end": {
+            "year": "2025",
+            "month": "9",
+            "day": "19"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2025",
+            "month": "8",
+            "day": "7"
+          },
+          "end": {
+            "year": "2025",
+            "month": "9",
+            "day": "19"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "카산드라",
+          "profiles": [
+            "벌룬 파티",
+            "블로니"
+          ],
+          "start": {
+            "year": "2025",
+            "month": "9",
+            "day": "19"
+          },
+          "end": {
+            "year": "2025",
+            "month": "9",
+            "day": "19"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "스파토데아",
+            "울루"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            "마커스",
+            "멜라니아",
+            "빌라",
+            "이터니티",
+            "제시카",
+            "피클즈"
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-2-8",
+      "pageName": "2.8",
+      "version": "2.8",
+      "versionName": "복낙원",
+      "start": {
+        "year": "2025",
+        "month": "9",
+        "day": "19"
+      },
+      "end": {
+        "year": "2025",
+        "month": "10",
+        "day": "30"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "노티카",
+          "profiles": [
+            "마릴린",
+            "디거스"
+          ],
+          "start": {
+            "year": "2025",
+            "month": "9",
+            "day": "19"
+          },
+          "end": {
+            "year": "2025",
+            "month": "10",
+            "day": "30"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2025",
+            "month": "9",
+            "day": "19"
+          },
+          "end": {
+            "year": "2025",
+            "month": "10",
+            "day": "30"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "몰디르",
+          "profiles": [
+            "X",
+            "베이비 블루"
+          ],
+          "start": {
+            "year": "2025",
+            "month": "10",
+            "day": "30"
+          },
+          "end": {
+            "year": "2025",
+            "month": "10",
+            "day": "30"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "37",
+            "네크롤로지스트"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            "레굴루스",
+            "메디슨 포켓",
+            "멜라니아",
+            "에즈라",
+            "제멜바이스",
+            "제시카"
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-3",
+      "pageName": "3.0",
+      "version": "3.0",
+      "versionName": "머나먼 길",
+      "start": {
+        "year": "2025",
+        "month": "10",
+        "day": "30"
+      },
+      "end": {
+        "year": "2025",
+        "month": "12",
+        "day": "11"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "센티널",
+          "profiles": [
+            "디케",
+            "던컨"
+          ],
+          "start": {
+            "year": "2025",
+            "month": "10",
+            "day": "30"
+          },
+          "end": {
+            "year": "2025",
+            "month": "11",
+            "day": "20"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2025",
+            "month": "10",
+            "day": "30"
+          },
+          "end": {
+            "year": "2025",
+            "month": "12",
+            "day": "11"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "카론",
+          "profiles": [
+            "블로니",
+            "테넌트"
+          ],
+          "start": {
+            "year": "2025",
+            "month": "11",
+            "day": "20"
+          },
+          "end": {
+            "year": "2025",
+            "month": "12",
+            "day": "11"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "에즈라",
+            "데저트 플란넬"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            "갈천",
+            "드루비스",
+            "메디슨 포켓",
+            "센츄리온",
+            "에즈라",
+            "제멜바이스"
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-3-1",
+      "pageName": "3.1",
+      "version": "3.1",
+      "versionName": "한 밤의 기적소리",
+      "start": {
+        "year": "2025",
+        "month": "12",
+        "day": "11"
+      },
+      "end": {
+        "year": "2026",
+        "month": "1",
+        "day": "20"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "루부스카",
+          "profiles": [
+            "베이비 블루",
+            "클릭"
+          ],
+          "start": {
+            "year": "2025",
+            "month": "12",
+            "day": "11"
+          },
+          "end": {
+            "year": "2026",
+            "month": "1",
+            "day": "1"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2025",
+            "month": "12",
+            "day": "11"
+          },
+          "end": {
+            "year": "2026",
+            "month": "1",
+            "day": "20"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "코르부스",
+          "profiles": [
+            "사츠키",
+            "마릴린"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "1",
+            "day": "1"
+          },
+          "end": {
+            "year": "2026",
+            "month": "1",
+            "day": "20"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "갈천",
+            "테넌트"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            "A나이트",
+            "메디슨 포켓",
+            "아르고스",
+            "에즈라",
+            "이터니티"
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-3-2",
+      "pageName": "3.2",
+      "version": "3.2",
+      "versionName": "흘러가는 축제",
+      "start": {
+        "year": "2026",
+        "month": "1",
+        "day": "20"
+      },
+      "end": {
+        "year": "2026",
+        "month": "3",
+        "day": "5"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "베릴",
+          "profiles": [
+            "블로니",
+            "로거헤드"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "1",
+            "day": "20"
+          },
+          "end": {
+            "year": "2026",
+            "month": "3",
+            "day": "5"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2026",
+            "month": "1",
+            "day": "20"
+          },
+          "end": {
+            "year": "2026",
+            "month": "3",
+            "day": "5"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "브룸",
+          "profiles": [
+            "디거스",
+            "던컨"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "3",
+            "day": "5"
+          },
+          "end": {
+            "year": "2026",
+            "month": "3",
+            "day": "5"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "이졸데",
+            "클릭"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            "갈라보나",
+            "마커스",
+            "빌라",
+            "아르고스",
+            "에즈라",
+            "이졸데"
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-3-3",
+      "pageName": "3.3",
+      "version": "3.3",
+      "versionName": "원정기",
+      "start": {
+        "year": "2026",
+        "month": "3",
+        "day": "5"
+      },
+      "end": {
+        "year": "2026",
+        "month": "4",
+        "day": "16"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "마샤",
+          "profiles": [
+            "마릴린",
+            "클릭"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "3",
+            "day": "5"
+          },
+          "end": {
+            "year": "2026",
+            "month": "3",
+            "day": "26"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2026",
+            "month": "3",
+            "day": "5"
+          },
+          "end": {
+            "year": "2026",
+            "month": "4",
+            "day": "16"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "이고르",
+          "profiles": [
+            "베이비 블루",
+            "호러피디아"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "3",
+            "day": "26"
+          },
+          "end": {
+            "year": "2026",
+            "month": "4",
+            "day": "16"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "마커스",
+            "벌룬 파티"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            "갈라보나",
+            "갈천",
+            "머큐리아",
+            "멜라니아",
+            "안안 리",
+            "이졸데"
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      }
+    },
+    {
+      "id": "version-3-4",
+      "pageName": "3.4",
+      "version": "3.4",
+      "versionName": "불로춘",
+      "start": {
+        "year": "2026",
+        "month": "4",
+        "day": "16"
+      },
+      "end": {
+        "year": "2026",
+        "month": "5",
+        "day": "28"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "노사전",
+          "profiles": [
+            "울루",
+            "테넌트"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "4",
+            "day": "16"
+          },
+          "end": {
+            "year": "2026",
+            "month": "5",
+            "day": "28"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2026",
+            "month": "4",
+            "day": "16"
+          },
+          "end": {
+            "year": "2026",
+            "month": "5",
+            "day": "28"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "정화광",
+          "profiles": [
+            "베이비 블루",
+            "블로니"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "5",
+            "day": "28"
+          },
+          "end": {
+            "year": "2026",
+            "month": "5",
+            "day": "28"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "윈드송"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            "6",
+            "A나이트",
+            "레굴루스",
+            "보이저",
+            "안안 리",
+            "윌로우",
+            "투스 페어리"
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": [
+            "6",
+            "갈기 모래",
+            "뉴바벨",
+            "드루비스",
+            "릴리아",
+            "보이저",
+            "소더비",
+            "윌로우",
+            "이터니티",
+            "제시카",
+            "투스 페어리"
+          ]
+        }
+      }
+    },
+    {
+      "id": "version-3-5",
+      "pageName": "3.5",
+      "version": "3.5",
+      "versionName": "터콰이즈 뱀 클럽",
+      "start": {
+        "year": "2026",
+        "month": "5",
+        "day": "28"
+      },
+      "end": {
+        "year": "2026",
+        "month": "7",
+        "day": "2"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "로렌츠 버터플라이",
+          "profiles": [
+            "X",
+            "바바라"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "5",
+            "day": "28"
+          },
+          "end": {
+            "year": "2026",
+            "month": "6",
+            "day": "18"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2026",
+            "month": "5",
+            "day": "28"
+          },
+          "end": {
+            "year": "2026",
+            "month": "7",
+            "day": "2"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "라모나",
+          "profiles": [
+            "로거헤드",
+            "칸지라"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "6",
+            "day": "18"
+          },
+          "end": {
+            "year": "2026",
+            "month": "7",
+            "day": "2"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "빌라",
+            "아부구스트"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            "소더비",
+            "스파토데아",
+            "윌로우",
+            "이졸데",
+            "투스 페어리",
+            "튜즈데이"
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": [
+            "보이저",
+            "스파토데아",
+            "안안 리",
+            "튜즈데이",
+            "피클즈"
+          ]
+        }
+      }
+    },
+    {
+      "id": "version-3-6",
+      "pageName": "3.6",
+      "version": "3.6",
+      "versionName": "사람들은 어디로 향하는가",
+      "start": {
+        "year": "2026",
+        "month": "7",
+        "day": "2"
+      },
+      "end": {
+        "year": "2026",
+        "month": "7",
+        "day": "23"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "이니그마",
+          "profiles": [
+            "마릴린",
+            "찰리"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "7",
+            "day": "2"
+          },
+          "end": {
+            "year": "2026",
+            "month": "7",
+            "day": "23"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2026",
+            "month": "7",
+            "day": "2"
+          },
+          "end": {
+            "year": "2026",
+            "month": "7",
+            "day": "23"
+          }
+        },
+        "last": {
+          "enabled": false,
+          "label": "후반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2026",
+            "month": "7",
+            "day": "23"
+          },
+          "end": {
+            "year": "2026",
+            "month": "7",
+            "day": "23"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "카카니아"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            "레콜레타",
+            "멜라니아",
+            "윌로우",
+            "이졸데",
+            "투스 페어리",
+            "튜즈데이"
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": [
+            "레콜레타",
+            "메디슨 포켓",
+            "멜라니아",
+            "안안 리",
+            "피클즈"
+          ]
+        }
+      }
+    },
+    {
+      "id": "version-3-7",
+      "pageName": "3.7",
+      "version": "3.7",
+      "versionName": "타인의 비애",
+      "start": {
+        "year": "2026",
+        "month": "8",
+        "day": "20"
+      },
+      "end": {
+        "year": "2026",
+        "month": "10",
+        "day": "1"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "리아논",
+          "profiles": [
+            "울루",
+            "아부구스트"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "8",
+            "day": "20"
+          },
+          "end": {
+            "year": "2026",
+            "month": "10",
+            "day": "1"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "중반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2026",
+            "month": "8",
+            "day": "20"
+          },
+          "end": {
+            "year": "2026",
+            "month": "10",
+            "day": "1"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "미스 스트레인저",
+          "profiles": [
+            "X",
+            "바바라"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "10",
+            "day": "1"
+          },
+          "end": {
+            "year": "2026",
+            "month": "10",
+            "day": "1"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "머큐리아"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            "레굴루스",
+            "레콜레타",
+            "머큐리아",
+            "메디슨 포켓",
+            "멜라니아",
+            "제멜바이스"
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": [
+            "레굴루스",
+            "레콜레타",
+            "메디슨 포켓",
+            "멜라니아",
+            "보이저",
+            "에즈라"
+          ]
+        }
+      }
+    }
+  ]
+}

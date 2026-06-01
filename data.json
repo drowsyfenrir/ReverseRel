@@ -836,7 +836,7 @@
       "name": "투스 페어리",
       "groupId": "g-1780003893554",
       "order": 2,
-      "image": "profile/투스페어리.png",
+      "image": "profile/투스 페어리.png",
       "traits": "치과 의사",
       "description": "",
       "x": 1968,
@@ -1810,7 +1810,7 @@
       "order": 1,
       "x": 3698,
       "y": 1195,
-      "image": "profile/디거스.png",
+      "image": "profile/디거스_재단.png",
       "traits": "",
       "description": "",
       "locked": false
@@ -1906,7 +1906,7 @@
       "order": 3,
       "x": 3409,
       "y": 2591,
-      "image": "profile/투스페어리.png",
+      "image": "profile/투스 페어리.png",
       "traits": "의학 관련 조사 지원",
       "description": "",
       "locked": false
