@@ -8,7 +8,8 @@ const EVENT_TITLE_OFFSETS = {
 
 const versionState = {
   data: null,
-  activeIndex: 0
+  activeIndex: 0,
+  preloadedImages: new Set()
 };
 
 fetch(VERSION_DATA_URL, { cache: "no-store" })
@@ -57,6 +58,7 @@ function renderVersionPage() {
   `;
 
   bindVersionControls();
+  preloadNearbyVersionImages();
 }
 
 function bindVersionControls() {
@@ -92,6 +94,63 @@ function currentPageIndex(data) {
 function findCurrentPage(data) {
   const pages = Array.isArray(data.pages) ? data.pages : [];
   return pages.find((page) => page.id === data.currentPageId) || pages[0];
+}
+
+function preloadNearbyVersionImages() {
+  const pages = getPages();
+  const nearbyPages = [
+    pages[versionState.activeIndex - 1],
+    pages[versionState.activeIndex + 1]
+  ].filter(Boolean);
+
+  const runPreload = () => {
+    nearbyPages
+      .flatMap((page) => collectPageImageUrls(page))
+      .forEach(preloadImage);
+  };
+
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(runPreload, { timeout: 800 });
+  } else {
+    window.setTimeout(runPreload, 150);
+  }
+}
+
+function collectPageImageUrls(page) {
+  const urls = [];
+  const version = clean(page.version || page.pageName || "");
+  if (version) urls.push(`img/version/${version}.png`);
+
+  Object.values(page.pickups || {}).forEach((pickup) => {
+    if (!pickup || pickup.enabled === false) return;
+    addProfileUrl(urls, pickup.name);
+    (Array.isArray(pickup.profiles) ? pickup.profiles : []).forEach((name) => {
+      addProfileUrl(urls, name);
+    });
+  });
+
+  Object.values(page.events || {}).forEach((event) => {
+    if (!event) return;
+    if (event.icon) urls.push(event.icon);
+    (Array.isArray(event.profiles) ? event.profiles : []).forEach((name) => {
+      addProfileUrl(urls, name);
+    });
+  });
+
+  return urls;
+}
+
+function addProfileUrl(urls, name) {
+  const cleanName = clean(name);
+  if (cleanName) urls.push(`profile/${cleanName}.png`);
+}
+
+function preloadImage(url) {
+  if (!url || versionState.preloadedImages.has(url)) return;
+  versionState.preloadedImages.add(url);
+  const image = new Image();
+  image.decoding = "async";
+  image.src = encodeURI(url);
 }
 
 function heroTemplate(page) {
