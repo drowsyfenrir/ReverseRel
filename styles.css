@@ -73,6 +73,9 @@
   font-family: "SCDream", "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif;
 }
 * { box-sizing: border-box; }
+html {
+  scrollbar-gutter: stable;
+}
 body {
   margin: 0;
   color: var(--ink);
@@ -168,12 +171,17 @@ button { border: 0; cursor: pointer; }
   position: relative;
   width: min(900px, calc(100vw - 36px));
   margin: 0 auto;
+  --version-stage-width: min(900px, calc(100vw - 36px));
+  --version-popup-pad-x: 20px;
+  --version-popup-pad-y: 20px;
+  --version-hero-height: calc((var(--version-stage-width) - (var(--version-popup-pad-x) * 2)) * 20 / 43);
+  --version-arrow-center-y: calc(var(--version-popup-pad-y) + var(--version-hero-height) + 25px + 140px + 10px);
 }
 .version-popup {
   position: relative;
   width: 100%;
   margin: 0;
-  padding: 20px 20px 34px;
+  padding: var(--version-popup-pad-y) var(--version-popup-pad-x) 34px;
   background: #f8f9fa;
   border-radius: 15px;
   box-shadow: 0 0 30px rgba(0, 0, 0, .1);
@@ -219,7 +227,7 @@ button { border: 0; cursor: pointer; }
 }
 .version-page-arrow {
   position: absolute;
-  top: 50%;
+  top: var(--version-arrow-center-y);
   z-index: 2;
   display: inline-flex;
   align-items: center;
@@ -298,8 +306,8 @@ button { border: 0; cursor: pointer; }
 }
 .version-hero p {
   margin: 0;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 300;
 }
 .version-list {
   display: grid;
@@ -321,21 +329,30 @@ button { border: 0; cursor: pointer; }
   margin: 0;
 }
 .pickup-card {
-  grid-template-columns: 100px minmax(0, 1fr) 110px;
+  grid-template-columns: minmax(0, 1fr) 210px;
   align-items: center;
   gap: 10px;
   min-height: 140px;
-  padding: 20px 40px;
+  padding: 20px 20px 20px 40px;
+  overflow: hidden;
+  background-color: var(--navy);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .pickup-card .version-card-copy {
   display: block;
   height: auto;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .35);
 }
 .pickup-card .version-card-copy h2 {
   margin: 0 0 8px;
+  color: #fff;
   line-height: 1.2;
 }
 .pickup-card .version-card-copy p {
+  color: #fff;
   line-height: 1.35;
 }
 .version-card-main,
@@ -364,15 +381,22 @@ button { border: 0; cursor: pointer; }
 }
 .version-profile-row {
   display: flex;
+  justify-content: flex-end;
   gap: 10px;
   margin-top: 0;
+}
+.pickup-card .version-image-slot-small {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, .5);
+  box-shadow: 0 4px 12px rgba(6, 22, 51, .18);
 }
 .version-card.has-gallery {
   grid-template-columns: 220px 1fr;
 }
 .event-card {
   display: block;
-  padding: 20px 40px;
+  padding: 10px 40px 20px;
 }
 .version-event-header {
   display: flex;

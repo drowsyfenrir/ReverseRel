@@ -178,18 +178,23 @@ function pickupTemplate(page, pickup) {
   if (!pickup || pickup.enabled === false) return "";
   const label = pickup.label || "";
   const name = pickup.name || "";
-  const profiles = Array.isArray(pickup.profiles) ? pickup.profiles.slice(0, 2) : [];
-  while (profiles.length < 2) profiles.push("");
+  const profiles = (Array.isArray(pickup.profiles) ? pickup.profiles.slice(0, 2) : [])
+    .filter((profile) => clean(profile));
+  const tabImage = name ? `img/tab/${name}.webp` : "";
+  const style = tabImage
+    ? ` style="background-image: linear-gradient(90deg, rgba(0, 0, 0, .82), rgba(0, 0, 0, .36) 42%, rgba(0, 0, 0, 0) 60%), url('${escapeAttr(encodeURI(tabImage))}')"`
+    : "";
   return `
-    <article class="version-card pickup-card">
-      ${profileSlot(name, "version-image-slot-large")}
+    <article class="version-card pickup-card"${style}>
       <div class="version-card-copy">
         <h2>[${escapeHtml(label)}] ${escapeHtml(name)}</h2>
         <p>${escapeHtml(pickupDateRange(pickup, page))}</p>
       </div>
-      <div class="version-profile-row" aria-hidden="true">
-        ${profiles.map((profile) => profileSlot(profile, "version-image-slot-small")).join("")}
-      </div>
+      ${profiles.length ? `
+        <div class="version-profile-row" aria-hidden="true">
+          ${profiles.map((profile) => profileSlot(profile, "version-image-slot-small")).join("")}
+        </div>
+      ` : ""}
     </article>
   `;
 }
@@ -226,7 +231,7 @@ function versionDateRange(page) {
 }
 
 function pickupDateRange(pickup, page) {
-  return `${dateStart(pickup.start || page.start)} → ${dateEnd(pickup.end || page.end)}`;
+  return `${pickupDateStart(pickup.start || page.start)} → ${pickupDateEnd(pickup.end || page.end)}`;
 }
 
 function dateStart(date) {
@@ -235,6 +240,14 @@ function dateStart(date) {
 
 function dateEnd(date) {
   return `${date?.year || ""}년 ${date?.month || ""}월 ${date?.day || ""}일 오전 04:59`;
+}
+
+function pickupDateStart(date) {
+  return `${date?.year || ""}년 ${date?.month || ""}월 ${date?.day || ""}일 05:00`;
+}
+
+function pickupDateEnd(date) {
+  return `${date?.year || ""}년 ${date?.month || ""}월 ${date?.day || ""}일 04:59`;
 }
 
 function clean(value) {

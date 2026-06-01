@@ -81,7 +81,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "레굴루스"
+            "레굴루스",
+            "찰리"
           ]
         },
         "ripples": {
@@ -115,7 +116,7 @@
       },
       "pickups": {
         "first": {
-          "enabled": false,
+          "enabled": true,
           "label": "전반기",
           "name": "멜라니아",
           "profiles": [
@@ -178,7 +179,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "이터니티"
+            "이터니티",
+            "X"
           ]
         },
         "ripples": {
@@ -275,7 +277,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "소더비"
+            "소더비",
+            "네크롤로지스트"
           ]
         },
         "ripples": {
@@ -372,7 +375,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "보이저"
+            "보이저",
+            "테넌트"
           ]
         },
         "ripples": {
@@ -469,7 +473,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "릴리아"
+            "릴리아",
+            "클릭"
           ]
         },
         "ripples": {
@@ -566,7 +571,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "A나이트"
+            "A나이트",
+            "디케"
           ]
         },
         "ripples": {
@@ -663,7 +669,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "드루비스"
+            "드루비스",
+            "사츠키"
           ]
         },
         "ripples": {
@@ -760,7 +767,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "센츄리온"
+            "센츄리온",
+            "베이비 블루"
           ]
         },
         "ripples": {
@@ -798,7 +806,7 @@
           "label": "전반기",
           "name": "빌라",
           "profiles": [
-            "아구스트",
+            "아부구스트",
             ""
           ],
           "start": {
@@ -857,7 +865,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "메디슨 포켓"
+            "메디슨 포켓",
+            "콘블룸"
           ]
         },
         "ripples": {
@@ -954,7 +963,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "안안 리"
+            "안안 리",
+            "벌룬 파티"
           ]
         },
         "ripples": {
@@ -1051,7 +1061,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "뉴바벨"
+            "뉴바벨",
+            "호러피디아"
           ]
         },
         "ripples": {
@@ -1148,7 +1159,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "멜라니아"
+            "멜라니아",
+            "블로니"
           ]
         },
         "ripples": {
@@ -1245,7 +1257,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "피클즈"
+            "피클즈",
+            "디거스"
           ]
         },
         "ripples": {
@@ -2669,7 +2682,7 @@
             "day": "2"
           },
           "end": {
-            "year": "2026",
+            "year": "26",
             "month": "7",
             "day": "23"
           }
@@ -2688,7 +2701,7 @@
             "day": "2"
           },
           "end": {
-            "year": "2026",
+            "year": "26",
             "month": "7",
             "day": "23"
           }
@@ -2707,7 +2720,7 @@
             "day": "23"
           },
           "end": {
-            "year": "2026",
+            "year": "26",
             "month": "7",
             "day": "23"
           }
@@ -2780,7 +2793,7 @@
             "day": "20"
           },
           "end": {
-            "year": "2026",
+            "year": "26",
             "month": "10",
             "day": "1"
           }
@@ -2799,7 +2812,7 @@
             "day": "20"
           },
           "end": {
-            "year": "2026",
+            "year": "26",
             "month": "10",
             "day": "1"
           }
