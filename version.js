@@ -9,6 +9,7 @@ const EVENT_TITLE_OFFSETS = {
 const versionState = {
   data: null,
   activeIndex: 0,
+  viewMode: "current",
   preloadedImages: new Set()
 };
 
@@ -39,22 +40,10 @@ function renderVersionPage() {
 
   root.innerHTML = `
     <div class="version-tabs" aria-label="버전 보기">
-      <button class="version-tab is-active" type="button" data-version-current>현재 버전</button>
-      <button class="version-tab" type="button" data-version-all>모든 버전</button>
+      <button class="version-tab ${versionState.viewMode === "current" ? "is-active" : ""}" type="button" data-version-current>현재 버전</button>
+      <button class="version-tab ${versionState.viewMode === "all" ? "is-active" : ""}" type="button" data-version-all>모든 버전</button>
     </div>
-    <div class="version-stage">
-      <button class="version-page-arrow version-page-arrow-prev" type="button" data-version-prev aria-label="이전 버전" ${versionState.activeIndex <= 0 ? "disabled" : ""}>&lt;</button>
-      <section class="version-popup" aria-label="버전 요약">
-        ${heroTemplate(page)}
-        <div class="version-list">
-          ${pickupTemplates(page)}
-          ${eventTemplate(page, "highCounter")}
-          ${eventTemplate(page, "ripples")}
-          ${eventTemplate(page, "photoscope")}
-        </div>
-      </section>
-      <button class="version-page-arrow version-page-arrow-next" type="button" data-version-next aria-label="다음 버전" ${versionState.activeIndex >= pages.length - 1 ? "disabled" : ""}>&gt;</button>
-    </div>
+    ${versionState.viewMode === "all" ? allVersionsTableTemplate(pages) : currentVersionTemplate(page, pages)}
   `;
 
   bindVersionControls();
@@ -63,7 +52,12 @@ function renderVersionPage() {
 
 function bindVersionControls() {
   document.querySelector("[data-version-current]")?.addEventListener("click", () => {
+    versionState.viewMode = "current";
     versionState.activeIndex = currentPageIndex(versionState.data);
+    renderVersionPage();
+  });
+  document.querySelector("[data-version-all]")?.addEventListener("click", () => {
+    versionState.viewMode = "all";
     renderVersionPage();
   });
   document.querySelector("[data-version-prev]")?.addEventListener("click", () => {
@@ -79,6 +73,76 @@ function bindVersionControls() {
       renderVersionPage();
     }
   });
+  document.querySelectorAll("[data-version-row-index]").forEach((row) => {
+    row.addEventListener("click", () => {
+      versionState.activeIndex = Number(row.dataset.versionRowIndex);
+      versionState.viewMode = "current";
+      renderVersionPage();
+    });
+  });
+}
+
+function currentVersionTemplate(page, pages) {
+  return `
+    <div class="version-stage">
+      <button class="version-page-arrow version-page-arrow-prev" type="button" data-version-prev aria-label="이전 버전" ${versionState.activeIndex <= 0 ? "disabled" : ""}>&lt;</button>
+      <section class="version-popup" aria-label="버전 요약">
+        ${heroTemplate(page)}
+        <div class="version-list">
+          ${pickupTemplates(page)}
+          ${eventTemplate(page, "highCounter")}
+          ${eventTemplate(page, "ripples")}
+          ${eventTemplate(page, "photoscope")}
+        </div>
+      </section>
+      <button class="version-page-arrow version-page-arrow-next" type="button" data-version-next aria-label="다음 버전" ${versionState.activeIndex >= pages.length - 1 ? "disabled" : ""}>&gt;</button>
+    </div>
+  `;
+}
+
+function allVersionsTableTemplate(pages) {
+  return `
+    <section class="version-table-stage" aria-label="모든 버전 비교표">
+      <div class="version-table-scroll">
+        <table class="version-table">
+          <thead>
+            <tr>
+              <th>버전</th>
+              <th>버전명</th>
+              <th>일정</th>
+              <th>전반기</th>
+              <th>후반기</th>
+              <th>배포</th>
+              <th>고음 카운터</th>
+              <th>호수의 물결</th>
+              <th>비구상 촬영기</th>
+              <th class="version-table-duration">기간</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${pages.map((page, index) => versionTableRowTemplate(page, index)).join("")}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  `;
+}
+
+function versionTableRowTemplate(page, index) {
+  return `
+    <tr data-version-row-index="${index}" title="클릭하면 해당 버전 상세로 이동">
+      <th class="version-table-version" scope="row">${escapeHtml(page.version || "")}</th>
+      <td>${tagList([page.versionName], "name")}</td>
+      <td class="version-table-schedule">${versionTableSchedule(page)}</td>
+      <td class="version-table-pickup-cell">${pickupTagList(page, "first")}</td>
+      <td class="version-table-pickup-cell">${pickupTagList(page, "last")}</td>
+      <td>${tagList(pickupNames(page, "middle"), "release")}</td>
+      <td>${tagList(eventNames(page, "highCounter"), "event")}</td>
+      <td>${tagList(eventNames(page, "ripples"), "ripples")}</td>
+      <td>${tagList(eventNames(page, "photoscope"), "photoscope")}</td>
+      <td class="version-table-duration">${escapeHtml(versionDurationWeeks(page))}</td>
+    </tr>
+  `;
 }
 
 function getPages() {
@@ -169,14 +233,14 @@ function heroTemplate(page) {
 
 function pickupTemplates(page) {
   const pickups = page.pickups || {};
-  return ["first", "middle", "last"]
-    .map((key) => pickupTemplate(page, pickups[key]))
+  return ["first", "last", "middle"]
+    .map((key) => pickupTemplate(page, pickups[key], key))
     .join("");
 }
 
-function pickupTemplate(page, pickup) {
+function pickupTemplate(page, pickup, key) {
   if (!pickup || pickup.enabled === false) return "";
-  const label = pickup.label || "";
+  const label = key === "middle" ? "배포" : pickup.label || "";
   const name = pickup.name || "";
   const profiles = (Array.isArray(pickup.profiles) ? pickup.profiles.slice(0, 2) : [])
     .filter((profile) => clean(profile));
@@ -226,8 +290,57 @@ function profileSlot(name, sizeClass) {
   return `<div class="version-image-slot ${sizeClass}"${style}></div>`;
 }
 
+function pickupNames(page, key) {
+  const pickup = page.pickups?.[key];
+  if (!pickup || pickup.enabled === false) return [];
+  return uniqueNames([pickup.name, ...(Array.isArray(pickup.profiles) ? pickup.profiles : [])]);
+}
+
+function pickupTagList(page, key) {
+  const pickup = page.pickups?.[key];
+  if (!pickup || pickup.enabled === false) return tagItems([]);
+  const items = [];
+  const pickupName = clean(pickup.name);
+  if (pickupName) items.push({ name: pickupName, tone: "pickup" });
+  uniqueNames(Array.isArray(pickup.profiles) ? pickup.profiles : []).forEach((name) => {
+    items.push({ name, tone: "five-star" });
+  });
+  return tagItems(items);
+}
+
+function eventNames(page, key) {
+  const event = page.events?.[key];
+  if (!event) return [];
+  return uniqueNames(Array.isArray(event.profiles) ? event.profiles : []);
+}
+
+function uniqueNames(names) {
+  return [...new Set(names.map(clean).filter(Boolean))];
+}
+
+function tagList(names, tone) {
+  const cleanNames = uniqueNames(names);
+  return tagItems(cleanNames.map((name) => ({ name, tone })));
+}
+
+function tagItems(items) {
+  if (items.length === 0) return '<span class="version-empty">-</span>';
+  return `
+    <div class="version-tag-list">
+      ${items.map((item) => `<span class="version-tag version-tag--${item.tone}">${escapeHtml(item.name)}</span>`).join("")}
+    </div>
+  `;
+}
+
 function versionDateRange(page) {
   return `${dateStart(page.start)} → ${dateEnd(page.end)}`;
+}
+
+function versionTableSchedule(page) {
+  return `
+    <span>${escapeHtml(dateStart(page.start))}</span>
+    <span>→ ${escapeHtml(dateEnd(page.end))}</span>
+  `;
 }
 
 function pickupDateRange(pickup, page) {
@@ -248,6 +361,22 @@ function pickupDateStart(date) {
 
 function pickupDateEnd(date) {
   return `${date?.year || ""}년 ${date?.month || ""}월 ${date?.day || ""}일 04:59`;
+}
+
+function versionDurationWeeks(page) {
+  const start = dateToTimestamp(page.start);
+  const end = dateToTimestamp(page.end);
+  if (!Number.isFinite(start) || !Number.isFinite(end) || end <= start) return "-";
+  const days = (end - start) / 86400000;
+  return `${Math.max(1, Math.ceil(days / 7))}주`;
+}
+
+function dateToTimestamp(date) {
+  const year = Number(date?.year);
+  const month = Number(date?.month);
+  const day = Number(date?.day);
+  if (!year || !month || !day) return NaN;
+  return new Date(year, month - 1, day).getTime();
 }
 
 function clean(value) {

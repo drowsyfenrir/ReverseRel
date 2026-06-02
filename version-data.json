@@ -38,7 +38,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -136,7 +136,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -234,7 +234,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -332,7 +332,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -430,7 +430,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -528,7 +528,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -626,7 +626,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -724,7 +724,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -822,7 +822,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -919,9 +919,9 @@
           }
         },
         "middle": {
-          "enabled": false,
-          "label": "중반기",
-          "name": "",
+          "enabled": true,
+          "label": "배포",
+          "name": "제멜바이스",
           "profiles": [
             "",
             ""
@@ -1018,7 +1018,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -1116,7 +1116,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -1214,7 +1214,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -1312,7 +1312,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -1416,7 +1416,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -1519,7 +1519,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -1623,7 +1623,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -1727,7 +1727,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "찰리",
@@ -1831,7 +1831,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -1935,9 +1935,9 @@
           }
         },
         "middle": {
-          "enabled": false,
-          "label": "중반기",
-          "name": "",
+          "enabled": true,
+          "label": "배포",
+          "name": "울리히",
           "profiles": [
             "",
             ""
@@ -2041,7 +2041,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -2146,7 +2146,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -2250,7 +2250,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -2355,7 +2355,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -2460,7 +2460,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -2578,7 +2578,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -2689,7 +2689,7 @@
         },
         "middle": {
           "enabled": false,
-          "label": "중반기",
+          "label": "배포",
           "name": "",
           "profiles": [
             "",
@@ -2799,9 +2799,9 @@
           }
         },
         "middle": {
-          "enabled": false,
-          "label": "중반기",
-          "name": "",
+          "enabled": true,
+          "label": "배포",
+          "name": "코펠리아",
           "profiles": [
             "",
             ""
@@ -2826,7 +2826,7 @@
             "바바라"
           ],
           "start": {
-            "year": "2026",
+            "year": "26",
             "month": "10",
             "day": "1"
           },
