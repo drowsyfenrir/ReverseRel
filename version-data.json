@@ -2128,7 +2128,13 @@
           "profiles": []
         }
       },
-      "exchangeCodes": []
+      "exchangeCodes": [
+        {
+          "name": "머나먼길의여정",
+          "month": "12",
+          "day": "11"
+        }
+      ]
     },
     {
       "id": "version-3-1",
@@ -2233,7 +2239,28 @@
           "profiles": []
         }
       },
-      "exchangeCodes": []
+      "exchangeCodes": [
+        {
+          "name": "흡혈귀열차",
+          "month": "1",
+          "day": "4"
+        },
+        {
+          "name": "섬뜩한열차여행",
+          "month": "1",
+          "day": "20"
+        },
+        {
+          "name": "여명을기다리는차장",
+          "month": "1",
+          "day": "20"
+        },
+        {
+          "name": "영혼인도자",
+          "month": "1",
+          "day": "20"
+        }
+      ]
     },
     {
       "id": "version-3-2",
@@ -2339,7 +2366,23 @@
           "profiles": []
         }
       },
-      "exchangeCodes": []
+      "exchangeCodes": [
+        {
+          "name": "리버스2026순례버전오픈!",
+          "month": "3",
+          "day": "5"
+        },
+        {
+          "name": "운명의친구",
+          "month": "3",
+          "day": "5"
+        },
+        {
+          "name": "보석사냥꾼",
+          "month": "3",
+          "day": "5"
+        }
+      ]
     },
     {
       "id": "version-3-3",
@@ -2445,7 +2488,23 @@
           "profiles": []
         }
       },
-      "exchangeCodes": []
+      "exchangeCodes": [
+        {
+          "name": "백의의기사",
+          "month": "3",
+          "day": "26"
+        },
+        {
+          "name": "핏빛색전투의노래",
+          "month": "4",
+          "day": "16"
+        },
+        {
+          "name": "철혈의장군",
+          "month": "4",
+          "day": "16"
+        }
+      ]
     },
     {
       "id": "version-3-4",
@@ -2564,7 +2623,23 @@
           ]
         }
       },
-      "exchangeCodes": []
+      "exchangeCodes": [
+        {
+          "name": "2.5주년특별버전오픈!",
+          "month": "5",
+          "day": "28"
+        },
+        {
+          "name": "마지막백마파제자",
+          "month": "5",
+          "day": "28"
+        },
+        {
+          "name": "낚시고수정화광",
+          "month": "5",
+          "day": "28"
+        }
+      ]
     },
     {
       "id": "version-3-5",

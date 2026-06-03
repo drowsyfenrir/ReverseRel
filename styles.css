@@ -1048,7 +1048,7 @@ button { border: 0; cursor: pointer; }
 }
 .version-editor-pickup-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
 }
 .version-editor-pickup-dates {
@@ -1057,7 +1057,7 @@ button { border: 0; cursor: pointer; }
   gap: 8px;
 }
 .version-editor-events-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: start;
 }
 .version-editor-check {
