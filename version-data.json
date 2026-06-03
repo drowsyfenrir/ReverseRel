@@ -97,7 +97,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-1-1",
@@ -195,7 +196,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-1-2",
@@ -293,7 +295,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-1-3",
@@ -391,7 +394,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-1-4",
@@ -489,7 +493,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-1-5",
@@ -587,7 +592,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-1-6",
@@ -685,7 +691,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-1-7",
@@ -783,7 +790,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-1-8",
@@ -881,7 +889,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-1-9",
@@ -979,7 +988,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-2",
@@ -1077,7 +1087,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-2-1",
@@ -1175,7 +1186,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-2-2",
@@ -1273,7 +1285,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-2-3",
@@ -1377,7 +1390,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-2-4",
@@ -1480,7 +1494,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-2-5",
@@ -1584,7 +1599,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-2-6",
@@ -1688,7 +1704,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-2-7",
@@ -1792,7 +1809,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-2-9",
@@ -1897,7 +1915,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-2-8",
@@ -2002,7 +2021,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-3",
@@ -2107,7 +2127,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-3-1",
@@ -2211,7 +2232,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-3-2",
@@ -2316,7 +2338,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-3-3",
@@ -2421,7 +2444,8 @@
           "dateMode": "none",
           "profiles": []
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-3-4",
@@ -2539,7 +2563,8 @@
             "투스 페어리"
           ]
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-3-5",
@@ -2596,7 +2621,7 @@
           }
         },
         "last": {
-          "enabled": true,
+          "enabled": false,
           "label": "후반기",
           "name": "라모나",
           "profiles": [
@@ -2650,7 +2675,24 @@
             "피클즈"
           ]
         }
-      }
+      },
+      "exchangeCodes": [
+        {
+          "name": "완벽한추론",
+          "month": "6",
+          "day": "18"
+        },
+        {
+          "name": "멕시코시티의비밀",
+          "month": "7",
+          "day": "2"
+        },
+        {
+          "name": "터콰이즈뱀클럽버전오픈",
+          "month": "7",
+          "day": "2"
+        }
+      ]
     },
     {
       "id": "version-3-6",
@@ -2761,7 +2803,8 @@
             "피클즈"
           ]
         }
-      }
+      },
+      "exchangeCodes": []
     },
     {
       "id": "version-3-7",
@@ -2872,7 +2915,8 @@
             "에즈라"
           ]
         }
-      }
+      },
+      "exchangeCodes": []
     }
   ]
 }

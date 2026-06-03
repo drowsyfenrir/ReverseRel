@@ -1,4 +1,4 @@
-const VERSION_DATA_URL = `version-data.json?v=${Date.now()}`;
+﻿const VERSION_DATA_URL = `version-data.json?v=${Date.now()}`;
 
 const EVENT_TITLE_OFFSETS = {
   highCounter: false,
@@ -73,6 +73,24 @@ function bindVersionControls() {
       renderVersionPage();
     }
   });
+  document.querySelectorAll("[data-copy-code]").forEach((button) => {
+    button.addEventListener("click", async (event) => {
+      event.stopPropagation();
+      const value = button.dataset.copyCode || "";
+      if (!value) return;
+      try {
+        await navigator.clipboard.writeText(value);
+      } catch {
+        const field = document.createElement("textarea");
+        field.value = value;
+        document.body.append(field);
+        field.select();
+        document.execCommand("copy");
+        field.remove();
+      }
+      showCopyToast("복사 완료.");
+    });
+  });
   document.querySelectorAll("[data-version-row-index]").forEach((row) => {
     row.addEventListener("click", () => {
       versionState.activeIndex = Number(row.dataset.versionRowIndex);
@@ -90,7 +108,7 @@ function currentVersionTemplate(page, pages) {
         ${heroTemplate(page)}
         <div class="version-list">
           ${pickupTemplates(page)}
-          ${eventTemplate(page, "highCounter")}
+          ${highCounterTemplate(page)}
           ${eventTemplate(page, "ripples")}
           ${eventTemplate(page, "photoscope")}
         </div>
@@ -149,6 +167,25 @@ function getPages() {
   return Array.isArray(versionState.data?.pages) ? versionState.data.pages : [];
 }
 
+function showCopyToast(message) {
+  let toast = document.querySelector(".copy-toast");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.className = "copy-toast";
+    toast.setAttribute("role", "status");
+    toast.setAttribute("aria-live", "polite");
+    document.body.append(toast);
+  }
+  toast.textContent = message;
+  toast.classList.remove("is-visible");
+  window.clearTimeout(showCopyToast.timer);
+  requestAnimationFrame(() => {
+    toast.classList.add("is-visible");
+  });
+  showCopyToast.timer = window.setTimeout(() => {
+    toast.classList.remove("is-visible");
+  }, 1600);
+}
 function currentPageIndex(data) {
   const pages = Array.isArray(data?.pages) ? data.pages : [];
   const index = pages.findIndex((page) => page.id === data.currentPageId);
@@ -263,6 +300,48 @@ function pickupTemplate(page, pickup, key) {
   `;
 }
 
+function highCounterTemplate(page) {
+  const event = page.events?.highCounter;
+  if (!event) return "";
+  const profiles = Array.isArray(event.profiles) ? event.profiles : [];
+  const codes = exchangeCodes(page);
+  return `
+    <article class="version-card event-card high-counter-card">
+      <div class="high-counter-layout ${codes.length ? "has-exchange" : ""}">
+        <div class="high-counter-main">
+          <div class="version-event-header">
+            <img class="version-event-icon" src="${escapeAttr(event.icon || "")}" alt="" />
+            <h2>[${escapeHtml(event.label || "")}]</h2>
+          </div>
+          <div class="version-event-profiles" aria-hidden="true">
+            ${profiles.map((name) => profileSlot(name, "version-image-slot-large")).join("")}
+          </div>
+        </div>
+        ${codes.length ? `
+          <div class="high-counter-divider" aria-hidden="true"></div>
+          <div class="exchange-code-panel">
+            <h2>[교환 코드]</h2>
+            <div class="exchange-code-list">
+              ${codes.map((code) => exchangeCodeItem(code)).join("")}
+            </div>
+          </div>
+        ` : ""}
+      </div>
+    </article>
+  `;
+}
+
+function exchangeCodeItem(code) {
+  return `
+    <div class="exchange-code-item">
+      <button class="exchange-copy-button" type="button" data-copy-code="${escapeAttr(code.name)}" aria-label="${escapeAttr(code.name)} 복사"></button>
+      <span class="exchange-code-name">${escapeHtml(code.name)}</span>
+      <span class="exchange-code-separator" aria-hidden="true">|</span>
+      <span class="exchange-code-date">${escapeHtml(exchangeCodeDate(code))}</span>
+    </div>
+  `;
+}
+
 function eventTemplate(page, key) {
   const event = page.events?.[key];
   if (!event) return "";
@@ -306,6 +385,20 @@ function pickupTagList(page, key) {
     items.push({ name, tone: "five-star" });
   });
   return tagItems(items);
+}
+
+function exchangeCodes(page) {
+  return (Array.isArray(page.exchangeCodes) ? page.exchangeCodes : [])
+    .map((code) => ({
+      name: clean(code?.name),
+      month: clean(code?.month),
+      day: clean(code?.day)
+    }))
+    .filter((code) => code.name);
+}
+
+function exchangeCodeDate(code) {
+  return `${code.month || ""}월 ${code.day || ""}일 04:59까지`;
 }
 
 function eventNames(page, key) {

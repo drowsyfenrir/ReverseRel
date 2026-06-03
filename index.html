@@ -1,13 +1,13 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light" />
   <title>리버스: 1999 도서관</title>
-  <meta name="description" content="리버스: 1999 세계관의 인물과 단체 관계를 정리한 관계도입니다." />
+  <meta name="description" content="리버스: 1999 도서관의 관계도와 버전 요약을 살펴볼 수 있는 입구 페이지입니다." />
   <meta property="og:title" content="리버스: 1999 도서관" />
-  <meta property="og:description" content="리버스: 1999 세계관의 인물과 단체 관계를 한눈에 살펴볼 수 있는 관계도입니다." />
+  <meta property="og:description" content="리버스: 1999 관계도와 버전 요약을 한곳에서 확인할 수 있습니다." />
   <meta property="og:image" content="https://reverselibrary.pages.dev/img/thumbnail.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -15,171 +15,37 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="리버스: 1999 도서관" />
-  <meta name="twitter:description" content="리버스: 1999 세계관의 인물과 단체 관계를 한눈에 살펴볼 수 있는 관계도입니다." />
+  <meta name="twitter:description" content="리버스: 1999 관계도와 버전 요약을 한곳에서 확인할 수 있습니다." />
   <meta name="twitter:image" content="https://reverselibrary.pages.dev/img/thumbnail.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="img/icon/32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="img/icon/16.png" />
   <link rel="apple-touch-icon" href="img/icon/fabicon.png" />
-  <link rel="stylesheet" href="styles.css?v=20260601-version-layout" />
+  <link rel="stylesheet" href="styles.css?v=20260603-home" />
 </head>
-<body>
-  <header class="topbar">
-    <div class="header-title">
-      <a class="brand" href="index.html"><img src="img/title.png" alt="" /></a>
-      <a href="index.html">관계도</a>
-      <span class="nav-separator" aria-hidden="true">|</span>
-      <a href="version.html">버전 요약</a>
-    </div>
-  </header>
-  <main class="app-shell">
-    <section id="graph" class="graph-canvas" aria-label="인물 관계도"></section>
+<body class="home-page">
+  <main class="home-shell" aria-label="리버스: 1999 도서관 홈">
+    <section class="home-popup">
+      <h1>리버스1999: 도서관</h1>
+      <p>해당 사이트는 미래시를 포함한 스포일러가 포함될 수 있습니다.</p>
+      <nav class="home-links" aria-label="페이지 이동">
+        <a class="home-link" href="version.html">
+          <span class="home-icon home-icon--version" aria-hidden="true"></span>
+          <span>버전 요약</span>
+        </a>
+        <a class="home-link" href="relationship.html">
+          <span class="home-icon home-icon--relationship" aria-hidden="true"></span>
+          <span>인물 관계도</span>
+        </a>
+        <div class="home-link home-link--disabled" aria-disabled="true">
+          <span class="home-icon home-icon--timeline" aria-hidden="true"></span>
+          <span>폭풍우 연표 (준비 중)</span>
+        </div>
+        <div class="home-link home-link--disabled" aria-disabled="true">
+          <span class="home-icon home-icon--empty" aria-hidden="true"></span>
+          <span>덱 사용법 (준비 중)</span>
+        </div>
+      </nav>
+    </section>
   </main>
-  <div class="transform-status" aria-live="polite">
-    <div class="nav-menu">
-      <button id="groupJumpButton" class="nav-menu-button" type="button" aria-haspopup="true" aria-expanded="false">그룹 이동</button>
-      <div id="groupJumpOptions" class="nav-menu-options" hidden></div>
-    </div>
-    <div class="zoom-menu">
-      <button id="zoomStatus" class="zoom-status-button" type="button" aria-haspopup="true" aria-expanded="false">🔎 100%</button>
-      <div id="zoomOptions" class="zoom-options" hidden>
-        <button type="button" data-zoom="0.5">50%</button>
-        <button type="button" data-zoom="0.7">70%</button>
-        <button type="button" data-zoom="1">100%</button>
-        <button type="button" data-zoom="1.5">150%</button>
-        <button type="button" data-zoom="2">200%</button>
-      </div>
-    </div>
-  </div>
-  <script src="vendor/panzoom.min.js"></script>
-  <script src="graph.js?v=20260530-zoom-speed"></script>
-  <script>
-    window.RelationshipGraph.bootViewer({ dataUrl: 'data.json' }).then(({ data, graph }) => {
-      if (!window.panzoom) return;
-      const initialZoom = 1;
-      const targetGroup = data.groups.find(group => group.name === '타임키퍼 소대');
-      const shell = document.querySelector('.app-shell');
-      const targetElement = targetGroup
-        ? graph.querySelector(`[data-type="group"][data-id="${CSS.escape(targetGroup.id)}"]`)
-        : null;
-      const groupJumpButton = document.getElementById('groupJumpButton');
-      const groupJumpOptions = document.getElementById('groupJumpOptions');
-      const zoomStatus = document.getElementById('zoomStatus');
-      const zoomOptions = document.getElementById('zoomOptions');
-      const topGroups = data.groups.filter(group => !group.parentGroupId);
-      topGroups.forEach(group => {
-        const button = document.createElement('button');
-        button.type = 'button';
-        button.dataset.groupId = group.id;
-        button.textContent = group.name;
-        groupJumpOptions.append(button);
-      });
-      groupJumpButton.textContent = targetGroup?.name || topGroups[0]?.name || '그룹 이동';
-      let panzoomInstance;
-      let initialTransform;
-
-      function isGraphBackground(target) {
-        return target === graph || target.classList.contains('graph-svg') || target.classList.contains('relation-line-hit');
-      }
-
-      function centerOnTarget() {
-        panzoomInstance.zoomAbs(0, 0, initialZoom);
-        panzoomInstance.moveTo(0, 0);
-        centerElement(targetElement || graph);
-      }
-
-      function centerElement(element) {
-        const viewport = shell.getBoundingClientRect();
-        const title = element.classList.contains('group-box') ? element.querySelector('.group-title') : null;
-        const targetRect = (title || element).getBoundingClientRect();
-        const dx = viewport.left + viewport.width / 2 - (targetRect.left + targetRect.width / 2);
-        const dy = viewport.top + viewport.height / 2 - (targetRect.top + targetRect.height / 2);
-        panzoomInstance.moveBy(dx, dy);
-      }
-
-      function resetView() {
-        if (!initialTransform) {
-          centerOnTarget();
-          updateTransformStatus();
-          return;
-        }
-        panzoomInstance.zoomAbs(0, 0, initialTransform.scale);
-        panzoomInstance.moveTo(initialTransform.x, initialTransform.y);
-        updateTransformStatus();
-      }
-
-      function updateTransformStatus() {
-        const transform = panzoomInstance.getTransform();
-        const scale = Math.round(transform.scale * 100);
-        zoomStatus.textContent = `🔎 ${scale}%`;
-      }
-
-      function setZoomMenu(open) {
-        zoomOptions.hidden = !open;
-        zoomStatus.setAttribute('aria-expanded', String(open));
-      }
-
-      function setGroupMenu(open) {
-        groupJumpOptions.hidden = !open;
-        groupJumpButton.setAttribute('aria-expanded', String(open));
-      }
-
-      function zoomTo(scale) {
-        const viewport = shell.getBoundingClientRect();
-        panzoomInstance.zoomAbs(viewport.left + viewport.width / 2, viewport.top + viewport.height / 2, scale);
-        updateTransformStatus();
-      }
-
-      panzoomInstance = window.panzoom(graph, {
-        maxZoom: 2,
-        minZoom: 0.5,
-        initialZoom,
-        zoomSpeed: 0.05,
-        smoothScroll: true,
-        bounds: false,
-        zoomDoubleClickSpeed: 1,
-        onDoubleClick(event) {
-          if (isGraphBackground(event.target)) {
-            resetView();
-          }
-          return false;
-        }
-      });
-      centerOnTarget();
-      initialTransform = { ...panzoomInstance.getTransform() };
-      updateTransformStatus();
-      panzoomInstance.on('transform', updateTransformStatus);
-      groupJumpButton.addEventListener('click', event => {
-        event.stopPropagation();
-        setGroupMenu(groupJumpOptions.hidden);
-        setZoomMenu(false);
-      });
-      groupJumpOptions.addEventListener('click', event => {
-        const button = event.target.closest('[data-group-id]');
-        if (!button) return;
-        const group = data.groups.find(item => item.id === button.dataset.groupId);
-        const groupElement = group ? graph.querySelector(`[data-type="group"][data-id="${CSS.escape(group.id)}"]`) : null;
-        if (groupElement) {
-          groupJumpButton.textContent = group.name;
-          centerElement(groupElement);
-        }
-        setGroupMenu(false);
-      });
-      zoomStatus.addEventListener('click', event => {
-        event.stopPropagation();
-        setZoomMenu(zoomOptions.hidden);
-        setGroupMenu(false);
-      });
-      zoomOptions.addEventListener('click', event => {
-        const button = event.target.closest('[data-zoom]');
-        if (!button) return;
-        zoomTo(Number(button.dataset.zoom));
-        setZoomMenu(false);
-      });
-      document.addEventListener('click', event => {
-        if (!event.target.closest('.nav-menu')) setGroupMenu(false);
-        if (!event.target.closest('.zoom-menu')) setZoomMenu(false);
-      });
-    });
-  </script>
 </body>
 </html>
