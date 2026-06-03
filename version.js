@@ -334,8 +334,10 @@ function highCounterTemplate(page) {
 function exchangeCodeItem(code) {
   return `
     <div class="exchange-code-item">
-      <button class="exchange-copy-button" type="button" data-copy-code="${escapeAttr(code.name)}" aria-label="${escapeAttr(code.name)} 복사"></button>
-      <span class="exchange-code-name">${escapeHtml(code.name)}</span>
+      <button class="exchange-copy-button" type="button" data-copy-code="${escapeAttr(code.name)}" aria-label="${escapeAttr(code.name)} 복사">
+        <span class="exchange-copy-icon" aria-hidden="true"></span>
+        <span class="exchange-code-name">${escapeHtml(code.name)}</span>
+      </button>
       <span class="exchange-code-separator" aria-hidden="true">|</span>
       <span class="exchange-code-date">${escapeHtml(exchangeCodeDate(code))}</span>
     </div>
@@ -353,20 +355,20 @@ function eventTemplate(page, key) {
       <div class="version-event-header">
         <img class="version-event-icon" src="${escapeAttr(event.icon || "")}" alt="" />
         <h2>[${escapeHtml(event.label || "")}]</h2>
-        <p>${escapeHtml(event.dateMode === "none" ? "기간 제한 없음" : versionDateRange(page))}</p>
+        <p>${escapeHtml(key === "ripples" ? "*해당 버전 광상을 받은 마도학자는 주황빛으로 빛납니다." : (event.dateMode === "none" ? "기간 제한 없음" : versionDateRange(page)))}</p>
       </div>
       <div class="version-event-profiles" aria-hidden="true">
-        ${profiles.map((name) => profileSlot(name, "version-image-slot-large")).join("")}
+        ${profiles.map((profile) => profileSlot(profile, "version-image-slot-large", key === "ripples" && profileHighlighted(profile))).join("")}
       </div>
     </article>
   `;
 }
 
-function profileSlot(name, sizeClass) {
-  const cleanName = clean(name);
+function profileSlot(name, sizeClass, highlighted = false) {
+  const cleanName = profileName(name);
   const image = cleanName ? `profile/${cleanName}.png` : "";
   const style = image ? ` style="background-image: url('${escapeAttr(encodeURI(image))}')"` : "";
-  return `<div class="version-image-slot ${sizeClass}"${style}></div>`;
+  return `<div class="version-image-slot ${sizeClass}${highlighted ? " is-highlighted" : ""}"${style}></div>`;
 }
 
 function pickupNames(page, key) {
@@ -407,8 +409,16 @@ function eventNames(page, key) {
   return uniqueNames(Array.isArray(event.profiles) ? event.profiles : []);
 }
 
+function profileName(profile) {
+  return clean(typeof profile === "string" ? profile : profile?.name);
+}
+
+function profileHighlighted(profile) {
+  return Boolean(typeof profile === "object" && profile?.highlighted);
+}
+
 function uniqueNames(names) {
-  return [...new Set(names.map(clean).filter(Boolean))];
+  return [...new Set(names.map(profileName).filter(Boolean))];
 }
 
 function tagList(names, tone) {

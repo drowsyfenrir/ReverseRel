@@ -280,7 +280,7 @@
           "dateMode": "version",
           "profiles": [
             "소더비",
-            "네크롤로지스트"
+            "마릴린"
           ]
         },
         "ripples": {
@@ -379,7 +379,7 @@
           "dateMode": "version",
           "profiles": [
             "보이저",
-            "테넌트"
+            "네크롤로지스트"
           ]
         },
         "ripples": {
@@ -478,7 +478,7 @@
           "dateMode": "version",
           "profiles": [
             "릴리아",
-            "클릭"
+            "테넌트"
           ]
         },
         "ripples": {
@@ -577,7 +577,7 @@
           "dateMode": "version",
           "profiles": [
             "A나이트",
-            "디케"
+            "클릭"
           ]
         },
         "ripples": {
@@ -676,7 +676,7 @@
           "dateMode": "version",
           "profiles": [
             "드루비스",
-            "사츠키"
+            "디케"
           ]
         },
         "ripples": {
@@ -775,7 +775,7 @@
           "dateMode": "version",
           "profiles": [
             "센츄리온",
-            "베이비 블루"
+            "사츠키"
           ]
         },
         "ripples": {
@@ -874,7 +874,7 @@
           "dateMode": "version",
           "profiles": [
             "메디슨 포켓",
-            "콘블룸"
+            "베이비 블루"
           ]
         },
         "ripples": {
@@ -973,7 +973,7 @@
           "dateMode": "version",
           "profiles": [
             "안안 리",
-            "벌룬 파티"
+            "콘블룸"
           ]
         },
         "ripples": {
@@ -1072,7 +1072,7 @@
           "dateMode": "version",
           "profiles": [
             "뉴바벨",
-            "호러피디아"
+            "벌룬 파티"
           ]
         },
         "ripples": {
@@ -1171,7 +1171,7 @@
           "dateMode": "version",
           "profiles": [
             "멜라니아",
-            "블로니"
+            "호러피디아"
           ]
         },
         "ripples": {
@@ -1270,7 +1270,7 @@
           "dateMode": "version",
           "profiles": [
             "피클즈",
-            "디거스"
+            "블로니"
           ]
         },
         "ripples": {
@@ -1368,7 +1368,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "투스 페어리"
+            "투스 페어리",
+            "디거스"
           ]
         },
         "ripples": {
@@ -1376,12 +1377,30 @@
           "icon": "img/material/Ripples on the Water.png",
           "dateMode": "version",
           "profiles": [
-            "소더비",
-            "이터니티",
-            "드루비스",
-            "릴리아",
-            "뉴바벨",
-            "갈기 모래"
+            {
+              "name": "갈기모래",
+              "highlighted": false
+            },
+            {
+              "name": "이터니티",
+              "highlighted": false
+            },
+            {
+              "name": "릴리아",
+              "highlighted": true
+            },
+            {
+              "name": "드루비스",
+              "highlighted": false
+            },
+            {
+              "name": "소더비",
+              "highlighted": false
+            },
+            {
+              "name": "뉴바벨",
+              "highlighted": false
+            }
           ]
         },
         "photoscope": {
@@ -1482,10 +1501,22 @@
           "icon": "img/material/Ripples on the Water.png",
           "dateMode": "version",
           "profiles": [
-            "보이저",
-            "제시카",
-            "릴리아",
-            "뉴바벨"
+            {
+              "name": "릴리아",
+              "highlighted": false
+            },
+            {
+              "name": "제시카",
+              "highlighted": true
+            },
+            {
+              "name": "보이저",
+              "highlighted": true
+            },
+            {
+              "name": "뉴바벨",
+              "highlighted": false
+            }
           ]
         },
         "photoscope": {
@@ -1586,11 +1617,26 @@
           "icon": "img/material/Ripples on the Water.png",
           "dateMode": "version",
           "profiles": [
-            "피클즈",
-            "안안 리",
-            "소더비",
-            "드루비스",
-            "제시카"
+            {
+              "name": "제시카",
+              "highlighted": false
+            },
+            {
+              "name": "소더비",
+              "highlighted": false
+            },
+            {
+              "name": "안안 리",
+              "highlighted": true
+            },
+            {
+              "name": "피클즈",
+              "highlighted": false
+            },
+            {
+              "name": "드루비스",
+              "highlighted": false
+            }
           ]
         },
         "photoscope": {
@@ -1691,11 +1737,26 @@
           "icon": "img/material/Ripples on the Water.png",
           "dateMode": "version",
           "profiles": [
-            "갈기 모래",
-            "메디슨 포켓",
-            "멜라니아",
-            "보이저",
-            "이터니티"
+            {
+              "name": "갈기 모래",
+              "highlighted": false
+            },
+            {
+              "name": "메디슨 포켓",
+              "highlighted": true
+            },
+            {
+              "name": "멜라니아",
+              "highlighted": true
+            },
+            {
+              "name": "이터니티",
+              "highlighted": false
+            },
+            {
+              "name": "보이저",
+              "highlighted": false
+            }
           ]
         },
         "photoscope": {
@@ -1796,11 +1857,26 @@
           "icon": "img/material/Ripples on the Water.png",
           "dateMode": "version",
           "profiles": [
-            "드루비스",
-            "보이저",
-            "안안 리",
-            "에즈라",
-            "제시카"
+            {
+              "name": "안안 리",
+              "highlighted": false
+            },
+            {
+              "name": "제시카",
+              "highlighted": false
+            },
+            {
+              "name": "에즈라",
+              "highlighted": true
+            },
+            {
+              "name": "드루비스",
+              "highlighted": false
+            },
+            {
+              "name": "보이저",
+              "highlighted": false
+            }
           ]
         },
         "photoscope": {
@@ -1901,12 +1977,30 @@
           "icon": "img/material/Ripples on the Water.png",
           "dateMode": "version",
           "profiles": [
-            "마커스",
-            "멜라니아",
-            "빌라",
-            "이터니티",
-            "제시카",
-            "피클즈"
+            {
+              "name": "피클즈",
+              "highlighted": false
+            },
+            {
+              "name": "빌라",
+              "highlighted": false
+            },
+            {
+              "name": "마커스",
+              "highlighted": true
+            },
+            {
+              "name": "이터니티",
+              "highlighted": false
+            },
+            {
+              "name": "멜라니아",
+              "highlighted": false
+            },
+            {
+              "name": "제시카",
+              "highlighted": false
+            }
           ]
         },
         "photoscope": {
@@ -2007,12 +2101,30 @@
           "icon": "img/material/Ripples on the Water.png",
           "dateMode": "version",
           "profiles": [
-            "레굴루스",
-            "메디슨 포켓",
-            "멜라니아",
-            "에즈라",
-            "제멜바이스",
-            "제시카"
+            {
+              "name": "에즈라",
+              "highlighted": false
+            },
+            {
+              "name": "레굴루스",
+              "highlighted": false
+            },
+            {
+              "name": "제멜바이스",
+              "highlighted": true
+            },
+            {
+              "name": "제시카",
+              "highlighted": false
+            },
+            {
+              "name": "멜라니아",
+              "highlighted": false
+            },
+            {
+              "name": "메디슨 포켓",
+              "highlighted": false
+            }
           ]
         },
         "photoscope": {
@@ -2113,12 +2225,30 @@
           "icon": "img/material/Ripples on the Water.png",
           "dateMode": "version",
           "profiles": [
-            "갈천",
-            "드루비스",
-            "메디슨 포켓",
-            "센츄리온",
-            "에즈라",
-            "제멜바이스"
+            {
+              "name": "에즈라",
+              "highlighted": false
+            },
+            {
+              "name": "갈천",
+              "highlighted": false
+            },
+            {
+              "name": "센츄리온",
+              "highlighted": true
+            },
+            {
+              "name": "드루비스",
+              "highlighted": false
+            },
+            {
+              "name": "제멜바이스",
+              "highlighted": false
+            },
+            {
+              "name": "메디슨 포켓",
+              "highlighted": false
+            }
           ]
         },
         "photoscope": {
@@ -2225,11 +2355,26 @@
           "icon": "img/material/Ripples on the Water.png",
           "dateMode": "version",
           "profiles": [
-            "A나이트",
-            "메디슨 포켓",
-            "아르고스",
-            "에즈라",
-            "이터니티"
+            {
+              "name": "에즈라",
+              "highlighted": false
+            },
+            {
+              "name": "아르고스",
+              "highlighted": true
+            },
+            {
+              "name": "A나이트",
+              "highlighted": true
+            },
+            {
+              "name": "이터니티",
+              "highlighted": false
+            },
+            {
+              "name": "메디슨  포켓",
+              "highlighted": false
+            }
           ]
         },
         "photoscope": {
@@ -2351,12 +2496,30 @@
           "icon": "img/material/Ripples on the Water.png",
           "dateMode": "version",
           "profiles": [
-            "갈라보나",
-            "마커스",
-            "빌라",
-            "아르고스",
-            "에즈라",
-            "이졸데"
+            {
+              "name": "에즈라",
+              "highlighted": false
+            },
+            {
+              "name": "빌라",
+              "highlighted": false
+            },
+            {
+              "name": "갈라보나",
+              "highlighted": true
+            },
+            {
+              "name": "이졸데",
+              "highlighted": true
+            },
+            {
+              "name": "아르고스",
+              "highlighted": false
+            },
+            {
+              "name": "마커스",
+              "highlighted": false
+            }
           ]
         },
         "photoscope": {
@@ -2473,12 +2636,30 @@
           "icon": "img/material/Ripples on the Water.png",
           "dateMode": "version",
           "profiles": [
-            "갈라보나",
-            "갈천",
-            "머큐리아",
-            "멜라니아",
-            "안안 리",
-            "이졸데"
+            {
+              "name": "갈천",
+              "highlighted": false
+            },
+            {
+              "name": "멜라니아",
+              "highlighted": false
+            },
+            {
+              "name": "안안 리",
+              "highlighted": true
+            },
+            {
+              "name": "머큐리아",
+              "highlighted": true
+            },
+            {
+              "name": "이졸데",
+              "highlighted": false
+            },
+            {
+              "name": "갈라보나",
+              "highlighted": false
+            }
           ]
         },
         "photoscope": {
@@ -2595,13 +2776,38 @@
           "icon": "img/material/Ripples on the Water.png",
           "dateMode": "version",
           "profiles": [
-            "6",
-            "A나이트",
-            "레굴루스",
-            "보이저",
-            "안안 리",
-            "윌로우",
-            "투스 페어리"
+            {
+              "name": "안안 리",
+              "highlighted": false
+            },
+            {
+              "name": "소더비",
+              "highlighted": false
+            },
+            {
+              "name": "레굴루스",
+              "highlighted": false
+            },
+            {
+              "name": "6",
+              "highlighted": true
+            },
+            {
+              "name": "투스 페어리",
+              "highlighted": true
+            },
+            {
+              "name": "윌로우",
+              "highlighted": true
+            },
+            {
+              "name": "보이저",
+              "highlighted": false
+            },
+            {
+              "name": "A나이트",
+              "highlighted": false
+            }
           ]
         },
         "photoscope": {
@@ -2730,12 +2936,30 @@
           "icon": "img/material/Ripples on the Water.png",
           "dateMode": "version",
           "profiles": [
-            "소더비",
-            "스파토데아",
-            "윌로우",
-            "이졸데",
-            "투스 페어리",
-            "튜즈데이"
+            {
+              "name": "소더비",
+              "highlighted": false
+            },
+            {
+              "name": "이졸데",
+              "highlighted": false
+            },
+            {
+              "name": "스파토데아",
+              "highlighted": true
+            },
+            {
+              "name": "튜즈데이",
+              "highlighted": true
+            },
+            {
+              "name": "투스 페어리",
+              "highlighted": false
+            },
+            {
+              "name": "윌로우",
+              "highlighted": false
+            }
           ]
         },
         "photoscope": {
@@ -2832,12 +3056,12 @@
             ""
           ],
           "start": {
-            "year": "2026",
+            "year": "26",
             "month": "7",
             "day": "23"
           },
           "end": {
-            "year": "26",
+            "year": "2026",
             "month": "7",
             "day": "23"
           }
@@ -2858,12 +3082,30 @@
           "icon": "img/material/Ripples on the Water.png",
           "dateMode": "version",
           "profiles": [
-            "레콜레타",
-            "멜라니아",
-            "윌로우",
-            "이졸데",
-            "투스 페어리",
-            "튜즈데이"
+            {
+              "name": "튜즈데이",
+              "highlighted": false
+            },
+            {
+              "name": "멜라니아",
+              "highlighted": false
+            },
+            {
+              "name": "투스 페어리",
+              "highlighted": false
+            },
+            {
+              "name": "레콜레타",
+              "highlighted": true
+            },
+            {
+              "name": "이졸데",
+              "highlighted": false
+            },
+            {
+              "name": "윌로우",
+              "highlighted": false
+            }
           ]
         },
         "photoscope": {
@@ -2882,19 +3124,117 @@
       "exchangeCodes": []
     },
     {
+      "id": "version-1780491535018-29",
+      "pageName": "3.9",
+      "version": "3.9",
+      "versionName": "아토믹 하트 콜라보",
+      "start": {
+        "year": "2026",
+        "month": "7",
+        "day": "23"
+      },
+      "end": {
+        "year": "2026",
+        "month": "9",
+        "day": "3"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "쌍둥이",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2026",
+            "month": "7",
+            "day": "23"
+          },
+          "end": {
+            "year": "2026",
+            "month": "9",
+            "day": "3"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "배포",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2026",
+            "month": "5",
+            "day": "28"
+          },
+          "end": {
+            "year": "2026",
+            "month": "7",
+            "day": "2"
+          }
+        },
+        "last": {
+          "enabled": false,
+          "label": "후반기",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2026",
+            "month": "9",
+            "day": "3"
+          },
+          "end": {
+            "year": "2026",
+            "month": "9",
+            "day": "3"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "J"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": []
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      },
+      "exchangeCodes": []
+    },
+    {
       "id": "version-3-7",
       "pageName": "3.7",
       "version": "3.7",
       "versionName": "타인의 비애",
       "start": {
         "year": "2026",
-        "month": "8",
-        "day": "20"
+        "month": "9",
+        "day": "3"
       },
       "end": {
         "year": "2026",
         "month": "10",
-        "day": "1"
+        "day": "15"
       },
       "pickups": {
         "first": {
@@ -2907,8 +3247,8 @@
           ],
           "start": {
             "year": "2026",
-            "month": "8",
-            "day": "20"
+            "month": "9",
+            "day": "3"
           },
           "end": {
             "year": "26",
@@ -2951,7 +3291,137 @@
           "end": {
             "year": "2026",
             "month": "10",
-            "day": "1"
+            "day": "15"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "카카니아"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            {
+              "name": "멜라니아",
+              "highlighted": false
+            },
+            {
+              "name": "레콜레타",
+              "highlighted": false
+            },
+            {
+              "name": "제멜바이스",
+              "highlighted": false
+            },
+            {
+              "name": "레굴루스",
+              "highlighted": true
+            },
+            {
+              "name": "머큐리아",
+              "highlighted": false
+            },
+            {
+              "name": "메디슨 포켓",
+              "highlighted": false
+            }
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": [
+            "레굴루스",
+            "레콜레타",
+            "메디슨 포켓",
+            "멜라니아",
+            "보이저",
+            "에즈라"
+          ]
+        }
+      },
+      "exchangeCodes": []
+    },
+    {
+      "id": "version-1780491541585-30",
+      "pageName": "3.8",
+      "version": "3.8",
+      "versionName": "세기말의 척도",
+      "start": {
+        "year": "2026",
+        "month": "10",
+        "day": "15"
+      },
+      "end": {
+        "year": "2026",
+        "month": "11",
+        "day": "26"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "에버에코",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2026",
+            "month": "10",
+            "day": "15"
+          },
+          "end": {
+            "year": "2026",
+            "month": "11",
+            "day": "5"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "배포",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2026",
+            "month": "5",
+            "day": "28"
+          },
+          "end": {
+            "year": "2026",
+            "month": "7",
+            "day": "2"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "코너스톤",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2026",
+            "month": "11",
+            "day": "5"
+          },
+          "end": {
+            "year": "2026",
+            "month": "11",
+            "day": "26"
           }
         }
       },
@@ -2969,26 +3439,37 @@
           "icon": "img/material/Ripples on the Water.png",
           "dateMode": "version",
           "profiles": [
-            "레굴루스",
-            "레콜레타",
-            "머큐리아",
-            "메디슨 포켓",
-            "멜라니아",
-            "제멜바이스"
+            {
+              "name": "머큐리아",
+              "highlighted": false
+            },
+            {
+              "name": "레굴루스",
+              "highlighted": false
+            },
+            {
+              "name": "J",
+              "highlighted": true
+            },
+            {
+              "name": "히사베스",
+              "highlighted": true
+            },
+            {
+              "name": "뉴바벨",
+              "highlighted": false
+            },
+            {
+              "name": "A나이트",
+              "highlighted": false
+            }
           ]
         },
         "photoscope": {
           "label": "비구상 촬영기",
           "icon": "img/material/Immaterial Photoscope.png",
           "dateMode": "none",
-          "profiles": [
-            "레굴루스",
-            "레콜레타",
-            "메디슨 포켓",
-            "멜라니아",
-            "보이저",
-            "에즈라"
-          ]
+          "profiles": []
         }
       },
       "exchangeCodes": []

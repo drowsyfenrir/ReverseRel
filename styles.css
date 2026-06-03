@@ -669,12 +669,27 @@ button { border: 0; cursor: pointer; }
   border-radius: 8px;
 }
 .version-image-slot {
+  position: relative;
   background: #e9edf3;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   border: 1px solid #d7dde8;
   border-radius: 10px;
+}
+.version-image-slot.is-highlighted {
+  border-color: #ff6b00;
+  box-shadow: 0 0 5px rgba(255, 107, 0, .6);
+}
+.version-image-slot.is-highlighted::after {
+  content: "";
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 50px;
+  height: 68px;
+  background: url("img/material/생각의 열쇠.webp") center / contain no-repeat;
+  pointer-events: none;
 }
 .version-image-slot-large {
   width: 100px;
@@ -787,21 +802,33 @@ button { border: 0; cursor: pointer; }
   white-space: nowrap;
 }
 .exchange-copy-button {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  color: #495057;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+.exchange-copy-icon {
   flex: 0 0 auto;
   width: 18px;
   height: 18px;
   margin-right: 6px;
-  border: 0;
-  padding: 0;
   background: #8b949e;
-  cursor: pointer;
   -webkit-mask: url("img/icon/copy.svg") center / contain no-repeat;
   mask: url("img/icon/copy.svg") center / contain no-repeat;
 }
 .exchange-copy-button:hover,
 .exchange-copy-button:focus-visible {
-  background: var(--orange);
+  color: var(--orange);
   outline: none;
+}
+.exchange-copy-button:hover .exchange-copy-icon,
+.exchange-copy-button:focus-visible .exchange-copy-icon {
+  background: var(--orange);
 }
 .exchange-code-name,
 .exchange-code-date {
@@ -950,6 +977,21 @@ button { border: 0; cursor: pointer; }
   border-radius: 6px;
   cursor: pointer;
 }
+.version-page-item[draggable="true"] {
+  cursor: grab;
+}
+.version-page-item.is-dragging {
+  cursor: grabbing;
+  opacity: .55;
+}
+.version-page-item.is-drop-before {
+  border-top-color: var(--orange);
+  box-shadow: inset 0 3px 0 var(--orange);
+}
+.version-page-item.is-drop-after {
+  border-bottom-color: var(--orange);
+  box-shadow: inset 0 -3px 0 var(--orange);
+}
 .version-page-item.is-selected {
   border-color: var(--orange);
   box-shadow: inset 0 0 0 1px var(--orange);
@@ -1086,6 +1128,23 @@ button { border: 0; cursor: pointer; }
   display: grid;
   grid-template-columns: minmax(0, 1fr) 40px;
   gap: 8px;
+}
+.version-editor-profile-row.has-highlight-check {
+  grid-template-columns: minmax(0, 1fr) 28px 40px;
+}
+.version-editor-highlight-check {
+  display: grid;
+  place-items: center;
+  min-height: 36px;
+  border: 1px solid #d7dde8;
+  border-radius: 6px;
+  background: #fff;
+}
+.version-editor-highlight-check input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: #ff6b00;
 }
 .version-editor-exchange {
   display: grid;
