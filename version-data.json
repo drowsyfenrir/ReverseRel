@@ -2621,7 +2621,7 @@
           }
         },
         "last": {
-          "enabled": false,
+          "enabled": true,
           "label": "후반기",
           "name": "라모나",
           "profiles": [
