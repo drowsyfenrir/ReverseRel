@@ -932,7 +932,7 @@
           "label": "배포",
           "name": "제멜바이스",
           "profiles": [
-            "",
+            "로렐라이",
             ""
           ],
           "start": {
@@ -1924,9 +1924,9 @@
           }
         },
         "middle": {
-          "enabled": false,
+          "enabled": true,
           "label": "배포",
-          "name": "",
+          "name": "알렉시오스",
           "profiles": [
             "",
             ""
@@ -2052,7 +2052,7 @@
           "label": "배포",
           "name": "울리히",
           "profiles": [
-            "",
+            "버디 페어차일드",
             ""
           ],
           "start": {
@@ -2723,9 +2723,9 @@
           }
         },
         "middle": {
-          "enabled": false,
+          "enabled": true,
           "label": "배포",
-          "name": "",
+          "name": "노초결",
           "profiles": [
             "",
             ""
@@ -3253,7 +3253,7 @@
           "end": {
             "year": "26",
             "month": "10",
-            "day": "1"
+            "day": "15"
           }
         },
         "middle": {
@@ -3261,18 +3261,18 @@
           "label": "배포",
           "name": "코펠리아",
           "profiles": [
-            "",
-            ""
+            "실버윙 이글",
+            "호숫가의 여인"
           ],
           "start": {
             "year": "2026",
-            "month": "8",
-            "day": "20"
+            "month": "9",
+            "day": "3"
           },
           "end": {
             "year": "26",
             "month": "10",
-            "day": "1"
+            "day": "15"
           }
         },
         "last": {
@@ -3285,8 +3285,8 @@
           ],
           "start": {
             "year": "26",
-            "month": "10",
-            "day": "1"
+            "month": "9",
+            "day": "24"
           },
           "end": {
             "year": "2026",
