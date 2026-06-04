@@ -498,6 +498,29 @@ button { border: 0; cursor: pointer; }
   gap: 20px;
   width: min(900px, calc(100vw - 36px));
   margin: 0 auto 12px;
+  --version-tab-width: 120px;
+  --version-tab-gap: 20px;
+  --version-tab-indicator-left: calc(50% - var(--version-tab-gap) / 2 - var(--version-tab-width) + 20px);
+}
+.version-tabs::after {
+  content: "";
+  position: absolute;
+  left: var(--version-tab-indicator-left);
+  bottom: 0;
+  width: calc(var(--version-tab-width) - 40px);
+  height: 3px;
+  border-radius: 999px;
+  background: var(--orange);
+  transition: left .22s ease;
+}
+.version-tabs.is-all::after,
+.version-tabs:has([data-version-all]:hover)::after,
+.version-tabs:has([data-version-all]:focus-visible)::after {
+  --version-tab-indicator-left: calc(50% + var(--version-tab-gap) / 2 + 20px);
+}
+.version-tabs:has([data-version-current]:hover)::after,
+.version-tabs:has([data-version-current]:focus-visible)::after {
+  --version-tab-indicator-left: calc(50% - var(--version-tab-gap) / 2 - var(--version-tab-width) + 20px);
 }
 .version-tab {
   position: relative;
@@ -519,16 +542,6 @@ button { border: 0; cursor: pointer; }
   color: #495057;
   background: transparent;
   font-weight: 600;
-}
-.version-tab.is-active::after {
-  content: "";
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 0;
-  height: 3px;
-  background: var(--orange);
-  border-radius: 999px;
 }
 .version-page-arrow {
   position: absolute;
@@ -694,6 +707,38 @@ button { border: 0; cursor: pointer; }
 .version-image-slot-large {
   width: 100px;
   height: 100px;
+}
+.version-event-profiles .version-image-slot-large {
+  z-index: 0;
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.version-event-profiles .version-image-slot-large:hover {
+  z-index: 2;
+  transform: scale(1.06);
+}
+.version-profile-name {
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  max-width: calc(100% - 12px);
+  padding: 4px 8px;
+  border-radius: 5px;
+  color: #fff;
+  background: #061633;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+  transform: translate(-50%, 8px);
+  transition: opacity .16s ease, transform .16s ease;
+  pointer-events: none;
+}
+.version-event-profiles .version-image-slot-large:hover .version-profile-name {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 .version-image-slot-small {
   width: 50px;
@@ -1230,6 +1275,8 @@ button { border: 0; cursor: pointer; }
     gap: 10px;
     width: min(100%, calc(100vw - 24px));
     margin-bottom: 10px;
+    --version-tab-width: 96px;
+    --version-tab-gap: 10px;
   }
   .version-tab {
     min-width: 96px;

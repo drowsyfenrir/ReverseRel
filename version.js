@@ -39,7 +39,7 @@ function renderVersionPage() {
   }
 
   root.innerHTML = `
-    <div class="version-tabs" aria-label="버전 보기">
+    <div class="version-tabs ${versionState.viewMode === "all" ? "is-all" : "is-current"}" aria-label="버전 보기">
       <button class="version-tab ${versionState.viewMode === "current" ? "is-active" : ""}" type="button" data-version-current>현재 버전</button>
       <button class="version-tab ${versionState.viewMode === "all" ? "is-active" : ""}" type="button" data-version-all>모든 버전</button>
     </div>
@@ -368,7 +368,10 @@ function profileSlot(name, sizeClass, highlighted = false) {
   const cleanName = profileName(name);
   const image = cleanName ? `profile/${cleanName}.png` : "";
   const style = image ? ` style="background-image: url('${escapeAttr(encodeURI(image))}')"` : "";
-  return `<div class="version-image-slot ${sizeClass}${highlighted ? " is-highlighted" : ""}"${style}></div>`;
+  const label = sizeClass === "version-image-slot-large" && cleanName
+    ? `<span class="version-profile-name">${escapeHtml(cleanName)}</span>`
+    : "";
+  return `<div class="version-image-slot ${sizeClass}${highlighted ? " is-highlighted" : ""}"${style}>${label}</div>`;
 }
 
 function pickupNames(page, key) {
