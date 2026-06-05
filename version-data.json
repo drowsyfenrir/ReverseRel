@@ -1,5 +1,4 @@
 {
-  "schema": "reverse-rel-version-data",
   "currentPageId": "version-3-5",
   "pages": [
     {
@@ -2753,7 +2752,7 @@
           "start": {
             "year": "2026",
             "month": "5",
-            "day": "28"
+            "day": "7"
           },
           "end": {
             "year": "2026",
