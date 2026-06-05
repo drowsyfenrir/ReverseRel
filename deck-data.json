@@ -1,0 +1,426 @@
+{
+  "schema": "reverse-rel-deck-data",
+  "decks": [
+    {
+      "id": "deck-beryl-001",
+      "name": "베릴 여광덱",
+      "profile": "베릴",
+      "types": "여광, 연소, 추가행동, 덮어쓰기, 정화, 보호막",
+      "description": "베릴을 중심으로 하는 원생 영감의 스택형 조합.",
+      "members": [
+        {
+          "name": "베릴",
+          "afflatus": "지능",
+          "psychube": "기나긴 속삭임",
+          "euphoria": "",
+          "tuning": "정성",
+          "code": "APQkOAU4RStENFI0UCgxQAQrAz8CPRBDAEYh"
+        },
+        {
+          "name": "이졸데",
+          "afflatus": "영혼",
+          "psychube": "날개짓의 순간",
+          "euphoria": "영혼이 날아 잠든다",
+          "tuning": "정성",
+          "code": "AEAASBE0AiQELRTwJC1EJlRFYEFSJEFBQCghKiA"
+        },
+        {
+          "name": "로렌츠",
+          "afflatus": "지능",
+          "psychube": "화염 같은 내 심장이여",
+          "euphoria": "",
+          "tuning": "정성",
+          "code": "ACkFK0Q4RfQkOgQ0ADQCPCA8MEBAQEJCUEViSFM="
+        },
+        {
+          "name": "마샤",
+          "afflatus": "야수",
+          "psychube": "무의식의 악몽",
+          "euphoria": "",
+          "tuning": "순환 균형",
+          "code": "APAkKFQqBDRENBU4AjkARDNMIjxQPGBBEEAwQjE="
+        }
+      ],
+      "note": "[베릴] 2형, 5형에 보석 개수 추가, [로렌츠 버터플라이] 1형에 연속 행동 +1, 2형과 5형에 예비 주문 개수 추가\n마도학자별 스탯 특수성에 따라 전용 의지를 서로 바꿔 끼는 것이 효과적\n베릴의 버프 스킬을 통해 예견 스택을 쌓는 것이 핵심, 로렌츠의 덮어쓰기도 베릴의 버프 스킬을 복사하는 것을 추천한다.",
+      "cycles": [
+        {
+          "name": "명함",
+          "description": "[베릴]의 첫 턴, 오버플로를 고를 수 있는데 퍼플 오버플로를 기본으로 쓴다.\n[베릴]은 매 턴, 본인의 열정 +1. [로렌츠 버터플라이]는 해당 턴, 술식을 사용하지 않은 캐릭터 +1 또는 자신은 +2.\n효과를 가지고 있기에 매 턴 열정 3을 맞출 경우 2턴 마다 술식 사용이 가능하다.\n\n5번 라운드 이후, 4번 ~ 5번 라운드 반복.",
+          "rounds": [
+            [
+              {
+                "skill": "베릴2",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "로렌츠2",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "마샤1",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "이졸데1",
+                "ready": false,
+                "overwrite": false
+              }
+            ],
+            [
+              {
+                "skill": "이졸데2",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴4",
+                "ready": true,
+                "overwrite": false
+              },
+              {
+                "skill": "로렌츠3",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴2",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "마샤2",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "로렌츠1",
+                "ready": false,
+                "overwrite": false
+              }
+            ],
+            [
+              {
+                "skill": "베릴4",
+                "ready": true,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴2",
+                "ready": false,
+                "overwrite": true
+              },
+              {
+                "skill": "베릴2",
+                "ready": false,
+                "overwrite": true
+              },
+              {
+                "skill": "베릴2",
+                "ready": false,
+                "overwrite": true
+              },
+              {
+                "skill": "로렌츠2",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "마샤3",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴3",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴1",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "로렌츠1",
+                "ready": false,
+                "overwrite": false
+              }
+            ],
+            [
+              {
+                "skill": "이졸데2",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴4",
+                "ready": true,
+                "overwrite": false
+              },
+              {
+                "skill": "로렌츠3",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "로렌츠1",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴1",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "로렌츠1",
+                "ready": false,
+                "overwrite": false
+              }
+            ],
+            [
+              {
+                "skill": "베릴4",
+                "ready": true,
+                "overwrite": false
+              },
+              {
+                "skill": "로렌츠2",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "마샤3",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴3",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴2",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "로렌츠1",
+                "ready": false,
+                "overwrite": true
+              },
+              {
+                "skill": "로렌츠1",
+                "ready": false,
+                "overwrite": true
+              },
+              {
+                "skill": "로렌츠1",
+                "ready": false,
+                "overwrite": true
+              },
+              {
+                "skill": "로렌츠1",
+                "ready": false,
+                "overwrite": false
+              }
+            ]
+          ]
+        },
+        {
+          "name": "로렌츠 1형",
+          "description": "로렌츠의 덮어쓰기는 가능한 로렌츠 1 스킬을 하되, 단기전에서는 베릴의 2 스킬을 덮어 쓸 수 있다.\n5번 라운드 이후, 4번 ~ 5번 라운드 반복.",
+          "rounds": [
+            [
+              {
+                "skill": "로렌츠2",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴2",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "이졸데1",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "마샤2",
+                "ready": false,
+                "overwrite": false
+              }
+            ],
+            [
+              {
+                "skill": "이졸데2",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴4",
+                "ready": true,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴1",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "로렌츠3",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴2",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "로렌츠1",
+                "ready": false,
+                "overwrite": false
+              }
+            ],
+            [
+              {
+                "skill": "베릴4",
+                "ready": true,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴2",
+                "ready": false,
+                "overwrite": true
+              },
+              {
+                "skill": "베릴2",
+                "ready": false,
+                "overwrite": true
+              },
+              {
+                "skill": "베릴2",
+                "ready": false,
+                "overwrite": true
+              },
+              {
+                "skill": "마샤3",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴3",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴2",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "이졸데3",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "로렌츠1",
+                "ready": false,
+                "overwrite": false
+              }
+            ],
+            [
+              {
+                "skill": "이졸데2",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴4",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "마샤1",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "로렌츠3",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "로렌츠1",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "로렌츠2",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴1",
+                "ready": false,
+                "overwrite": false
+              }
+            ],
+            [
+              {
+                "skill": "베릴4",
+                "ready": true,
+                "overwrite": false
+              },
+              {
+                "skill": "마샤3",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴3",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "베릴2",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "로렌츠1",
+                "ready": false,
+                "overwrite": true
+              },
+              {
+                "skill": "로렌츠1",
+                "ready": false,
+                "overwrite": true
+              },
+              {
+                "skill": "로렌츠1",
+                "ready": false,
+                "overwrite": true
+              },
+              {
+                "skill": "이졸데3",
+                "ready": false,
+                "overwrite": false
+              },
+              {
+                "skill": "로렌츠1",
+                "ready": false,
+                "overwrite": false
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

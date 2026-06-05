@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <title>덱 리스트 - 리버스: 1999 도서관</title>
+  <meta name="description" content="리버스: 1999 덱 리스트를 정리한 페이지입니다." />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icon/32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/icon/16.png" />
+  <link rel="apple-touch-icon" href="img/icon/fabicon.png" />
+  <link rel="stylesheet" href="styles.css?v=20260605-deck-editor" />
+</head>
+<body class="deck-page">
+  <header class="topbar">
+    <div class="header-title">
+      <a class="brand" href="index.html"><img src="img/title.png" alt="리버스 1999 도서관" /></a>
+      <a href="version.html">버전 요약</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="relationship.html">인물 관계도</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="deck.html" aria-current="page">덱 리스트</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+    </div>
+  </header>
+  <main class="deck-shell" aria-label="덱 리스트">
+    <section class="deck-popup deck-list-popup">
+      <h1>Deck List</h1>
+      <label class="deck-search" aria-label="덱 검색">
+        <span class="deck-search-icon" aria-hidden="true"></span>
+        <input id="deckSearchInput" type="search" placeholder="search deck..." />
+      </label>
+      <div id="deckList" class="deck-list"></div>
+    </section>
+    <section id="deckDetailPopup" class="deck-popup deck-detail-popup" hidden></section>
+  </main>
+  <script src="deck.js?v=20260605-deck-editor"></script>
+</body>
+</html>

@@ -1,5 +1,9 @@
 data.backup-*.json
+version-data.backup-*.json
+deck-data.backup-*.json
 editor.html
 editor.js
 version-editor.html
 version-editor.js
+deck-editor.html
+deck-editor.js

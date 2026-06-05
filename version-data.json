@@ -1,4 +1,5 @@
 {
+  "schema": "reverse-rel-version-data",
   "currentPageId": "version-3-5",
   "pages": [
     {
@@ -2231,7 +2232,7 @@
             },
             {
               "name": "갈천",
-              "highlighted": false
+              "highlighted": true
             },
             {
               "name": "센츄리온",
@@ -2239,7 +2240,7 @@
             },
             {
               "name": "드루비스",
-              "highlighted": false
+              "highlighted": true
             },
             {
               "name": "제멜바이스",

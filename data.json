@@ -1,4 +1,5 @@
 {
+  "schema": "reverse-rel-relationship-data",
   "title": "Reverse Relationship",
   "theme": {
     "orange": "#ff6b00",

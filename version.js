@@ -88,7 +88,7 @@ function bindVersionControls() {
         document.execCommand("copy");
         field.remove();
       }
-      showCopyToast("복사 완료.");
+      showCopyToast("복사 완료");
     });
   });
   document.querySelectorAll("[data-version-row-index]").forEach((row) => {
