@@ -1,4 +1,5 @@
 {
+  "schema": "reverse-rel-version-data",
   "currentPageId": "version-3-5",
   "pages": [
     {
@@ -1378,7 +1379,7 @@
           "dateMode": "version",
           "profiles": [
             {
-              "name": "갈기모래",
+              "name": "갈기 모래",
               "highlighted": false
             },
             {
@@ -2372,7 +2373,7 @@
               "highlighted": false
             },
             {
-              "name": "메디슨  포켓",
+              "name": "메디슨 포켓",
               "highlighted": false
             }
           ]
@@ -3073,7 +3074,7 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "제멜바이스",
+            "카카니아",
             "디거스"
           ]
         },
@@ -3203,7 +3204,7 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "J"
+            "튜즈데이"
           ]
         },
         "ripples": {
@@ -3285,8 +3286,8 @@
           ],
           "start": {
             "year": "26",
-            "month": "9",
-            "day": "24"
+            "month": "10",
+            "day": "15"
           },
           "end": {
             "year": "2026",
@@ -3301,7 +3302,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "카카니아"
+            "머큐리아",
+            "테넌트"
           ]
         },
         "ripples": {
@@ -3372,8 +3374,8 @@
           "label": "전반기",
           "name": "에버에코",
           "profiles": [
-            "",
-            ""
+            "콘블룸",
+            "디케"
           ],
           "start": {
             "year": "2026",
@@ -3410,8 +3412,8 @@
           "label": "후반기",
           "name": "코너스톤",
           "profiles": [
-            "",
-            ""
+            "디거스",
+            "데저트 플란넬"
           ],
           "start": {
             "year": "2026",
@@ -3431,7 +3433,7 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "머큐리아"
+            "J"
           ]
         },
         "ripples": {
