@@ -256,10 +256,9 @@ button { border: 0; cursor: pointer; }
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
   width: 400px;
-  min-height: 108px;
-  padding: 10px 14px 14px 10px;
+  min-height: 214px;
+  padding: 10px 14px;
   background: rgba(255, 255, 255, .7);
   border-radius: 10px;
   cursor: pointer;
@@ -273,58 +272,54 @@ button { border: 0; cursor: pointer; }
   outline: 2px solid var(--orange);
   outline-offset: 3px;
 }
-.deck-card-head {
-  display: grid;
-  grid-template-columns: 50px minmax(0, 1fr);
-  gap: 14px;
-  align-items: center;
-}
 .deck-profile {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background: #ff6b00;
   object-fit: cover;
 }
 .deck-card-copy {
   min-width: 0;
+  padding-left: 10px;
   padding-top: 0;
 }
 .deck-card-copy h2 {
-  margin: 0 24px 4px 0;
+  margin: 0 24px 5px 0;
   color: #212529;
   font-size: 22px;
   font-weight: 600;
   line-height: 1.2;
 }
 .deck-card-copy p {
-  margin: 0;
+  margin: 0 0 15px;
   color: #495057;
-  font-size: 12px;
-  font-weight: 300;
+  font-size: 14px;
+  font-weight: 350;
+  letter-spacing: -.05em;
   line-height: 1.35;
+}
+.deck-card-profiles {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 .deck-keywords {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  width: 350px;
   min-height: 23px;
-}
-.deck-keywords span {
-  display: inline-flex;
-  flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
-  height: 23px;
-  padding: 0 9px;
-  border-radius: 15px;
+  margin: 0 auto;
+  padding: 4px 10px;
+  border-radius: 10px;
   color: #fff;
   background: #061633;
   font-size: 12px;
   font-weight: 350;
-  line-height: 1;
+  line-height: 1.25;
+  text-align: center;
   white-space: nowrap;
 }
 .deck-open {
@@ -1902,6 +1897,9 @@ button { border: 0; cursor: pointer; }
 .deck-editor-grid-2 {
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: end;
+}
+.deck-editor-grid-2-fields {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .deck-editor-grid-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));

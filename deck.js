@@ -108,19 +108,25 @@ function renderDeckList() {
   });
   list.innerHTML = decks.map((deck) => `
     <article class="deck-card" role="button" tabindex="0" data-deck-id="${escapeAttr(deck.id)}">
-      <div class="deck-card-head">
-        <img class="deck-profile" src="${profilePath(deck.profile)}" alt="${escapeAttr(deck.profile || deck.name)}" />
-        <div class="deck-card-copy">
-          <h2>${escapeHtml(deck.name)}</h2>
-          <p>${escapeHtml(deck.description)}</p>
-        </div>
+      <div class="deck-card-copy">
+        <h2>${escapeHtml(deck.name)}</h2>
+        <p>${escapeHtml(deck.description)}</p>
+      </div>
+      <div class="deck-card-profiles" aria-label="덱 멤버">
+        ${deckCardProfiles(deck).map((name) => `<img class="deck-profile" src="${profilePath(name)}" alt="${escapeAttr(name)}" />`).join("")}
       </div>
       <div class="deck-keywords" aria-label="키워드">
-        ${splitTypes(deck.types).map((type) => `<span>${escapeHtml(type)}</span>`).join("")}
+        ${escapeHtml(splitTypes(deck.types).join(" | "))}
       </div>
       <img class="deck-open" src="img/deck/arrow outward.svg" alt="" aria-hidden="true" />
     </article>
   `).join("") || '<p class="deck-empty">표시할 덱이 없습니다.</p>';
+}
+
+function deckCardProfiles(deck) {
+  const names = (deck.members || []).map((member) => member.name).filter(Boolean).slice(0, 4);
+  while (names.length < 4) names.push(deck.profile || names[0] || "베릴");
+  return names;
 }
 
 function openDeckDetail(deckId) {
