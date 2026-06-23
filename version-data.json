@@ -1984,7 +1984,7 @@
             },
             {
               "name": "빌라",
-              "highlighted": false
+              "highlighted": true
             },
             {
               "name": "마커스",
@@ -1992,7 +1992,7 @@
             },
             {
               "name": "이터니티",
-              "highlighted": false
+              "highlighted": true
             },
             {
               "name": "멜라니아",
@@ -3127,7 +3127,13 @@
           ]
         }
       },
-      "exchangeCodes": []
+      "exchangeCodes": [
+        {
+          "name": "은색빌딩연구원",
+          "month": "7",
+          "day": "23"
+        }
+      ]
     },
     {
       "id": "version-1780491535018-29",
