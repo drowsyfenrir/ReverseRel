@@ -3482,7 +3482,14 @@
           "label": "비구상 촬영기",
           "icon": "img/material/Immaterial Photoscope.png",
           "dateMode": "none",
-          "profiles": []
+          "profiles": [
+            "히사베스",
+            "J",
+            "에즈라",
+            "제멜바이스",
+            "레굴루스",
+            "제시카"
+          ]
         }
       },
       "exchangeCodes": []
