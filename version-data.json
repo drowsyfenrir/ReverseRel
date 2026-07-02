@@ -1,6 +1,6 @@
 {
   "schema": "reverse-rel-version-data",
-  "currentPageId": "version-3-5",
+  "currentPageId": "version-3-6",
   "pages": [
     {
       "id": "version-1-0",
@@ -3130,6 +3130,11 @@
       "exchangeCodes": [
         {
           "name": "은색빌딩연구원",
+          "month": "7",
+          "day": "23"
+        },
+        {
+          "name": "라플라스에오신것을환영합니다",
           "month": "7",
           "day": "23"
         }
