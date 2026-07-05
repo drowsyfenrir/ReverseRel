@@ -3152,8 +3152,8 @@
       },
       "end": {
         "year": "2026",
-        "month": "9",
-        "day": "3"
+        "month": "8",
+        "day": "13"
       },
       "pickups": {
         "first": {
@@ -3171,8 +3171,8 @@
           },
           "end": {
             "year": "2026",
-            "month": "9",
-            "day": "3"
+            "month": "8",
+            "day": "13"
           }
         },
         "middle": {
@@ -3204,13 +3204,13 @@
           ],
           "start": {
             "year": "2026",
-            "month": "9",
-            "day": "3"
+            "month": "8",
+            "day": "13"
           },
           "end": {
             "year": "2026",
-            "month": "9",
-            "day": "3"
+            "month": "8",
+            "day": "13"
           }
         }
       },
@@ -3245,13 +3245,13 @@
       "versionName": "타인의 비애",
       "start": {
         "year": "2026",
-        "month": "9",
-        "day": "3"
+        "month": "8",
+        "day": "13"
       },
       "end": {
         "year": "2026",
-        "month": "10",
-        "day": "15"
+        "month": "9",
+        "day": "24"
       },
       "pickups": {
         "first": {
@@ -3264,13 +3264,13 @@
           ],
           "start": {
             "year": "2026",
-            "month": "9",
-            "day": "3"
+            "month": "8",
+            "day": "13"
           },
           "end": {
             "year": "26",
-            "month": "10",
-            "day": "15"
+            "month": "9",
+            "day": "24"
           }
         },
         "middle": {
@@ -3283,13 +3283,13 @@
           ],
           "start": {
             "year": "2026",
-            "month": "9",
-            "day": "3"
+            "month": "8",
+            "day": "6"
           },
           "end": {
             "year": "26",
-            "month": "10",
-            "day": "15"
+            "month": "9",
+            "day": "24"
           }
         },
         "last": {
@@ -3302,13 +3302,13 @@
           ],
           "start": {
             "year": "26",
-            "month": "10",
-            "day": "15"
+            "month": "8",
+            "day": "27"
           },
           "end": {
             "year": "2026",
-            "month": "10",
-            "day": "15"
+            "month": "9",
+            "day": "3"
           }
         }
       },
@@ -3376,13 +3376,13 @@
       "versionName": "세기말의 척도",
       "start": {
         "year": "2026",
-        "month": "10",
-        "day": "15"
+        "month": "9",
+        "day": "24"
       },
       "end": {
         "year": "2026",
         "month": "11",
-        "day": "26"
+        "day": "5"
       },
       "pickups": {
         "first": {
@@ -3395,8 +3395,8 @@
           ],
           "start": {
             "year": "2026",
-            "month": "10",
-            "day": "15"
+            "month": "9",
+            "day": "24"
           },
           "end": {
             "year": "2026",
@@ -3424,7 +3424,7 @@
           }
         },
         "last": {
-          "enabled": true,
+          "enabled": false,
           "label": "후반기",
           "name": "코너스톤",
           "profiles": [
@@ -3433,13 +3433,13 @@
           ],
           "start": {
             "year": "2026",
-            "month": "11",
-            "day": "5"
+            "month": "10",
+            "day": "15"
           },
           "end": {
             "year": "2026",
             "month": "11",
-            "day": "26"
+            "day": "5"
           }
         }
       },
