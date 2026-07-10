@@ -2753,7 +2753,7 @@
           "start": {
             "year": "2026",
             "month": "5",
-            "day": "7"
+            "day": "28"
           },
           "end": {
             "year": "2026",
@@ -3166,8 +3166,8 @@
           "label": "전반기",
           "name": "쌍둥이",
           "profiles": [
-            "",
-            ""
+            "사츠키",
+            "슬라우치 햇"
           ],
           "start": {
             "year": "2026",
@@ -3181,22 +3181,22 @@
           }
         },
         "middle": {
-          "enabled": false,
+          "enabled": true,
           "label": "배포",
-          "name": "",
+          "name": "노라",
           "profiles": [
             "",
             ""
           ],
           "start": {
             "year": "2026",
-            "month": "5",
-            "day": "28"
+            "month": "7",
+            "day": "23"
           },
           "end": {
             "year": "2026",
-            "month": "7",
-            "day": "2"
+            "month": "8",
+            "day": "13"
           }
         },
         "last": {
@@ -3232,7 +3232,36 @@
           "label": "호수의 물결",
           "icon": "img/material/Ripples on the Water.png",
           "dateMode": "version",
-          "profiles": []
+          "profiles": [
+            {
+              "name": "레굴루스",
+              "highlighted": false
+            },
+            {
+              "name": "6",
+              "highlighted": false
+            },
+            {
+              "name": "투스 페어리",
+              "highlighted": false
+            },
+            {
+              "name": "로페라",
+              "highlighted": true
+            },
+            {
+              "name": "윈드송",
+              "highlighted": true
+            },
+            {
+              "name": "이졸데",
+              "highlighted": false
+            },
+            {
+              "name": "안안 리",
+              "highlighted": false
+            }
+          ]
         },
         "photoscope": {
           "label": "비구상 촬영기",
@@ -3307,13 +3336,13 @@
           ],
           "start": {
             "year": "26",
-            "month": "8",
-            "day": "27"
+            "month": "9",
+            "day": "24"
           },
           "end": {
             "year": "2026",
             "month": "9",
-            "day": "3"
+            "day": "24"
           }
         }
       },
