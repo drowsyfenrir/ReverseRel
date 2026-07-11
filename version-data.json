@@ -3003,7 +3003,7 @@
       "id": "version-3-6",
       "pageName": "3.6",
       "version": "3.6",
-      "versionName": "사람들은 어디로 향하는가",
+      "versionName": "사람은 어디로 향하는가",
       "start": {
         "year": "2026",
         "month": "7",
@@ -3458,7 +3458,7 @@
           }
         },
         "last": {
-          "enabled": false,
+          "enabled": true,
           "label": "후반기",
           "name": "코너스톤",
           "profiles": [
@@ -3467,8 +3467,8 @@
           ],
           "start": {
             "year": "2026",
-            "month": "10",
-            "day": "15"
+            "month": "11",
+            "day": "5"
           },
           "end": {
             "year": "2026",
