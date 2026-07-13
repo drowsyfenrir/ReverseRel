@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <title>픽업 가이드 - 리버스: 1999 도서관</title>
+  <meta name="description" content="리버스: 1999 픽업 가이드를 정리할 페이지입니다." />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icon/32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/icon/16.png" />
+  <link rel="apple-touch-icon" href="img/icon/fabicon.png" />
+  <link rel="stylesheet" href="styles.css?v=20260713-pickup" />
+</head>
+
+<body class="pickup-page">
+  <header class="topbar">
+    <div class="header-title">
+      <a class="brand" href="index.html"><img src="img/title.png" alt="리버스 1999 도서관" /></a>
+      <a href="version.html">버전 요약</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="relationship.html">인물 관계도</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="deck.html">덱 리스트</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="pickup.html" aria-current="page">픽업 가이드</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+    </div>
+  </header>
+  <main class="version-shell pickup-shell" aria-label="픽업 가이드">
+    <div class="version-tabs pickup-tabs is-banner" aria-label="픽업 가이드 보기">
+      <button class="version-tab is-active" type="button" data-pickup-view="banner">픽업 배너</button>
+      <button class="version-tab" type="button" data-pickup-view="schedule">마도학자 일정</button>
+    </div>
+    <div class="version-stage pickup-stage">
+      <section class="version-popup pickup-popup is-active" data-pickup-panel="banner" aria-label="픽업 배너"></section>
+      <section class="version-popup pickup-popup" data-pickup-panel="schedule" aria-label="마도학자 일정" hidden></section>
+    </div>
+  </main>
+  <script src="pickup.js?v=20260713-pickup-tabs"></script>
+</body>
+
+</html>

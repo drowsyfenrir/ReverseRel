@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <title>픽업 에디터 - 리버스: 1999 도서관</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icon/32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/icon/16.png" />
+  <link rel="apple-touch-icon" href="img/icon/fabicon.png" />
+  <link rel="stylesheet" href="styles.css?v=20260713-pickup-editor" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="header-title">
+      <a class="brand" href="index.html"><img src="img/title.png" alt="리버스 1999 도서관" /></a>
+      <a href="version.html">버전 요약</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="relationship.html">인물 관계도</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="deck.html">덱 리스트</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="pickup.html">픽업 가이드</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="version-editor.html">버전 에디터</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="editor.html">관계도 에디터</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="deck-editor.html">덱 에디터</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="pickup-editor.html" aria-current="page">픽업 에디터</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+    </div>
+  </header>
+  <main class="deck-editor-shell pickup-editor-shell">
+    <aside class="deck-editor-list-panel">
+      <div id="pickupPanelList" class="deck-editor-list pickup-editor-panel-list"></div>
+      <div class="deck-editor-file-actions">
+        <button id="openPickupData" type="button">불러오기</button>
+        <button id="savePickupData" type="button">저장</button>
+        <button id="downloadPickupData" type="button">다운로드</button>
+        <button id="copyPickupData" type="button">복사</button>
+      </div>
+      <p id="pickupEditorStatus" class="deck-editor-status">pickup-data.json을 불러오는 중입니다.</p>
+    </aside>
+    <section class="deck-editor-content-panel">
+      <form id="pickupEditorForm" class="deck-editor-form pickup-editor-form"></form>
+    </section>
+  </main>
+  <script src="pickup-editor.js?v=20260713-pickup-editor"></script>
+</body>
+</html>
