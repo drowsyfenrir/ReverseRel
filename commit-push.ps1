@@ -39,6 +39,27 @@ if ($LASTEXITCODE -ne 0) {
   exit 1
 }
 
+$localOnlyFiles = @(
+  "editor.html",
+  "editor.js",
+  "version-editor.html",
+  "version-editor.js",
+  "deck-editor.html",
+  "deck-editor.js",
+  "pickup-editor.html",
+  "pickup-editor.js"
+)
+
+Write-Host "로컬 전용 에디터 파일은 커밋에서 제외합니다."
+foreach ($file in $localOnlyFiles) {
+  git rm --cached --ignore-unmatch --quiet -- $file
+  if ($LASTEXITCODE -ne 0) {
+    Write-Host ""
+    Write-Host "$file 제외 처리에 실패했습니다."
+    exit 1
+  }
+}
+
 Write-Host ""
 Write-Host "[커밋]"
 git commit -m $message
