@@ -161,35 +161,68 @@ function scheduleDisplayName(name) {
 
 function findScheduleForName(name) {
   const pages = pagesFromCurrentVersion();
+  const versionOrder = versionOrderMap(pages);
   const target = cleanText(name);
   const result = [];
-  pages.forEach((page) => {
+  let sequence = 0;
+  pages.forEach((page, pageIndex) => {
+    const version = page.version || page.pageName || "";
     [
       ["전반기", page.pickups?.first],
       ["후반기", page.pickups?.last],
       ["배포", page.pickups?.middle]
     ].forEach(([category, pickup]) => {
-      if (pickupContainsName(pickup, target)) result.push({ category, version: page.version || page.pageName || "" });
+      if (pickupContainsName(pickup, target)) result.push(scheduleItem(category, version, pageIndex, sequence++));
     });
     [
       ["고음 카운터", page.events?.highCounter],
       ["호수의 물결", page.events?.ripples]
     ].forEach(([category, event]) => {
-      if (profileListContainsName(event?.profiles, target)) result.push({ category, version: page.version || page.pageName || "" });
+      if (profileListContainsName(event?.profiles, target)) result.push(scheduleItem(category, version, pageIndex, sequence++));
     });
   });
-  manualConditionsForName(target).forEach((condition) => result.push(condition));
-  return result;
+  manualConditionsForName(target, versionOrder, sequence).forEach((condition) => result.push(condition));
+  return result
+    .sort((a, b) => a.order - b.order || a.sequence - b.sequence)
+    .map(({ category, version }) => ({ category, version }));
 }
 
-function manualConditionsForName(target) {
+function scheduleItem(category, version, order, sequence) {
+  return {
+    category,
+    version,
+    order,
+    sequence
+  };
+}
+
+function manualConditionsForName(target, versionOrder, baseSequence) {
   return (pickupState.data.conditions || [])
-    .filter((condition) => conditionContainsName(condition, target))
-    .map((condition) => ({
+    .map((condition, index) => ({ condition, index }))
+    .filter(({ condition }) => conditionContainsName(condition, target))
+    .map(({ condition, index }) => ({
       category: cleanText(condition.label),
-      version: cleanText(condition.version)
+      version: cleanText(condition.version),
+      order: versionSortOrder(cleanText(condition.version), versionOrder),
+      sequence: baseSequence + index
     }))
     .filter((condition) => condition.category && condition.version);
+}
+
+function versionOrderMap(pages) {
+  const orderMap = new Map();
+  pages.forEach((page, index) => {
+    [page.version, page.pageName].map(cleanText).filter(Boolean).forEach((version) => {
+      if (!orderMap.has(version)) orderMap.set(version, index);
+    });
+  });
+  return orderMap;
+}
+
+function versionSortOrder(version, orderMap) {
+  if (orderMap.has(version)) return orderMap.get(version);
+  const numeric = Number(version);
+  return Number.isFinite(numeric) ? 10000 + numeric : Number.MAX_SAFE_INTEGER;
 }
 
 function conditionContainsName(condition, target) {
