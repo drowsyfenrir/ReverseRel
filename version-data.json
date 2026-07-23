@@ -1,6 +1,6 @@
 {
   "schema": "reverse-rel-version-data",
-  "currentPageId": "version-3-6",
+  "currentPageId": "version-1780491535018-29",
   "pages": [
     {
       "id": "version-1-0",
@@ -3267,10 +3267,24 @@
           "label": "비구상 촬영기",
           "icon": "img/material/Immaterial Photoscope.png",
           "dateMode": "none",
-          "profiles": []
+          "profiles": [
+            "로페라",
+            "윈드송",
+            "제멜바이스",
+            "레굴루스",
+            "갈천",
+            "튜즈데이",
+            "드루비스"
+          ]
         }
       },
-      "exchangeCodes": []
+      "exchangeCodes": [
+        {
+          "name": "콜렉티프2.0시대",
+          "month": "8",
+          "day": "13"
+        }
+      ]
     },
     {
       "id": "version-3-7",
