@@ -3225,7 +3225,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "튜즈데이"
+            "튜즈데이",
+            "바바라"
           ]
         },
         "ripples": {
@@ -3481,8 +3482,8 @@
           ],
           "start": {
             "year": "2026",
-            "month": "10",
-            "day": "15"
+            "month": "11",
+            "day": "5"
           },
           "end": {
             "year": "2026",
@@ -3497,7 +3498,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "J"
+            "J",
+            "네임데이"
           ]
         },
         "ripples": {
