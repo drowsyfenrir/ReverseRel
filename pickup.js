@@ -191,7 +191,7 @@ function renderScheduleProfile(entry) {
   return `
     <article class="pickup-schedule-profile">
       <div class="pickup-schedule-image" style="background-image: url('profile/${encodeURIComponent(name)}.png');">
-        ${entry.rhiannon ? '<img class="pickup-schedule-overlay" src="img/pickup/리아논.png" alt="" />' : ""}
+        ${entry.rhiannon ? '<span class="pickup-schedule-overlay-frame"><img class="pickup-schedule-overlay" src="img/pickup/리아논.png" alt="" /></span>' : ""}
       </div>
       <h3>${escapeHtml(displayName)}</h3>
       <div class="pickup-schedule-list">
@@ -331,8 +331,8 @@ async function drawScheduleProfile(context, profile, rootRect) {
   const imageBox = profile.querySelector(".pickup-schedule-image");
   const nameLabel = profile.querySelector("h3");
   if (imageBox) await drawElementBoxFromDom(context, imageBox, rootRect);
-  for (const overlay of imageBox?.querySelectorAll("img") || []) {
-    await drawImgElement(context, overlay, rootRect);
+  for (const overlay of imageBox?.querySelectorAll(".pickup-schedule-overlay-frame") || []) {
+    await drawOverlayFrame(context, overlay, rootRect);
   }
   if (nameLabel) {
     await drawElementBoxFromDom(context, nameLabel, rootRect);
@@ -380,10 +380,6 @@ async function drawImgElement(context, element, rootRect) {
   const style = window.getComputedStyle(element);
   const x = rect.left - rootRect.left;
   const y = rect.top - rootRect.top;
-  if (element.classList.contains("pickup-schedule-overlay")) {
-    await drawCircleImage(context, element, x, y, rect.width, rect.height);
-    return;
-  }
   const radius = style.clipPath.startsWith("circle") ? Math.min(rect.width, rect.height) / 2 : parseFloat(style.borderTopLeftRadius) || 0;
   const image = await loadImage(element.currentSrc || element.src);
   context.save();
@@ -399,8 +395,16 @@ async function drawImgElement(context, element, rootRect) {
   drawOutline(context, style, x, y, rect.width, rect.height, radius);
 }
 
-async function drawCircleImage(context, element, x, y, width, height) {
-  const image = await loadImage(element.currentSrc || element.src);
+async function drawOverlayFrame(context, frame, rootRect) {
+  const rect = frame.getBoundingClientRect();
+  if (!rect.width || !rect.height) return;
+  const imageElement = frame.querySelector("img");
+  if (!imageElement) return;
+  const image = await loadImage(imageElement.currentSrc || imageElement.src);
+  const x = rect.left - rootRect.left;
+  const y = rect.top - rootRect.top;
+  const width = rect.width;
+  const height = rect.height;
   const radius = Math.min(width, height) / 2;
   const centerX = x + width / 2;
   const centerY = y + height / 2;
