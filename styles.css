@@ -1321,16 +1321,22 @@ button { border: 0; cursor: pointer; }
 }
 .pickup-tabs {
   --version-tab-width: 150px;
-  --version-tab-indicator-left: calc(50% - var(--version-tab-gap) / 2 - var(--version-tab-width) + 20px);
+  --pickup-tab-indicator-width: 70px;
+  --pickup-tab-indicator-offset: calc((var(--version-tab-width) - var(--pickup-tab-indicator-width)) / 2);
+  --version-tab-indicator-left: calc(50% - var(--version-tab-gap) / 2 - var(--version-tab-width) + var(--pickup-tab-indicator-offset));
+}
+.pickup-tabs::after {
+  width: var(--pickup-tab-indicator-width);
+  border-radius: 0;
 }
 .pickup-tabs.is-schedule::after,
 .pickup-tabs:has([data-pickup-view="schedule"]:hover)::after,
 .pickup-tabs:has([data-pickup-view="schedule"]:focus-visible)::after {
-  --version-tab-indicator-left: calc(50% + var(--version-tab-gap) / 2 + 20px);
+  --version-tab-indicator-left: calc(50% + var(--version-tab-gap) / 2 + var(--pickup-tab-indicator-offset));
 }
 .pickup-tabs:has([data-pickup-view="banner"]:hover)::after,
 .pickup-tabs:has([data-pickup-view="banner"]:focus-visible)::after {
-  --version-tab-indicator-left: calc(50% - var(--version-tab-gap) / 2 - var(--version-tab-width) + 20px);
+  --version-tab-indicator-left: calc(50% - var(--version-tab-gap) / 2 - var(--version-tab-width) + var(--pickup-tab-indicator-offset));
 }
 .version-tab {
   position: relative;
@@ -2556,7 +2562,12 @@ button { border: 0; cursor: pointer; }
   }
   .pickup-tabs {
     --version-tab-width: 132px;
-    --version-tab-indicator-left: calc(50% - var(--version-tab-gap) / 2 - var(--version-tab-width) + 20px);
+    --pickup-tab-indicator-width: calc(var(--version-tab-width) - 40px);
+    --pickup-tab-indicator-offset: 20px;
+    --version-tab-indicator-left: calc(50% - var(--version-tab-gap) / 2 - var(--version-tab-width) + var(--pickup-tab-indicator-offset));
+  }
+  .pickup-tabs::after {
+    width: var(--pickup-tab-indicator-width);
   }
   .pickup-tabs .version-tab {
     min-width: 132px;
@@ -2565,12 +2576,12 @@ button { border: 0; cursor: pointer; }
   .pickup-tabs.is-banner::after,
   .pickup-tabs.is-banner:has([data-pickup-view="schedule"]:hover)::after,
   .pickup-tabs.is-banner:has([data-pickup-view="schedule"]:focus-visible)::after {
-    --version-tab-indicator-left: calc(50% - var(--version-tab-gap) / 2 - var(--version-tab-width) + 20px);
+    --version-tab-indicator-left: calc(50% - var(--version-tab-gap) / 2 - var(--version-tab-width) + var(--pickup-tab-indicator-offset));
   }
   .pickup-tabs.is-schedule::after,
   .pickup-tabs.is-schedule:has([data-pickup-view="banner"]:hover)::after,
   .pickup-tabs.is-schedule:has([data-pickup-view="banner"]:focus-visible)::after {
-    --version-tab-indicator-left: calc(50% + var(--version-tab-gap) / 2 + 20px);
+    --version-tab-indicator-left: calc(50% + var(--version-tab-gap) / 2 + var(--pickup-tab-indicator-offset));
   }
   .pickup-popup[data-pickup-panel="banner"] {
     padding: 14px 10px 22px;
@@ -3611,10 +3622,42 @@ button { border: 0; cursor: pointer; }
   position: absolute;
   top: -28px;
   left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   color: #000;
   font-size: 14px;
   font-weight: 550;
   line-height: 20px;
+}
+.pickup-schedule-download {
+  display: inline-grid;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 4px;
+  color: var(--orange);
+  background: transparent;
+  cursor: pointer;
+}
+.pickup-schedule-download:hover,
+.pickup-schedule-download:focus-visible {
+  color: var(--navy);
+}
+.pickup-schedule-download:disabled {
+  cursor: wait;
+  opacity: .45;
+}
+.pickup-schedule-download svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 .pickup-schedule-deck-body {
   display: flex;
@@ -3633,6 +3676,7 @@ button { border: 0; cursor: pointer; }
   text-align: center;
 }
 .pickup-schedule-image {
+  position: relative;
   width: 120px;
   height: 120px;
   border: 1px solid #807f7d;
@@ -3641,6 +3685,20 @@ button { border: 0; cursor: pointer; }
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.pickup-schedule-overlay {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #fff;
+  clip-path: circle(50% at 50% 50%);
+  object-fit: cover;
+  pointer-events: none;
 }
 .pickup-schedule-profile h3 {
   display: grid;
@@ -3855,6 +3913,17 @@ button { border: 0; cursor: pointer; }
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
+}
+.pickup-editor-name-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.pickup-editor-name-label input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: var(--orange);
 }
 #statusText { min-height: 20px; margin: 0; color: var(--muted); font-size: 13px; }
 @media (max-width: 980px) {

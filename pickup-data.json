@@ -2,12 +2,6 @@
   "schema": "reverse-rel-pickup-data",
   "conditions": [
     {
-      "id": "condition-1783950328697-32eb1d4caa5f48",
-      "version": "3.6",
-      "label": "복각",
-      "names": "바르카롤라"
-    },
-    {
       "id": "condition-1783950388844-92426a0d73a1f",
       "version": "3.9",
       "label": "이중",
@@ -41,13 +35,7 @@
       "id": "condition-1783950618072-bc4ef77492bd28",
       "version": "3.7",
       "label": "선택권",
-      "names": "제멜바이스, 센티널, 루부스카, 이터니티, 이졸데, 로렌츠 버터플라이, 플러터 페이지, 마샤, 안안 리, 투스 페어리, 키페리나, 정화광, 라모나, 튜즈데이, 윌로우, 브룸, 울리히, 카론, 코르부스, 레콜레타, 바르카롤라, 알레프, 이고르, 몰디르, 로페라, 마커스, 아르고스, 드루비스, 머큐리아, 빌라"
-    },
-    {
-      "id": "condition-1784015703119-bfb9b2896d5ee8",
-      "version": "3.6",
-      "label": "복각",
-      "names": "마샤"
+      "names": "제멜바이스, 센티널, 루부스카, 이터니티, 이졸데, 로렌츠 버터플라이, 플러터 페이지, 마샤, 안안 리, 투스 페어리, 키페리나, 정화광, 라모나, 튜즈데이, 윌로우, 브룸, 울리히, 카론, 코르부스, 레콜레타, 바르카롤라, 알레프, 이고르, 몰디르, 로페라, 마커스, 아르고스, 드루비스, 머큐리아, 빌라, 갈천, 파투투"
     }
   ],
   "panels": {
@@ -64,7 +52,7 @@
           "content": "",
           "note": "",
           "names": [],
-          "visible": true
+          "visible": false
         },
         {
           "id": "block-1783938849000-3297cdbbb10fa",
@@ -77,7 +65,7 @@
           "content": "전력덱 탱커 및 범용 탱커",
           "note": "필수 추천",
           "names": [],
-          "visible": true
+          "visible": false
         },
         {
           "id": "block-1783939123868-0a852a3baab23",
@@ -90,7 +78,7 @@
           "content": "마도학자 선택 후 70번 안으로 확정 픽업",
           "note": "이월 가능",
           "names": [],
-          "visible": true
+          "visible": false
         },
         {
           "id": "block-1783939206936-4540631d26298",
@@ -103,7 +91,7 @@
           "content": "",
           "note": "",
           "names": [],
-          "visible": true
+          "visible": false
         },
         {
           "id": "block-1783939915179-7bc58481ec318",
@@ -406,11 +394,26 @@
           "content": "",
           "note": "",
           "names": [
-            "노티카",
-            "제멜바이스",
-            "센티널",
-            "루부스카",
-            "이터니티"
+            {
+              "name": "노티카",
+              "rhiannon": false
+            },
+            {
+              "name": "제멜바이스",
+              "rhiannon": false
+            },
+            {
+              "name": "센티널",
+              "rhiannon": true
+            },
+            {
+              "name": "루부스카",
+              "rhiannon": false
+            },
+            {
+              "name": "파투투",
+              "rhiannon": false
+            }
           ],
           "visible": true
         },
@@ -425,11 +428,26 @@
           "content": "",
           "note": "",
           "names": [
-            "베릴",
-            "이졸데",
-            "로렌츠 버터플라이",
-            "플러터 페이지",
-            "마샤"
+            {
+              "name": "베릴",
+              "rhiannon": false
+            },
+            {
+              "name": "이졸데",
+              "rhiannon": false
+            },
+            {
+              "name": "로렌츠 버터플라이",
+              "rhiannon": false
+            },
+            {
+              "name": "플러터 페이지",
+              "rhiannon": false
+            },
+            {
+              "name": "마샤",
+              "rhiannon": false
+            }
           ],
           "visible": true
         },
@@ -444,10 +462,22 @@
           "content": "",
           "note": "",
           "names": [
-            "노사전",
-            "안안 리",
-            "투스 페어리",
-            "키페리나"
+            {
+              "name": "노사전",
+              "rhiannon": false
+            },
+            {
+              "name": "안안 리",
+              "rhiannon": true
+            },
+            {
+              "name": "투스 페어리",
+              "rhiannon": false
+            },
+            {
+              "name": "키페리나",
+              "rhiannon": false
+            }
           ],
           "visible": true
         },
@@ -462,11 +492,26 @@
           "content": "",
           "note": "",
           "names": [
-            "양월",
-            "정화광",
-            "로렌츠 버터플라이",
-            "플러터 페이지",
-            "마샤"
+            {
+              "name": "양월",
+              "rhiannon": false
+            },
+            {
+              "name": "정화광",
+              "rhiannon": true
+            },
+            {
+              "name": "로렌츠 버터플라이",
+              "rhiannon": false
+            },
+            {
+              "name": "플러터 페이지",
+              "rhiannon": false
+            },
+            {
+              "name": "마샤",
+              "rhiannon": false
+            }
           ],
           "visible": true
         },
@@ -481,11 +526,26 @@
           "content": "",
           "note": "",
           "names": [
-            "라모나",
-            "튜즈데이",
-            "윌로우",
-            "로렌츠 버터플라이",
-            "에지오"
+            {
+              "name": "라모나",
+              "rhiannon": false
+            },
+            {
+              "name": "튜즈데이",
+              "rhiannon": false
+            },
+            {
+              "name": "윌로우",
+              "rhiannon": false
+            },
+            {
+              "name": "로렌츠 버터플라이",
+              "rhiannon": false
+            },
+            {
+              "name": "에지오",
+              "rhiannon": false
+            }
           ],
           "visible": true
         },
@@ -500,11 +560,26 @@
           "content": "",
           "note": "",
           "names": [
-            "브룸",
-            "안조 날라",
-            "울리히",
-            "카론",
-            "이니그마"
+            {
+              "name": "브룸",
+              "rhiannon": false
+            },
+            {
+              "name": "안조 날라",
+              "rhiannon": false
+            },
+            {
+              "name": "울리히",
+              "rhiannon": true
+            },
+            {
+              "name": "카론",
+              "rhiannon": false
+            },
+            {
+              "name": "이니그마",
+              "rhiannon": false
+            }
           ],
           "visible": true
         },
@@ -519,10 +594,22 @@
           "content": "",
           "note": "",
           "names": [
-            "루시",
-            "울리히",
-            "카론",
-            "이니그마"
+            {
+              "name": "루시",
+              "rhiannon": false
+            },
+            {
+              "name": "울리히",
+              "rhiannon": true
+            },
+            {
+              "name": "카론",
+              "rhiannon": false
+            },
+            {
+              "name": "이니그마",
+              "rhiannon": false
+            }
           ],
           "visible": true
         },
@@ -537,10 +624,22 @@
           "content": "",
           "note": "",
           "names": [
-            "코르부스",
-            "플러터 페이지",
-            "카론",
-            "이니그마"
+            {
+              "name": "코르부스",
+              "rhiannon": false
+            },
+            {
+              "name": "플러터 페이지",
+              "rhiannon": false
+            },
+            {
+              "name": "카론",
+              "rhiannon": false
+            },
+            {
+              "name": "이니그마",
+              "rhiannon": false
+            }
           ],
           "visible": true
         },
@@ -555,10 +654,22 @@
           "content": "",
           "note": "",
           "names": [
-            "레콜레타",
-            "울리히",
-            "카론",
-            "이니그마"
+            {
+              "name": "레콜레타",
+              "rhiannon": false
+            },
+            {
+              "name": "울리히",
+              "rhiannon": true
+            },
+            {
+              "name": "카론",
+              "rhiannon": false
+            },
+            {
+              "name": "이니그마",
+              "rhiannon": false
+            }
           ],
           "visible": true
         },
@@ -573,10 +684,22 @@
           "content": "",
           "note": "",
           "names": [
-            "바르카롤라",
-            "알레프",
-            "투스 페어리",
-            "키페리나"
+            {
+              "name": "바르카롤라",
+              "rhiannon": false
+            },
+            {
+              "name": "알레프",
+              "rhiannon": false
+            },
+            {
+              "name": "투스 페어리",
+              "rhiannon": true
+            },
+            {
+              "name": "키페리나",
+              "rhiannon": false
+            }
           ],
           "visible": true
         },
@@ -591,10 +714,26 @@
           "content": "",
           "note": "",
           "names": [
-            "이고르",
-            "몰디르",
-            "로페라",
-            "마샤"
+            {
+              "name": "이고르",
+              "rhiannon": false
+            },
+            {
+              "name": "몰디르",
+              "rhiannon": true
+            },
+            {
+              "name": "로페라",
+              "rhiannon": false
+            },
+            {
+              "name": "J",
+              "rhiannon": false
+            },
+            {
+              "name": "마샤",
+              "rhiannon": false
+            }
           ],
           "visible": true
         },
@@ -609,11 +748,26 @@
           "content": "",
           "note": "",
           "names": [
-            "마커스",
-            "아르고스",
-            "드루비스",
-            "머큐리아",
-            "빌라"
+            {
+              "name": "마커스",
+              "rhiannon": false
+            },
+            {
+              "name": "아르고스",
+              "rhiannon": false
+            },
+            {
+              "name": "드루비스",
+              "rhiannon": false
+            },
+            {
+              "name": "머큐리아",
+              "rhiannon": false
+            },
+            {
+              "name": "빌라",
+              "rhiannon": false
+            }
           ],
           "visible": true
         },
@@ -628,10 +782,22 @@
           "content": "",
           "note": "",
           "names": [
-            "쌍둥이",
-            "코펠리아",
-            "리아논",
-            "에버에코"
+            {
+              "name": "쌍둥이",
+              "rhiannon": false
+            },
+            {
+              "name": "코펠리아",
+              "rhiannon": false
+            },
+            {
+              "name": "리아논",
+              "rhiannon": false
+            },
+            {
+              "name": "에버에코",
+              "rhiannon": false
+            }
           ],
           "visible": true
         },
@@ -646,10 +812,86 @@
           "content": "",
           "note": "",
           "names": [
-            "미스 스트레인저",
-            "리아논",
-            "카론",
-            "이니그마"
+            {
+              "name": "미스 스트레인저",
+              "rhiannon": false
+            },
+            {
+              "name": "리아논",
+              "rhiannon": false
+            },
+            {
+              "name": "카론",
+              "rhiannon": false
+            },
+            {
+              "name": "이니그마",
+              "rhiannon": false
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1785668919308-318da0a38dffa8",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "반격_저형상",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "names": [
+            {
+              "name": "J",
+              "rhiannon": false
+            },
+            {
+              "name": "코너스톤",
+              "rhiannon": false
+            },
+            {
+              "name": "안조 날라",
+              "rhiannon": true
+            },
+            {
+              "name": "플러터 페이지",
+              "rhiannon": false
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1785672951314-de1d473dd78998",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "에지오_복합",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "names": [
+            {
+              "name": "에지오",
+              "rhiannon": false
+            },
+            {
+              "name": "튜즈데이",
+              "rhiannon": false
+            },
+            {
+              "name": "갈천",
+              "rhiannon": false
+            },
+            {
+              "name": "플러터 페이지",
+              "rhiannon": false
+            },
+            {
+              "name": "파투투",
+              "rhiannon": false
+            }
           ],
           "visible": true
         }

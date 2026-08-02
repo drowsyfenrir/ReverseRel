@@ -33,6 +33,27 @@ pickupButtons.forEach((button) => {
   });
 });
 
+document.addEventListener("click", async (event) => {
+  const button = event.target.closest("[data-download-pickup-deck]");
+  if (!button) return;
+  const deck = button.closest(".pickup-schedule-deck");
+  if (!deck) return;
+  button.disabled = true;
+  try {
+    const blob = await renderElementToPng(deck);
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = `${safeFileName(button.dataset.deckName || "pickup-schedule")}.png`;
+    link.click();
+    URL.revokeObjectURL(link.href);
+  } catch (error) {
+    console.error(error);
+    alert("이미지 다운로드에 실패했습니다.");
+  } finally {
+    button.disabled = false;
+  }
+});
+
 function normalizePickupData(data) {
   const panels = data?.panels || {};
   return {
@@ -64,9 +85,22 @@ function normalizeBlocks(blocks) {
     category: block.category || "",
     content: block.content || "",
     note: block.note || "",
-    names: Array.isArray(block.names) ? block.names.map((name) => name || "") : ["", "", "", ""],
+    names: Array.isArray(block.names) ? block.names.map(normalizeScheduleName) : ["", "", "", ""].map(normalizeScheduleName),
     visible: block.visible !== false
   })) : [];
+}
+
+function normalizeScheduleName(entry) {
+  if (entry && typeof entry === "object") {
+    return {
+      name: entry.name || "",
+      rhiannon: entry.rhiannon === true
+    };
+  }
+  return {
+    name: entry || "",
+    rhiannon: false
+  };
 }
 
 function normalizeVersionData(data) {
@@ -121,38 +155,54 @@ function renderBlock(block) {
 function renderScheduleBlocks(blocks) {
   const visibleDecks = blocks.filter((block) => {
     if (block.visible === false || block.type !== "deck") return false;
-    return (Array.isArray(block.names) ? block.names : []).some((name) => cleanText(name));
+    return (Array.isArray(block.names) ? block.names : []).some((entry) => cleanText(scheduleEntryName(entry)));
   });
   if (!visibleDecks.length) return '<div class="pickup-empty">마도학자 일정 컨텐츠를 추가하세요.</div>';
   return `<div class="pickup-schedule-content">${visibleDecks.map(renderScheduleDeck).join("")}</div>`;
 }
 
 function renderScheduleDeck(block) {
-  const names = (Array.isArray(block.names) ? block.names : []).map(cleanText).filter(Boolean);
-  if (!names.length) return "";
+  const entries = (Array.isArray(block.names) ? block.names : []).map(normalizeScheduleName).filter((entry) => cleanText(entry.name));
+  if (!entries.length) return "";
   const deckName = cleanText(block.name);
   return `
     <section class="pickup-schedule-deck">
-      ${deckName ? `<div class="pickup-schedule-deck-label">${escapeHtml(deckName)}</div>` : ""}
+      ${deckName ? `
+        <div class="pickup-schedule-deck-label">
+          <span>${escapeHtml(deckName)}</span>
+          <button class="pickup-schedule-download" type="button" data-download-pickup-deck data-deck-name="${escapeAttr(deckName)}" aria-label="${escapeAttr(deckName)} 이미지 다운로드">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17v3h14v-3" />
+            </svg>
+          </button>
+        </div>
+      ` : ""}
       <div class="pickup-schedule-deck-body">
-        ${names.map(renderScheduleProfile).join("")}
+        ${entries.map(renderScheduleProfile).join("")}
       </div>
     </section>
   `;
 }
 
-function renderScheduleProfile(name) {
+function renderScheduleProfile(entry) {
+  const name = scheduleEntryName(entry);
   const schedules = findScheduleForName(name);
   const displayName = scheduleDisplayName(name);
   return `
     <article class="pickup-schedule-profile">
-      <div class="pickup-schedule-image" style="background-image: url('profile/${encodeURIComponent(name)}.png');"></div>
+      <div class="pickup-schedule-image" style="background-image: url('profile/${encodeURIComponent(name)}.png');">
+        ${entry.rhiannon ? '<img class="pickup-schedule-overlay" src="img/pickup/리아논.png" alt="" />' : ""}
+      </div>
       <h3>${escapeHtml(displayName)}</h3>
       <div class="pickup-schedule-list">
         ${schedules.length ? schedules.map((item) => `<p>[${escapeHtml(item.category)}] ${escapeHtml(item.version)}</p>`).join("") : "<p>예정 없음</p>"}
       </div>
     </article>
   `;
+}
+
+function scheduleEntryName(entry) {
+  return cleanText(entry && typeof entry === "object" ? entry.name : entry);
 }
 
 function scheduleDisplayName(name) {
@@ -256,6 +306,210 @@ function cleanText(value) {
   return String(value ?? "").trim();
 }
 
+async function renderElementToPng(element) {
+  const rect = element.getBoundingClientRect();
+  const width = Math.ceil(rect.width);
+  const height = Math.ceil(rect.height);
+  const scale = Math.max(2, Math.ceil(window.devicePixelRatio || 1));
+  const canvas = document.createElement("canvas");
+  canvas.width = width * scale;
+  canvas.height = height * scale;
+  const context = canvas.getContext("2d");
+  context.setTransform(scale, 0, 0, scale, 0, 0);
+  if (document.fonts?.ready) await document.fonts.ready;
+
+  await drawElementBox(context, element, rect, 0, 0, width, height);
+  for (const profile of element.querySelectorAll(".pickup-schedule-profile")) {
+    await drawScheduleProfile(context, profile, rect);
+  }
+  return new Promise((resolve, reject) => {
+    canvas.toBlob((blob) => blob ? resolve(blob) : reject(new Error("PNG 생성 실패")), "image/png");
+  });
+}
+
+async function drawScheduleProfile(context, profile, rootRect) {
+  const imageBox = profile.querySelector(".pickup-schedule-image");
+  const nameLabel = profile.querySelector("h3");
+  if (imageBox) await drawElementBoxFromDom(context, imageBox, rootRect);
+  for (const overlay of imageBox?.querySelectorAll("img") || []) {
+    await drawImgElement(context, overlay, rootRect);
+  }
+  if (nameLabel) {
+    await drawElementBoxFromDom(context, nameLabel, rootRect);
+    drawCenteredText(context, nameLabel, rootRect);
+  }
+  profile.querySelectorAll(".pickup-schedule-list p").forEach((line) => drawCenteredText(context, line, rootRect));
+}
+
+async function drawElementBoxFromDom(context, element, rootRect) {
+  const rect = element.getBoundingClientRect();
+  await drawElementBox(
+    context,
+    element,
+    rootRect,
+    rect.left - rootRect.left,
+    rect.top - rootRect.top,
+    rect.width,
+    rect.height
+  );
+}
+
+async function drawElementBox(context, element, rootRect, x, y, width, height) {
+  const style = window.getComputedStyle(element);
+  const radius = parseFloat(style.borderTopLeftRadius) || 0;
+  context.save();
+  roundedRect(context, x, y, width, height, radius);
+  context.clip();
+  const backgroundColor = style.backgroundColor;
+  if (backgroundColor && backgroundColor !== "rgba(0, 0, 0, 0)" && backgroundColor !== "transparent") {
+    context.fillStyle = backgroundColor;
+    context.fillRect(x, y, width, height);
+  }
+  const backgroundUrl = extractCssUrl(style.backgroundImage);
+  if (backgroundUrl) {
+    const image = await loadImage(new URL(backgroundUrl, location.href).href);
+    drawImageCover(context, image, x, y, width, height);
+  }
+  context.restore();
+  drawBorder(context, style, x, y, width, height, radius);
+}
+
+async function drawImgElement(context, element, rootRect) {
+  const rect = element.getBoundingClientRect();
+  if (!rect.width || !rect.height) return;
+  const style = window.getComputedStyle(element);
+  const x = rect.left - rootRect.left;
+  const y = rect.top - rootRect.top;
+  if (element.classList.contains("pickup-schedule-overlay")) {
+    await drawCircleImage(context, element, x, y, rect.width, rect.height);
+    return;
+  }
+  const radius = style.clipPath.startsWith("circle") ? Math.min(rect.width, rect.height) / 2 : parseFloat(style.borderTopLeftRadius) || 0;
+  const image = await loadImage(element.currentSrc || element.src);
+  context.save();
+  roundedRect(context, x, y, rect.width, rect.height, radius);
+  context.clip();
+  if (style.objectFit === "cover") {
+    drawImageCover(context, image, x, y, rect.width, rect.height);
+  } else {
+    context.drawImage(image, x, y, rect.width, rect.height);
+  }
+  context.restore();
+  drawBorder(context, style, x, y, rect.width, rect.height, radius);
+  drawOutline(context, style, x, y, rect.width, rect.height, radius);
+}
+
+async function drawCircleImage(context, element, x, y, width, height) {
+  const image = await loadImage(element.currentSrc || element.src);
+  const radius = Math.min(width, height) / 2;
+  const centerX = x + width / 2;
+  const centerY = y + height / 2;
+  context.save();
+  context.beginPath();
+  context.arc(centerX, centerY, radius, 0, Math.PI * 2);
+  context.closePath();
+  context.clip();
+  drawImageCover(context, image, x, y, width, height);
+  context.restore();
+  context.save();
+  context.strokeStyle = "#fff";
+  context.lineWidth = 1;
+  context.beginPath();
+  context.arc(centerX, centerY, radius - 0.5, 0, Math.PI * 2);
+  context.closePath();
+  context.stroke();
+  context.restore();
+}
+
+function drawCenteredText(context, element, rootRect) {
+  const rect = element.getBoundingClientRect();
+  const style = window.getComputedStyle(element);
+  const text = cleanText(element.textContent);
+  if (!text) return;
+  context.save();
+  context.fillStyle = style.color || "#000";
+  context.font = style.font || `${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
+  context.textAlign = style.textAlign === "left" ? "left" : style.textAlign === "right" ? "right" : "center";
+  context.textBaseline = "middle";
+  const x = context.textAlign === "left"
+    ? rect.left - rootRect.left
+    : context.textAlign === "right"
+      ? rect.right - rootRect.left
+      : rect.left - rootRect.left + rect.width / 2;
+  const y = rect.top - rootRect.top + rect.height / 2;
+  context.fillText(text, x, y);
+  context.restore();
+}
+
+function drawBorder(context, style, x, y, width, height, radius) {
+  const borderWidth = parseFloat(style.borderTopWidth) || 0;
+  if (!borderWidth) return;
+  context.save();
+  context.strokeStyle = style.borderTopColor || "#d7dde8";
+  context.lineWidth = borderWidth;
+  roundedRect(context, x + borderWidth / 2, y + borderWidth / 2, width - borderWidth, height - borderWidth, Math.max(0, radius - borderWidth / 2));
+  context.stroke();
+  context.restore();
+}
+
+function drawOutline(context, style, x, y, width, height, radius) {
+  const outlineWidth = parseFloat(style.outlineWidth) || 0;
+  if (!outlineWidth || style.outlineStyle === "none") return;
+  context.save();
+  context.strokeStyle = style.outlineColor || "#fff";
+  context.lineWidth = outlineWidth;
+  roundedRect(
+    context,
+    x - outlineWidth / 2,
+    y - outlineWidth / 2,
+    width + outlineWidth,
+    height + outlineWidth,
+    radius + outlineWidth / 2
+  );
+  context.stroke();
+  context.restore();
+}
+
+function roundedRect(context, x, y, width, height, radius) {
+  const safeRadius = Math.min(radius, width / 2, height / 2);
+  context.beginPath();
+  context.moveTo(x + safeRadius, y);
+  context.lineTo(x + width - safeRadius, y);
+  context.quadraticCurveTo(x + width, y, x + width, y + safeRadius);
+  context.lineTo(x + width, y + height - safeRadius);
+  context.quadraticCurveTo(x + width, y + height, x + width - safeRadius, y + height);
+  context.lineTo(x + safeRadius, y + height);
+  context.quadraticCurveTo(x, y + height, x, y + height - safeRadius);
+  context.lineTo(x, y + safeRadius);
+  context.quadraticCurveTo(x, y, x + safeRadius, y);
+  context.closePath();
+}
+
+function drawImageCover(context, image, x, y, width, height) {
+  const scale = Math.max(width / image.naturalWidth, height / image.naturalHeight);
+  const drawWidth = image.naturalWidth * scale;
+  const drawHeight = image.naturalHeight * scale;
+  context.drawImage(image, x + (width - drawWidth) / 2, y + (height - drawHeight) / 2, drawWidth, drawHeight);
+}
+
+function extractCssUrl(value) {
+  const match = /url\((['"]?)(.*?)\1\)/.exec(value || "");
+  return match ? match[2] : "";
+}
+
+function loadImage(src) {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = reject;
+    image.src = src;
+  });
+}
+
+function safeFileName(value) {
+  return cleanText(value).replace(/[\\/:*?"<>|]/g, "_") || "pickup-schedule";
+}
+
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"']/g, (char) => ({
     "&": "&amp;",
@@ -264,4 +518,8 @@ function escapeHtml(value) {
     '"': "&quot;",
     "'": "&#039;"
   }[char]));
+}
+
+function escapeAttr(value) {
+  return escapeHtml(value);
 }
