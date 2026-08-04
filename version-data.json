@@ -3436,7 +3436,13 @@
           ]
         }
       },
-      "exchangeCodes": []
+      "exchangeCodes": [
+        {
+          "name": "세상을등진마녀",
+          "month": "9",
+          "day": "24"
+        }
+      ]
     },
     {
       "id": "version-1780491541585-30",
