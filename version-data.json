@@ -3147,9 +3147,9 @@
     },
     {
       "id": "version-1780491535018-29",
-      "pageName": "3.9",
-      "version": "3.9",
-      "versionName": "아토믹 하트 콜라보",
+      "pageName": "3.8.5",
+      "version": "3.8.5",
+      "versionName": "폴리머 웨이브",
       "start": {
         "year": "2026",
         "month": "7",
@@ -3576,6 +3576,129 @@
             "레굴루스",
             "제시카"
           ]
+        }
+      },
+      "exchangeCodes": []
+    },
+    {
+      "id": "version-1786088498014-31",
+      "pageName": "3.9",
+      "version": "3.9",
+      "versionName": "다시 불타올라라! 황금빛 바다",
+      "start": {
+        "year": "2026",
+        "month": "11",
+        "day": "5"
+      },
+      "end": {
+        "year": "2026",
+        "month": "12",
+        "day": "17"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "헤도네",
+          "profiles": [
+            "블로니",
+            "울루"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "11",
+            "day": "5"
+          },
+          "end": {
+            "year": "2026",
+            "month": "11",
+            "day": "26"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "배포",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2026",
+            "month": "5",
+            "day": "28"
+          },
+          "end": {
+            "year": "2026",
+            "month": "7",
+            "day": "2"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "나르키소스",
+          "profiles": [
+            "아부구스트",
+            "X"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "11",
+            "day": "26"
+          },
+          "end": {
+            "year": "2026",
+            "month": "12",
+            "day": "17"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "아르고스"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            {
+              "name": "멜라니아",
+              "highlighted": false
+            },
+            {
+              "name": "레콜레타",
+              "highlighted": false
+            },
+            {
+              "name": "누아르",
+              "highlighted": true
+            },
+            {
+              "name": "몰디르",
+              "highlighted": true
+            },
+            {
+              "name": "히사베스",
+              "highlighted": false
+            },
+            {
+              "name": "레굴루스",
+              "highlighted": false
+            }
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
         }
       },
       "exchangeCodes": []
