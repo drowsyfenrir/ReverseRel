@@ -5,6 +5,7 @@ const pickupState = {
 
 const PICKUP_SCHEMA = "reverse-rel-pickup-data";
 const PICKUP_PUBLIC_ORIGIN = "https://reverselibrary.pages.dev";
+const pickupEmbedHeightCache = new Map();
 const pickupSearchParams = new URLSearchParams(location.search);
 const pickupRequestedEmbed = pickupSearchParams.get("embed") || document.body.dataset.pickupEmbed || "";
 const pickupEmbedTarget = ["banner", "schedule"].includes(pickupRequestedEmbed)
@@ -138,7 +139,10 @@ function renderPickupPanels() {
       panel.hidden = !isActive;
       panel.classList.toggle("is-active", isActive);
     });
+  } else {
+    primePickupEmbedHeights();
   }
+  document.documentElement.dataset.pickupRendered = "true";
 }
 
 function renderPickupShareButton(target, label) {
@@ -343,18 +347,84 @@ function cleanText(value) {
 }
 
 async function copyPickupEmbedCode(target = "banner") {
-  const embedCode = renderPickupIframeEmbed(target);
+  const height = await getPickupEmbedHeight(target);
+  const embedCode = renderPickupIframeEmbed(target, height);
   await navigator.clipboard.writeText(embedCode);
   showPickupToast("임베드 코드 복사 완료");
 }
 
-function renderPickupIframeEmbed(target = "banner") {
+function renderPickupIframeEmbed(target = "banner", measuredHeight = 0) {
   const panel = document.querySelector(`[data-pickup-panel="${target}"]`);
-  const height = Math.max(360, Math.ceil(panel?.scrollHeight || 0) + 80);
+  const fallbackHeight = Math.ceil(panel?.scrollHeight || 0);
+  const height = Math.max(120, Math.ceil(measuredHeight || fallbackHeight) + 2);
   const title = target === "schedule" ? "리버스 1999 픽업 일정" : "리버스 1999 픽업 안내";
   const embedPage = target === "schedule" ? "pickup-schedule-embed.html" : "pickup-banner-embed.html";
   const src = `${PICKUP_PUBLIC_ORIGIN}/${embedPage}`;
   return `<iframe src="${src}" title="${title}" width="900" height="${height}" loading="lazy" scrolling="no" frameborder="0" style="display:block;width:100%;max-width:900px;height:${height}px;margin:0 auto;border:0;border-radius:12px;overflow:hidden;background:#fff;"></iframe>`;
+}
+
+function primePickupEmbedHeights() {
+  ["banner", "schedule"].forEach((target) => {
+    if (!pickupEmbedHeightCache.has(target)) {
+      pickupEmbedHeightCache.set(target, measurePickupEmbedHeight(target));
+    }
+  });
+}
+
+function getPickupEmbedHeight(target) {
+  if (!pickupEmbedHeightCache.has(target)) {
+    pickupEmbedHeightCache.set(target, measurePickupEmbedHeight(target));
+  }
+  return pickupEmbedHeightCache.get(target);
+}
+
+function measurePickupEmbedHeight(target) {
+  const embedPage = target === "schedule" ? "pickup-schedule-embed.html" : "pickup-banner-embed.html";
+  return new Promise((resolve) => {
+    const frame = document.createElement("iframe");
+    const fallback = Math.ceil(document.querySelector(`[data-pickup-panel="${target}"]`)?.scrollHeight || 360);
+    const finish = (height = fallback) => {
+      frame.remove();
+      resolve(Math.max(120, Math.ceil(height)));
+    };
+    const timer = setTimeout(() => finish(), 10000);
+    frame.setAttribute("aria-hidden", "true");
+    frame.tabIndex = -1;
+    frame.style.cssText = "position:fixed;left:-10000px;top:0;width:900px;height:1px;border:0;visibility:hidden;pointer-events:none;";
+    frame.addEventListener("load", async () => {
+      try {
+        const doc = frame.contentDocument;
+        if (!doc) throw new Error("임베드 문서를 읽을 수 없습니다.");
+        await waitForPickupEmbedRender(doc);
+        await doc.fonts?.ready;
+        await Promise.all(Array.from(doc.images).map((image) => image.decode?.().catch(() => undefined)));
+        await new Promise((next) => requestAnimationFrame(() => requestAnimationFrame(next)));
+        clearTimeout(timer);
+        finish(Math.max(doc.documentElement.scrollHeight, doc.body?.scrollHeight || 0));
+      } catch (error) {
+        clearTimeout(timer);
+        finish();
+      }
+    }, { once: true });
+    frame.src = new URL(embedPage, location.href).href;
+    document.body.appendChild(frame);
+  });
+}
+
+function waitForPickupEmbedRender(doc) {
+  if (doc.documentElement.dataset.pickupRendered === "true") return Promise.resolve();
+  return new Promise((resolve) => {
+    const observer = new MutationObserver(() => {
+      if (doc.documentElement.dataset.pickupRendered !== "true") return;
+      observer.disconnect();
+      resolve();
+    });
+    observer.observe(doc.documentElement, { attributes: true, attributeFilter: ["data-pickup-rendered"] });
+    setTimeout(() => {
+      observer.disconnect();
+      resolve();
+    }, 8000);
+  });
 }
 
 function showPickupToast(message) {
