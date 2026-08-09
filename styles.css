@@ -1466,6 +1466,35 @@ button { border: 0; cursor: pointer; }
 .pickup-embed-schedule [data-pickup-panel="schedule"] {
   display: block !important;
 }
+.pickup-embed-schedule .pickup-schedule-deck-body {
+  display: grid;
+  grid-template-columns: repeat(var(--pickup-profile-count, 1), minmax(0, 140px));
+  gap: clamp(6px, 2.5vw, 28px);
+}
+.pickup-embed-schedule .pickup-schedule-profile {
+  width: 100%;
+  min-width: 0;
+  grid-template-rows: auto 25px auto;
+}
+.pickup-embed-schedule .pickup-schedule-image {
+  width: min(120px, 100%);
+  height: auto;
+  aspect-ratio: 1;
+}
+.pickup-embed-schedule .pickup-schedule-overlay-frame {
+  width: min(40px, 33.333%);
+  height: auto;
+  aspect-ratio: 1;
+}
+.pickup-embed-schedule .pickup-schedule-profile h3 {
+  width: min(120px, 100%);
+  font-size: clamp(10px, 1.8vw, 16px);
+}
+.pickup-embed-schedule .pickup-schedule-list {
+  min-width: 0;
+  font-size: clamp(9px, 1.45vw, 13px);
+  overflow-wrap: anywhere;
+}
 .pickup-popup[hidden] {
   display: none;
 }

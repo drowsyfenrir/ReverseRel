@@ -213,7 +213,7 @@ function renderScheduleDeck(block) {
           </button>
         </div>
       ` : ""}
-      <div class="pickup-schedule-deck-body">
+      <div class="pickup-schedule-deck-body" style="--pickup-profile-count:${entries.length}">
         ${entries.map(renderScheduleProfile).join("")}
       </div>
     </section>
@@ -350,11 +350,11 @@ async function copyPickupEmbedCode(target = "banner") {
 
 function renderPickupIframeEmbed(target = "banner") {
   const panel = document.querySelector(`[data-pickup-panel="${target}"]`);
-  const height = Math.max(360, Math.ceil(panel?.scrollHeight || 0) + 4);
+  const height = Math.max(360, Math.ceil(panel?.scrollHeight || 0) + 80);
   const title = target === "schedule" ? "리버스 1999 픽업 일정" : "리버스 1999 픽업 안내";
   const embedPage = target === "schedule" ? "pickup-schedule-embed.html" : "pickup-banner-embed.html";
   const src = `${PICKUP_PUBLIC_ORIGIN}/${embedPage}`;
-  return `<iframe src="${src}" title="${title}" loading="lazy" scrolling="no" style="display:block;width:100%;max-width:900px;height:${height}px;margin:0 auto;border:0;border-radius:12px;overflow:hidden;background:#fff;"></iframe>`;
+  return `<iframe src="${src}" title="${title}" width="900" height="${height}" loading="lazy" scrolling="no" frameborder="0" style="display:block;width:100%;max-width:900px;height:${height}px;margin:0 auto;border:0;border-radius:12px;overflow:hidden;background:#fff;"></iframe>`;
 }
 
 function showPickupToast(message) {
