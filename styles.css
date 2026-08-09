@@ -1466,6 +1466,12 @@ button { border: 0; cursor: pointer; }
 .pickup-embed-schedule [data-pickup-panel="schedule"] {
   display: block !important;
 }
+.pickup-embed-banner .pickup-popup[data-pickup-panel="banner"] {
+  box-sizing: border-box;
+  border: 1px solid #d7dde8;
+  border-radius: 12px;
+  overflow: hidden;
+}
 .pickup-embed-schedule .pickup-schedule-deck-body {
   display: grid;
   grid-template-columns: repeat(var(--pickup-profile-count, 1), minmax(0, 140px));
