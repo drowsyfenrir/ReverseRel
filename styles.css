@@ -1394,7 +1394,7 @@ button { border: 0; cursor: pointer; }
   top: 14px;
   right: 14px;
   z-index: 3;
-  display: inline-grid;
+  display: none;
   width: 32px;
   height: 32px;
   padding: 0;
@@ -1404,6 +1404,9 @@ button { border: 0; cursor: pointer; }
   color: var(--orange);
   background: rgba(255, 255, 255, .86);
   cursor: pointer;
+}
+.pickup-share-tools-visible .pickup-embed-copy-button {
+  display: inline-grid;
 }
 .pickup-embed-copy-button:hover,
 .pickup-embed-copy-button:focus-visible {
