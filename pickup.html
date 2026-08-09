@@ -26,7 +26,15 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/icon/32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="img/icon/16.png" />
   <link rel="apple-touch-icon" href="img/icon/fabicon.png" />
-  <link rel="stylesheet" href="styles.css?v=20260802-pickup-overlay-frame" />
+  <script>
+    (() => {
+      const target = new URLSearchParams(location.search).get("embed");
+      if (target === "banner" || target === "schedule") {
+        document.documentElement.classList.add("pickup-embed-document", `pickup-embed-${target}`);
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css?v=20260809-pickup-panel-only-embed" />
 </head>
 
 <body class="pickup-page">
@@ -53,7 +61,7 @@
       <section class="version-popup pickup-popup" data-pickup-panel="schedule" aria-label="마도학자 일정" hidden></section>
     </div>
   </main>
-  <script src="pickup.js?v=20260802-pickup-overlay-frame"></script>
+  <script src="pickup.js?v=20260809-pickup-panel-only-embed"></script>
 </body>
 
 </html>

@@ -4,9 +4,17 @@ const pickupState = {
 };
 
 const PICKUP_SCHEMA = "reverse-rel-pickup-data";
+const PICKUP_PUBLIC_ORIGIN = "https://reverselibrary.pages.dev";
+const pickupSearchParams = new URLSearchParams(location.search);
+const pickupEmbedTarget = ["banner", "schedule"].includes(pickupSearchParams.get("embed"))
+  ? pickupSearchParams.get("embed")
+  : "";
+const isPickupEmbed = Boolean(pickupEmbedTarget);
 const pickupTabs = document.querySelector(".pickup-tabs");
 const pickupButtons = Array.from(document.querySelectorAll("[data-pickup-view]"));
 const pickupPanels = Array.from(document.querySelectorAll("[data-pickup-panel]"));
+
+if (isPickupEmbed) document.body.classList.add("pickup-embed");
 
 Promise.all([
   fetch(`pickup-data.json?v=${Date.now()}`, { cache: "no-store" }).then((response) => response.json()).catch(() => null),
@@ -34,6 +42,11 @@ pickupButtons.forEach((button) => {
 });
 
 document.addEventListener("click", async (event) => {
+  const shareButton = event.target.closest("[data-copy-pickup-embed]");
+  if (shareButton) {
+    await copyPickupEmbedCode(shareButton.dataset.copyPickupEmbed || "banner");
+    return;
+  }
   const button = event.target.closest("[data-download-pickup-deck]");
   if (!button) return;
   const deck = button.closest(".pickup-schedule-deck");
@@ -113,8 +126,30 @@ function normalizeVersionData(data) {
 function renderPickupPanels() {
   const bannerPanel = document.querySelector('[data-pickup-panel="banner"]');
   const schedulePanel = document.querySelector('[data-pickup-panel="schedule"]');
-  bannerPanel.innerHTML = renderBlocks(pickupState.data.panels.banner.blocks);
-  schedulePanel.innerHTML = renderScheduleBlocks(pickupState.data.panels.schedule.blocks);
+  bannerPanel.innerHTML = `${isPickupEmbed ? "" : renderPickupShareButton("banner", "픽업 안내 임베드 코드 복사")}${renderBlocks(pickupState.data.panels.banner.blocks)}`;
+  schedulePanel.innerHTML = `${isPickupEmbed ? "" : renderPickupShareButton("schedule", "픽업 일정 임베드 코드 복사")}${renderScheduleBlocks(pickupState.data.panels.schedule.blocks)}`;
+  if (isPickupEmbed) {
+    pickupTabs?.classList.toggle("is-banner", pickupEmbedTarget === "banner");
+    pickupTabs?.classList.toggle("is-schedule", pickupEmbedTarget === "schedule");
+    pickupButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.pickupView === pickupEmbedTarget));
+    pickupPanels.forEach((panel) => {
+      const isActive = panel.dataset.pickupPanel === pickupEmbedTarget;
+      panel.hidden = !isActive;
+      panel.classList.toggle("is-active", isActive);
+    });
+  }
+}
+
+function renderPickupShareButton(target, label) {
+  return `
+    <button class="pickup-embed-copy-button" type="button" data-copy-pickup-embed="${target}" aria-label="${escapeAttr(label)}">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7" />
+        <path d="M16 6 12 2 8 6" />
+        <path d="M12 2v13" />
+      </svg>
+    </button>
+  `;
 }
 
 function renderBlocks(blocks) {
@@ -304,6 +339,33 @@ function profileName(profile) {
 
 function cleanText(value) {
   return String(value ?? "").trim();
+}
+
+async function copyPickupEmbedCode(target = "banner") {
+  const embedCode = renderPickupIframeEmbed(target);
+  await navigator.clipboard.writeText(embedCode);
+  showPickupToast("임베드 코드 복사 완료");
+}
+
+function renderPickupIframeEmbed(target = "banner") {
+  const panel = document.querySelector(`[data-pickup-panel="${target}"]`);
+  const height = Math.max(360, Math.ceil(panel?.scrollHeight || 0) + 4);
+  const title = target === "schedule" ? "리버스 1999 픽업 일정" : "리버스 1999 픽업 안내";
+  const src = `${PICKUP_PUBLIC_ORIGIN}/pickup.html?embed=${encodeURIComponent(target)}#pickup-panel`;
+  return `<iframe src="${src}" title="${title}" loading="lazy" scrolling="no" style="display:block;width:100%;max-width:900px;height:${height}px;margin:0 auto;border:0;border-radius:12px;overflow:hidden;background:#fff;"></iframe>`;
+}
+
+function showPickupToast(message) {
+  let toast = document.querySelector(".copy-toast");
+  if (!toast) {
+    toast = document.createElement("div");
+    toast.className = "copy-toast";
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.classList.add("is-visible");
+  clearTimeout(showPickupToast.timer);
+  showPickupToast.timer = setTimeout(() => toast.classList.remove("is-visible"), 1600);
 }
 
 async function renderElementToPng(element) {
