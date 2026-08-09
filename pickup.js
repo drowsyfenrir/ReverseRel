@@ -128,7 +128,7 @@ function normalizeVersionData(data) {
 function renderPickupPanels() {
   const bannerPanel = document.querySelector('[data-pickup-panel="banner"]');
   const schedulePanel = document.querySelector('[data-pickup-panel="schedule"]');
-  bannerPanel.innerHTML = `${isPickupEmbed ? "" : renderPickupShareButton("banner", "픽업 안내 임베드 코드 복사")}${renderBlocks(pickupState.data.panels.banner.blocks)}`;
+  bannerPanel.innerHTML = `${isPickupEmbed ? "" : renderPickupShareButton("banner", "픽업 안내 이미지 링크 코드 복사")}${renderBlocks(pickupState.data.panels.banner.blocks)}`;
   schedulePanel.innerHTML = `${isPickupEmbed ? "" : renderPickupShareButton("schedule", "픽업 일정 임베드 코드 복사")}${renderScheduleBlocks(pickupState.data.panels.schedule.blocks)}`;
   if (isPickupEmbed) {
     pickupTabs?.classList.toggle("is-banner", pickupEmbedTarget === "banner");
@@ -347,10 +347,21 @@ function cleanText(value) {
 }
 
 async function copyPickupEmbedCode(target = "banner") {
+  if (target === "banner") {
+    await navigator.clipboard.writeText(renderPickupBannerImageCode());
+    showPickupToast("이미지 링크 코드 복사 완료");
+    return;
+  }
   const height = await getPickupEmbedHeight(target);
   const embedCode = renderPickupIframeEmbed(target, height);
   await navigator.clipboard.writeText(embedCode);
   showPickupToast("임베드 코드 복사 완료");
+}
+
+function renderPickupBannerImageCode() {
+  const pageUrl = `${PICKUP_PUBLIC_ORIGIN}/pickup.html`;
+  const imageUrl = `${PICKUP_PUBLIC_ORIGIN}/generated/pickup/banner.png`;
+  return `<a href="${pageUrl}" target="_blank" rel="noopener"><img src="${imageUrl}" alt="리버스 1999 픽업 안내" width="900" style="display:block;width:100%;max-width:900px;height:auto;margin:0 auto;border:0;border-radius:12px;"></a>`;
 }
 
 function renderPickupIframeEmbed(target = "banner", measuredHeight = 0) {
@@ -364,7 +375,7 @@ function renderPickupIframeEmbed(target = "banner", measuredHeight = 0) {
 }
 
 function primePickupEmbedHeights() {
-  ["banner", "schedule"].forEach((target) => {
+  ["schedule"].forEach((target) => {
     if (!pickupEmbedHeightCache.has(target)) {
       pickupEmbedHeightCache.set(target, measurePickupEmbedHeight(target));
     }

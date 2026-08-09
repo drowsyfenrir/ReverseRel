@@ -5,6 +5,15 @@
 Set-Location -LiteralPath $PSScriptRoot
 
 Write-Host ""
+Write-Host "[픽업 안내 이미지 생성]"
+& "$PSScriptRoot\generate-pickup-images.ps1"
+if ($LASTEXITCODE -ne 0) {
+  Write-Host ""
+  Write-Host "픽업 안내 이미지 생성에 실패하여 커밋을 중단했습니다."
+  exit 1
+}
+
+Write-Host ""
 Write-Host "[상태 확인]"
 git status --short
 if ($LASTEXITCODE -ne 0) {
