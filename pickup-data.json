@@ -102,7 +102,7 @@
         {
           "id": "block-1783939915179-7bc58481ec318",
           "type": "header",
-          "text": "3.9 (콜라보)",
+          "text": "3.8.5 (콜라보)",
           "banner": "",
           "name": "",
           "kind": "",
@@ -129,7 +129,7 @@
           "id": "block-1783940095239-c46aedad1294f",
           "type": "banner",
           "text": "",
-          "banner": "3.9 호수의 물결",
+          "banner": "3.8.5 호수의 물결",
           "name": "",
           "kind": "",
           "category": "호수의 물결 :",
@@ -388,7 +388,7 @@
         {
           "id": "block-1785819786024-6c0d6aa9684208",
           "type": "header",
-          "text": "",
+          "text": "3.9",
           "banner": "",
           "name": "",
           "kind": "",
@@ -396,7 +396,46 @@
           "content": "",
           "note": "",
           "names": [],
-          "visible": false
+          "visible": true
+        },
+        {
+          "id": "block-1786247328698-13d0ae02d6123",
+          "type": "banner",
+          "text": "",
+          "banner": "헤도네",
+          "name": "헤도네",
+          "kind": "상시",
+          "category": "픽업 :",
+          "content": "마도구 덱 서포터",
+          "note": "리아논 대체 가능성",
+          "names": [],
+          "visible": true
+        },
+        {
+          "id": "block-1786247449422-dc81414c315ac",
+          "type": "banner",
+          "text": "",
+          "banner": "나르키소스",
+          "name": "나르키소스",
+          "kind": "상시",
+          "category": "픽업 :",
+          "content": "정보 없음",
+          "note": "",
+          "names": [],
+          "visible": true
+        },
+        {
+          "id": "block-1786247464387-ca47948062679",
+          "type": "banner",
+          "text": "",
+          "banner": "3.9 호수의 물결",
+          "name": "",
+          "kind": "",
+          "category": "호수의 물결 :",
+          "content": "마도학자 선택 후 70번 안으로 확정 픽업",
+          "note": "이월 가능, 정보 없음",
+          "names": [],
+          "visible": true
         }
       ]
     },

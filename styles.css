@@ -3829,7 +3829,7 @@ button { border: 0; cursor: pointer; }
 .pickup-editor-block.is-dragging {
   opacity: .45;
 }
-.pickup-editor-block.is-hidden {
+.pickup-editor-block.is-editor-hidden {
   opacity: .58;
 }
 .pickup-editor-block.is-drop-before {
@@ -3882,7 +3882,7 @@ button { border: 0; cursor: pointer; }
 .pickup-editor-block > header button[data-toggle-visible].is-visible {
   background: var(--navy);
 }
-.pickup-editor-block > header button[data-toggle-visible].is-hidden {
+.pickup-editor-block > header button[data-toggle-visible].is-toggle-hidden {
   background: #8b949e;
 }
 .pickup-editor-banner-preview {
