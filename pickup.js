@@ -6,8 +6,9 @@ const pickupState = {
 const PICKUP_SCHEMA = "reverse-rel-pickup-data";
 const PICKUP_PUBLIC_ORIGIN = "https://reverselibrary.pages.dev";
 const pickupSearchParams = new URLSearchParams(location.search);
-const pickupEmbedTarget = ["banner", "schedule"].includes(pickupSearchParams.get("embed"))
-  ? pickupSearchParams.get("embed")
+const pickupRequestedEmbed = pickupSearchParams.get("embed") || document.body.dataset.pickupEmbed || "";
+const pickupEmbedTarget = ["banner", "schedule"].includes(pickupRequestedEmbed)
+  ? pickupRequestedEmbed
   : "";
 const isPickupEmbed = Boolean(pickupEmbedTarget);
 const pickupTabs = document.querySelector(".pickup-tabs");
@@ -351,7 +352,8 @@ function renderPickupIframeEmbed(target = "banner") {
   const panel = document.querySelector(`[data-pickup-panel="${target}"]`);
   const height = Math.max(360, Math.ceil(panel?.scrollHeight || 0) + 4);
   const title = target === "schedule" ? "리버스 1999 픽업 일정" : "리버스 1999 픽업 안내";
-  const src = `${PICKUP_PUBLIC_ORIGIN}/pickup.html?embed=${encodeURIComponent(target)}#pickup-panel`;
+  const embedPage = target === "schedule" ? "pickup-schedule-embed.html" : "pickup-banner-embed.html";
+  const src = `${PICKUP_PUBLIC_ORIGIN}/${embedPage}`;
   return `<iframe src="${src}" title="${title}" loading="lazy" scrolling="no" style="display:block;width:100%;max-width:900px;height:${height}px;margin:0 auto;border:0;border-radius:12px;overflow:hidden;background:#fff;"></iframe>`;
 }
 
