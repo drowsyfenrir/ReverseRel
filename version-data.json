@@ -3704,7 +3704,16 @@
           "label": "비구상 촬영기",
           "icon": "img/material/Immaterial Photoscope.png",
           "dateMode": "none",
-          "profiles": []
+          "profiles": [
+            "몰디르",
+            "누아르",
+            "갈천",
+            "센츄리온",
+            "드루비스",
+            "마커스",
+            "이터니티",
+            "빌라"
+          ]
         }
       },
       "exchangeCodes": []
