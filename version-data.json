@@ -1,6 +1,6 @@
 {
   "schema": "reverse-rel-version-data",
-  "currentPageId": "version-1780491535018-29",
+  "currentPageId": "version-3-7",
   "pages": [
     {
       "id": "version-1-0",
@@ -3446,6 +3446,11 @@
           "name": "세상을등진마녀",
           "month": "9",
           "day": "24"
+        },
+        {
+          "name": "빛을좇는나방",
+          "month": "9",
+          "day": "24"
         }
       ]
     },
@@ -3660,7 +3665,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "아르고스"
+            "아르고스",
+            "던컨"
           ]
         },
         "ripples": {
