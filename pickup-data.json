@@ -872,11 +872,11 @@
             },
             {
               "name": "코펠리아",
-              "rhiannon": false
+              "rhiannon": true
             },
             {
               "name": "헤도네",
-              "rhiannon": true
+              "rhiannon": false
             },
             {
               "name": "에버에코",
