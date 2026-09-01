@@ -110,7 +110,7 @@
           "content": "",
           "note": "",
           "names": [],
-          "visible": true
+          "visible": false
         },
         {
           "id": "block-1783939921051-d7a8dccec6c32",
@@ -123,7 +123,7 @@
           "content": "마도구 덱 메인 딜러",
           "note": "이월 불가능, 복각 없음",
           "names": [],
-          "visible": true
+          "visible": false
         },
         {
           "id": "block-1783940095239-c46aedad1294f",
@@ -136,7 +136,7 @@
           "content": "마도학자 선택 후 70번 안으로 확정 픽업",
           "note": "이월 가능",
           "names": [],
-          "visible": true
+          "visible": false
         },
         {
           "id": "block-1783940133157-471db334cae9c",
@@ -149,7 +149,7 @@
           "content": "이고르 술식 메인 딜러 / 양월덱 서포터",
           "note": "이월 불가능, 비추천",
           "names": [],
-          "visible": true
+          "visible": false
         },
         {
           "id": "block-1783940337627-42f03521ce2a68",
@@ -162,7 +162,7 @@
           "content": "",
           "note": "",
           "names": [],
-          "visible": true
+          "visible": false
         },
         {
           "id": "block-1783940924340-563b56a76f5e48",
@@ -407,7 +407,7 @@
           "kind": "상시",
           "category": "픽업 :",
           "content": "마도구 덱 서포터",
-          "note": "리아논 대체 가능성",
+          "note": "추천",
           "names": [],
           "visible": true
         },
@@ -419,8 +419,21 @@
           "name": "나르키소스",
           "kind": "상시",
           "category": "픽업 :",
-          "content": "정보 없음",
-          "note": "",
+          "content": "술식 힐러",
+          "note": "추천",
+          "names": [],
+          "visible": true
+        },
+        {
+          "id": "block-1788248700318-16c60e267b062",
+          "type": "banner",
+          "text": "",
+          "banner": "3.9 호수의 승낙",
+          "name": "",
+          "kind": "",
+          "category": "호수의 승낙 :",
+          "content": " 3명의 6성 캐릭터를 선택하여 그 중 하나를 획득",
+          "note": "이월 불가능",
           "names": [],
           "visible": true
         },
@@ -433,7 +446,20 @@
           "kind": "",
           "category": "호수의 물결 :",
           "content": "마도학자 선택 후 70번 안으로 확정 픽업",
-          "note": "이월 가능, 정보 없음",
+          "note": "이고르 보유 시, 몰디르 추천",
+          "names": [],
+          "visible": true
+        },
+        {
+          "id": "block-1788248774462-ad05dd2b9ce688",
+          "type": "text",
+          "text": "전반기 헤도네는 마도구 덱의 필수 파츠로 추천.\n호수의 승낙은 3개를 선택 시, 무엇이 나와도 될 경우만 추천.",
+          "banner": "",
+          "name": "",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
           "names": [],
           "visible": true
         }
