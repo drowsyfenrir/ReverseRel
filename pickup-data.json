@@ -516,6 +516,19 @@
           "visible": true
         },
         {
+          "id": "block-1789220907756-e34198ab929e98",
+          "type": "banner",
+          "text": "",
+          "banner": "베릴",
+          "name": "베릴",
+          "kind": "한정",
+          "category": "복각 픽업 :",
+          "content": "여광 메인 딜러",
+          "note": "추천, 이월 불가능",
+          "names": [],
+          "visible": true
+        },
+        {
           "id": "block-1789219300534-7fd2b14dce127",
           "type": "banner",
           "text": "",
