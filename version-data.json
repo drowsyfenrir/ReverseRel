@@ -3722,6 +3722,129 @@
         }
       },
       "exchangeCodes": []
+    },
+    {
+      "id": "version-1789213777879-32",
+      "pageName": "4.0",
+      "version": "4.0",
+      "versionName": "문지기",
+      "start": {
+        "year": "2026",
+        "month": "12",
+        "day": "17"
+      },
+      "end": {
+        "year": "2027",
+        "month": "1",
+        "day": "28"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "맹세의 사냥꾼 릴리아",
+          "profiles": [
+            "예니세이",
+            "베이비 블루"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "12",
+            "day": "17"
+          },
+          "end": {
+            "year": "2026",
+            "month": "1",
+            "day": "28"
+          }
+        },
+        "middle": {
+          "enabled": true,
+          "label": "배포",
+          "name": "글린두르",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2026",
+            "month": "12",
+            "day": "17"
+          },
+          "end": {
+            "year": "2026",
+            "month": "1",
+            "day": "28"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "드레이크",
+          "profiles": [
+            "로거헤드",
+            "데저트 플란넬"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "1",
+            "day": "7"
+          },
+          "end": {
+            "year": "2027",
+            "month": "1",
+            "day": "28"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "로페라"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            {
+              "name": "6",
+              "highlighted": false
+            },
+            {
+              "name": "보이저",
+              "highlighted": false
+            },
+            {
+              "name": "37",
+              "highlighted": true
+            },
+            {
+              "name": "센츄리온",
+              "highlighted": true
+            },
+            {
+              "name": "이졸데",
+              "highlighted": false
+            },
+            {
+              "name": "레굴루스",
+              "highlighted": false
+            }
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
+        }
+      },
+      "exchangeCodes": []
     }
   ]
 }
