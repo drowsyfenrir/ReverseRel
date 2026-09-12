@@ -484,7 +484,7 @@
           "name": "맹세의 사냥꾼 릴리아",
           "kind": "한정",
           "category": "픽업 :",
-          "content": "신규 키워드 증압 딜러",
+          "content": "신규 키워드 통지 딜러",
           "note": "이월 불가능, 필수 추천",
           "names": [],
           "visible": true
@@ -497,7 +497,7 @@
           "name": "드레이크",
           "kind": "상시",
           "category": "픽업 :",
-          "content": "여광, 반격 딜 서포터",
+          "content": "여광, 딜 서포터",
           "note": "이월 가능",
           "names": [],
           "visible": true
