@@ -3814,7 +3814,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "로페라"
+            "로페라",
+            "슬라우치 햇"
           ]
         },
         "ripples": {
@@ -3852,7 +3853,15 @@
           "label": "비구상 촬영기",
           "icon": "img/material/Immaterial Photoscope.png",
           "dateMode": "none",
-          "profiles": []
+          "profiles": [
+            "37",
+            "센츄리온",
+            "마커스",
+            "이터니티",
+            "빌라",
+            "아르고스",
+            "A나이트"
+          ]
         }
       },
       "exchangeCodes": []
