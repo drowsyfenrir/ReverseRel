@@ -1,6 +1,6 @@
 {
   "schema": "reverse-rel-version-data",
-  "currentPageId": "version-1780491541585-30",
+  "currentPageId": "version-1786088498014-31",
   "pages": [
     {
       "id": "version-1-0",
@@ -3603,6 +3603,11 @@
           "name": "성숙한이념을지닌건축가",
           "month": "11",
           "day": "5"
+        },
+        {
+          "name": "3주년지난시간속으로오픈!",
+          "month": "11",
+          "day": "1"
         }
       ]
     },
@@ -3737,7 +3742,13 @@
           ]
         }
       },
-      "exchangeCodes": []
+      "exchangeCodes": [
+        {
+          "name": "에파이스토노스의지배자",
+          "month": "11",
+          "day": "26"
+        }
+      ]
     },
     {
       "id": "version-1789213777879-32",
@@ -3867,6 +3878,125 @@
             "아르고스",
             "A나이트"
           ]
+        }
+      },
+      "exchangeCodes": []
+    },
+    {
+      "id": "version-1792980184227-33",
+      "pageName": "4.1",
+      "version": "4.1",
+      "versionName": "아틀란티스 살인사건",
+      "start": {
+        "year": "2026",
+        "month": "1",
+        "day": "28"
+      },
+      "end": {
+        "year": "2027",
+        "month": "2",
+        "day": "4"
+      },
+      "pickups": {
+        "first": {
+          "enabled": true,
+          "label": "전반기",
+          "name": "페르시타",
+          "profiles": [
+            "벌룬 파티",
+            "디거스"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "1",
+            "day": "28"
+          },
+          "end": {
+            "year": "2026",
+            "month": "2",
+            "day": "18"
+          }
+        },
+        "middle": {
+          "enabled": false,
+          "label": "배포",
+          "name": "",
+          "profiles": [
+            "",
+            ""
+          ],
+          "start": {
+            "year": "2026",
+            "month": "5",
+            "day": "28"
+          },
+          "end": {
+            "year": "2026",
+            "month": "7",
+            "day": "2"
+          }
+        },
+        "last": {
+          "enabled": true,
+          "label": "후반기",
+          "name": "이블린",
+          "profiles": [
+            "디케",
+            "마릴린"
+          ],
+          "start": {
+            "year": "2026",
+            "month": "2",
+            "day": "18"
+          },
+          "end": {
+            "year": "2027",
+            "month": "2",
+            "day": "4"
+          }
+        }
+      },
+      "events": {
+        "highCounter": {
+          "label": "고음 카운터",
+          "icon": "img/material/Album of the Lost.png",
+          "dateMode": "version",
+          "profiles": [
+            "윌로우"
+          ]
+        },
+        "ripples": {
+          "label": "호수의 물결",
+          "icon": "img/material/Ripples on the Water.png",
+          "dateMode": "version",
+          "profiles": [
+            {
+              "name": "37",
+              "highlighted": false
+            },
+            {
+              "name": "갈기 모래",
+              "highlighted": true
+            },
+            {
+              "name": "울리히",
+              "highlighted": true
+            },
+            {
+              "name": "이졸데",
+              "highlighted": false
+            },
+            {
+              "name": "센츄리온",
+              "highlighted": false
+            }
+          ]
+        },
+        "photoscope": {
+          "label": "비구상 촬영기",
+          "icon": "img/material/Immaterial Photoscope.png",
+          "dateMode": "none",
+          "profiles": []
         }
       },
       "exchangeCodes": []
