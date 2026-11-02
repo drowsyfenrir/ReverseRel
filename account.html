@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <title>계정 분석 - 리버스: 1999 도서관</title>
+  <meta name="description" content="리버스: 1999 계정 정보를 분석하는 페이지입니다." />
+  <meta property="og:site_name" content="리버스: 1999 도서관" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="계정 분석 - 리버스: 1999 도서관" />
+  <meta property="og:description" content="리버스: 1999 계정 정보를 분석하는 페이지입니다." />
+  <meta property="og:image" content="https://reverselibrary.pages.dev/img/thumbnail.png" />
+  <meta property="og:image:secure_url" content="https://reverselibrary.pages.dev/img/thumbnail.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="리버스: 1999 도서관 미리보기 이미지" />
+  <meta property="og:url" content="https://reverselibrary.pages.dev/account.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="계정 분석 - 리버스: 1999 도서관" />
+  <meta name="twitter:description" content="리버스: 1999 계정 정보를 분석하는 페이지입니다." />
+  <meta name="twitter:image" content="https://reverselibrary.pages.dev/img/thumbnail.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icon/32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/icon/16.png" />
+  <link rel="apple-touch-icon" href="img/icon/fabicon.png" />
+  <link rel="stylesheet" href="styles.css?v=20261103-account" />
+</head>
+<body class="account-page">
+  <header class="topbar">
+    <div class="header-title">
+      <a class="brand" href="index.html"><img src="img/title.png" alt="리버스 1999 도서관" /></a>
+      <a href="version.html">버전 요약</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="relationship.html">인물 관계도</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="deck.html">덱 리스트</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="pickup.html">픽업 가이드</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="account.html" aria-current="page">계정 분석</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+    </div>
+  </header>
+  <main class="account-shell" aria-label="계정 분석">
+    <div class="account-layout">
+      <section class="account-panel account-input-panel">
+        <h1>계정 정보</h1>
+        <label class="account-input-label" for="accountDataInput">구매 예정 또는 현재 마도학자 리스트를 적어주세요.</label>
+        <textarea id="accountDataInput" placeholder="예시) 리아논 + 루시 + 제멜바이스 + 울리히 + 에지오&#10;예시) 리아논, 루시, 제멜바이스, 울리히, 에지오" spellcheck="false"></textarea>
+        <div class="account-actions">
+          <button id="accountCalculateButton" type="button">계산</button>
+        </div>
+      </section>
+      <section class="account-panel account-result-panel" aria-labelledby="accountResultTitle">
+        <h2 id="accountResultTitle">분석 결과</h2>
+        <div id="accountResult" class="account-result" aria-live="polite">대기 중</div>
+      </section>
+    </div>
+  </main>
+  <script src="account.js?v=20261103-account"></script>
+</body>
+</html>

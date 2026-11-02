@@ -168,7 +168,8 @@ button { border: 0; cursor: pointer; }
 .home-icon--relationship {
   background-image: url("img/icon/인물 관계도.png");
 }
-.home-icon--timeline {
+.home-icon--timeline,
+.home-icon--account {
   background-image: url("img/icon/폭풍우 연표.png");
 }
 .home-icon--empty {
@@ -176,6 +177,225 @@ button { border: 0; cursor: pointer; }
 }
 .home-icon--pickup {
   background-image: url("img/icon/픽업 가이드.png");
+}
+.account-shell {
+  min-height: 100vh;
+  padding: 98px 18px 64px;
+}
+.account-layout {
+  display: grid;
+  width: min(900px, calc(100vw - 36px));
+  margin: 0 auto;
+  gap: 18px;
+}
+.account-panel {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #edf0f3;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+}
+.account-panel h1,
+.account-panel h2 {
+  margin: 0 0 20px;
+  color: var(--ink);
+  font-size: 20px;
+  font-weight: 550;
+  line-height: 1.3;
+}
+.account-input-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 550;
+}
+.account-input-panel textarea {
+  display: block;
+  width: 100%;
+  min-height: 220px;
+  padding: 14px;
+  resize: vertical;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  background: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.account-input-panel textarea:focus {
+  border-color: var(--orange);
+  outline: 2px solid rgba(255, 107, 0, .15);
+}
+.account-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+.account-actions button {
+  min-width: 88px;
+  min-height: 38px;
+  padding: 8px 18px;
+  border-radius: 6px;
+  color: #fff;
+  background: var(--navy);
+  font-size: 14px;
+  font-weight: 550;
+}
+.account-actions button:hover,
+.account-actions button:focus-visible {
+  background: var(--orange);
+  outline: none;
+}
+.account-result-panel {
+  min-height: 280px;
+}
+.account-result {
+  display: grid;
+  min-height: 190px;
+  place-items: center;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+}
+.account-result.is-ready {
+  color: var(--ink);
+  font-weight: 550;
+}
+.account-result.has-results {
+  display: block;
+  min-height: 0;
+  place-items: normal;
+  text-align: left;
+}
+.account-result-summary {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 550;
+  text-align: center;
+}
+.account-deck-results {
+  padding: 0;
+}
+.account-schedule-deck .pickup-schedule-deck-label strong {
+  font-weight: 450;
+}
+.account-owned-label {
+  color: var(--orange);
+  font-weight: 550;
+}
+.account-optimization {
+  width: min(480px, 100%);
+  margin: 38px auto 0;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+}
+.account-version-summary {
+  margin-bottom: 28px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.account-version-summary p,
+.account-combination-copy {
+  margin: 0;
+}
+.account-version-summary strong {
+  color: var(--orange);
+  font-weight: 700;
+}
+.account-pull-count {
+  display: inline-flex;
+  align-items: center;
+  gap: .25em;
+  white-space: nowrap;
+}
+.account-pull-icon {
+  width: 1em;
+  height: 1em;
+  flex: 0 0 1em;
+  object-fit: contain;
+}
+.account-optimization h3 {
+  margin: 28px 0 14px;
+  font-size: 16px;
+  font-weight: 550;
+  line-height: 1.4;
+}
+.account-ranking-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.account-ranking-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 38px;
+  gap: 16px;
+  border-bottom: 1px solid #edf0f3;
+  font-size: 14px;
+}
+.account-ranking-list li strong {
+  flex: 0 0 auto;
+  color: var(--orange);
+  font-weight: 700;
+}
+.account-combination-copy {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.account-combination-copy strong {
+  font-weight: 400;
+}
+.account-combination-list {
+  display: grid;
+  margin-top: 18px;
+  gap: 18px;
+}
+.account-combination-deck {
+  padding-bottom: 18px;
+  border-bottom: 1px solid #edf0f3;
+}
+.account-combination-deck:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.account-combination-deck h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 10px;
+  gap: 16px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.account-combination-deck h4 span {
+  flex: 0 0 auto;
+  color: var(--orange);
+}
+.account-combination-deck ul {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  gap: 5px;
+  list-style: none;
+}
+.account-combination-deck li {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.account-choice-group {
+  font-weight: 550;
+}
+.account-choice-detail {
+  font-weight: 450;
 }
 .deck-page {
   min-height: 100vh;
@@ -2641,6 +2861,30 @@ button { border: 0; cursor: pointer; }
   .home-icon {
     width: 88px;
     height: 88px;
+  }
+  .account-shell {
+    padding: 78px 12px 48px;
+  }
+  .account-layout {
+    width: min(100%, calc(100vw - 24px));
+    gap: 12px;
+  }
+  .account-panel {
+    padding: 18px 14px;
+  }
+  .account-panel h1,
+  .account-panel h2 {
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+  .account-input-panel textarea {
+    min-height: 180px;
+  }
+  .account-result-panel {
+    min-height: 220px;
+  }
+  .account-result {
+    min-height: 140px;
   }
   .version-popup {
     width: min(100%, calc(100vw - 24px));
