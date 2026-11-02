@@ -286,7 +286,7 @@ function renderScheduleProfile(entry) {
       <div class="pickup-schedule-image" style="background-image: url('profile/${encodeURIComponent(name)}.png');"></div>
       <h3>${escapeHtml(displayName)}</h3>
       <div class="pickup-schedule-list">
-        ${schedules.length ? schedules.map((item) => `<p>[${escapeHtml(item.category)}] ${escapeHtml(item.version)}</p>`).join("") : "<p>예정 없음</p>"}
+        ${schedules.length ? schedules.map((item) => `<p>[${escapeHtml(item.category)}]${item.version ? ` ${escapeHtml(item.version)}` : ""}</p>`).join("") : "<p>예정 없음</p>"}
       </div>
     </article>
   `;
@@ -345,13 +345,16 @@ function manualConditionsForName(target, versionOrder, baseSequence) {
   return (pickupState.data.conditions || [])
     .map((condition, index) => ({ condition, index }))
     .filter(({ condition }) => conditionContainsName(condition, target))
-    .map(({ condition, index }) => ({
-      category: cleanText(condition.label),
-      version: cleanText(condition.version),
-      order: versionSortOrder(cleanText(condition.version), versionOrder),
-      sequence: baseSequence + index
-    }))
-    .filter((condition) => condition.category && condition.version);
+    .map(({ condition, index }) => {
+      const version = cleanText(condition.version);
+      return {
+        category: cleanText(condition.label),
+        version,
+        order: version ? versionSortOrder(version, versionOrder) : Number.MAX_SAFE_INTEGER,
+        sequence: baseSequence + index
+      };
+    })
+    .filter((condition) => condition.category);
 }
 
 function versionOrderMap(pages) {
@@ -508,7 +511,7 @@ async function renderElementToPng(element) {
   if (document.fonts?.ready) await document.fonts.ready;
 
   await drawElementBox(context, element, rect, 0, 0, width, height);
-  element.querySelectorAll(".pickup-schedule-group-label").forEach((label) => drawCenteredText(context, label, rect));
+  element.querySelectorAll(".pickup-schedule-group-label").forEach((label) => drawScheduleGroupLabel(context, label, rect));
   for (const profile of element.querySelectorAll(".pickup-schedule-profile")) {
     await drawScheduleProfile(context, profile, rect);
   }
@@ -523,9 +526,26 @@ async function drawScheduleProfile(context, profile, rootRect) {
   if (imageBox) await drawElementBoxFromDom(context, imageBox, rootRect);
   if (nameLabel) {
     await drawElementBoxFromDom(context, nameLabel, rootRect);
-    drawCenteredText(context, nameLabel, rootRect);
+    drawCenteredText(context, nameLabel, rootRect, 1);
   }
-  profile.querySelectorAll(".pickup-schedule-list p").forEach((line) => drawCenteredText(context, line, rootRect));
+  profile.querySelectorAll(".pickup-schedule-list p").forEach((line) => drawWrappedText(context, line, rootRect));
+}
+
+function drawScheduleGroupLabel(context, label, rootRect) {
+  const rect = label.getBoundingClientRect();
+  const style = window.getComputedStyle(label);
+  const borderWidth = parseFloat(style.borderBottomWidth) || 0;
+  if (borderWidth) {
+    context.save();
+    context.strokeStyle = style.borderBottomColor || "#aeb7c3";
+    context.lineWidth = borderWidth;
+    context.beginPath();
+    context.moveTo(rect.left - rootRect.left, rect.bottom - rootRect.top - borderWidth / 2);
+    context.lineTo(rect.right - rootRect.left, rect.bottom - rootRect.top - borderWidth / 2);
+    context.stroke();
+    context.restore();
+  }
+  drawCenteredText(context, label, rootRect);
 }
 
 async function drawElementBoxFromDom(context, element, rootRect) {
@@ -561,24 +581,72 @@ async function drawElementBox(context, element, rootRect, x, y, width, height) {
   drawBorder(context, style, x, y, width, height, radius);
 }
 
-function drawCenteredText(context, element, rootRect) {
+function drawCenteredText(context, element, rootRect, offsetY = 0) {
   const rect = element.getBoundingClientRect();
   const style = window.getComputedStyle(element);
   const text = cleanText(element.textContent);
   if (!text) return;
   context.save();
+  applyCanvasTextStyle(context, style);
+  const x = textXForRect(context, rect, rootRect);
+  drawTextAtVisualCenter(context, text, x, rect.top - rootRect.top + rect.height / 2 + offsetY);
+  context.restore();
+}
+
+function drawWrappedText(context, element, rootRect) {
+  const rect = element.getBoundingClientRect();
+  const style = window.getComputedStyle(element);
+  const text = cleanText(element.textContent);
+  if (!text) return;
+  context.save();
+  applyCanvasTextStyle(context, style);
+  const lines = wrapCanvasText(context, text, rect.width);
+  const lineHeight = parseFloat(style.lineHeight) || (parseFloat(style.fontSize) || 13) * 1.35;
+  const x = textXForRect(context, rect, rootRect);
+  const top = rect.top - rootRect.top;
+  lines.forEach((line, index) => {
+    drawTextAtVisualCenter(context, line, x, top + lineHeight * (index + 0.5));
+  });
+  context.restore();
+}
+
+function applyCanvasTextStyle(context, style) {
   context.fillStyle = style.color || "#000";
   context.font = style.font || `${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
   context.textAlign = style.textAlign === "left" ? "left" : style.textAlign === "right" ? "right" : "center";
-  context.textBaseline = "middle";
-  const x = context.textAlign === "left"
-    ? rect.left - rootRect.left
-    : context.textAlign === "right"
-      ? rect.right - rootRect.left
-      : rect.left - rootRect.left + rect.width / 2;
-  const y = rect.top - rootRect.top + rect.height / 2;
-  context.fillText(text, x, y);
-  context.restore();
+  context.textBaseline = "alphabetic";
+  if ("letterSpacing" in context) context.letterSpacing = style.letterSpacing || "0px";
+}
+
+function textXForRect(context, rect, rootRect) {
+  if (context.textAlign === "left") return rect.left - rootRect.left;
+  if (context.textAlign === "right") return rect.right - rootRect.left;
+  return rect.left - rootRect.left + rect.width / 2;
+}
+
+function drawTextAtVisualCenter(context, text, x, centerY) {
+  const metrics = context.measureText(text);
+  const fontSize = parseFloat(/([\d.]+)px/.exec(context.font)?.[1]) || 13;
+  const ascent = metrics.actualBoundingBoxAscent || fontSize * 0.8;
+  const descent = metrics.actualBoundingBoxDescent || fontSize * 0.2;
+  context.fillText(text, x, centerY + (ascent - descent) / 2);
+}
+
+function wrapCanvasText(context, text, maxWidth) {
+  const words = text.split(/\s+/).filter(Boolean);
+  const lines = [];
+  let line = "";
+  words.forEach((word) => {
+    const candidate = line ? `${line} ${word}` : word;
+    if (!line || context.measureText(candidate).width <= maxWidth) {
+      line = candidate;
+      return;
+    }
+    lines.push(line);
+    line = word;
+  });
+  if (line) lines.push(line);
+  return lines.length ? lines : [text];
 }
 
 function drawBorder(context, style, x, y, width, height, radius) {

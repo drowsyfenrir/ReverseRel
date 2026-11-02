@@ -3843,12 +3843,14 @@ button { border: 0; cursor: pointer; }
 }
 .pickup-schedule-list {
   display: grid;
+  width: calc(100% + 4px);
   min-width: 0;
   gap: 2px;
   align-self: start;
   color: #495057;
   font-size: 13px;
   font-weight: 400;
+  letter-spacing: -0.05em;
   line-height: 1.35;
 }
 .pickup-schedule-list p {
@@ -4147,6 +4149,7 @@ button { border: 0; cursor: pointer; }
   }
   .pickup-schedule-list,
   .pickup-embed-schedule .pickup-schedule-list {
+    width: calc(100% + 1.5px);
     gap: 1px;
     font-size: 9px;
     line-height: 1.25;
