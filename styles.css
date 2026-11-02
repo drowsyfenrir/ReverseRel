@@ -308,6 +308,13 @@ button { border: 0; cursor: pointer; }
   color: var(--muted);
   font-size: 13px;
 }
+.account-version-summary .account-analysis-warning {
+  margin-top: 10px;
+  color: #d62828;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 400;
+}
 .account-version-summary strong {
   color: var(--orange);
   font-weight: 700;

@@ -512,6 +512,7 @@ function renderAccountOptimization(rankedDecks, optimizedCombination, maximumDec
         <p>현재 버전은 <strong>[${escapeHtml(accountWindow.currentVersion)}]</strong>입니다. 확인된 최신 버전은 <strong>[${escapeHtml(accountWindow.latestVersion)}]</strong>입니다.</p>
         <p>소과금 기준 획득 가능한 픽업 횟수는 약 <strong class="account-pull-count"><img class="account-pull-icon" src="img/icon/토끼.png" alt="" aria-hidden="true">[${accountWindow.availablePulls}]회</strong>입니다.</p>
         <p class="account-pull-disclaimer">아래 픽업 횟수는 모두 픽뚫을 상정한 최대 횟수입니다.</p>
+        <p class="account-analysis-warning">해당 조합 추천은 다양한 변수가 아닌 일괄적인 값을 바탕으로 추천 하기에<br>참고 자료로 사용하고 픽업은 본인이 판단 하시길 바랍니다.</p>
       </div>
       <h3>픽업 횟수 적은 순으로 추천한 덱 순서입니다.</h3>
       <ol class="account-ranking-list">
@@ -546,6 +547,7 @@ function renderAccountOptimization(rankedDecks, optimizedCombination, maximumDec
 function renderCombinationDeck(deck, plan) {
   const choices = [...plan.choices].sort((a, b) => a.groupIndex - b.groupIndex);
   const hasLakeGift = choices.some((choice) => !choice.owned && cleanText(choice.schedule?.category) === "호수의 선물");
+  const hasDoublePickup = choices.some((choice) => !choice.owned && cleanText(choice.schedule?.category) === "이중 픽업");
   return `
     <article class="account-combination-deck">
       <h4>${escapeHtml(cleanText(deck.block.name))} <span class="account-pull-count"><img class="account-pull-icon" src="img/icon/토끼.png" alt="" aria-hidden="true">${plan.cost}회</span></h4>
@@ -553,6 +555,7 @@ function renderCombinationDeck(deck, plan) {
         ${choices.map((choice) => `<li>${formatCombinationChoice(choice)}</li>`).join("")}
       </ul>
       ${hasLakeGift ? '<p class="account-lake-gift-warning">[호수의 선물]은 선택한 캐릭터 3개 중 하나가 랜덤으로 뽑히니 주의.</p>' : ""}
+      ${hasDoublePickup ? '<p class="account-lake-gift-warning">[이중 픽업]은 선택한 캐릭터 2개 중 하나가 랜덤으로 뽑히니 주의.</p>' : ""}
     </article>
   `;
 }
