@@ -5,6 +5,8 @@ const pickupState = {
 
 const PICKUP_SCHEMA = "reverse-rel-pickup-data";
 const PICKUP_PUBLIC_ORIGIN = "https://reverselibrary.pages.dev";
+const SCHEDULE_GROUP_COUNT = 4;
+const SCHEDULE_NAME_LIMIT = 8;
 const pickupEmbedHeightCache = new Map();
 const pickupSearchParams = new URLSearchParams(location.search);
 const pickupRequestedEmbed = pickupSearchParams.get("embed") || document.body.dataset.pickupEmbed || "";
@@ -96,31 +98,51 @@ function normalizeConditions(conditions) {
 }
 
 function normalizeBlocks(blocks) {
-  return Array.isArray(blocks) ? blocks.map((block) => ({
-    id: block.id || `block-${Date.now()}-${Math.random().toString(16).slice(2)}`,
-    type: block.type || "text",
-    text: block.text || "",
-    banner: block.banner || "",
-    name: block.name || "",
-    kind: block.kind || "",
-    category: block.category || "",
-    content: block.content || "",
-    note: block.note || "",
-    names: Array.isArray(block.names) ? block.names.map(normalizeScheduleName) : ["", "", "", ""].map(normalizeScheduleName),
-    visible: block.visible !== false
-  })) : [];
+  return Array.isArray(blocks) ? blocks.map((block) => {
+    const names = Array.isArray(block?.names) ? block.names : [];
+    const isDeck = block?.type === "deck";
+    return {
+      id: block.id || `block-${Date.now()}-${Math.random().toString(16).slice(2)}`,
+      type: block.type || "text",
+      text: block.text || "",
+      banner: block.banner || "",
+      name: block.name || "",
+      kind: block.kind || "",
+      category: block.category || "",
+      content: block.content || "",
+      note: block.note || "",
+      names: isDeck ? [] : names.map(normalizeScheduleName),
+      groups: isDeck ? normalizeScheduleGroups(block.groups, names) : [],
+      visible: block.visible !== false
+    };
+  }) : [];
+}
+
+function normalizeScheduleGroups(groups, legacyNames = []) {
+  const hasGroups = Array.isArray(groups) && groups.length > 0;
+  const normalized = hasGroups
+    ? groups.slice(0, SCHEDULE_GROUP_COUNT).map((group) => ({
+        description: group?.description || "",
+        names: Array.isArray(group?.names) ? group.names.map(normalizeScheduleName) : []
+      }))
+    : [{ description: "", names: legacyNames.map(normalizeScheduleName) }];
+  while (normalized.length < SCHEDULE_GROUP_COUNT) normalized.push({ description: "", names: [] });
+  let remaining = SCHEDULE_NAME_LIMIT;
+  normalized.forEach((group) => {
+    group.names = group.names.slice(0, remaining);
+    remaining -= group.names.length;
+  });
+  return normalized;
 }
 
 function normalizeScheduleName(entry) {
   if (entry && typeof entry === "object") {
     return {
-      name: entry.name || "",
-      rhiannon: entry.rhiannon === true
+      name: entry.name || ""
     };
   }
   return {
-    name: entry || "",
-    rhiannon: false
+    name: entry || ""
   };
 }
 
@@ -201,14 +223,15 @@ function renderBlock(block) {
 function renderScheduleBlocks(blocks) {
   const visibleDecks = blocks.filter((block) => {
     if (block.visible === false || block.type !== "deck") return false;
-    return (Array.isArray(block.names) ? block.names : []).some((entry) => cleanText(scheduleEntryName(entry)));
+    return scheduleDeckGroups(block).some((group) => group.entries.length);
   });
   if (!visibleDecks.length) return '<div class="pickup-empty">마도학자 일정 컨텐츠를 추가하세요.</div>';
   return `<div class="pickup-schedule-content">${visibleDecks.map(renderScheduleDeck).join("")}</div>`;
 }
 
 function renderScheduleDeck(block) {
-  const entries = (Array.isArray(block.names) ? block.names : []).map(normalizeScheduleName).filter((entry) => cleanText(entry.name));
+  const groups = scheduleDeckGroups(block).filter((group) => group.entries.length);
+  const entries = groups.flatMap((group) => group.entries);
   if (!entries.length) return "";
   const deckName = cleanText(block.name);
   return `
@@ -223,11 +246,35 @@ function renderScheduleDeck(block) {
           </button>
         </div>
       ` : ""}
-      <div class="pickup-schedule-deck-body" style="--pickup-profile-count:${entries.length}">
+      <div class="pickup-schedule-group-row">
+        ${groups.map((group) => `
+          <div class="pickup-schedule-group-label" style="--pickup-group-size:${group.entries.length}">
+            그룹${group.index + 1}${group.description ? ` ${escapeHtml(group.description)}` : ""}
+          </div>
+        `).join("")}
+      </div>
+      <div class="pickup-schedule-deck-body">
         ${entries.map(renderScheduleProfile).join("")}
       </div>
     </section>
   `;
+}
+
+function scheduleDeckGroups(block) {
+  const groups = normalizeScheduleGroups(block?.groups, Array.isArray(block?.names) ? block.names : []);
+  let remaining = SCHEDULE_NAME_LIMIT;
+  return groups.map((group, index) => {
+    const entries = group.names
+      .map(normalizeScheduleName)
+      .filter((entry) => cleanText(entry.name))
+      .slice(0, remaining);
+    remaining -= entries.length;
+    return {
+      index,
+      description: cleanText(group.description),
+      entries
+    };
+  });
 }
 
 function renderScheduleProfile(entry) {
@@ -236,9 +283,7 @@ function renderScheduleProfile(entry) {
   const displayName = scheduleDisplayName(name);
   return `
     <article class="pickup-schedule-profile">
-      <div class="pickup-schedule-image" style="background-image: url('profile/${encodeURIComponent(name)}.png');">
-        ${entry.rhiannon ? '<span class="pickup-schedule-overlay-frame"><img class="pickup-schedule-overlay" src="img/pickup/리아논.png" alt="" /></span>' : ""}
-      </div>
+      <div class="pickup-schedule-image" style="background-image: url('profile/${encodeURIComponent(name)}.png');"></div>
       <h3>${escapeHtml(displayName)}</h3>
       <div class="pickup-schedule-list">
         ${schedules.length ? schedules.map((item) => `<p>[${escapeHtml(item.category)}] ${escapeHtml(item.version)}</p>`).join("") : "<p>예정 없음</p>"}
@@ -252,7 +297,11 @@ function scheduleEntryName(entry) {
 }
 
 function scheduleDisplayName(name) {
-  return cleanText(name) === "로렌츠 버터플라이" ? "로렌츠" : name;
+  const displayNames = {
+    "로렌츠 버터플라이": "로렌츠",
+    "미스 스트레인저": "미스스"
+  };
+  return displayNames[cleanText(name)] || name;
 }
 
 function findScheduleForName(name) {
@@ -459,6 +508,7 @@ async function renderElementToPng(element) {
   if (document.fonts?.ready) await document.fonts.ready;
 
   await drawElementBox(context, element, rect, 0, 0, width, height);
+  element.querySelectorAll(".pickup-schedule-group-label").forEach((label) => drawCenteredText(context, label, rect));
   for (const profile of element.querySelectorAll(".pickup-schedule-profile")) {
     await drawScheduleProfile(context, profile, rect);
   }
@@ -471,9 +521,6 @@ async function drawScheduleProfile(context, profile, rootRect) {
   const imageBox = profile.querySelector(".pickup-schedule-image");
   const nameLabel = profile.querySelector("h3");
   if (imageBox) await drawElementBoxFromDom(context, imageBox, rootRect);
-  for (const overlay of imageBox?.querySelectorAll(".pickup-schedule-overlay-frame") || []) {
-    await drawOverlayFrame(context, overlay, rootRect);
-  }
   if (nameLabel) {
     await drawElementBoxFromDom(context, nameLabel, rootRect);
     drawCenteredText(context, nameLabel, rootRect);
@@ -514,57 +561,6 @@ async function drawElementBox(context, element, rootRect, x, y, width, height) {
   drawBorder(context, style, x, y, width, height, radius);
 }
 
-async function drawImgElement(context, element, rootRect) {
-  const rect = element.getBoundingClientRect();
-  if (!rect.width || !rect.height) return;
-  const style = window.getComputedStyle(element);
-  const x = rect.left - rootRect.left;
-  const y = rect.top - rootRect.top;
-  const radius = style.clipPath.startsWith("circle") ? Math.min(rect.width, rect.height) / 2 : parseFloat(style.borderTopLeftRadius) || 0;
-  const image = await loadImage(element.currentSrc || element.src);
-  context.save();
-  roundedRect(context, x, y, rect.width, rect.height, radius);
-  context.clip();
-  if (style.objectFit === "cover") {
-    drawImageCover(context, image, x, y, rect.width, rect.height);
-  } else {
-    context.drawImage(image, x, y, rect.width, rect.height);
-  }
-  context.restore();
-  drawBorder(context, style, x, y, rect.width, rect.height, radius);
-  drawOutline(context, style, x, y, rect.width, rect.height, radius);
-}
-
-async function drawOverlayFrame(context, frame, rootRect) {
-  const rect = frame.getBoundingClientRect();
-  if (!rect.width || !rect.height) return;
-  const imageElement = frame.querySelector("img");
-  if (!imageElement) return;
-  const image = await loadImage(imageElement.currentSrc || imageElement.src);
-  const x = rect.left - rootRect.left;
-  const y = rect.top - rootRect.top;
-  const width = rect.width;
-  const height = rect.height;
-  const radius = Math.min(width, height) / 2;
-  const centerX = x + width / 2;
-  const centerY = y + height / 2;
-  context.save();
-  context.beginPath();
-  context.arc(centerX, centerY, radius, 0, Math.PI * 2);
-  context.closePath();
-  context.clip();
-  drawImageCover(context, image, x, y, width, height);
-  context.restore();
-  context.save();
-  context.strokeStyle = "#fff";
-  context.lineWidth = 1;
-  context.beginPath();
-  context.arc(centerX, centerY, radius - 0.5, 0, Math.PI * 2);
-  context.closePath();
-  context.stroke();
-  context.restore();
-}
-
 function drawCenteredText(context, element, rootRect) {
   const rect = element.getBoundingClientRect();
   const style = window.getComputedStyle(element);
@@ -592,24 +588,6 @@ function drawBorder(context, style, x, y, width, height, radius) {
   context.strokeStyle = style.borderTopColor || "#d7dde8";
   context.lineWidth = borderWidth;
   roundedRect(context, x + borderWidth / 2, y + borderWidth / 2, width - borderWidth, height - borderWidth, Math.max(0, radius - borderWidth / 2));
-  context.stroke();
-  context.restore();
-}
-
-function drawOutline(context, style, x, y, width, height, radius) {
-  const outlineWidth = parseFloat(style.outlineWidth) || 0;
-  if (!outlineWidth || style.outlineStyle === "none") return;
-  context.save();
-  context.strokeStyle = style.outlineColor || "#fff";
-  context.lineWidth = outlineWidth;
-  roundedRect(
-    context,
-    x - outlineWidth / 2,
-    y - outlineWidth / 2,
-    width + outlineWidth,
-    height + outlineWidth,
-    radius + outlineWidth / 2
-  );
   context.stroke();
   context.restore();
 }
