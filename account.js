@@ -5,6 +5,7 @@ const accountResult = document.getElementById("accountResult");
 const ACCOUNT_GROUP_COUNT = 4;
 const ACCOUNT_NAME_LIMIT = 8;
 const ACCOUNT_PULLS_PER_VERSION = 110;
+const ACCOUNT_DEFAULT_OWNED_NAMES = ["마틸다"];
 const ACCOUNT_PICKUP_COSTS = new Map([
   ["길가의 초상화", 0],
   ["배포", 0],
@@ -143,7 +144,7 @@ function allKnownDataNames() {
 }
 
 function parseOwnedNames(value) {
-  const owned = new Set();
+  const owned = new Set(ACCOUNT_DEFAULT_OWNED_NAMES.map((name) => canonicalName(name)));
   String(value || "")
     .split(/[+,，;|/\n\r]+/)
     .map(cleanText)
@@ -528,12 +529,14 @@ function renderAccountOptimization(rankedDecks, optimizedCombination, maximumDec
 
 function renderCombinationDeck(deck, plan) {
   const choices = [...plan.choices].sort((a, b) => a.groupIndex - b.groupIndex);
+  const hasLakeGift = choices.some((choice) => !choice.owned && cleanText(choice.schedule?.category) === "호수의 선물");
   return `
     <article class="account-combination-deck">
       <h4>${escapeHtml(cleanText(deck.block.name))} <span class="account-pull-count"><img class="account-pull-icon" src="img/icon/토끼.png" alt="" aria-hidden="true">${plan.cost}회</span></h4>
       <ul>
         ${choices.map((choice) => `<li>${formatCombinationChoice(choice)}</li>`).join("")}
       </ul>
+      ${hasLakeGift ? '<p class="account-lake-gift-warning">[호수의 선물]은 선택한 캐릭터 3개 중 하나가 랜덤으로 뽑히니 주의.</p>' : ""}
     </article>
   `;
 }
