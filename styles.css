@@ -312,8 +312,8 @@ button { border: 0; cursor: pointer; }
   margin-top: 10px;
   color: #d62828;
   font-size: 13px;
-  font-style: italic;
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 700;
 }
 .account-version-summary strong {
   color: var(--orange);
