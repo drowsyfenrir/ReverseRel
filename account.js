@@ -430,6 +430,7 @@ function currentAccountVersionWindow() {
   return {
     currentVersion: cleanText(currentPage.version || currentPage.pageName) || "-",
     latestVersion: cleanText(latestPage.version || latestPage.pageName) || "-",
+    versionCount: futurePages.length,
     availablePulls: futurePages.length * ACCOUNT_PULLS_PER_VERSION
   };
 }
@@ -497,11 +498,20 @@ function isBetterCombination(candidate, current, preferPriority) {
 function renderAccountOptimization(rankedDecks, optimizedCombination, maximumDeckCombination, accountWindow) {
   const combinationNames = optimizedCombination.selections.map(({ deck }) => cleanText(deck.block.name));
   const maximumCombinationNames = maximumDeckCombination.selections.map(({ deck }) => cleanText(deck.block.name));
+  const optimizedDeckCount = optimizedCombination.selections.length;
+  const maximumDeckCount = maximumDeckCombination.selections.length;
+  const accountRating = optimizedDeckCount >= 3 ? "훌륭한" : "아쉬운";
+  const assessmentAdvice = optimizedDeckCount >= 3
+    ? "<p>리버스 1999의 컨텐츠를 플레이 하기에 부족함이 없습니다.</p><p>지금 당장 시작하세요!</p>"
+    : maximumDeckCount >= 3
+      ? "<p>하지만 최소 수치가 아니라면 3개 이상 덱을 만들 수 있으므로 취향을 바탕으로 신중히 지갑과 상담하여 덱을 짜보도록 합시다.</p>"
+      : "";
   return `
     <section class="account-optimization" aria-label="계정 분석 추천 결과">
       <div class="account-version-summary">
         <p>현재 버전은 <strong>[${escapeHtml(accountWindow.currentVersion)}]</strong>입니다. 확인된 최신 버전은 <strong>[${escapeHtml(accountWindow.latestVersion)}]</strong>입니다.</p>
         <p>소과금 기준 획득 가능한 픽업 횟수는 약 <strong class="account-pull-count"><img class="account-pull-icon" src="img/icon/토끼.png" alt="" aria-hidden="true">[${accountWindow.availablePulls}]회</strong>입니다.</p>
+        <p class="account-pull-disclaimer">아래 픽업 횟수는 모두 픽뚫을 상정한 최대 횟수입니다.</p>
       </div>
       <h3>픽업 횟수 적은 순으로 추천한 덱 순서입니다.</h3>
       <ol class="account-ranking-list">
@@ -522,6 +532,12 @@ function renderAccountOptimization(rankedDecks, optimizedCombination, maximumDec
       <p class="account-combination-copy"><strong>덱 추천 조합과 조건은 아래와 같습니다.</strong></p>
       <div class="account-combination-list account-maximum-combination-list">
         ${maximumDeckCombination.selections.map(({ deck, plan }) => renderCombinationDeck(deck, plan)).join("")}
+      </div>
+      <div class="account-final-assessment">
+        <p>현재 리버스 1999의 최종 컨텐츠는 상위 덱을 3개 요구합니다.</p>
+        <p>당신은 현재 버전 이후 ${accountWindow.versionCount}버전 간 최소 ${optimizedDeckCount}개의 덱을 완성할 가능성이 높습니다.</p>
+        <p>해당 계정은 ${accountRating} 계정입니다.</p>
+        ${assessmentAdvice}
       </div>
     </section>
   `;

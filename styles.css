@@ -303,6 +303,11 @@ button { border: 0; cursor: pointer; }
 .account-combination-copy {
   margin: 0;
 }
+.account-version-summary .account-pull-disclaimer {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
 .account-version-summary strong {
   color: var(--orange);
   font-weight: 700;
@@ -403,6 +408,21 @@ button { border: 0; cursor: pointer; }
 }
 .account-choice-detail {
   font-weight: 450;
+}
+.account-final-assessment {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 1.7;
+}
+.account-final-assessment p {
+  margin: 0;
+}
+.account-final-assessment p + p {
+  margin-top: 6px;
 }
 .deck-page {
   min-height: 100vh;
