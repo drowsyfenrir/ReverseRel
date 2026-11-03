@@ -51,6 +51,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -65,6 +66,7 @@
           "category": "픽업 :",
           "content": "전력덱 탱커 및 범용 탱커",
           "note": "필수 추천",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -79,6 +81,7 @@
           "category": "호수의 물결 :",
           "content": "마도학자 선택 후 70번 안으로 확정 픽업",
           "note": "이월 가능",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -93,6 +96,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -107,6 +111,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -121,6 +126,7 @@
           "category": "픽업 :",
           "content": "마도구 덱 메인 딜러",
           "note": "이월 불가능, 복각 없음",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -135,6 +141,7 @@
           "category": "호수의 물결 :",
           "content": "마도학자 선택 후 70번 안으로 확정 픽업",
           "note": "이월 가능",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -149,6 +156,7 @@
           "category": "픽업 :",
           "content": "이고르 술식 메인 딜러 / 양월덱 서포터",
           "note": "이월 불가능, 비추천",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -163,6 +171,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -177,6 +186,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -191,6 +201,7 @@
           "category": "픽업 :",
           "content": "복합 키워드 만능 서포터",
           "note": "이월 불가능",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -205,6 +216,7 @@
           "category": "픽업 :",
           "content": "술식 덱 딜러",
           "note": "우선 순위 낮음",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -219,6 +231,7 @@
           "category": "픽업 :",
           "content": "마도구 덱 서포터",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -233,6 +246,7 @@
           "category": "복각 픽업 :",
           "content": "신혈 덱 메인 딜러",
           "note": "이월 불가능",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -247,6 +261,7 @@
           "category": "복각 픽업 :",
           "content": "기존 한정 캐릭터 중 하나를 선택하여 픽업",
           "note": "이월 불가능",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -261,6 +276,7 @@
           "category": "호수의 승낙 :",
           "content": "상시 캐릭터 중 하나를 선택하여 픽업",
           "note": "이월 불가능",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -275,6 +291,7 @@
           "category": "호수의 물결 :",
           "content": "마도학자 선택 후 70번 안으로 확정 픽업",
           "note": "이월 가능",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -289,6 +306,7 @@
           "category": "과금 누적 보상 :",
           "content": "일정 금액 이상 시 캐릭터 세트를 선택하여 받음",
           "note": "브룸/안조, 카론/루시, 머큐/곡랑 中 1",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -303,6 +321,7 @@
           "category": ":",
           "content": "보유한 상시 캐릭터 중 하나를 선택하여 획득",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -317,6 +336,7 @@
           "category": ":",
           "content": "상시 캐릭터 중 하나를 선택하여 획득",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -331,6 +351,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -345,6 +366,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -359,6 +381,7 @@
           "category": "픽업 :",
           "content": "마도구 덱 힐러",
           "note": "추천",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -373,6 +396,7 @@
           "category": "픽업 :",
           "content": "반격 덱 딜러",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -387,6 +411,7 @@
           "category": "호수의 물결 :",
           "content": "마도학자 선택 후 70번 안으로 확정 픽업",
           "note": "이월 가능, J 추천",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -401,6 +426,7 @@
           "category": "픽업 :",
           "content": "전력 탱커 / 여광 서포터",
           "note": "이월 불가능",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -415,6 +441,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": false
@@ -429,6 +456,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": true
@@ -443,6 +471,7 @@
           "category": "픽업 :",
           "content": "마도구 덱 서포터",
           "note": "추천",
+          "imageUrl": "https://ac.arca.live/20261026sac/d9d75ec1480ebac61088ac36b6873a6747c19ae7739ebb7afac9807738cd103e.jpg?expires=1793689765&key=f-lOtw8ruBArJpiRDLna4g",
           "names": [],
           "groups": [],
           "visible": true
@@ -457,6 +486,7 @@
           "category": "픽업 :",
           "content": "술식 힐러",
           "note": "추천",
+          "imageUrl": "https://ac.arca.live/20261026sac/8e5a5f189190d038b359318a0c8020566d24526eff407f2923e13678e6763ccb.jpg?expires=1793689765&key=bsf43omoN-Ups_3plAjb6g",
           "names": [],
           "groups": [],
           "visible": true
@@ -471,6 +501,7 @@
           "category": "호수의 선물 :",
           "content": " 3명의 6성 캐릭터를 선택하여 그 중 하나를 획득",
           "note": "이월 불가능",
+          "imageUrl": "https://ac.arca.live/20261026sac/248f783ebf38d387a8fc49f506898f7fd2ea36ac8b595b12107688bbb93bd19d.jpg?expires=1793689765&key=LZfXRhU3sj2KsHUC2aWMwQ",
           "names": [],
           "groups": [],
           "visible": true
@@ -485,6 +516,7 @@
           "category": "호수의 물결 :",
           "content": "마도학자 선택 후 70번 안으로 확정 픽업",
           "note": "이고르 보유 시, 몰디르 추천",
+          "imageUrl": "https://ac.arca.live/20261026sac/b07765899a795de5b4bd0a4a4bcafc547f32b70a6d4b44b8ff2742ef88ca3dba.jpg?expires=1793689765&key=4FaEp852XU-KxKoo3Jdx6A",
           "names": [],
           "groups": [],
           "visible": true
@@ -499,6 +531,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": true
@@ -513,6 +546,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": true
@@ -527,6 +561,7 @@
           "category": "픽업 :",
           "content": "신규 키워드 통지 딜러",
           "note": "이월 불가능, 필수 추천",
+          "imageUrl": "https://ac.arca.live/20261103sac/be5308ee27da38a2ffa0700aeb6ab97fc045b8ee92076cdb8b630e98aa644a7e.jpg?expires=1793689765&key=fdvvQV_QEkhiDskdhHXi3Q",
           "names": [],
           "groups": [],
           "visible": true
@@ -541,6 +576,7 @@
           "category": "픽업 :",
           "content": "여광, 딜 서포터",
           "note": "이월 가능",
+          "imageUrl": "https://ac.arca.live/20261103sac/81d557769b69026d3f2fd7354aae6161cb7be30a7e80906e77cc3d83b03be140.jpg?expires=1793689765&key=d-UDQNoYKlYGFqKtHsgIXg",
           "names": [],
           "groups": [],
           "visible": true
@@ -555,6 +591,7 @@
           "category": "호수의 물결 :",
           "content": "마도학자 선택 후 70번 안으로 확정 픽업",
           "note": "이월 가능",
+          "imageUrl": "https://ac.arca.live/20261103sac/424b1bc917c464eb561a5e04dd59e0c299a4287531c43e7c6f040b882f7e2bb1.jpg?expires=1793689765&key=hcjqqArhYEoUmcsWC1kPtw",
           "names": [],
           "groups": [],
           "visible": true
@@ -569,6 +606,7 @@
           "category": "복각 픽업 :",
           "content": "여광 메인 딜러",
           "note": "추천, 이월 불가능",
+          "imageUrl": "https://ac.arca.live/20261103sac/97c1e37c11862e31f1c378749865b2bd95b293f8674aebd09e7000b089d79551.jpg?expires=1793690835&key=InzkFnPtZwDFUJmQxURd2A",
           "names": [],
           "groups": [],
           "visible": true
@@ -583,6 +621,7 @@
           "category": "복각 픽업 :",
           "content": "기존 한정 캐릭터 중 하나를 선택하여 픽업",
           "note": "이월 불가능",
+          "imageUrl": "https://ac.arca.live/20261103sac/72fe2e6c942617f9be698fe79e05ab8d6cf2c77a14442ff16d69871559916b55.jpg?expires=1793689765&key=IwU1SEgX6_b1abRq7lmlVg",
           "names": [],
           "groups": [],
           "visible": true
@@ -597,6 +636,7 @@
           "category": "",
           "content": "미보유 6성 상시 캐릭터 랜덤 초대",
           "note": "",
+          "imageUrl": "https://ac.arca.live/20261103sac/09e11c0c9b9c0f07359691329c3ff295992cda3e11f3033afb3bf6dc6a681dbe.jpg?expires=1793689765&key=qw1oEoqGxd7U8KwoApbvfw",
           "names": [],
           "groups": [],
           "visible": true
@@ -611,6 +651,7 @@
           "category": "",
           "content": "4.0 까지 광상 캐릭터 선택 초대",
           "note": "",
+          "imageUrl": "https://ac.arca.live/20261103sac/ac653944ce0483bbcb9a8669a0e1d1b2656effe3436709baa6e5eb479c44d3f0.jpg?expires=1793689765&key=rAOiuaOrIwXGTjh0_pHI1g",
           "names": [],
           "groups": [],
           "visible": true
@@ -625,6 +666,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": true
@@ -639,6 +681,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": true
@@ -653,6 +696,7 @@
           "category": "픽업 :",
           "content": "통지 힐러",
           "note": "이월 가능, 추천",
+          "imageUrl": "https://ac.arca.live/20261103sac/e2307b0ab76162faa2d0b50847cd1684bbe73c4cc466a93e14d43fed0f5720c1.jpg?expires=1793689765&key=Ywo2NAHDB8mTUTl3e9fD3A",
           "names": [],
           "groups": [],
           "visible": true
@@ -667,6 +711,7 @@
           "category": "픽업 :",
           "content": "미확정",
           "note": "이월 가능",
+          "imageUrl": "https://ac.arca.live/20261103sac/29aaba638218cc3a36a2d774650d77ac5762482ece4ebc110856470c20f4a9cb.jpg?expires=1793689765&key=ykCncvpzmwWJ2-KwNlIytQ",
           "names": [],
           "groups": [],
           "visible": true
@@ -681,6 +726,7 @@
           "category": "4.1 호수의 물결 :",
           "content": "마도학자 선택 후 70번 안으로 확정 픽업",
           "note": "이월 가능, 뉴비 비추천",
+          "imageUrl": "https://ac.arca.live/20261103sac/06ce5038c6838066dbabda1eafbc88c873681a91021a98c7978f9e048cc413b2.jpg?expires=1793689765&key=F7kEd3AhNKCal7fa9zdRAA",
           "names": [],
           "groups": [],
           "visible": true
@@ -695,6 +741,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [],
           "visible": true
@@ -713,6 +760,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -772,6 +820,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -821,6 +870,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -871,6 +921,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -921,6 +972,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -971,6 +1023,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -1018,6 +1071,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -1065,6 +1119,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -1118,6 +1173,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -1171,6 +1227,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -1227,6 +1284,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -1280,6 +1338,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -1333,6 +1392,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -1392,6 +1452,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -1439,6 +1500,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -1489,6 +1551,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -1545,6 +1608,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -1601,6 +1665,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -1654,6 +1719,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -1704,6 +1770,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -1757,6 +1824,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -1810,6 +1878,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {
@@ -1869,6 +1938,7 @@
           "category": "",
           "content": "",
           "note": "",
+          "imageUrl": "",
           "names": [],
           "groups": [
             {

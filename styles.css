@@ -2595,6 +2595,9 @@ button { border: 0; cursor: pointer; }
 .deck-editor-grid-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+.deck-editor-grid-7 {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
 .deck-editor-field {
   display: grid;
   gap: 6px;
@@ -4225,17 +4228,12 @@ button { border: 0; cursor: pointer; }
   border-radius: 8px;
   background: #fbfcfd;
 }
-.pickup-editor-block.is-dragging {
-  opacity: .45;
-}
 .pickup-editor-block.is-editor-hidden {
   opacity: .58;
 }
-.pickup-editor-block.is-drop-before {
-  border-top: 3px solid var(--orange);
-}
-.pickup-editor-block.is-drop-after {
-  border-bottom: 3px solid var(--orange);
+.pickup-editor-block.is-group-header {
+  border-color: #cfd7e3;
+  background: #f5f7fa;
 }
 .pickup-editor-block > header {
   display: flex;
@@ -4252,6 +4250,11 @@ button { border: 0; cursor: pointer; }
   align-items: center;
   gap: 8px;
   min-width: 0;
+}
+.pickup-editor-group-count {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
 }
 .pickup-editor-deck-name {
   width: 180px;
@@ -4288,6 +4291,9 @@ button { border: 0; cursor: pointer; }
 }
 .pickup-editor-block > header button[data-move-block] {
   background: #495057;
+}
+.pickup-editor-block > header button.pickup-editor-collapse-toggle {
+  background: var(--navy);
 }
 .pickup-editor-block > header button.pickup-editor-move-to {
   width: auto;

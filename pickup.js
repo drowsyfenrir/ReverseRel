@@ -8,6 +8,7 @@ const PICKUP_PUBLIC_ORIGIN = "https://reverselibrary.pages.dev";
 const SCHEDULE_GROUP_COUNT = 4;
 const SCHEDULE_NAME_LIMIT = 8;
 const pickupEmbedHeightCache = new Map();
+const pickupCanvasImageCache = new Map();
 const pickupSearchParams = new URLSearchParams(location.search);
 const pickupRequestedEmbed = pickupSearchParams.get("embed") || document.body.dataset.pickupEmbed || "";
 const pickupEmbedTarget = ["banner", "schedule"].includes(pickupRequestedEmbed)
@@ -54,7 +55,12 @@ pickupButtons.forEach((button) => {
 document.addEventListener("click", async (event) => {
   const shareButton = event.target.closest("[data-copy-pickup-embed]");
   if (shareButton) {
-    await copyPickupEmbedCode(shareButton.dataset.copyPickupEmbed || "banner");
+    const target = shareButton.dataset.copyPickupEmbed || "banner";
+    if (target === "schedule") {
+      await downloadPickupSchedulePanel(shareButton);
+    } else {
+      await copyPickupEmbedCode(target);
+    }
     return;
   }
   const button = event.target.closest("[data-download-pickup-deck]");
@@ -111,6 +117,7 @@ function normalizeBlocks(blocks) {
       category: block.category || "",
       content: block.content || "",
       note: block.note || "",
+      imageUrl: block.imageUrl || "",
       names: isDeck ? [] : names.map(normalizeScheduleName),
       groups: isDeck ? normalizeScheduleGroups(block.groups, names) : [],
       visible: block.visible !== false
@@ -156,8 +163,8 @@ function normalizeVersionData(data) {
 function renderPickupPanels() {
   const bannerPanel = document.querySelector('[data-pickup-panel="banner"]');
   const schedulePanel = document.querySelector('[data-pickup-panel="schedule"]');
-  bannerPanel.innerHTML = `${isPickupEmbed ? "" : renderPickupShareButton("banner", "픽업 안내 임베드 코드 복사")}${renderBlocks(pickupState.data.panels.banner.blocks)}`;
-  schedulePanel.innerHTML = `${isPickupEmbed ? "" : renderPickupShareButton("schedule", "픽업 일정 임베드 코드 복사")}${renderScheduleBlocks(pickupState.data.panels.schedule.blocks)}`;
+  bannerPanel.innerHTML = `${isPickupEmbed ? "" : renderPickupShareButton("banner", "픽업 안내 아카라이브 HTML 코드 복사")}${renderBlocks(pickupState.data.panels.banner.blocks)}`;
+  schedulePanel.innerHTML = `${isPickupEmbed ? "" : renderPickupShareButton("schedule", "픽업 일정 전체 이미지 다운로드")}${renderScheduleBlocks(pickupState.data.panels.schedule.blocks)}`;
   if (isPickupEmbed) {
     pickupTabs?.classList.toggle("is-banner", pickupEmbedTarget === "banner");
     pickupTabs?.classList.toggle("is-schedule", pickupEmbedTarget === "schedule");
@@ -174,12 +181,13 @@ function renderPickupPanels() {
 }
 
 function renderPickupShareButton(target, label) {
+  const icon = target === "schedule"
+    ? '<path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17v3h14v-3" />'
+    : '<path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7" /><path d="M16 6 12 2 8 6" /><path d="M12 2v13" />';
   return `
     <button class="pickup-embed-copy-button" type="button" data-copy-pickup-embed="${target}" aria-label="${escapeAttr(label)}">
       <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7" />
-        <path d="M16 6 12 2 8 6" />
-        <path d="M12 2v13" />
+        ${icon}
       </svg>
     </button>
   `;
@@ -405,10 +413,90 @@ function cleanText(value) {
 }
 
 async function copyPickupEmbedCode(target = "banner") {
+  if (target === "banner") {
+    await navigator.clipboard.writeText(renderArcaPickupBannerHtml());
+    showPickupToast("아카라이브 HTML 코드 복사 완료");
+    return;
+  }
   const height = await getPickupEmbedHeight(target);
   const embedCode = renderPickupIframeEmbed(target, height);
   await navigator.clipboard.writeText(embedCode);
   showPickupToast("임베드 코드 복사 완료");
+}
+
+async function downloadPickupSchedulePanel(button) {
+  const panel = button.closest("section.version-popup.pickup-popup.is-active")
+    || document.querySelector('[data-pickup-panel="schedule"]');
+  if (!panel) return;
+  button.disabled = true;
+  try {
+    const blob = await renderElementToPng(panel);
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "리버스 1999 픽업 일정.png";
+    link.click();
+    URL.revokeObjectURL(link.href);
+    showPickupToast("픽업 일정 이미지 저장 완료");
+  } catch (error) {
+    console.error(error);
+    alert("픽업 일정 이미지 다운로드에 실패했습니다.");
+  } finally {
+    button.disabled = false;
+  }
+}
+
+function renderArcaPickupBannerHtml() {
+  const blocks = pickupState.data.panels.banner.blocks.filter((block) => block.visible !== false);
+  const imageGuide = [];
+  let imageIndex = 0;
+  const content = blocks.map((block) => {
+    if (block.type === "header") {
+      return `<h2 style="margin:18px 0;color:#000;font-size:24px;font-weight:600;line-height:1.4;text-align:center;"><span style="display:inline-block;font-size:22px;line-height:1;vertical-align:middle;">📌</span>&nbsp;${escapeHtml(block.text)}</h2>`;
+    }
+    if (block.type === "banner") {
+      imageIndex += 1;
+      const number = String(imageIndex).padStart(2, "0");
+      const placeholder = `배너_이미지_주소_${number}`;
+      const name = cleanText(block.name) || `배너 ${number}`;
+      const imageUrl = cleanText(block.imageUrl);
+      imageGuide.push(imageUrl
+        ? `${number}. ${name}: 픽업 에디터에 저장된 URL 자동 적용`
+        : `${number}. ${name}: src="${placeholder}"의 ${placeholder} 부분을 이미지 주소로 교체`);
+      return renderArcaPickupBannerItem(block, imageUrl || placeholder, name);
+    }
+    return renderArcaPickupTextBlock(block.text);
+  }).join("\n");
+  const guide = [
+    "<!-- 아카라이브용 픽업 안내 HTML",
+    "사용법: 아래 목록의 src 속성에서 배너_이미지_주소_번호 부분만 아카라이브 전용 이미지 주소로 교체하세요.",
+    "따옴표와 나머지 HTML은 그대로 유지하면 됩니다.",
+    ...imageGuide,
+    "-->"
+  ].join("\n");
+  return `${guide}\n<div style="padding:18px;border:1px solid #d7dde8;border-radius:12px;background:#fff;color:#000;">\n${content}\n</div>`;
+}
+
+function renderArcaPickupBannerItem(block, placeholder, name) {
+  const kind = cleanText(block.kind);
+  return `<div style="margin:18px 0;text-align:center;">
+  <img src="${escapeAttr(placeholder)}" alt="${escapeAttr(name)} 배너 이미지" style="display:inline-block;width:100%;height:auto;border:0;border-radius:10px;vertical-align:middle;">
+  <p style="margin:8px 0 0;color:#000;font-size:18px;font-weight:400;line-height:1.5;text-align:center;">
+    <span style="display:inline-block;font-weight:550;vertical-align:middle;"><span style="display:inline-block;font-size:16px;line-height:1;vertical-align:middle;">💎</span>&nbsp;${escapeHtml(block.name)}</span>
+    ${kind ? `<span style="display:inline-block;color:#c92525;font-weight:550;">(${escapeHtml(kind)})</span>` : ""}
+    <span style="display:inline-block;font-weight:550;">${escapeHtml(block.category)}</span>
+    <span style="display:inline-block;font-weight:400;">${escapeHtml(block.content)}</span>
+    <span style="display:inline-block;color:#c92525;font-weight:550;">${escapeHtml(block.note)}</span>
+  </p>
+</div>`;
+}
+
+function renderArcaPickupTextBlock(value) {
+  const text = escapeHtml(value).replace(/\r?\n/g, "<br>");
+  return `<div style="margin:20px 0;">
+  <div style="width:100%;height:1px;margin:0 0 20px;background:linear-gradient(90deg,#fff,#d7dde8,#fff);"></div>
+  <p style="margin:0;color:#000;font-size:18px;font-weight:400;line-height:1.6;text-align:center;">${text}</p>
+  <div style="width:100%;height:1px;margin:20px 0 0;background:linear-gradient(90deg,#fff,#d7dde8,#fff);"></div>
+</div>`;
 }
 
 function renderPickupIframeEmbed(target = "banner", measuredHeight = 0) {
@@ -509,11 +597,27 @@ async function renderElementToPng(element) {
   const context = canvas.getContext("2d");
   context.setTransform(scale, 0, 0, scale, 0, 0);
   if (document.fonts?.ready) await document.fonts.ready;
+  await preloadCanvasBackgrounds(element);
 
   await drawElementBox(context, element, rect, 0, 0, width, height);
-  element.querySelectorAll(".pickup-schedule-group-label").forEach((label) => drawScheduleGroupLabel(context, label, rect));
-  for (const profile of element.querySelectorAll(".pickup-schedule-profile")) {
-    await drawScheduleProfile(context, profile, rect);
+  const decks = element.matches(".pickup-schedule-deck")
+    ? [element]
+    : Array.from(element.querySelectorAll(".pickup-schedule-deck"));
+
+  for (const deck of decks) {
+    if (deck !== element) await drawElementBoxFromDom(context, deck, rect);
+    const deckName = deck.querySelector(".pickup-schedule-deck-label > span");
+    if (deckName) drawWrappedText(context, deckName, rect);
+  }
+  decks.forEach((deck) => {
+    deck.querySelectorAll(".pickup-schedule-group-label").forEach((label) => {
+      drawScheduleGroupLabel(context, label, rect);
+    });
+  });
+  for (const deck of decks) {
+    for (const profile of deck.querySelectorAll(".pickup-schedule-profile")) {
+      await drawScheduleProfile(context, profile, rect);
+    }
   }
   return new Promise((resolve, reject) => {
     canvas.toBlob((blob) => blob ? resolve(blob) : reject(new Error("PNG 생성 실패")), "image/png");
@@ -687,13 +791,26 @@ function extractCssUrl(value) {
   return match ? match[2] : "";
 }
 
+function preloadCanvasBackgrounds(root) {
+  const sources = new Set();
+  [root, ...root.querySelectorAll("*")].forEach((element) => {
+    const backgroundUrl = extractCssUrl(window.getComputedStyle(element).backgroundImage);
+    if (backgroundUrl) sources.add(new URL(backgroundUrl, location.href).href);
+  });
+  return Promise.all(Array.from(sources, (src) => loadImage(src).catch(() => null)));
+}
+
 function loadImage(src) {
-  return new Promise((resolve, reject) => {
+  if (pickupCanvasImageCache.has(src)) return pickupCanvasImageCache.get(src);
+  const promise = new Promise((resolve, reject) => {
     const image = new Image();
     image.onload = () => resolve(image);
     image.onerror = reject;
     image.src = src;
   });
+  pickupCanvasImageCache.set(src, promise);
+  promise.catch(() => pickupCanvasImageCache.delete(src));
+  return promise;
 }
 
 function safeFileName(value) {
