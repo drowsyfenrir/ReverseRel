@@ -195,6 +195,12 @@ function resolveAccountName(value) {
   if (!text) return "";
   const direct = accountState.aliasMap.get(nameKey(text)) || accountState.aliasMap.get(compactNameKey(text));
   if (direct) return direct;
+  const multipliedFormation = text.replace(/\s*[x×]\s*\d+\s*$/i, "");
+  if (multipliedFormation !== text) {
+    return accountState.aliasMap.get(nameKey(multipliedFormation))
+      || accountState.aliasMap.get(compactNameKey(multipliedFormation))
+      || "";
+  }
   const parenthesizedFormation = text.replace(/\s*\(\s*\d+\s*(?:돌|형상?)\s*\)\s*$/i, "");
   if (parenthesizedFormation !== text) {
     return accountState.aliasMap.get(nameKey(parenthesizedFormation))
