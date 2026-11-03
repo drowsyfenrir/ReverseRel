@@ -195,19 +195,19 @@ function resolveAccountName(value) {
   if (!text) return "";
   const direct = accountState.aliasMap.get(nameKey(text)) || accountState.aliasMap.get(compactNameKey(text));
   if (direct) return direct;
-  const multipliedFormation = text.replace(/\s*[x×]\s*\d+\s*$/i, "");
+  const multipliedFormation = text.replace(/\s*[x×]\s*[1-5]\s*$/i, "");
   if (multipliedFormation !== text) {
     return accountState.aliasMap.get(nameKey(multipliedFormation))
       || accountState.aliasMap.get(compactNameKey(multipliedFormation))
       || "";
   }
-  const parenthesizedFormation = text.replace(/\s*\(\s*\d+\s*(?:돌|형상?)\s*\)\s*$/i, "");
+  const parenthesizedFormation = text.replace(/\s*\(\s*[1-5]\s*(?:돌|형상?)\s*\)\s*$/i, "");
   if (parenthesizedFormation !== text) {
     return accountState.aliasMap.get(nameKey(parenthesizedFormation))
       || accountState.aliasMap.get(compactNameKey(parenthesizedFormation))
       || "";
   }
-  const formationMatch = /^(.*?)(\d+)$/.exec(text);
+  const formationMatch = /^(.*?[^\d\s])([1-5])$/.exec(text);
   if (!formationMatch) return "";
   const base = cleanText(formationMatch[1]);
   return accountState.aliasMap.get(nameKey(base)) || accountState.aliasMap.get(compactNameKey(base)) || "";
