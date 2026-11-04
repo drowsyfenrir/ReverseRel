@@ -47,7 +47,9 @@ $localOnlyFiles = @(
   "deck-editor.html",
   "deck-editor.js",
   "pickup-editor.html",
-  "pickup-editor.js"
+  "pickup-editor.js",
+  "story-editor.html",
+  "story-editor.js"
 )
 
 Write-Host "로컬 전용 에디터 파일은 커밋에서 제외합니다."
