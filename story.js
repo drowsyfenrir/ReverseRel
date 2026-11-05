@@ -348,7 +348,7 @@ function renderStoryDialogueEntries(entries, imageContext = null) {
       imageContext.nextIndex += 1;
       return `
         <section class="story-dialogue-image">
-          <img src="${imageContext.basePath}/${imageIndex}.png" alt="스토리 이미지 ${imageIndex}" />
+          <img src="${imageContext.basePath}/${imageIndex}.png" alt="스토리 이미지 ${imageIndex}" loading="lazy" />
         </section>
       `;
     }
