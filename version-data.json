@@ -3962,7 +3962,8 @@
           "icon": "img/material/Album of the Lost.png",
           "dateMode": "version",
           "profiles": [
-            "윌로우"
+            "윌로우",
+            "베이비 블루"
           ]
         },
         "ripples": {
@@ -3996,7 +3997,14 @@
           "label": "비구상 촬영기",
           "icon": "img/material/Immaterial Photoscope.png",
           "dateMode": "none",
-          "profiles": []
+          "profiles": [
+            "울리히",
+            "갈기 모래",
+            "아르고스",
+            "A나이트",
+            "이졸데",
+            "갈라보나"
+          ]
         }
       },
       "exchangeCodes": []
