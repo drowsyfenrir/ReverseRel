@@ -348,7 +348,7 @@ function renderStoryDialogueEntries(entries, imageContext = null) {
       imageContext.nextIndex += 1;
       return `
         <section class="story-dialogue-image">
-          <img src="${imageContext.basePath}/${imageIndex}.png" alt="스토리 이미지 ${imageIndex}" loading="lazy" />
+          <img src="${imageContext.basePath}/${imageIndex}.webp" alt="스토리 이미지 ${imageIndex}" loading="lazy" onerror="this.onerror=null; this.src=this.src.slice(0, -5) + '.png';" />
         </section>
       `;
     }
@@ -442,22 +442,23 @@ function parseStoryChoiceOptions(source) {
 }
 
 function parseStoryDialogue(source) {
-  const markerPattern = /(?:^|\n)[ \t]*([^\n:]+?)[ \t]*:[ \t]*/g;
+  const markerPattern = /(?:^|\n)[ \t]*([^\n:]+?)[ \t]*(?<!\\):[ \t]*/g;
+  const dialogueText = (text) => text.trim().replace(/\\:/g, ":");
   const markers = Array.from(source.matchAll(markerPattern));
   if (!markers.length) {
-    const text = source.trim();
+    const text = dialogueText(source);
     return text ? [{ speaker: "스크립트", text }] : [];
   }
 
   const entries = [];
-  const preface = source.slice(0, markers[0].index).trim();
+  const preface = dialogueText(source.slice(0, markers[0].index));
   if (preface) entries.push({ speaker: "스크립트", text: preface });
   markers.forEach((marker, index) => {
     const textStart = marker.index + marker[0].length;
     const textEnd = markers[index + 1]?.index ?? source.length;
     entries.push({
       speaker: marker[1].trim(),
-      text: source.slice(textStart, textEnd).trim()
+      text: dialogueText(source.slice(textStart, textEnd))
     });
   });
   return entries;
