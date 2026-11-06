@@ -32,6 +32,11 @@ if ([string]::IsNullOrWhiteSpace($message)) {
 
 Write-Host ""
 Write-Host "[스테이징]"
+git rm -r --cached --ignore-unmatch --quiet -- test
+if ($LASTEXITCODE -ne 0) {
+  Write-Host "test 폴더 제외 처리에 실패했습니다."
+  exit 1
+}
 git add .
 if ($LASTEXITCODE -ne 0) {
   Write-Host ""

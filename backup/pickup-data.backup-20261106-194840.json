@@ -1,0 +1,1985 @@
+{
+  "schema": "reverse-rel-pickup-data",
+  "conditions": [
+    {
+      "id": "condition-1783950455833-cd80306a537eb",
+      "version": "4.0",
+      "label": "호수의 추억",
+      "names": "곡랑, 루시, 양월, 안조 날라, 노티카"
+    },
+    {
+      "id": "condition-1786089970343-7b621b13d61c5",
+      "version": "3.9",
+      "label": "호수의 선물",
+      "names": "울리히, 코르부스, 이고르, 마샤, 바르카롤라, 알레프, 로렌츠 버터플라이, 카론, 레콜레타"
+    },
+    {
+      "id": "condition-1789506596013-615a36d1e2724",
+      "version": "4.0",
+      "label": "상자 추천 메세지",
+      "names": "제멜바이스, 이졸데, 안안리, 투스 페어리, 튜즈데이, 윌로우, 레콜레타, 로페라, J, 마커스, 아르고스, 드루비스, 머큐리아, 빌라, 갈천, 6, 윈드송, 누아르, 몰디르, 37, 안안 리"
+    },
+    {
+      "id": "condition-1793610714104-0a00f5b8cc82e",
+      "version": "3.9",
+      "label": "복각",
+      "names": "브룸, 이니그마, 플러터 페이지"
+    },
+    {
+      "id": "condition-1793610768386-4b8e7881b2653",
+      "version": "4.0",
+      "label": "복각",
+      "names": "베릴"
+    },
+    {
+      "id": "condition-1793627947478-007408b865653",
+      "version": "",
+      "label": "길가의 초상화",
+      "names": "이터니티, 피클즈, 뉴바벨, 멜라니아, 안안 리, 갈기 모래, 제시카, 메디슨 포켓, 보이저, 릴리아, 소더비, 드루비스"
+    }
+  ],
+  "panels": {
+    "banner": {
+      "blocks": [
+        {
+          "id": "block-1783938833401-c5ee48fd180328",
+          "type": "header",
+          "text": "3.6",
+          "banner": "",
+          "name": "",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783938849000-3297cdbbb10fa",
+          "type": "banner",
+          "text": "",
+          "banner": "이니그마",
+          "name": "이니그마",
+          "kind": "상시",
+          "category": "픽업 :",
+          "content": "전력덱 탱커 및 범용 탱커",
+          "note": "필수 추천",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783939123868-0a852a3baab23",
+          "type": "banner",
+          "text": "",
+          "banner": "3.6 호수의 물결",
+          "name": "",
+          "kind": "",
+          "category": "호수의 물결 :",
+          "content": "마도학자 선택 후 70번 안으로 확정 픽업",
+          "note": "이월 가능",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783939206936-4540631d26298",
+          "type": "text",
+          "text": "필수 캐릭터인 이니그마를 뽑아가도록 하자.\n전력 덱 탱커로 설계 됐지만 범용 탱커로도 만능이다.\n\n이후 술식 덱 서포터를 필요로 하면 레콜레타를 뽑아도 좋다.\n필수적인 요소는 아니다.",
+          "banner": "",
+          "name": "",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783939915179-7bc58481ec318",
+          "type": "header",
+          "text": "3.8.5 (콜라보)",
+          "banner": "",
+          "name": "",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783939921051-d7a8dccec6c32",
+          "type": "banner",
+          "text": "",
+          "banner": "쌍둥이",
+          "name": "쌍둥이",
+          "kind": "한정",
+          "category": "픽업 :",
+          "content": "마도구 덱 메인 딜러",
+          "note": "이월 불가능, 복각 없음",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783940095239-c46aedad1294f",
+          "type": "banner",
+          "text": "",
+          "banner": "3.8.5 호수의 물결",
+          "name": "",
+          "kind": "",
+          "category": "호수의 물결 :",
+          "content": "마도학자 선택 후 70번 안으로 확정 픽업",
+          "note": "이월 가능",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783940133157-471db334cae9c",
+          "type": "banner",
+          "text": "",
+          "banner": "이고르-정화광",
+          "name": "이고르 / 정화광",
+          "kind": "이중",
+          "category": "픽업 :",
+          "content": "이고르 술식 메인 딜러 / 양월덱 서포터",
+          "note": "이월 불가능, 비추천",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783940337627-42f03521ce2a68",
+          "type": "text",
+          "text": "중섭, 한섭, 글섭 동시 오픈 버전으로 3.9 버전이 앞당겨 오픈합니다.\n\n콜라보는 절대 복각이 없으며 재화를 100회  뽑을 수 있는 분량을 주기에\n확정 명함이 가능하며 이후 덱 키워드인 마도구에 쓰이므로  반드시 뽑기를 추천합니다.",
+          "banner": "",
+          "name": "",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783940924340-563b56a76f5e48",
+          "type": "header",
+          "text": "3.7",
+          "banner": "",
+          "name": "",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783940928887-6323c5e16de3d",
+          "type": "banner",
+          "text": "",
+          "banner": "리아논",
+          "name": "리아논",
+          "kind": "한정",
+          "category": "픽업 :",
+          "content": "복합 키워드 만능 서포터",
+          "note": "이월 불가능",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783940934535-3ffe0fdde313c",
+          "type": "banner",
+          "text": "",
+          "banner": "미스 스트레인저",
+          "name": "미스 스트레인저",
+          "kind": "상시",
+          "category": "픽업 :",
+          "content": "술식 덱 딜러",
+          "note": "우선 순위 낮음",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783940939314-364c414ce3e8a",
+          "type": "banner",
+          "text": "",
+          "banner": "코펠리아",
+          "name": "코펠리아",
+          "kind": "배포",
+          "category": "픽업 :",
+          "content": "마도구 덱 서포터",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783940943844-bb3645aa51d938",
+          "type": "banner",
+          "text": "",
+          "banner": "노티카",
+          "name": "노티카",
+          "kind": "한정",
+          "category": "복각 픽업 :",
+          "content": "신혈 덱 메인 딜러",
+          "note": "이월 불가능",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783940947585-dd059070284d28",
+          "type": "banner",
+          "text": "",
+          "banner": "3.7 호수의 추억",
+          "name": "호수의 추억",
+          "kind": "한정",
+          "category": "복각 픽업 :",
+          "content": "기존 한정 캐릭터 중 하나를 선택하여 픽업",
+          "note": "이월 불가능",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783941208061-60e92a9e307b7",
+          "type": "banner",
+          "text": "",
+          "banner": "3.7 호수의 승낙",
+          "name": "",
+          "kind": "",
+          "category": "호수의 승낙 :",
+          "content": "상시 캐릭터 중 하나를 선택하여 픽업",
+          "note": "이월 불가능",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783940954408-4bad3e343bbb98",
+          "type": "banner",
+          "text": "",
+          "banner": "3.7 호수의 물결",
+          "name": "",
+          "kind": "",
+          "category": "호수의 물결 :",
+          "content": "마도학자 선택 후 70번 안으로 확정 픽업",
+          "note": "이월 가능",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783940961782-5d1f31dcd2962",
+          "type": "banner",
+          "text": "",
+          "banner": "3.7 누적 보상",
+          "name": "",
+          "kind": "",
+          "category": "과금 누적 보상 :",
+          "content": "일정 금액 이상 시 캐릭터 세트를 선택하여 받음",
+          "note": "브룸/안조, 카론/루시, 머큐/곡랑 中 1",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783940969521-11f673fefa511",
+          "type": "banner",
+          "text": "",
+          "banner": "3.7 형상권",
+          "name": "형상권",
+          "kind": "배포",
+          "category": ":",
+          "content": "보유한 상시 캐릭터 중 하나를 선택하여 획득",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783940978879-aa801e1cd57ac8",
+          "type": "banner",
+          "text": "",
+          "banner": "3.7 선택권",
+          "name": "선택권",
+          "kind": "구매",
+          "category": ":",
+          "content": "상시 캐릭터 중 하나를 선택하여 획득",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783940983777-de7e1a9c18354",
+          "type": "text",
+          "text": "리아논은 다양한 키워드에 모두 대응한 서포터 캐릭터로 이후 필수적인 요소.\n그레이스는 전용 파츠가 공개 되지 않았으며 암석 키워드가 필요한 경우\n이후 추가 되는 마도구 덱을 더 우선 순위로 두는 것을 추천.",
+          "banner": "",
+          "name": "",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783940985841-ef800b9303e1a",
+          "type": "header",
+          "text": "3.8",
+          "banner": "",
+          "name": "",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783941462301-4a9d174e977bd",
+          "type": "banner",
+          "text": "",
+          "banner": "에버에코",
+          "name": "에버에코",
+          "kind": "상시",
+          "category": "픽업 :",
+          "content": "마도구 덱 힐러",
+          "note": "추천",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783941462773-c453d5353fc138",
+          "type": "banner",
+          "text": "",
+          "banner": "코너스톤",
+          "name": "코너스톤",
+          "kind": "상시",
+          "category": "픽업 :",
+          "content": "반격 덱 딜러",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783941463173-c526e47adef9a",
+          "type": "banner",
+          "text": "",
+          "banner": "3.8 호수의 물결",
+          "name": "",
+          "kind": "",
+          "category": "호수의 물결 :",
+          "content": "마도학자 선택 후 70번 안으로 확정 픽업",
+          "note": "이월 가능, J 추천",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1789506979399-39adfa0ad08998",
+          "type": "banner",
+          "text": "",
+          "banner": "이니그마-로렌츠 버터플라이",
+          "name": "이니그마 / 로렌츠 버터플라이",
+          "kind": "이중",
+          "category": "픽업 :",
+          "content": "전력 탱커 / 여광 서포터",
+          "note": "이월 불가능",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1783941478161-155011e8ea057",
+          "type": "text",
+          "text": "전반기 에버에코는 마도구 덱의 핵심 파츠.\n코너스톤은 미스 스트레인저와 마찬가지로 같은 암석 영감 계열의\n마도구 덱에 우선 순위가 밀리는 편이기에 재화가 모자라다면 스킵 추천.\n\n호수의 물결에서 광상을 받는 J는 범용 탱커로 뛰어난 성능을 보여주기에\n재화가 충분하다면 추천, 고음 카운터로 뽑을 수도 있으니 고려할 것.",
+          "banner": "",
+          "name": "",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": false
+        },
+        {
+          "id": "block-1785819786024-6c0d6aa9684208",
+          "type": "header",
+          "text": "3.9",
+          "banner": "",
+          "name": "",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1786247328698-13d0ae02d6123",
+          "type": "banner",
+          "text": "",
+          "banner": "헤도네",
+          "name": "헤도네",
+          "kind": "상시",
+          "category": "픽업 :",
+          "content": "마도구 덱 서포터",
+          "note": "추천",
+          "imageUrl": "https://ac.arca.live/20261026sac/d9d75ec1480ebac61088ac36b6873a6747c19ae7739ebb7afac9807738cd103e.jpg?expires=1793689765&key=f-lOtw8ruBArJpiRDLna4g",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1786247449422-dc81414c315ac",
+          "type": "banner",
+          "text": "",
+          "banner": "나르키소스",
+          "name": "나르키소스",
+          "kind": "상시",
+          "category": "픽업 :",
+          "content": "술식 힐러",
+          "note": "추천",
+          "imageUrl": "https://ac.arca.live/20261026sac/8e5a5f189190d038b359318a0c8020566d24526eff407f2923e13678e6763ccb.jpg?expires=1793689765&key=bsf43omoN-Ups_3plAjb6g",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1788248700318-16c60e267b062",
+          "type": "banner",
+          "text": "",
+          "banner": "3.9 호수의 선물",
+          "name": "",
+          "kind": "",
+          "category": "호수의 선물 :",
+          "content": " 3명의 6성 캐릭터를 선택하여 그 중 하나를 획득",
+          "note": "이월 불가능",
+          "imageUrl": "https://ac.arca.live/20261026sac/248f783ebf38d387a8fc49f506898f7fd2ea36ac8b595b12107688bbb93bd19d.jpg?expires=1793689765&key=LZfXRhU3sj2KsHUC2aWMwQ",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1786247464387-ca47948062679",
+          "type": "banner",
+          "text": "",
+          "banner": "3.9 호수의 물결",
+          "name": "",
+          "kind": "",
+          "category": "호수의 물결 :",
+          "content": "마도학자 선택 후 70번 안으로 확정 픽업",
+          "note": "이고르 보유 시, 몰디르 추천",
+          "imageUrl": "https://ac.arca.live/20261026sac/b07765899a795de5b4bd0a4a4bcafc547f32b70a6d4b44b8ff2742ef88ca3dba.jpg?expires=1793689765&key=4FaEp852XU-KxKoo3Jdx6A",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1788248774462-ad05dd2b9ce688",
+          "type": "text",
+          "text": "헤도네를 마지막으로 마도구는 덱 구성이 끝나므로\n손리세는 비추, 마도구 파츠가 있는 리세계는 필수 파츠로 추천!\n\n나르키소스는 10개 이상의 술식 덱에 사용 가능한 광범위 힐러.\n단, 최신 픽업이 아닌 기존 캐릭터 요구량이 많은 편이니 뉴비는 비추천!\n\n호수의 선물은 3개를 선택 시, 무엇이 나와도 될 경우만 추천.",
+          "banner": "",
+          "name": "",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1789218481832-6e74956d7c072",
+          "type": "header",
+          "text": "4.0",
+          "banner": "",
+          "name": "",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1789218489644-3d87740c855b88",
+          "type": "banner",
+          "text": "",
+          "banner": "SP 릴리아",
+          "name": "SP 릴리아",
+          "kind": "한정",
+          "category": "픽업 :",
+          "content": "신규 키워드 통지 딜러",
+          "note": "이월 불가능, 필수 추천",
+          "imageUrl": "https://ac.arca.live/20261103sac/be5308ee27da38a2ffa0700aeb6ab97fc045b8ee92076cdb8b630e98aa644a7e.jpg?expires=1793689765&key=fdvvQV_QEkhiDskdhHXi3Q",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1789219185127-c5d89e70cd9df",
+          "type": "banner",
+          "text": "",
+          "banner": "드레이크",
+          "name": "드레이크",
+          "kind": "상시",
+          "category": "픽업 :",
+          "content": "여광, 딜 서포터",
+          "note": "이월 가능",
+          "imageUrl": "https://ac.arca.live/20261103sac/81d557769b69026d3f2fd7354aae6161cb7be30a7e80906e77cc3d83b03be140.jpg?expires=1793689765&key=d-UDQNoYKlYGFqKtHsgIXg",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1789219270368-8e10941c6fa65",
+          "type": "banner",
+          "text": "",
+          "banner": "4.0 호수의 물결",
+          "name": "",
+          "kind": "",
+          "category": "호수의 물결 :",
+          "content": "마도학자 선택 후 70번 안으로 확정 픽업",
+          "note": "이월 가능",
+          "imageUrl": "https://ac.arca.live/20261103sac/424b1bc917c464eb561a5e04dd59e0c299a4287531c43e7c6f040b882f7e2bb1.jpg?expires=1793689765&key=hcjqqArhYEoUmcsWC1kPtw",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1789220907756-e34198ab929e98",
+          "type": "banner",
+          "text": "",
+          "banner": "베릴",
+          "name": "베릴",
+          "kind": "한정",
+          "category": "복각 픽업 :",
+          "content": "여광 메인 딜러",
+          "note": "추천, 이월 불가능",
+          "imageUrl": "https://ac.arca.live/20261103sac/97c1e37c11862e31f1c378749865b2bd95b293f8674aebd09e7000b089d79551.jpg?expires=1793690835&key=InzkFnPtZwDFUJmQxURd2A",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1789219300534-7fd2b14dce127",
+          "type": "banner",
+          "text": "",
+          "banner": "4.0 호수의 추억",
+          "name": "호수의 추억",
+          "kind": "한정",
+          "category": "복각 픽업 :",
+          "content": "기존 한정 캐릭터 중 하나를 선택하여 픽업",
+          "note": "이월 불가능",
+          "imageUrl": "https://ac.arca.live/20261103sac/72fe2e6c942617f9be698fe79e05ab8d6cf2c77a14442ff16d69871559916b55.jpg?expires=1793689765&key=IwU1SEgX6_b1abRq7lmlVg",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1789219397170-e3f9c5763a9c28",
+          "type": "banner",
+          "text": "",
+          "banner": "4.0 축제 스폐셜 게스트",
+          "name": "축제 스폐셜 게스트",
+          "kind": "배포",
+          "category": "",
+          "content": "미보유 6성 상시 캐릭터 랜덤 초대",
+          "note": "",
+          "imageUrl": "https://ac.arca.live/20261103sac/09e11c0c9b9c0f07359691329c3ff295992cda3e11f3033afb3bf6dc6a681dbe.jpg?expires=1793689765&key=qw1oEoqGxd7U8KwoApbvfw",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1789219896864-2d3fb7df57d79",
+          "type": "banner",
+          "text": "",
+          "banner": "4.0 상자 추천 메세지",
+          "name": "상자 추천 메세지",
+          "kind": "배포",
+          "category": "",
+          "content": "4.0 까지 광상 캐릭터 선택 초대",
+          "note": "",
+          "imageUrl": "https://ac.arca.live/20261103sac/ac653944ce0483bbcb9a8669a0e1d1b2656effe3436709baa6e5eb479c44d3f0.jpg?expires=1793689765&key=rAOiuaOrIwXGTjh0_pHI1g",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1793610879547-5dec4000406878",
+          "type": "text",
+          "text": "SP 릴리아와 상자 추천 메세지, 호수의 물결로 뽑을 수 있는 37은\n통지 키워드의 최신 덱으로 추천.\n\n특히 37은 상자 추천 메세지로 공짜로 받아도 되고 60뽑을 투자해서 호수의 물결로 받아도 됨!\n\n 드레이크는 베릴 고형상시 추천.",
+          "banner": "",
+          "name": "",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1793610944248-516405977c7e88",
+          "type": "header",
+          "text": "4.1",
+          "banner": "",
+          "name": "",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1793610952526-f35730d452f59",
+          "type": "banner",
+          "text": "",
+          "banner": "페르히타",
+          "name": "페르히타",
+          "kind": "상시",
+          "category": "픽업 :",
+          "content": "통지 힐러",
+          "note": "이월 가능, 추천",
+          "imageUrl": "https://ac.arca.live/20261103sac/e2307b0ab76162faa2d0b50847cd1684bbe73c4cc466a93e14d43fed0f5720c1.jpg?expires=1793689765&key=Ywo2NAHDB8mTUTl3e9fD3A",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1793611086267-ae35cb3f4a0b08",
+          "type": "banner",
+          "text": "",
+          "banner": "이블린",
+          "name": "이블린",
+          "kind": "상시",
+          "category": "픽업 :",
+          "content": "미확정",
+          "note": "이월 가능",
+          "imageUrl": "https://ac.arca.live/20261103sac/29aaba638218cc3a36a2d774650d77ac5762482ece4ebc110856470c20f4a9cb.jpg?expires=1793689765&key=ykCncvpzmwWJ2-KwNlIytQ",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1793611101034-3408f172713e6",
+          "type": "banner",
+          "text": "",
+          "banner": "4.1 호수의 물결",
+          "name": "",
+          "kind": "",
+          "category": "4.1 호수의 물결 :",
+          "content": "마도학자 선택 후 70번 안으로 확정 픽업",
+          "note": "이월 가능, 뉴비 비추천",
+          "imageUrl": "https://ac.arca.live/20261103sac/06ce5038c6838066dbabda1eafbc88c873681a91021a98c7978f9e048cc413b2.jpg?expires=1793689765&key=F7kEd3AhNKCal7fa9zdRAA",
+          "names": [],
+          "groups": [],
+          "visible": true
+        },
+        {
+          "id": "block-1793611134744-e61c1589272aa",
+          "type": "text",
+          "text": "4.0 입문자를 위한 페르히타는 통지덱의 힐러 캐릭터로 필수 추천!\n\n기존 캐릭터 사용자들을 위한 전력, 변위 광상이 추가 됐음으로\n신규 유저는 페르히타를 기존 유저는 나머지 캐릭터 픽업까지 고려해볼 것.",
+          "banner": "",
+          "name": "",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [],
+          "visible": true
+        }
+      ]
+    },
+    "schedule": {
+      "blocks": [
+        {
+          "id": "block-1783944988420-9347980df33b3",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "통지",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "SP 릴리아"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "37"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "리아논"
+                },
+                {
+                  "name": "로페라"
+                },
+                {
+                  "name": "카론"
+                },
+                {
+                  "name": "머큐리아"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "페르히타"
+                },
+                {
+                  "name": "J"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793614004855-41af04d7e999a8",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "마도구",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "中 2명 선택",
+              "names": [
+                {
+                  "name": "코펠리아"
+                },
+                {
+                  "name": "쌍둥이"
+                },
+                {
+                  "name": "리아논"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "헤도네"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "에버에코"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": []
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793614728506-84fb515900a148",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "계시_나무",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "노사전"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "투스 페어리"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "리아논"
+                },
+                {
+                  "name": "안안 리"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "키페리나"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793618005633-36a94b8d6a8d98",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "계시_천체",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "바르카롤라"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "알레프"
+                },
+                {
+                  "name": "37"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "리아논"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "키페리나"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793614990188-cf392cd957d8f8",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "여광_고형상 유리",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "베릴"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "드레이크"
+                },
+                {
+                  "name": "이졸데"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "로렌츠 버터플라이"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "마샤"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793615069690-f7be3e7884488",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "여광_천체 상성 및 피해 감면 환경 시",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "베릴"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "마틸다"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "플러터 페이지"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "마샤"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793615273026-b558dd927f69d8",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "신혈_루부스카 명함",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "제멜바이스"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "노티카"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "몰디르"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "나르키소스"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793615564895-3540b7d1492c18",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "신혈_루부스카 1형상 이상",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "노티카"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "리아논"
+                },
+                {
+                  "name": "센티널"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "제멜바이스"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "루부스카"
+                },
+                {
+                  "name": "파투투"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793615811871-5545cf9509dda",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "전력_루시",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "이니그마"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "리아논"
+                },
+                {
+                  "name": "울리히"
+                },
+                {
+                  "name": "플러터 페이지"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "루시"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "카론"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793615920571-ea5c6b5bf9c058",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "전력_코르부스 or 브룸",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "이니그마"
+                }
+              ]
+            },
+            {
+              "description": "中 2명 선택, 적 다수 플페, 야수 상성 리아논",
+              "names": [
+                {
+                  "name": "리아논"
+                },
+                {
+                  "name": "카론"
+                },
+                {
+                  "name": "플러터 페이지"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "코르부스"
+                },
+                {
+                  "name": "브룸"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": ""
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793616063998-d7a1940bc40c3",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "전력_코르부스 & 브룸",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "이니그마"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "브룸"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "코르부스"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "리아논"
+                },
+                {
+                  "name": "카론"
+                },
+                {
+                  "name": "플러터 페이지"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793616324022-7f463ca3e3afc8",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "전력_ 안조날라 & 브룸",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "리아논 선택 시 이니그마",
+              "names": [
+                {
+                  "name": "이니그마"
+                },
+                {
+                  "name": "파투투"
+                }
+              ]
+            },
+            {
+              "description": "야수 상성 시 리아논",
+              "names": [
+                {
+                  "name": "리아논"
+                },
+                {
+                  "name": "카론"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "안조 날라"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "브룸"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793616512589-a446b41721169",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "양월_추가 행동",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "양월"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "플러터 페이지"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "리아논"
+                },
+                {
+                  "name": "정화광"
+                }
+              ]
+            },
+            {
+              "description": "생존률은 낮아지지만 최고점은 로페라 선택",
+              "names": [
+                {
+                  "name": "로페라"
+                },
+                {
+                  "name": "이니그마"
+                },
+                {
+                  "name": "마샤"
+                },
+                {
+                  "name": "키페리나"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793616667796-93b267d7db79",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "양월_여광",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "1형 이상",
+              "names": [
+                {
+                  "name": "양월"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "리아논"
+                }
+              ]
+            },
+            {
+              "description": "2형 이상",
+              "names": [
+                {
+                  "name": "로렌츠 버터플라이"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "마샤"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793616935008-ccfb253fbf995",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "술식_안조",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "리아논"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "몰디르"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "안조 날라"
+                }
+              ]
+            },
+            {
+              "description": "中 계약",
+              "names": [
+                {
+                  "name": "J"
+                },
+                {
+                  "name": "나르키소스"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793617160698-4536c49961a998",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "술식_J",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "J"
+                }
+              ]
+            },
+            {
+              "description": "中 2명 선택, 레콜레타는 1형 이상",
+              "names": [
+                {
+                  "name": "레콜레타"
+                },
+                {
+                  "name": "몰디르"
+                },
+                {
+                  "name": "멜라니아"
+                },
+                {
+                  "name": "이졸데"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "리아논"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": ""
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793617251499-d81c07eb3ec8",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "술식_이고르",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "이고르"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "로페라"
+                },
+                {
+                  "name": "리아논"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "몰디르"
+                },
+                {
+                  "name": "리아논"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "나르키소스"
+                },
+                {
+                  "name": "J"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793617297837-45b439a381e7e8",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "술식_누아르",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "누아르"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "6"
+                },
+                {
+                  "name": "히사베스"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "몰디르"
+                },
+                {
+                  "name": "리아논"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "나르키소스"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793617334458-6bf89ecc5c367",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "술식_암석",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "레콜레타"
+                },
+                {
+                  "name": "미스 스트레인저"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "몰디르"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "리아논"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "나르키소스"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793617358184-348374fe2d5d68",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "술식_암석 고형상",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "미스 스트레인저"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "레콜레타"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "리아논"
+                }
+              ]
+            },
+            {
+              "description": "생존률이 높을 경우 몰디르 선택",
+              "names": [
+                {
+                  "name": "몰디르"
+                },
+                {
+                  "name": "나르키소스"
+                },
+                {
+                  "name": "J"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793617739522-ea5516df9dc75",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "반격",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "J"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "플러터 페이지"
+                }
+              ]
+            },
+            {
+              "description": "中 2명 선택",
+              "names": [
+                {
+                  "name": "로페라"
+                },
+                {
+                  "name": "리아논"
+                },
+                {
+                  "name": "코너스톤"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": ""
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793618442359-113c9d423f794",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "윈드송_추가 행동",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "윈드송"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "플러터 페이지"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "J"
+                },
+                {
+                  "name": "마샤"
+                },
+                {
+                  "name": "키페리나"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "6"
+                },
+                {
+                  "name": "로렌츠 버터플라이"
+                },
+                {
+                  "name": "로페라"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        },
+        {
+          "id": "block-1793618534301-c1f39a279c3bb8",
+          "type": "deck",
+          "text": "",
+          "banner": "",
+          "name": "중독_라모나",
+          "kind": "",
+          "category": "",
+          "content": "",
+          "note": "",
+          "imageUrl": "",
+          "names": [],
+          "groups": [
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "튜즈데이"
+                }
+              ]
+            },
+            {
+              "description": "적 다수 시 에지오 선택",
+              "names": [
+                {
+                  "name": "윌로우"
+                },
+                {
+                  "name": "에지오"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "라모나"
+                }
+              ]
+            },
+            {
+              "description": "",
+              "names": [
+                {
+                  "name": "마샤"
+                }
+              ]
+            }
+          ],
+          "visible": true
+        }
+      ]
+    }
+  }
+}
