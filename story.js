@@ -1,6 +1,12 @@
 const storyTimeline = document.getElementById("storyTimeline");
 const storyDetailPanel = document.getElementById("storyDetailPanel");
 const storyDetailContent = document.getElementById("storyDetailContent");
+const storyDetailHome = storyDetailPanel.parentElement;
+let storyReturnScroll = 0;
+const storyMobileScreen = window.matchMedia("(max-width: 720px)");
+storyMobileScreen.addEventListener("change", () => {
+  if (!storyDetailPanel.hidden) closeStoryDetail();
+});
 const storyTabs = Array.from(document.querySelectorAll("[data-story-type]"));
 
 const STORY_TYPE_LABELS = {
@@ -128,6 +134,7 @@ function bindStoryPageEvents() {
     if (chapterButton && chapterButton.closest(".story-detail-chapters")?.dataset.dragged !== "true") {
       storyState.detailChapterIndex = Number(chapterButton.dataset.storyChapterIndex) || 0;
       renderStoryDetail();
+      if (document.body.classList.contains("story-reading")) window.scrollTo(0, 0);
       return;
     }
     const choiceButton = event.target.closest("[data-story-choice-index]");
@@ -266,14 +273,24 @@ function setupHorizontalDragging(scroller) {
 }
 
 function openStoryDetail(versionId) {
+  if (storyDetailPanel.hidden) storyReturnScroll = window.scrollY;
   storyState.detailVersionId = versionId;
   storyState.detailChapterIndex = 0;
   renderStoryDetail();
   storyDetailPanel.hidden = false;
+  if (storyMobileScreen.matches) {
+    document.body.append(storyDetailPanel);
+    document.body.classList.add("story-reading");
+    window.scrollTo(0, 0);
+  }
 }
 
 function closeStoryDetail() {
+  const wasReading = document.body.classList.contains("story-reading");
   storyDetailPanel.hidden = true;
+  document.body.classList.remove("story-reading");
+  storyDetailHome.prepend(storyDetailPanel);
+  if (wasReading) window.scrollTo(0, storyReturnScroll);
   storyState.detailVersionId = null;
   storyState.detailChapterIndex = 0;
 }
@@ -287,6 +304,7 @@ function renderStoryDetail() {
   const chapter = version.chapters[storyState.detailChapterIndex] || null;
   const versionLabel = version.version ? `${version.version}장` : "장 미정";
   storyDetailContent.innerHTML = `
+    <div class="story-reading-header">
     <div class="story-detail-meta">
       <span>${escapeStoryHtml(STORY_TYPE_LABELS[version.type] || STORY_TYPE_LABELS.other)}</span>
       <span>${escapeStoryHtml(versionLabel)}</span>
@@ -296,6 +314,8 @@ function renderStoryDetail() {
       ${version.chapters.map((item, index) => `
         <button class="${index === storyState.detailChapterIndex ? "is-active" : ""}" type="button" data-story-chapter-index="${index}">${index + 1}</button>
       `).join("") || '<span class="story-detail-no-chapter">등록된 챕터가 없습니다.</span>'}
+    </div>
+    ${chapter ? `<div class="story-reading-heading story-chapter-heading"><h2>${escapeStoryHtml(chapter.chapterName || "이름 없는 챕터")}</h2>${formatStoryTime(chapter.time) ? `<time>${escapeStoryHtml(formatStoryTime(chapter.time))}</time>` : ""}</div>` : ""}
     </div>
     ${chapter ? renderStoryChapterDetail(version, chapter, storyState.detailChapterIndex) : ""}
   `;

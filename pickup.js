@@ -254,18 +254,45 @@ function renderScheduleDeck(block) {
           </button>
         </div>
       ` : ""}
+      ${[groups, ...scheduleMobileRows(groups)].map((row, rowIndex) => `
+      <div class="${rowIndex === 0 ? "pickup-schedule-desktop-row" : "pickup-schedule-mobile-row"}">
       <div class="pickup-schedule-group-row">
-        ${groups.map((group) => `
+        ${row.map((group) => `
           <div class="pickup-schedule-group-label" style="--pickup-group-size:${group.entries.length}">
             그룹${group.index + 1}${group.description ? ` ${escapeHtml(group.description)}` : ""}
           </div>
         `).join("")}
       </div>
       <div class="pickup-schedule-deck-body">
-        ${entries.map(renderScheduleProfile).join("")}
+        ${row.flatMap((group) => group.entries).map(renderScheduleProfile).join("")}
       </div>
+      </div>`).join("")}
     </section>
   `;
+}
+
+function scheduleMobileRows(groups) {
+  const total = groups.reduce((sum, group) => sum + group.entries.length, 0);
+  const balanced = total === 5 && groups.length > 2
+    && groups[0].index === 0 && groups[1].index === 1
+    && groups[0].entries.length + groups[1].entries.length <= 3;
+  const breakAfterFirst = total === 5 && groups.length > 1
+    && groups[0].index === 0 && groups[0].entries.length === 3;
+  const rows = [];
+  let row = [];
+  let size = 0;
+  groups.forEach((group, index) => {
+    if (row.length && (size + group.entries.length > 4
+      || (balanced && index === 2) || (breakAfterFirst && index === 1))) {
+      rows.push(row);
+      row = [];
+      size = 0;
+    }
+    row.push(group);
+    size += group.entries.length;
+  });
+  if (row.length) rows.push(row);
+  return rows;
 }
 
 function scheduleDeckGroups(block) {

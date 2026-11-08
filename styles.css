@@ -444,6 +444,8 @@ button { border: 0; cursor: pointer; }
   border: 1px dashed rgba(255, 255, 255, .35);
   background: rgba(255, 255, 255, .08);
 }
+.story-reading-header { display: contents; }
+.story-reading-heading { display: none; }
 .story-detail-panel {
   position: absolute;
   top: 0;
@@ -5143,6 +5145,12 @@ button { border: 0; cursor: pointer; }
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+.pickup-schedule-mobile-row {
+  display: none;
+}
+.pickup-schedule-desktop-row {
+  display: contents;
+}
 .pickup-schedule-group-row,
 .pickup-schedule-deck-body {
   display: grid;
@@ -5492,6 +5500,20 @@ button { border: 0; cursor: pointer; }
   .pickup-popup[data-pickup-panel="schedule"] {
     padding-inline: 10px;
   }
+  .pickup-schedule-desktop-row {
+    display: none;
+  }
+  .pickup-schedule-mobile-row {
+    display: block;
+    margin-bottom: 16px;
+  }
+  .pickup-schedule-mobile-row:last-child {
+    margin-bottom: 0;
+  }
+  .pickup-schedule-mobile-row .pickup-schedule-group-row,
+  .pickup-schedule-mobile-row .pickup-schedule-deck-body {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
   .pickup-schedule-deck {
     min-height: 0;
     padding: 14px 8px;
@@ -5535,6 +5557,61 @@ button { border: 0; cursor: pointer; }
   height: 100px;
   background: transparent;
   pointer-events: none;
+}
+
+@media (max-width: 720px) {
+  body.story-reading > .topbar,
+  body.story-reading > .story-shell {
+    display: none;
+  }
+  body.story-reading > .story-detail-panel {
+    position: relative;
+    inset: auto;
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100dvh;
+    padding: 0 14px 28px;
+    border: 0;
+    border-radius: 0;
+    transform: none;
+  }
+  .story-reading .story-detail-close {
+    position: fixed;
+    top: max(12px, env(safe-area-inset-top));
+    right: 12px;
+    z-index: 12;
+    width: 40px;
+    height: 40px;
+  }
+  .story-reading #storyDetailContent { display: block; }
+  .story-reading .story-reading-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: block;
+    margin: 0 -14px;
+    padding: calc(20px + env(safe-area-inset-top)) 14px 14px;
+    border-bottom: 1px solid #e3e7ed;
+    background: #fff;
+  }
+  .story-reading .story-detail-meta { padding-right: 48px; }
+  .story-reading .story-reading-heading {
+    display: flex;
+    margin-top: 16px;
+  }
+  .story-reading .story-chapter-detail {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .story-reading .story-chapter-detail > .story-chapter-heading { display: none; }
+  .story-reading .story-chapter-body {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
 }
 
 
