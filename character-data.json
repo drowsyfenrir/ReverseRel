@@ -1,0 +1,3780 @@
+{
+  "schema": "reverse-rel-character-data",
+  "characters": [
+    {
+      "id": "8296bb32-d8cb-40b7-b398-105f3a9ca964",
+      "sourceName": "레굴루스",
+      "visible": true,
+      "version": "1.0",
+      "name": "레굴루스",
+      "inspiration": "천체",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "AjwAPBA0IDQiOkAoUTlB+QQnFUYUQlVAVEE0SEY=",
+          "notes": "10, 마도구"
+        },
+        {
+          "modulation": "정성",
+          "resonance": "AjwAPBA0IDQiOkAoUTlB+QRGFEJVQFRBNEhGRhZHNQ==",
+          "notes": "15, 마도구"
+        }
+      ],
+      "wills": [
+        {
+          "name": "밤의 모독자",
+          "importance": "S",
+          "notes": "마도구덱"
+        },
+        {
+          "name": "살포시 다가오는 봄날",
+          "importance": "S",
+          "notes": "계시덱"
+        },
+        {
+          "name": "'반사된 형상'의 지시",
+          "importance": "S",
+          "notes": "계시덱"
+        },
+        {
+          "name": "증명 시도",
+          "importance": "S-",
+          "notes": "마도구덱"
+        }
+      ],
+      "euphoria": [
+        "레굴루스처럼 반짝거린다 (계시)",
+        "흔들면 터져나오는 사자후 (마도구)"
+      ]
+    },
+    {
+      "id": "6d13097d-453c-40e4-8f8f-3dbd17555bf8",
+      "sourceName": "드루비스",
+      "visible": true,
+      "version": "1.0",
+      "name": "드루비스",
+      "inspiration": "나무",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "순환 균형",
+          "resonance": "APAkLUQtFEMFQANBVEhmPGA8UDQyNDA6ADsRRQE",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "땅따먹기 게임",
+          "importance": "S",
+          "notes": "스택 중첩 가능 시"
+        },
+        {
+          "name": "마음의 방향",
+          "importance": "S",
+          "notes": "디버퍼 필요"
+        },
+        {
+          "name": "두 번째 생명",
+          "importance": "A+",
+          "notes": "보조"
+        },
+        {
+          "name": "친절한 퇴마사",
+          "importance": "A+",
+          "notes": "나무덱 보조"
+        }
+      ],
+      "euphoria": [
+        "돌 사이의 푸른 빛, 숲속의 나 (석화)",
+        "재와 불꽃의 새싹 (나무 범용)"
+      ]
+    },
+    {
+      "id": "488a2b02-0e7d-4cd5-8dac-3c4cc5ac5970",
+      "sourceName": "릴리아",
+      "visible": true,
+      "version": "1.0",
+      "name": "릴리아",
+      "inspiration": "천체",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "ACUALAFAMEIxKlAoUUQzQhJIAzgFOEUrRCUE9CQ",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "성 밖의 세상",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "증명 시도",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "무엇이 개선가처럼 울리는가? (구 술식)",
+        "캄차카에서의 사냥 (구 탄환)"
+      ]
+    },
+    {
+      "id": "ad0cbd00-2e08-440b-8d66-d3c2b740a221",
+      "sourceName": "메디슨 포켓",
+      "visible": true,
+      "version": "1.0",
+      "name": "메디슨 포켓",
+      "inspiration": "야수",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "광분",
+          "resonance": "APwlNAU0VTxhPAE4IjokKhJBQkhUQFBBACsgRCE",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "두려워하는 조개껍데기",
+          "importance": "S",
+          "notes": "광상"
+        },
+        {
+          "name": "가정 지도사",
+          "importance": "S",
+          "notes": "데미지 증가 보조"
+        },
+        {
+          "name": "방랑 즉흥곡",
+          "importance": "S",
+          "notes": "술식 피해 증가 보조"
+        },
+        {
+          "name": "올드앤뉴 멜로디",
+          "importance": "S-",
+          "notes": "데미지 증가 보조"
+        }
+      ],
+      "euphoria": [
+        "5ml 혈액 연금술",
+        ""
+      ]
+    },
+    {
+      "id": "00ffea66-7180-4216-85db-f12b7cff00f3",
+      "sourceName": "보이저",
+      "visible": true,
+      "version": "1.0",
+      "name": "보이저",
+      "inspiration": "천체",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "APAkJAQmVC1ELRQoASoAJCFBIEEyRUA0UkBQSGE",
+          "notes": "10"
+        },
+        {
+          "modulation": "정성",
+          "resonance": "APAkJAQmVC1ELRQoASoAJCFBIEEyRUBEUUZQNFI=",
+          "notes": "12 이상"
+        }
+      ],
+      "wills": [
+        {
+          "name": "살포시 다가오는 봄날",
+          "importance": "S",
+          "notes": "계시덱"
+        },
+        {
+          "name": "'반사된 형상'의 지시",
+          "importance": "S",
+          "notes": "계시덱"
+        },
+        {
+          "name": "또 다른 이야기",
+          "importance": "A",
+          "notes": ""
+        },
+        {
+          "name": "오락 지상주의",
+          "importance": "A",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "억겁의 세월을 넘어 울리는 소나타 (계시)",
+        ""
+      ]
+    },
+    {
+      "id": "255e7f7c-bd3a-49fb-8a04-1e129968212e",
+      "sourceName": "센츄리온",
+      "visible": true,
+      "version": "1.0",
+      "name": "센츄리온",
+      "inspiration": "야수",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "꿈의 리허설",
+          "importance": "S",
+          "notes": "변위 광상 시"
+        },
+        {
+          "name": "네버엔딩 Q&A",
+          "importance": "S",
+          "notes": "변위 광상 시"
+        },
+        {
+          "name": "하늘은 스스로 돕는 자를 돕는다",
+          "importance": "S",
+          "notes": "w. 로렌츠 버터플라이"
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "운명이 기우는 방향 (구 술식)",
+        "위태로울수록 짜릿한 인생 (변위)"
+      ]
+    },
+    {
+      "id": "63a43464-2298-4ffc-bf29-ef4fa3b05662",
+      "sourceName": "안안 리",
+      "visible": true,
+      "version": "1.0",
+      "name": "안안 리",
+      "inspiration": "나무",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "APtCJQAsASQEOCVCVSs0SEVEFUEDQCM9MCwhLEE",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "'반사된 형상'의 지시",
+          "importance": "S",
+          "notes": "계시덱"
+        },
+        {
+          "name": "수많은 이별",
+          "importance": "S",
+          "notes": "계시덱"
+        },
+        {
+          "name": "기나긴 속삭임",
+          "importance": "S-",
+          "notes": ""
+        },
+        {
+          "name": "친절한 퇴마사",
+          "importance": "A+",
+          "notes": "나무덱 보조"
+        }
+      ],
+      "euphoria": [
+        "비과학의 과학적 처리 (구 상태이상)",
+        "3000볼트 초고속 소환 (계시)"
+      ]
+    },
+    {
+      "id": "a3a92834-bf7c-4d88-ad5b-884c4c5a2a1e",
+      "sourceName": "이터니티",
+      "visible": true,
+      "version": "1.0",
+      "name": "이터니티",
+      "inspiration": "암석",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "편안과 태연",
+          "resonance": "APAkJAMmVCcFLUQoUSpQPEA8MDkSOxBIAkgATAFMEA",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "개울 속으로",
+          "importance": "S",
+          "notes": "신혈 메인딜"
+        },
+        {
+          "name": "귀향의 애도사",
+          "importance": "S-",
+          "notes": "신혈 메인딜"
+        },
+        {
+          "name": "가장 깊은 곳에서",
+          "importance": "A",
+          "notes": ""
+        },
+        {
+          "name": "방랑 즉흥곡",
+          "importance": "A-",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "다시 한 번 마시는 푸른 파도 (구 자해)",
+        "조석처럼 바뀌는 생명 (신혈)"
+      ]
+    },
+    {
+      "id": "62a2bb50-269a-44f2-9f6d-8d3bdf5e3803",
+      "sourceName": "뉴바벨",
+      "visible": true,
+      "version": "1.0",
+      "name": "뉴바벨",
+      "inspiration": "암석",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "고요",
+          "resonance": "ADQEPwY8ADkROhAxMCZQMUEwNDRTJ0X9Iw",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "장면 메모",
+          "importance": "S",
+          "notes": "보호막량 증가"
+        },
+        {
+          "name": "성 밖의 세상",
+          "importance": "S",
+          "notes": "데미지"
+        },
+        {
+          "name": "기나긴 속삭임",
+          "importance": "S",
+          "notes": "데미지"
+        },
+        {
+          "name": "가까워지는 빗소리",
+          "importance": "S-",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "고탑은 야심으로 지어야 한다",
+        ""
+      ]
+    },
+    {
+      "id": "b02b56ef-ba9d-4d62-84d8-774725df3c81",
+      "sourceName": "소더비",
+      "visible": true,
+      "version": "1.0",
+      "name": "소더비",
+      "inspiration": "나무",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "순환 균형",
+          "resonance": "APAkMEU7UzQVPAM6M0ATJAA9IjQQQDBCQExhSGBIYg==",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "무색",
+          "importance": "S",
+          "notes": "중독 데미지"
+        },
+        {
+          "name": "호기심쟁이",
+          "importance": "S",
+          "notes": "힐러"
+        },
+        {
+          "name": "올드앤뉴 멜로디",
+          "importance": "S",
+          "notes": "데미지 증가 보조"
+        },
+        {
+          "name": "웃음 소리",
+          "importance": "A",
+          "notes": "증폭 비추천"
+        }
+      ],
+      "euphoria": [
+        "약간의 몽상, 충분한 동심 (중독)",
+        ""
+      ]
+    },
+    {
+      "id": "f3536d7f-66c7-4e72-94c2-0f515f7b08d8",
+      "sourceName": "A나이트",
+      "visible": true,
+      "version": "1.0",
+      "name": "A나이트",
+      "inspiration": "영혼",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "APAkJAQmVC1ELRQoASoAJCFBIEEyRUA0UkBQSGE",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "균형 유지",
+          "importance": "S",
+          "notes": "비상성"
+        },
+        {
+          "name": "땅따먹기 게임",
+          "importance": "S",
+          "notes": "스택 중첩 가능 시"
+        },
+        {
+          "name": "꿈의 리허설",
+          "importance": "A",
+          "notes": "디버퍼 필요"
+        },
+        {
+          "name": "네버엔딩 Q&A",
+          "importance": "A",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "천국과 인간 세상에 울려 퍼지리라 (술식)",
+        ""
+      ]
+    },
+    {
+      "id": "dad77ce1-72ab-4d1a-9fa6-c326b2b6bd77",
+      "sourceName": "멜라니아",
+      "visible": true,
+      "version": "1.1",
+      "name": "멜라니아",
+      "inspiration": "야수",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "ACZQ8CQmVCQELxQtRDlAOEI8ADwQNCI0IA",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "오락 지상주의",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "가정 지도사",
+          "importance": "S",
+          "notes": "데미지 증가 보조"
+        },
+        {
+          "name": "방랑 즉흥곡",
+          "importance": "S",
+          "notes": "술식 피해 증가 보조"
+        },
+        {
+          "name": "네버엔딩 Q&A",
+          "importance": "A+",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "점, 선, 면을 넘나드는 자 (술식)",
+        ""
+      ]
+    },
+    {
+      "id": "528b633c-3e95-4744-b120-3e752cb96611",
+      "sourceName": "피클즈",
+      "visible": true,
+      "version": "1.1",
+      "name": "피클즈",
+      "inspiration": "암석",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "ACZQ8CQmVCQELxQtRDlAOEI8ADwQNCI0IA",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "좁은 문을 두드려라",
+          "importance": "S",
+          "notes": "광상, 단기전"
+        },
+        {
+          "name": "또 다른 이야기",
+          "importance": "S",
+          "notes": "광상, 장기전"
+        },
+        {
+          "name": "사라진 비문",
+          "importance": "S",
+          "notes": "암석덱 보조"
+        },
+        {
+          "name": "방랑 즉흥곡",
+          "importance": "S",
+          "notes": "술식 피해 증가 보조"
+        }
+      ],
+      "euphoria": [
+        "개는 생각한다, 고로 존재한다.",
+        ""
+      ]
+    },
+    {
+      "id": "bcc1ae4a-d9f2-43ea-a95f-9348df90c007",
+      "sourceName": "투스 페어리",
+      "visible": true,
+      "version": "1.2",
+      "name": "투스 페어리",
+      "inspiration": "천체",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "ADgFOEU8YjwCNBM0QysSKQArEEBAQkFFYPQk",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "이별 변주곡",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "'반사된 형상'의 지시",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "살포시 다가오는 봄날",
+          "importance": "S-",
+          "notes": ""
+        },
+        {
+          "name": "두려워하는 조개껍데기",
+          "importance": "A",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "달콤 쌉싸름한 고통의 무도 (계시)",
+        ""
+      ]
+    },
+    {
+      "id": "96847d0d-5a69-4c74-b8bc-2255e7878240",
+      "sourceName": "제시카",
+      "visible": true,
+      "version": "1.2",
+      "name": "제시카",
+      "inspiration": "나무",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "광분",
+          "resonance": "APgkJAQoVDRENBQ8YDxQOCI7MEASQCBCAEcCSAA",
+          "notes": "중독"
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "현상에 남다",
+          "importance": "S",
+          "notes": "중독 광상"
+        },
+        {
+          "name": "성 밖의 세상",
+          "importance": "S-",
+          "notes": "중독 광상"
+        },
+        {
+          "name": "네버엔딩 Q&A",
+          "importance": "A",
+          "notes": "중독 광상"
+        },
+        {
+          "name": "밤의 모독자",
+          "importance": "S",
+          "notes": "석화 광상"
+        }
+      ],
+      "euphoria": [
+        "봄 그늘의 보호를 받는 자갈 (구 석화)",
+        "가는 가지로 엮어야 할 이야기 (중독)"
+      ]
+    },
+    {
+      "id": "3f777e38-0988-462d-9884-0988b24f8f9a",
+      "sourceName": "갈라보나",
+      "visible": true,
+      "version": "1.3",
+      "name": "갈라보나",
+      "inspiration": "암석",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "APAkJAQmVC1ELRQoASoAJCFBIEEyRUA0UkBQSGE",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "성 밖의 세상",
+          "importance": "S",
+          "notes": "장기전"
+        },
+        {
+          "name": "초침의 서식지",
+          "importance": "S",
+          "notes": "단기전"
+        },
+        {
+          "name": "밤의 깊은 곳",
+          "importance": "A",
+          "notes": ""
+        },
+        {
+          "name": "멋진 신세계",
+          "importance": "A",
+          "notes": "체술 낭송"
+        }
+      ],
+      "euphoria": [
+        "우주를 품은 눈동자",
+        ""
+      ]
+    },
+    {
+      "id": "db8bcf7c-2a25-417b-9d43-7da1e4e5f3e4",
+      "sourceName": "갈기 모래",
+      "visible": true,
+      "version": "1.3",
+      "name": "갈기 모래",
+      "inspiration": "야수",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "AfAAJAEkBCkgKzAsIi0UJiQ8YEJCQ1VFRUFUSEQ=",
+          "notes": "10-11"
+        },
+        {
+          "modulation": "이해",
+          "resonance": "AfAAJAEkBCkgKzAsIi0UJiQ8YEJCRWRDVURERUU=",
+          "notes": "12-15"
+        }
+      ],
+      "wills": [
+        {
+          "name": "꿈의 리허설",
+          "importance": "S",
+          "notes": "메인 딜러 시"
+        },
+        {
+          "name": "네버엔딩 Q&A",
+          "importance": "S",
+          "notes": "메인 딜러 시"
+        },
+        {
+          "name": "가정 지도사",
+          "importance": "S",
+          "notes": "술식 덱"
+        },
+        {
+          "name": "수많은 이별",
+          "importance": "S",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "성지순례의 여정 (술식)",
+        "산기슭에서 깨어나 바람을 밟는 북소리 (변위)"
+      ]
+    },
+    {
+      "id": "f7422e66-6bdb-4bef-a824-d0135f155810",
+      "sourceName": "37",
+      "visible": true,
+      "version": "1.4",
+      "name": "37",
+      "inspiration": "천체",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "불시의 의아함",
+          "resonance": "A/QkOEU6BCtEKQU0AjQAPCA8MEBAQEJCUkRRSGA=",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "모든 지혜는 하나의 흐름",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "살포시 다가오는 봄날",
+          "importance": "A",
+          "notes": "보조"
+        },
+        {
+          "name": "초침의 서식지",
+          "importance": "A",
+          "notes": "메인딜, w. 플러터 페이지"
+        },
+        {
+          "name": "현상에 담다",
+          "importance": "A",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "세상에 나누어떨어지지 않는 수 (통지)",
+        ""
+      ]
+    },
+    {
+      "id": "99626876-2289-44f1-9e30-13735f3be1ed",
+      "sourceName": "6",
+      "visible": true,
+      "version": "1.4",
+      "name": "6",
+      "inspiration": "지능",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "APAkJAQtFC1EJlQoUSpQJAE0ETgiOzA9AA==",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "'반사된 형상'의 지시",
+          "importance": "S",
+          "notes": "마법 위력 보조"
+        },
+        {
+          "name": "뇌실은 감옥이다",
+          "importance": "S",
+          "notes": "마법 위력 보조"
+        },
+        {
+          "name": "균형 유지",
+          "importance": "S",
+          "notes": "비상성"
+        },
+        {
+          "name": "오락 지상주의",
+          "importance": "S",
+          "notes": "상성"
+        }
+      ],
+      "euphoria": [
+        "만물의 이치 조화 (상태이상)",
+        ""
+      ]
+    },
+    {
+      "id": "c23383ec-6f3b-4ae0-b650-93e90c2d39e4",
+      "sourceName": "스파토데아",
+      "visible": true,
+      "version": "1.5",
+      "name": "스파토데아",
+      "inspiration": "야수",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "APgkJQQsBSwyJlQtRChRSGBBQDkwOxBAAEACRBM",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "기나긴 속삭임",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "오락 지상주의",
+          "importance": "A+",
+          "notes": ""
+        },
+        {
+          "name": "네버엔딩 Q&A",
+          "importance": "A+",
+          "notes": ""
+        },
+        {
+          "name": "밤의 깊은 곳",
+          "importance": "A",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "천 년간 타오른 꿈 (여광)",
+        ""
+      ]
+    },
+    {
+      "id": "3d31a741-bc5e-4f4c-8b14-7e005a6889c1",
+      "sourceName": "에즈라",
+      "visible": true,
+      "version": "1.5",
+      "name": "에즈라",
+      "inspiration": "천체",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "불시의 의아함",
+          "resonance": "APQkOEU4BSUEK0QoUSpQPAA8ECYwRDNFMUgjTCJIIUwg",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "용자의 충고",
+          "importance": "S",
+          "notes": "체력"
+        },
+        {
+          "name": "마음의 묘비명",
+          "importance": "S",
+          "notes": "보호막량 증가"
+        },
+        {
+          "name": "세 번째 신뢰",
+          "importance": "S",
+          "notes": "전력 광상"
+        },
+        {
+          "name": "살포시 다가오는 봄날",
+          "importance": "S",
+          "notes": "신혈 광상"
+        }
+      ],
+      "euphoria": [
+        "균맥이 가리키는 바람의 탐침 (전력)",
+        "꺼지지 않는 씨앗 (신혈)"
+      ]
+    },
+    {
+      "id": "38e15921-c3db-4826-ab34-188e2b8cd89a",
+      "sourceName": "곡랑",
+      "visible": true,
+      "version": "1.6",
+      "name": "곡랑",
+      "inspiration": "암석",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "AEAASBE0AiQELRTwJC1EJlRFYEFSJEFBQCghKiA",
+          "notes": "10"
+        },
+        {
+          "modulation": "순환 균형",
+          "resonance": "ACpQKFEkBC0ULUQmVPAkRDBFIEYAJjFAAUEiQgJIIw",
+          "notes": "12 이상"
+        }
+      ],
+      "wills": [
+        {
+          "name": "성 밖의 세상",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "초침의 서식지",
+          "importance": "A+",
+          "notes": ""
+        },
+        {
+          "name": "마음의 방향",
+          "importance": "A",
+          "notes": "디버퍼 필요"
+        },
+        {
+          "name": "용감한 전진",
+          "importance": "A",
+          "notes": "디버퍼 필요"
+        }
+      ],
+      "euphoria": [
+        "하늘의 별이 바치는 술",
+        ""
+      ]
+    },
+    {
+      "id": "b7c9e08b-afcd-4f88-abd8-c208840ce42b",
+      "sourceName": "갈천",
+      "visible": true,
+      "version": "1.6",
+      "name": "갈천",
+      "inspiration": "야수",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "ADQANAI8IDkwOkAoUSwyJQQsBfgkL0QmVA",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "초침의 서식지",
+          "importance": "S",
+          "notes": "광상"
+        },
+        {
+          "name": "세 번째 신뢰",
+          "importance": "S",
+          "notes": "술식 피해 증가 보조"
+        },
+        {
+          "name": "한가로이 듣는 바람",
+          "importance": "S",
+          "notes": "술식 피해 증가 보조"
+        },
+        {
+          "name": "수많은 이별",
+          "importance": "S-",
+          "notes": "술식 피해 증가 보조"
+        }
+      ],
+      "euphoria": [
+        "쓸쓸한 이별의 순간 (술식)",
+        ""
+      ]
+    },
+    {
+      "id": "d02e8e02-4ed3-4f0a-83ff-7458af7cab74",
+      "sourceName": "이졸데",
+      "visible": true,
+      "version": "1.7",
+      "name": "이졸데",
+      "inspiration": "영혼",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "ADRQNABEMEMgQjE8Yj0GKEIpIiQD8AI4RTgk",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "날개짓의 순간",
+          "importance": "S",
+          "notes": "여광덱"
+        },
+        {
+          "name": "무의식의 악몽",
+          "importance": "S",
+          "notes": "여광덱"
+        },
+        {
+          "name": "초침의 서식지",
+          "importance": "S",
+          "notes": "데미지"
+        },
+        {
+          "name": "좁은 문을 두드려라",
+          "importance": "A+",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "영혼이 날아 잠든다 (여광)",
+        ""
+      ]
+    },
+    {
+      "id": "d169160d-1590-457c-968a-125a229eaccc",
+      "sourceName": "마커스",
+      "visible": true,
+      "version": "1.7",
+      "name": "마커스",
+      "inspiration": "나무",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "ADQRJQA5AjsTNAX4JC9EL0IvQCZQPDA8Yw",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "또 다른 이야기",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "마음의 방향",
+          "importance": "A+",
+          "notes": ""
+        },
+        {
+          "name": "땅따먹기 게임",
+          "importance": "A+",
+          "notes": ""
+        },
+        {
+          "name": "필요한 기록",
+          "importance": "A",
+          "notes": "증폭 비추천"
+        }
+      ],
+      "euphoria": [
+        "이전 페이지가 소중한 이유 (승급)",
+        ""
+      ]
+    },
+    {
+      "id": "cf877025-069f-42ed-86db-bdd7a01d5220",
+      "sourceName": "빌라",
+      "visible": true,
+      "version": "1.8",
+      "name": "빌라",
+      "inspiration": "나무",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "편안과 태연",
+          "resonance": "ADQwNDIqUChRJAEtEUQARSD0JDhFOAUlBCtE",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "두려워하는 조개껍데기",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "올드앤뉴 멜로디",
+          "importance": "S",
+          "notes": "데미지 증가 보조"
+        },
+        {
+          "name": "장면 메모",
+          "importance": "S",
+          "notes": "데미지 증가 보조"
+        },
+        {
+          "name": "방랑 즉흥곡",
+          "importance": "S",
+          "notes": "술식 피해 증가 보조"
+        }
+      ],
+      "euphoria": [
+        "하나의 이상을 받드는 방법",
+        ""
+      ]
+    },
+    {
+      "id": "419ebe2a-5d88-4269-918a-e0b6e03654fe",
+      "sourceName": "윈드송",
+      "visible": true,
+      "version": "1.8",
+      "name": "윈드송",
+      "inspiration": "천체",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "AEAASBE0AiQELRTwJC1EJlRFYEFSJEFBQCghKiA",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "성 밖의 세상",
+          "importance": "S",
+          "notes": "장기전, w. 플러터 페이지"
+        },
+        {
+          "name": "초침의 서식지",
+          "importance": "S",
+          "notes": "단기전, w. 플러터 페이지"
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "내 손으로 만 리를 재다",
+        ""
+      ]
+    },
+    {
+      "id": "f593fd1e-c618-4835-afa4-1e79a70f93a3",
+      "sourceName": "루시",
+      "visible": true,
+      "version": "1.9",
+      "name": "루시",
+      "inspiration": "지능",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "ADQwNDIqUChRJAEtEUQARSD0JDhFOAUlBCtE",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "초침의 서식지",
+          "importance": "S",
+          "notes": "w. 플러터 페이지"
+        },
+        {
+          "name": "기나긴 속삭임",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "행진의 걸음소리",
+          "importance": "S-",
+          "notes": ""
+        },
+        {
+          "name": "또 다른 이야기",
+          "importance": "S-",
+          "notes": "w. 로렌츠 버터플라이"
+        }
+      ],
+      "euphoria": [
+        "계단 끝은 새벽",
+        ""
+      ]
+    },
+    {
+      "id": "55fa270a-9ba0-4a66-92b4-89749f586138",
+      "sourceName": "카카니아",
+      "visible": true,
+      "version": "1.9",
+      "name": "카카니아",
+      "inspiration": "나무",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "포식",
+          "resonance": "ACUAJxA5AjgTMzEzQjNTPQU9BkQSREBIUUhiTGFMYPxF",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "용자의 충고",
+          "importance": "S",
+          "notes": "고정데미지 위주"
+        },
+        {
+          "name": "마음의 묘비명",
+          "importance": "S",
+          "notes": "공감 위주"
+        },
+        {
+          "name": "귀향의 애도사",
+          "importance": "A",
+          "notes": "증폭 비추천"
+        },
+        {
+          "name": "살포시 다가오는 봄날",
+          "importance": "A-",
+          "notes": "증폭 비추천"
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "260535ae-e494-4011-9ac6-6346e286e50c",
+      "sourceName": "제멜바이스",
+      "visible": true,
+      "version": "1.9",
+      "name": "제멜바이스",
+      "inspiration": "암석",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "편안과 태연 ",
+          "resonance": "APAkJAMmVCcFLUQoUSpQPEA8MDkSOxBIAkgATAFMEA",
+          "notes": "크리티컬"
+        },
+        {
+          "modulation": "편안과 태연",
+          "resonance": "APAkJAQmVC1ELRQoASoAJCFBIEEyRUA0UkBQSGE",
+          "notes": "크리티컬"
+        }
+      ],
+      "wills": [
+        {
+          "name": "세 번째 신뢰",
+          "importance": "S",
+          "notes": "광상, 보조"
+        },
+        {
+          "name": "응답 바람",
+          "importance": "S",
+          "notes": "데미지"
+        },
+        {
+          "name": "귀향의 애도사",
+          "importance": "S",
+          "notes": "광상, 데미지"
+        },
+        {
+          "name": "장면 메모",
+          "importance": "A",
+          "notes": "광상, 보조"
+        }
+      ],
+      "euphoria": [
+        "천 개의 달처럼 붉은 (신혈)",
+        ""
+      ]
+    },
+    {
+      "id": "44b01435-ab4d-4be8-9783-126a79a4e4e0",
+      "sourceName": "머큐리아",
+      "visible": true,
+      "version": "2.0",
+      "name": "머큐리아",
+      "inspiration": "영혼",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "ADhFK0Q0MjQwPGA8UDoEKQUpAkUAQBBCEfQk",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "샘물처럼 천천히",
+          "importance": "S",
+          "notes": "데미지"
+        },
+        {
+          "name": "기나긴 속삭임",
+          "importance": "S",
+          "notes": "데미지"
+        },
+        {
+          "name": "활시위의 선포",
+          "importance": "S",
+          "notes": "데미지 증가 보조"
+        },
+        {
+          "name": "미로의 밖",
+          "importance": "S",
+          "notes": "데미지 증가 보조"
+        }
+      ],
+      "euphoria": [
+        "우주의 황홀한 빛",
+        ""
+      ]
+    },
+    {
+      "id": "a70cf3cf-af0c-4250-90d1-ab6c4548bd21",
+      "sourceName": "J",
+      "visible": true,
+      "version": "2.0",
+      "name": "J",
+      "inspiration": "야수",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "순환 균형",
+          "resonance": "APAkJhA4AjkANEQoVDQVKgRAUEJRRFM8MDxA",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "초침의 서식지",
+          "importance": "S",
+          "notes": "단기전"
+        },
+        {
+          "name": "성 밖의 세상",
+          "importance": "S",
+          "notes": "술식, 장기전"
+        },
+        {
+          "name": "가정 지도사",
+          "importance": "S",
+          "notes": "치명타 피해 보조"
+        },
+        {
+          "name": "두려워하는 조개껍데기",
+          "importance": "S",
+          "notes": "피격 빈도 높음"
+        }
+      ],
+      "euphoria": [
+        "뛰어들어, 운명을 담금질하라",
+        ""
+      ]
+    },
+    {
+      "id": "1c55ab38-d10f-4cb2-8659-bf47d99f9c38",
+      "sourceName": "튜즈데이",
+      "visible": true,
+      "version": "2.1",
+      "name": "튜즈데이",
+      "inspiration": "영혼",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "광분",
+          "resonance": "APgkNBQ0RChUQwVIBDwAPGA5ETtBQRBAQEcwRTJII0xD",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "활시위의 선포",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "소란스러운 세상",
+          "importance": "A+",
+          "notes": ""
+        },
+        {
+          "name": "메이드의 목격",
+          "importance": "A+",
+          "notes": ""
+        },
+        {
+          "name": "미로의 밖",
+          "importance": "A",
+          "notes": "사이클 최적화"
+        }
+      ],
+      "euphoria": [
+        "문 앞에서 멈춰선 희망",
+        ""
+      ]
+    },
+    {
+      "id": "59d075ec-5c40-4660-9e79-e895876b8a14",
+      "sourceName": "아르고스",
+      "visible": true,
+      "version": "2.1",
+      "name": "아르고스",
+      "inspiration": "나무",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "APAkLUQtFEMFQANBVEhmPGA8UDQyNDA6ADsRRQE",
+          "notes": "w. 빌라"
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "밤의 깊은 곳",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "수많은 이별",
+          "importance": "S",
+          "notes": "승급덱 보조"
+        },
+        {
+          "name": "초침의 서식지",
+          "importance": "A+",
+          "notes": ""
+        },
+        {
+          "name": "성 밖의 세상",
+          "importance": "A+",
+          "notes": "장기전"
+        }
+      ],
+      "euphoria": [
+        "수많은 생명의 소멸, 여전히 뜨거운 총구 (승급)",
+        ""
+      ]
+    },
+    {
+      "id": "84235530-4909-47b1-82c8-b2de9acd08f1",
+      "sourceName": "안조 날라",
+      "visible": true,
+      "version": "2.2",
+      "name": "안조 날라",
+      "inspiration": "야수",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "AfAkJAQtFCZULURAIEFQRDFFUUQySEAqACgBJ0JDIg==",
+          "notes": "치명타 부족 시"
+        },
+        {
+          "modulation": "이해",
+          "resonance": "ATQANAJBVfA0OQQ4FSgSKDFBIT0gPGBFUUg1Q1M=",
+          "notes": "공명 최대 시"
+        }
+      ],
+      "wills": [
+        {
+          "name": "초침의 서식지",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "실체 없는 진실",
+          "importance": "S-",
+          "notes": ""
+        },
+        {
+          "name": "평범한 순간",
+          "importance": "A+",
+          "notes": "천체·암석 계약"
+        },
+        {
+          "name": "성 밖의 세상",
+          "importance": "A+",
+          "notes": "영혼·지능 계약"
+        }
+      ],
+      "euphoria": [
+        "찬란했던 시절의 여운",
+        ""
+      ]
+    },
+    {
+      "id": "a2aa97f7-3319-449a-aed2-c7f57d403aca",
+      "sourceName": "로페라",
+      "visible": true,
+      "version": "2.2",
+      "name": "로페라",
+      "inspiration": "야수",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "희망",
+          "resonance": "BPQ0NFAlESoAKAQqAyQkLSJCVUJTQFJMQ0gySEJEIEVA=",
+          "notes": "10"
+        },
+        {
+          "modulation": "희망",
+          "resonance": "BPQ0NFAlESoAKAQqAyQkLSJCVUJTQFJMQ0gySEJEIEVA=",
+          "notes": "15 공명 이상"
+        }
+      ],
+      "wills": [
+        {
+          "name": "세 번째 신뢰",
+          "importance": "S",
+          "notes": "마법 위력, 술식 보조"
+        },
+        {
+          "name": "가정 지도사",
+          "importance": "S",
+          "notes": "치명타 피해 보조"
+        },
+        {
+          "name": "한가로이 듣는 바람",
+          "importance": "S-",
+          "notes": "술식 피해 증가 보조"
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "위험 속에서도 새싹은 자란다",
+        ""
+      ]
+    },
+    {
+      "id": "519c18f2-d217-4848-b005-80605a8cf927",
+      "sourceName": "윌로우",
+      "visible": true,
+      "version": "2.3",
+      "name": "윌로우",
+      "inspiration": "나무",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "순환 균형",
+          "resonance": "APAkJAQtFC1EJlQoASoAJCE0UkEyQSBAUEVASGE=",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "불규칙한 스텝",
+          "importance": "S",
+          "notes": "중장기전"
+        },
+        {
+          "name": "무색",
+          "importance": "S",
+          "notes": "단기전"
+        },
+        {
+          "name": "다시 만난 지난밤과의 작별",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "실체 없는 진실",
+          "importance": "A",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "대지를 떠나기 위한 날개짓",
+        ""
+      ]
+    },
+    {
+      "id": "f9df34af-a2a6-43c5-8f96-c9453b00bb87",
+      "sourceName": "플러터 페이지",
+      "visible": true,
+      "version": "2.3",
+      "name": "플러터 페이지",
+      "inspiration": "천체",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "순식간의 광증",
+          "resonance": "ACUALAFAMEIxKlAoUUQzQhJIAzgFOEUrRCUE9CQ",
+          "notes": "치명타"
+        },
+        {
+          "modulation": "순식간의 광증",
+          "resonance": "ACUALAFAMEIxKlAoUUQzQhJIAzgFOEUrRCUE9CQ",
+          "notes": "생존 우선"
+        }
+      ],
+      "wills": [
+        {
+          "name": "활시위의 선포",
+          "importance": "S",
+          "notes": "치명타 피해 보조"
+        },
+        {
+          "name": "살포시 다가오는 봄날",
+          "importance": "S",
+          "notes": "치명타 피해 보조"
+        },
+        {
+          "name": "'반사된 형상'의 지시",
+          "importance": "S",
+          "notes": "마법 위력 보조"
+        },
+        {
+          "name": "이별 변주곡",
+          "importance": "S-",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "5491e246-20d8-42de-baec-687f8650f58d",
+      "sourceName": "바르카롤라",
+      "visible": true,
+      "version": "2.4",
+      "name": "바르카롤라",
+      "inspiration": "천체",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "APgkJQQsBSwyJlQtRChRSGBBQDkwOxBAAEACRBM",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "이별 변주곡",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "밤의 깊은 곳",
+          "importance": "A+",
+          "notes": ""
+        },
+        {
+          "name": "증명 시도",
+          "importance": "A+",
+          "notes": ""
+        },
+        {
+          "name": "불규칙한 스텝",
+          "importance": "A",
+          "notes": "빠른 술식"
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "b1fdea02-bbce-4010-9270-19d062fe17bc",
+      "sourceName": "파투투",
+      "visible": true,
+      "version": "2.4",
+      "name": "파투투",
+      "inspiration": "암석",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "광분",
+          "resonance": "APgkPAM8Y0ETQEM7RDkUJ0EpAUUyQQA0IDRATGA",
+          "notes": ""
+        },
+        {
+          "modulation": "제한 없는 상상",
+          "resonance": "APgkPAM8Y0ETQEM7RDkUJ0EpAUUyQQA0IDRATGA",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "두려워하는 조개껍데기",
+          "importance": "S",
+          "notes": "데미지 증가 보조"
+        },
+        {
+          "name": "방랑 즉흥곡",
+          "importance": "S",
+          "notes": "술식 피해 증가 보조"
+        },
+        {
+          "name": "올드앤뉴 멜로디",
+          "importance": "S-",
+          "notes": "데미지 증가 보조"
+        },
+        {
+          "name": "장면 메모",
+          "importance": "S-",
+          "notes": "데미지 증가 보조"
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "7b053ddf-4f7a-4b55-b747-d33009fd53f2",
+      "sourceName": "양월",
+      "visible": true,
+      "version": "2.5",
+      "name": "양월",
+      "inspiration": "천체",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "AvQkK0QoUSpQJQAsAThFOAUlBEAwQjFEM0ISSAM=",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "응답 바람",
+          "importance": "S",
+          "notes": "w. 플러터 페이지"
+        },
+        {
+          "name": "기나긴 속삭임",
+          "importance": "S",
+          "notes": "플러터 페이지 미편성"
+        },
+        {
+          "name": "성 밖의 세상",
+          "importance": "A+",
+          "notes": "장기전"
+        },
+        {
+          "name": "초침의 서식지",
+          "importance": "A+",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "별을 따라 세상 평정",
+        ""
+      ]
+    },
+    {
+      "id": "812477e3-a513-447a-929f-1dfcda4b0894",
+      "sourceName": "누아르",
+      "visible": true,
+      "version": "2.5",
+      "name": "누아르",
+      "inspiration": "나무",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "APgkNAU0VSsEJUQ4AjkALSE8UDxgQTFEEEQwSEM",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "꿈의 리허설",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "네버엔딩 Q&A",
+          "importance": "A+",
+          "notes": ""
+        },
+        {
+          "name": "멋진 신세계",
+          "importance": "A",
+          "notes": ""
+        },
+        {
+          "name": "헤아릴 수 있는 마음",
+          "importance": "A",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "최고의 테이크는 바로 지금",
+        ""
+      ]
+    },
+    {
+      "id": "53b004a4-49a4-4193-a61d-ee86bbfe92ed",
+      "sourceName": "레콜레타",
+      "visible": true,
+      "version": "2.6",
+      "name": "레콜레타",
+      "inspiration": "암석",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "ACUALAFAMEIxKlAoUUQzQhJIAzgFOEUrRCUE9CQ",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "마지막 던지기",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "꿈의 리허설",
+          "importance": "A",
+          "notes": "디버퍼 필요"
+        },
+        {
+          "name": "네버엔딩 Q&A",
+          "importance": "A",
+          "notes": ""
+        },
+        {
+          "name": "균형 유지",
+          "importance": "A",
+          "notes": "비상성"
+        }
+      ],
+      "euphoria": [
+        "<미완의 챕터>",
+        ""
+      ]
+    },
+    {
+      "id": "a999fd0a-fb6b-473a-9fdf-62aa528aef2e",
+      "sourceName": "알레프",
+      "visible": true,
+      "version": "2.6",
+      "name": "알레프",
+      "inspiration": "지능",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "Ai1U+DQpBS0DJAAtEEETQiQ4MiYgQUFEQEhgPGE=",
+          "notes": "10"
+        },
+        {
+          "modulation": "정성",
+          "resonance": "Ai1U+DQpBS0DJAAtEEETQiQ4MiYgQUFEQEhgRWFFYw==",
+          "notes": "15"
+        }
+      ],
+      "wills": [
+        {
+          "name": "뇌실은 감옥이다",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "기나긴 속삭임",
+          "importance": "A+",
+          "notes": ""
+        },
+        {
+          "name": "땅따먹기 게임",
+          "importance": "A",
+          "notes": ""
+        },
+        {
+          "name": "불규칙한 스텝",
+          "importance": "A",
+          "notes": "빠른 술식"
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "3b5b595a-dd16-4c6d-b26f-84ec95fe4377",
+      "sourceName": "히사베스",
+      "visible": true,
+      "version": "2.7",
+      "name": "히사베스",
+      "inspiration": "나무",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "APQkJQQrRDgFOEUoUSpQJQAsAUgDRDNAMEISQjE=",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "네버엔딩 Q&A",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "꿈의 리허설",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "오락 지상주의",
+          "importance": "A",
+          "notes": ""
+        },
+        {
+          "name": "멋진 신세계",
+          "importance": "A-",
+          "notes": "스택 중첩 시"
+        }
+      ],
+      "euphoria": [
+        "생각의 한계, 그 너머의 무한",
+        ""
+      ]
+    },
+    {
+      "id": "a6a0fcc0-a74c-48bd-9b46-e13fa3ab3d49",
+      "sourceName": "키페리나",
+      "visible": true,
+      "version": "2.7",
+      "name": "키페리나",
+      "inspiration": "천체",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "광분",
+          "resonance": "APwlNAU0VTxhPAE4IjokKhJBQkhUQFBBACsgRCE",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "살포시 다가오는 봄날",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "기나긴 속삭임",
+          "importance": "S",
+          "notes": "계시 4인덱"
+        },
+        {
+          "name": "두려워하는 조개껍데기",
+          "importance": "A",
+          "notes": ""
+        },
+        {
+          "name": "그림자처럼",
+          "importance": "A",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "d6a070b9-8d55-44cc-ae6d-9e4ada688702",
+      "sourceName": "에지오",
+      "visible": true,
+      "version": "2.9",
+      "name": "에지오",
+      "inspiration": "천체",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "희망",
+          "resonance": "ADQwNDIqUChRJAEtEUQARSD0JDhFOAUlBCtE",
+          "notes": ""
+        },
+        {
+          "modulation": "정성",
+          "resonance": "ADQwNDIqUChRJAEtEUQARSD0JDhFOAUlBCtE",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "성 밖의 세상",
+          "importance": "S",
+          "notes": "추공, 장기전"
+        },
+        {
+          "name": "밤의 깊은 곳",
+          "importance": "S",
+          "notes": "추공, 단기전"
+        },
+        {
+          "name": "현상에 담다",
+          "importance": "S",
+          "notes": "중독"
+        },
+        {
+          "name": "황혼의 종소리",
+          "importance": "S",
+          "notes": "술식"
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "caa0804f-444d-492a-ad93-c45f64e2f1d6",
+      "sourceName": "카산드라",
+      "visible": true,
+      "version": "2.9",
+      "name": "카산드라",
+      "inspiration": "암석",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "APQgOAE0Iy1CNAM5RCUAK0AoVD0FPQZFUUVi",
+          "notes": "술식"
+        },
+        {
+          "modulation": "이해",
+          "resonance": "APQgJQA4ATQjLUI0AyZAPmApBSsVKFQ5RA==",
+          "notes": "추가 공격"
+        }
+      ],
+      "wills": [
+        {
+          "name": "활시위의 선포",
+          "importance": "S",
+          "notes": "치명타 피해 보조"
+        },
+        {
+          "name": "서사시의 끝",
+          "importance": "S",
+          "notes": "데미지 보조"
+        },
+        {
+          "name": "마음에 이는 물결",
+          "importance": "S",
+          "notes": "술식 보조"
+        },
+        {
+          "name": "황혼의 종소리",
+          "importance": "S",
+          "notes": "술식 딜러"
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "937677b0-adee-4da2-9e68-90db34bfc935",
+      "sourceName": "알렉시오스",
+      "visible": false,
+      "version": "2.9",
+      "name": "알렉시오스",
+      "inspiration": "",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "9884743e-ece2-4004-8bd1-232a425e3ee8",
+      "sourceName": "노티카",
+      "visible": true,
+      "version": "2.8",
+      "name": "노티카",
+      "inspiration": "영혼",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "불시의 의아함",
+          "resonance": "APQkOEU4BSUEK0QkAS0RKFEqUDxAPDBMAEwgSBBIIQ",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "마음의 묘비명",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "초침의 서식지",
+          "importance": "A",
+          "notes": ""
+        },
+        {
+          "name": "좁은 문을 두드려라",
+          "importance": "A-",
+          "notes": ""
+        },
+        {
+          "name": "평범한 순간",
+          "importance": "A-",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "말 없는 별을 지켜주는 밤",
+        ""
+      ]
+    },
+    {
+      "id": "2a820076-31d5-4492-b6d8-1660d0e106c2",
+      "sourceName": "몰디르",
+      "visible": true,
+      "version": "2.8",
+      "name": "몰디르",
+      "inspiration": "야수",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "APAkNBU0RDxQPGAoVCoERABAAUICQTBIQjgiOSA",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "가정 지도사",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "방랑 즉흥곡",
+          "importance": "S",
+          "notes": "보호막이 없는 덱"
+        },
+        {
+          "name": "수많은 이별",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "네버엔딩 Q&A",
+          "importance": "A",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "가는 내내 축복이 함께하기를",
+        ""
+      ]
+    },
+    {
+      "id": "6e5a955d-e3f9-4a00-834a-8c41ea012f5f",
+      "sourceName": "울리히",
+      "visible": true,
+      "version": "2.8",
+      "name": "울리히",
+      "inspiration": "지능",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "AfQkOEUrRCkFOgQpQiQhJiBAAEIBLUBEA0FQSGI=",
+          "notes": "치명타율 버프 미보유 시"
+        },
+        {
+          "modulation": "이해",
+          "resonance": "AThFK0Q0MjQwPGA8UDoEKQUpAvQkRQBAEEIR",
+          "notes": "치명타율 버프 보유 시"
+        }
+      ],
+      "wills": [
+        {
+          "name": "초침의 서식지",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "세 번째 신뢰",
+          "importance": "S",
+          "notes": "보조"
+        },
+        {
+          "name": "씨앗을 향한 속삭임",
+          "importance": "S",
+          "notes": "보조"
+        },
+        {
+          "name": "떠오른 생각",
+          "importance": "S-",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "순환 연산, 번뜩이는 영감",
+        ""
+      ]
+    },
+    {
+      "id": "088631f7-1611-43b3-872b-ee24bd130efd",
+      "sourceName": "센티널",
+      "visible": true,
+      "version": "3.0",
+      "name": "센티널",
+      "inspiration": "암석",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "편안과 태연",
+          "resonance": "APAkJAMmVCcFLUQoUSpQPEA8MDkSOxBIAkgATAFMEA",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "귀향의 애도사",
+          "importance": "S",
+          "notes": "추공 강화"
+        },
+        {
+          "name": "개울 속으로",
+          "importance": "S",
+          "notes": "술식 강화"
+        },
+        {
+          "name": "올드앤뉴 멜로디",
+          "importance": "S",
+          "notes": "보조"
+        },
+        {
+          "name": "두려워하는 조개껍데기",
+          "importance": "S",
+          "notes": "보조"
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "c1f5e61f-e4b0-4b1b-bd1b-c38364175094",
+      "sourceName": "카론",
+      "visible": true,
+      "version": "3.0",
+      "name": "카론",
+      "inspiration": "영혼",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "광분",
+          "resonance": "APwlJAQmAyhUKlMtIzxBPTA0UTQBQSJDIEQA",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "씨앗을 향한 속삭임",
+          "importance": "S",
+          "notes": "치명타 피해 보조"
+        },
+        {
+          "name": "세 번째 신뢰",
+          "importance": "S",
+          "notes": "마법, 술식 보조"
+        },
+        {
+          "name": "방랑 즉흥곡",
+          "importance": "S-",
+          "notes": ""
+        },
+        {
+          "name": "샘물처럼 천천히",
+          "importance": "A",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "e638b42a-9b97-42a2-80ce-f7d730572602",
+      "sourceName": "루부스카",
+      "visible": true,
+      "version": "3.1",
+      "name": "루부스카",
+      "inspiration": "암석",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "포식",
+          "resonance": "ADEEMQIxAEgASBY8YzxTOiQ4IkwiNCA0QExgJ0H8JQ",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "방랑 즉흥곡",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "사라진 비문",
+          "importance": "A",
+          "notes": "암석덱 보조"
+        },
+        {
+          "name": "두려워하는 조개껍데기",
+          "importance": "A",
+          "notes": ""
+        },
+        {
+          "name": "올드앤뉴 멜로디",
+          "importance": "A",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "e1636023-8c81-4c0f-b47f-a674a3c57971",
+      "sourceName": "코르부스",
+      "visible": true,
+      "version": "3.1",
+      "name": "코르부스",
+      "inspiration": "지능",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "APQkK0Q4RTgFJQQkAS8RKFEqUDQyRABDIEEw",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "초침의 서식지",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "성 밖의 세상",
+          "importance": "S",
+          "notes": "장기전, w. 플러터 페이지"
+        },
+        {
+          "name": "살아있는 자의 고행",
+          "importance": "A+",
+          "notes": ""
+        },
+        {
+          "name": "밤의 깊은 곳",
+          "importance": "A",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "6c8969f5-cfd6-46fc-91dc-f5606f111c5d",
+      "sourceName": "베릴",
+      "visible": true,
+      "version": "3.2",
+      "name": "베릴",
+      "inspiration": "지능",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "ADQANAJEUEAgQlE9BjwyKQQqQygSO1M4RfQw",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "천만번의 효험",
+          "importance": "S",
+          "notes": "w. 플러터 페이지"
+        },
+        {
+          "name": "기나긴 속삭임",
+          "importance": "S",
+          "notes": "플러터 페이지 미편성"
+        },
+        {
+          "name": "초침의 서식지",
+          "importance": "A+",
+          "notes": ""
+        },
+        {
+          "name": "좁은 문을 두드려라",
+          "importance": "A",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "반짝이는 운명의 순간",
+        ""
+      ]
+    },
+    {
+      "id": "b943b623-9721-4947-a087-9025d15dfb97",
+      "sourceName": "브룸",
+      "visible": true,
+      "version": "3.2",
+      "name": "브룸",
+      "inspiration": "야수",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "AScCJABAEEEEQSUpBUBQJyAsIysy80NHYSxFSDBIZg==",
+          "notes": "치명타 버프 미보유 시"
+        },
+        {
+          "modulation": "이해",
+          "resonance": "ADQV8CQqBDREKFREMzxQPGA4AjkAJhBAMEIx",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "초침의 서식지",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "성 밖의 세상",
+          "importance": "S-",
+          "notes": ""
+        },
+        {
+          "name": "세 번째 신뢰",
+          "importance": "A",
+          "notes": "보조"
+        },
+        {
+          "name": "가정 지도사",
+          "importance": "A",
+          "notes": "보조"
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "da4e35ae-4cc2-496c-94aa-8f8c190aee56",
+      "sourceName": "마샤",
+      "visible": true,
+      "version": "3.3",
+      "name": "마샤",
+      "inspiration": "야수",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "순환 균형",
+          "resonance": "BTQgNCI8ADwQKgTwNCkVQyRAQUJROkM7VERQTEA=",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "무의식의 악몽",
+          "importance": "S",
+          "notes": "여광덱"
+        },
+        {
+          "name": "화염같은 내 심장이여",
+          "importance": "S",
+          "notes": "여광덱"
+        },
+        {
+          "name": "기나긴 속삭임",
+          "importance": "S",
+          "notes": "보호막량 증가"
+        },
+        {
+          "name": "가정 지도사",
+          "importance": "S",
+          "notes": "여광덱이 아닌 다른덱"
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "60c9d70f-a865-4ab5-91ab-ee90431da37e",
+      "sourceName": "이고르",
+      "visible": true,
+      "version": "3.3",
+      "name": "이고르",
+      "inspiration": "야수",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "AfQkKgMoEjgFJ0UqQjlTNEA0ATxgPQAmIQ==",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "아케론을 건너",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "초침의 서식지",
+          "importance": "S",
+          "notes": "5형상, w. 플러터 페이지"
+        },
+        {
+          "name": "네버엔딩 Q&A",
+          "importance": "S-",
+          "notes": "w. 플러터 페이지"
+        },
+        {
+          "name": "소리와 색",
+          "importance": "A-",
+          "notes": "w. 플러터 페이지"
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "f232bf2d-32ab-43ed-8d76-d811146f9885",
+      "sourceName": "노사전",
+      "visible": true,
+      "version": "3.4",
+      "name": "노사전",
+      "inspiration": "나무",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "광분",
+          "resonance": "ACUAOQI0BfgkPGMtRDsTLUI8MDQRJlAtQA==",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "천지 유람",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "기나긴 속삭임",
+          "importance": "A+",
+          "notes": ""
+        },
+        {
+          "name": "네버엔딩 Q&A",
+          "importance": "A-",
+          "notes": ""
+        },
+        {
+          "name": "소리와 색",
+          "importance": "B",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "43d77392-6ab5-4ca5-8baa-da2ce307c737",
+      "sourceName": "정화광",
+      "visible": true,
+      "version": "3.4",
+      "name": "정화광",
+      "inspiration": "천체",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "순환 균형",
+          "resonance": "APAkKgQoVDQVNEQ4AjkAJhBAMEIxRDM8UDxg",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "무의식의 악몽",
+          "importance": "S",
+          "notes": "w. 마샤"
+        },
+        {
+          "name": "'반사된 형상'의 지시",
+          "importance": "S",
+          "notes": "w. 플러터 페이지"
+        },
+        {
+          "name": "활시위의 선포",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "두려워하는 조개껍데기",
+          "importance": "S",
+          "notes": "피격 빈도 높음"
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "070963e3-0b58-4ba2-8e8a-10c59ed33dce",
+      "sourceName": "노초결",
+      "visible": false,
+      "version": "3.4",
+      "name": "노초결",
+      "inspiration": "",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "8371d030-3489-4240-ae38-16998a0644aa",
+      "sourceName": "로렌츠 버터플라이",
+      "visible": true,
+      "version": "3.5",
+      "name": "로렌츠 버터플라이",
+      "inspiration": "지능",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "ACkFK0Q4RfQkOgQ0ADQCPCA8MEBAQEJCUEViSFM=",
+          "notes": ""
+        },
+        {
+          "modulation": "순식간의 광증",
+          "resonance": "ADQANAJEUEAgQlE9BjwyKQQqQygSO1M4RfQw",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "날개짓의 순간",
+          "importance": "S",
+          "notes": "범용"
+        },
+        {
+          "name": "화염같은 내 심장이여",
+          "importance": "S",
+          "notes": "여광덱"
+        },
+        {
+          "name": "두려워하는 조개껍데기",
+          "importance": "A",
+          "notes": "피격 빈도 높음"
+        },
+        {
+          "name": "올드앤뉴 멜로디",
+          "importance": "B",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "a2dbe8b3-75c1-4080-bc85-9ac9171849dd",
+      "sourceName": "라모나",
+      "visible": true,
+      "version": "3.5",
+      "name": "라모나",
+      "inspiration": "나무",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "희망",
+          "resonance": "APQkKQU6BDhFK0Q0ADQCPCA8MEBAQEJCUEViSFM=",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "현상에 남다",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "소란스러운 세상",
+          "importance": "A",
+          "notes": ""
+        },
+        {
+          "name": "무색",
+          "importance": "A",
+          "notes": ""
+        },
+        {
+          "name": "네버엔딩 Q&A",
+          "importance": "B",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "dbaffe02-1e89-46c1-991a-898f85e873b0",
+      "sourceName": "이니그마",
+      "visible": true,
+      "version": "3.6",
+      "name": "이니그마",
+      "inspiration": "지능",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "광분",
+          "resonance": "APw1PGM0MjQSOAU6NDwCQRRAUkwBMAAwIEFARWA=",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "해답의 경계",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "세 번째 신뢰",
+          "importance": "S",
+          "notes": "버프>보호막"
+        },
+        {
+          "name": "기나긴 속삭임",
+          "importance": "S",
+          "notes": "보호막량 증가"
+        },
+        {
+          "name": "두려워하는 조개껍데기",
+          "importance": "S",
+          "notes": "피격 빈도 높음"
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "3b3d82ec-de0f-4173-ab3c-1fbbc671d643",
+      "sourceName": "쌍둥이",
+      "visible": true,
+      "version": "3.8.5",
+      "name": "쌍둥이",
+      "inspiration": "천체+암석",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "ADgFJQQ6RCdFNAI0ADwgPDApQi1ARFBFYfQk",
+          "notes": "범용"
+        },
+        {
+          "modulation": "희망",
+          "resonance": "BPQkJQQnRTgFOkQ0ADQCPCA8MClCLUBEUEVh",
+          "notes": "w. 헤도네"
+        }
+      ],
+      "wills": [
+        {
+          "name": "예술 원자력",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "과학 안무법",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "기나긴 속삭임",
+          "importance": "B+",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "5f87ba22-9bcd-40ce-b689-9d4cb41c9ecc",
+      "sourceName": "노라",
+      "visible": false,
+      "version": "3.8.5",
+      "name": "노라",
+      "inspiration": "",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "f8e75ad2-e02c-4c5d-a43d-1663ada24201",
+      "sourceName": "리아논",
+      "visible": true,
+      "version": "3.7",
+      "name": "리아논",
+      "inspiration": "야수",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "광분",
+          "resonance": "APwlJSA0VTRTPAM8EzgiOiRAAEIBMDFBUURQSCI=",
+          "notes": "범용"
+        },
+        {
+          "modulation": "편안과 태연",
+          "resonance": "BfwlPBM8AzFUMVJMZjokTFBBEjQwNDI5AEEQQFFIYA==",
+          "notes": "15, 0 형상"
+        },
+        {
+          "modulation": "편안과 태연",
+          "resonance": "BfwlPBM8AzFUMVIxUExmOiRMUEESNDA0MjkAQRA=",
+          "notes": "15, 4 형상 이상"
+        }
+      ],
+      "wills": [
+        {
+          "name": "어제의 가벼운 빗소리",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "활시위의 선포",
+          "importance": "A+",
+          "notes": ""
+        },
+        {
+          "name": "가정 지도사",
+          "importance": "A",
+          "notes": ""
+        },
+        {
+          "name": "두려워하는 조개껍데기",
+          "importance": "A-",
+          "notes": "피격 빈도 높음"
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "12e93fd3-dfcd-4078-abde-451fafed5340",
+      "sourceName": "미스 스트레인저",
+      "visible": true,
+      "version": "3.7",
+      "name": "미스 스트레인저",
+      "inspiration": "암석",
+      "portrait": "0/2/5",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "APQkJQAsAShRKlAlBDgFOEVAMEIxQhJIA0QzK0Q=",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "허물을 벗어 내가 되리라",
+          "importance": "S",
+          "notes": "범용"
+        },
+        {
+          "name": "기나긴 속삭임",
+          "importance": "S",
+          "notes": "중장기전, 높은 방어력 대상"
+        },
+        {
+          "name": "땅따먹기 게임",
+          "importance": "A+",
+          "notes": "스택 중첩 가능 시"
+        },
+        {
+          "name": "네버엔딩 Q&A",
+          "importance": "A",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "464d9442-3e8b-4372-b300-db76104c3e1a",
+      "sourceName": "코펠리아",
+      "visible": true,
+      "version": "3.7",
+      "name": "코펠리아",
+      "inspiration": "암석",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "순식간의 광증",
+          "resonance": "APQkKQU4RStEOgQ0ADQCPCA8MEVAQFBCUSlC",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "성가는 침묵하라",
+          "importance": "S",
+          "notes": "범용"
+        },
+        {
+          "name": "기나긴 속삭임",
+          "importance": "S",
+          "notes": "높은 데미지"
+        },
+        {
+          "name": "두려워하는 조개껍데기",
+          "importance": "A-",
+          "notes": "피격 빈도 높음"
+        },
+        {
+          "name": "올드앤뉴 멜로디",
+          "importance": "B",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "4133da54-c2c5-4d55-b116-f67b972a2e24",
+      "sourceName": "에버에코",
+      "visible": true,
+      "version": "3.8",
+      "name": "에버에코",
+      "inspiration": "암석",
+      "portrait": "0",
+      "tuning": [
+        {
+          "modulation": "광분",
+          "resonance": "APwlMBIwEDRVNFM5ADwDPBM6JEEwQTJBUEhRRFI=",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "빛 너머의 꿈",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "방랑 즉흥곡",
+          "importance": "A",
+          "notes": "술식 보조"
+        },
+        {
+          "name": "두려워하는 조개껍데기",
+          "importance": "A",
+          "notes": "피격 빈도 높음"
+        },
+        {
+          "name": "올드앤뉴 멜로디",
+          "importance": "B",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "920b528c-67b4-46a4-afe1-8ec31c7b0f05",
+      "sourceName": "코너스톤",
+      "visible": true,
+      "version": "3.8",
+      "name": "코너스톤",
+      "inspiration": "암석",
+      "portrait": "0/1/2/5",
+      "tuning": [
+        {
+          "modulation": "이해",
+          "resonance": "APAkKFQqBDQVNEQ5ADgCQRBAMEIxSCJEMzxQPGA=",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "빛과 그림자의 거처",
+          "importance": "S",
+          "notes": "범용"
+        },
+        {
+          "name": "초침의 서식지",
+          "importance": "S",
+          "notes": "범용"
+        },
+        {
+          "name": "성 밖의 세상",
+          "importance": "S",
+          "notes": "장기전"
+        },
+        {
+          "name": "마지막 던지기",
+          "importance": "S-",
+          "notes": "중장기전"
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "7c710b88-5c53-40de-b75d-428145921192",
+      "sourceName": "헤도네",
+      "visible": true,
+      "version": "3.9",
+      "name": "헤도네",
+      "inspiration": "암석",
+      "portrait": "0/5",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "APAkNBU0RChUKgQ8ADwQJFEmUCYwOCI5IA",
+          "notes": ""
+        },
+        {
+          "modulation": "편안과 태연",
+          "resonance": "APAkNBU0RChUKgQ8ADwQJFEmUCYwOCI5IA",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "사라진 비문",
+          "importance": "S",
+          "notes": "쌍둥이덱, w. 코펠리아"
+        },
+        {
+          "name": "성가는 침묵하라",
+          "importance": "S",
+          "notes": "쌍둥이덱, 코펠리아 미편성"
+        },
+        {
+          "name": "성가는 침묵하라",
+          "importance": "S",
+          "notes": "코펠리아 메인 딜러 시"
+        },
+        {
+          "name": "활시위의 선포",
+          "importance": "A+",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "ec3d340b-54d2-4a0a-ba43-86239328ae37",
+      "sourceName": "나르키소스",
+      "visible": true,
+      "version": "3.9",
+      "name": "나르키소스",
+      "inspiration": "야수",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "절제",
+          "resonance": "APwFNFU0NTsDPSQwADAgMEAmUj0jJQJEMkxgTAE=",
+          "notes": "정신 피해, 필수 아님"
+        },
+        {
+          "modulation": "고요",
+          "resonance": "APwFNFU0NTsDPSQwADAgMEAmUj0jJQJEMkxgTAE=",
+          "notes": "현실 피해, 필수 아님"
+        }
+      ],
+      "wills": [
+        {
+          "name": "마음에 이는 물결",
+          "importance": "S",
+          "notes": "술식 보조"
+        },
+        {
+          "name": "방랑 즉흥곡",
+          "importance": "S-",
+          "notes": "술식 보조"
+        },
+        {
+          "name": "활시위의 선포",
+          "importance": "S",
+          "notes": "치명타 피해 보조"
+        },
+        {
+          "name": "가정 지도사",
+          "importance": "S",
+          "notes": "치명타 피해 보조"
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "78d9458e-fa49-45ea-aa5c-fdf6ff06ba42",
+      "sourceName": "SP 릴리아",
+      "visible": true,
+      "version": "4.0",
+      "name": "SP 릴리아",
+      "inspiration": "천체",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "희망",
+          "resonance": "BPQkOEUrRDoEKQUkUSZQKDEsEkUAQAJAMEIQSBA=",
+          "notes": "10-12, w. 37 0 형상 시"
+        },
+        {
+          "modulation": "희망",
+          "resonance": "BPQkOEUrRDoEKQUkUSZQKDEsEkUAQAJAMEUQRSA=",
+          "notes": "13-15, w. 37 0 형상 시"
+        },
+        {
+          "modulation": "희망",
+          "resonance": "BPQkNAI4BSUENAA8IEBAPDBDQkVgLVE6RCdF",
+          "notes": "10-12, w. 37 1 형상 이상 시"
+        },
+        {
+          "modulation": "희망",
+          "resonance": "BPQkNAI4BSUENAA8IEBAPDBDQkVgLVE4RURERWQ=",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "폭풍의 능선에 서서",
+          "importance": "S",
+          "notes": ""
+        },
+        {
+          "name": "소리와 색",
+          "importance": "A",
+          "notes": ""
+        },
+        {
+          "name": "평범한 순간",
+          "importance": "A-",
+          "notes": ""
+        },
+        {
+          "name": "초침의 서식지",
+          "importance": "A-",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "6e43f187-0625-413b-afd8-ea486b6effcc",
+      "sourceName": "드레이크",
+      "visible": true,
+      "version": "4.0",
+      "name": "드레이크",
+      "inspiration": "야수",
+      "portrait": "0/1/5",
+      "tuning": [
+        {
+          "modulation": "정성",
+          "resonance": "AvAkNEQoVDQVKgQ4AjkAQDBCMUQzJFEmUEEQSCI=",
+          "notes": "10, 베릴 덱"
+        },
+        {
+          "modulation": "정성",
+          "resonance": "AvAkNEQoVDQVKgQ4AjkAQDA8YEIxRVAnMiYQ",
+          "notes": "11-15, 베릴 덱"
+        }
+      ],
+      "wills": [
+        {
+          "name": "무의식의 악몽",
+          "importance": "S",
+          "notes": "메인 딜러 사"
+        },
+        {
+          "name": "숙명을 등지고",
+          "importance": "S",
+          "notes": "서포터 사용 시"
+        },
+        {
+          "name": "초침의 서식지",
+          "importance": "A+",
+          "notes": "고형상 시"
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "2658a566-01a4-4bbd-8fe3-46064d39d739",
+      "sourceName": "글린두르",
+      "visible": false,
+      "version": "4.0",
+      "name": "글린두르",
+      "inspiration": "",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "a6aca143-85b4-4bcc-a4d3-8d6225f113b8",
+      "sourceName": "페르히타",
+      "visible": true,
+      "version": "4.1",
+      "name": "페르히타",
+      "inspiration": "천체",
+      "portrait": "0",
+      "tuning": [
+        {
+          "modulation": "포식",
+          "resonance": "AvwBOgA8AzwTNCM0JTNCOTAwQDFTJ0VIRUhiTEJMYA==",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "살포시 다가오는 봄날",
+          "importance": "S",
+          "notes": "신비한 빛 아군 존재"
+        },
+        {
+          "name": "순수의 관",
+          "importance": "S",
+          "notes": "신비한 빛 아군 없음"
+        },
+        {
+          "name": "두려워하는 조개껍데기",
+          "importance": "A-",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "0ea0cef4-9f53-4ce4-a333-d61885d1a501",
+      "sourceName": "이블린",
+      "visible": true,
+      "version": "4.1",
+      "name": "이블린",
+      "inspiration": "야수",
+      "portrait": "",
+      "tuning": [
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        },
+        {
+          "modulation": "",
+          "resonance": "",
+          "notes": ""
+        }
+      ],
+      "wills": [
+        {
+          "name": "식용 퍼즐",
+          "importance": "S",
+          "notes": "미확정"
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        },
+        {
+          "name": "",
+          "importance": "",
+          "notes": ""
+        }
+      ],
+      "euphoria": [
+        "",
+        ""
+      ]
+    }
+  ]
+}

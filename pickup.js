@@ -231,9 +231,10 @@ function renderBlock(block) {
 function renderScheduleBlocks(blocks) {
   const visibleDecks = blocks.filter((block) => {
     if (block.visible === false || block.type !== "deck") return false;
-    return scheduleDeckGroups(block).some((group) => group.entries.length);
+    const character = isPickupEmbed ? cleanText(pickupSearchParams.get("character")) : "";
+    return scheduleDeckGroups(block).some((group) => group.entries.some((entry) => !character || scheduleEntryName(entry) === character));
   });
-  if (!visibleDecks.length) return '<div class="pickup-empty">마도학자 일정 컨텐츠를 추가하세요.</div>';
+  if (!visibleDecks.length) return '<div class="pickup-empty">' + (isPickupEmbed && pickupSearchParams.get("character") ? "해당 캐릭터가 포함된 덱이 없습니다." : "마도학자 일정 컨텐츠를 추가하세요.") + '</div>';
   return `<div class="pickup-schedule-content">${visibleDecks.map(renderScheduleDeck).join("")}</div>`;
 }
 

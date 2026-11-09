@@ -654,18 +654,45 @@ function renderAccountDeck(deck, ownedNames) {
       <div class="pickup-schedule-deck-label">
         <strong>${escapeHtml(deckName)}</strong>
       </div>
+      ${[visibleGroups, ...accountDeckMobileRows(visibleGroups)].map((row, rowIndex) => `
+      <div class="${rowIndex === 0 ? "pickup-schedule-desktop-row" : "pickup-schedule-mobile-row"}">
       <div class="pickup-schedule-group-row">
-        ${visibleGroups.map((group) => `
+        ${row.map((group) => `
           <div class="pickup-schedule-group-label" style="--pickup-group-size:${group.names.length}">
             그룹${group.index + 1}${group.description ? ` ${escapeHtml(group.description)}` : ""}
           </div>
         `).join("")}
       </div>
       <div class="pickup-schedule-deck-body">
-        ${visibleGroups.flatMap((group) => group.names).map((name) => renderAccountProfile(name, ownedNames)).join("")}
+        ${row.flatMap((group) => group.names).map((name) => renderAccountProfile(name, ownedNames)).join("")}
       </div>
+      </div>`).join("")}
     </section>
   `;
+}
+
+function accountDeckMobileRows(groups) {
+  const total = groups.reduce((sum, group) => sum + group.names.length, 0);
+  const balanced = total === 5 && groups.length > 2
+    && groups[0].index === 0 && groups[1].index === 1
+    && groups[0].names.length + groups[1].names.length <= 3;
+  const breakAfterFirst = total === 5 && groups.length > 1
+    && groups[0].index === 0 && groups[0].names.length === 3;
+  const rows = [];
+  let row = [];
+  let size = 0;
+  groups.forEach((group, index) => {
+    if (row.length && (size + group.names.length > 4
+      || (balanced && index === 2) || (breakAfterFirst && index === 1))) {
+      rows.push(row);
+      row = [];
+      size = 0;
+    }
+    row.push(group);
+    size += group.names.length;
+  });
+  if (row.length) rows.push(row);
+  return rows;
 }
 
 function renderAccountProfile(name, ownedNames) {

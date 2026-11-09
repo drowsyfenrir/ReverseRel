@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>캐릭터 공략 - 리버스: 1999 도서관</title>
+  <link rel="icon" href="img/icon/32.png" />
+  <link rel="stylesheet" href="styles.css?v=20261109-character" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="header-title">
+      <a class="brand" href="index.html"><img src="img/title.png" alt="리버스 1999 도서관" /></a>
+      <a href="version.html">버전 요약</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="relationship.html">인물 관계도</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="story.html">폭풍우 연표</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="character.html" aria-current="page">캐릭터 공략</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="deck.html">덱 리스트</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a href="pickup.html">픽업 가이드</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+      <a class="header-account-link" href="account.html" aria-label="계정 분석">계정 분석</a>
+      <span class="nav-separator" aria-hidden="true">|</span>
+    </div>
+  </header>
+<main class="account-layout character-shell character-guide" aria-label="캐릭터 공략">
+  <section class="account-panel">
+    <div class="character-filter-bar">
+      <div id="characterFilters" class="character-filters" role="group" aria-label="영감 필터"></div>
+      <div class="character-search"><input id="characterSearch" type="search" placeholder="캐릭터 이름" aria-label="이름 검색" /></div>
+    </div>
+  </section>
+  <section class="account-panel" aria-label="캐릭터 목록">
+    <div class="character-guide-list-heading">
+      <p id="characterGuideStatus" class="character-guide-status" role="status">캐릭터를 불러오는 중입니다.</p>
+      <p class="character-guide-copy-hint">변조 클릭 시 공명 코드가 복사 됩니다.</p>
+    </div>
+    <div id="characterGrid" class="character-guide-grid"></div>
+  </section>
+</main>
+<dialog id="characterDetailDialog" class="character-detail-dialog" aria-labelledby="characterDetailTitle">
+  <div class="character-detail-header"><h2 id="characterDetailTitle" class="character-detail-icon-heading"><img class="character-detail-heading-icon" src="img/character/character.png" alt="" />캐릭터 정보</h2><button id="closeCharacterDetail" type="button" aria-label="상세 닫기"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" /></svg></button></div>
+  <div id="characterDetailContent"></div>
+</dialog>
+<script src="character.js?v=20261109-detail"></script>
+</body>
+</html>
