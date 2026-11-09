@@ -99,12 +99,14 @@ function euphoriaFileName(label) {
 function openCharacterDetail(id) {
   const c = guideState.characters.find((item) => item.id === id);
   if (!c) return;
+  const inspirationColor = ({ "영혼": "#6d3c71", "야수": "#823838", "천체": "#284059", "나무": "#286638", "암석": "#5e4524", "지능": "#86783c", "암석+천체": "#5e4524" })[guideInspiration(c.inspiration)] || "#101828";
+  characterDetailContent.style.setProperty("--character-inspiration-color", inspirationColor);
   characterDeckObserver?.disconnect();
   const tuning = (c.tuning || []).filter((t) => t.modulation || t.resonance || t.notes);
   const wills = Array.from({ length: 4 }, (_, i) => c.wills?.[i] || {});
   const euphoria = (c.euphoria || []).filter((v) => String(v ?? "").trim());
   characterDetailContent.innerHTML =
-    '<div class="character-detail-overview"><div class="character-detail-profile">' + detailImage("profile", c.name) + '<h3>' + guideEscape(c.name) + '</h3></div>' +
+    '<div class="character-detail-overview"><div class="character-detail-profile"><div class="character-detail-profile-art">' + detailImage("profile", c.name) + (c.inspiration ? '<img class="character-detail-afflatus" src="' + guideAsset("img/character/영감", guideInspiration(c.inspiration) + "_풀") + '" alt="' + guideEscape(c.inspiration) + '" />' : '') + '</div><h3>' + guideEscape(c.name) + '</h3></div>' +
     '<section class="character-detail-section character-detail-tuning-section"><h3 class="character-detail-icon-heading"><img class="character-detail-heading-icon" src="img/character/변조/아이콘.png" alt="" />변조 / 공명</h3>' +
     (tuning.length ? tuning.map((t) => '<div class="character-detail-tuning"' + (t.resonance && t.resonance !== "미정" ? ' role="button" tabindex="0" data-detail-code="' + guideEscape(t.resonance) + '" aria-label="공명 코드 복사"' : '') + '>' + detailImage("img/character/변조", t.modulation) + '<div class="character-detail-tuning-content"><div class="character-detail-tuning-title"><strong>' + guideEscape(t.modulation === "미정" ? "" : t.modulation || "") + '</strong>' + (t.notes ? '<span class="character-detail-separator">|</span><span>' + guideEscape(t.notes) + '</span>' : '') + '</div><div class="character-detail-code"><span>' + guideEscape(t.resonance === "미정" ? "" : t.resonance || "") + '</span>' + '</div></div></div>').join("") : '') + '</section>' +
     '<section class="character-detail-portrait-info"><h3 class="character-detail-icon-heading"><img class="character-detail-heading-icon" src="img/character/형상/아이콘.png" alt="" />형상</h3><img src="' + guideAsset("img/character/형상", c.name) + '" alt="' + guideEscape(c.name) + ' 형상" /><p>' + guideEscape(c.portrait === "미정" ? "" : c.portrait || "") + '</p></section></div>' +
@@ -119,6 +121,10 @@ function openCharacterDetail(id) {
     }).join("") : '') + '</div></section>' +
     '<section class="character-detail-section"><h3 class="character-detail-icon-heading"><img class="character-detail-heading-icon" src="img/character/deck.png" alt="" />관련 덱</h3><iframe class="character-detail-decks" title="' + guideEscape(c.name) + ' 관련 픽업 일정" src="pickup-schedule-embed.html?character=' + encodeURIComponent(c.name) + '"></iframe></section>';
   characterDetailContent.querySelectorAll("img").forEach((img) => img.addEventListener("error", () => {
+    if (img.classList.contains("character-detail-afflatus")) {
+      img.remove();
+      return;
+    }
     if (img.dataset.euphoriaPng) {
       const png = img.dataset.euphoriaPng;
       delete img.dataset.euphoriaPng;
