@@ -136,6 +136,16 @@ function openCharacterDetail(id) {
     placeholder.textContent = "이미지 준비 중";
     img.replaceWith(placeholder);
   }));
+  const afflatus = characterDetailContent.querySelector(".character-detail-afflatus");
+  if (afflatus) {
+    const reserveAfflatusHeight = () => {
+      if (!afflatus.naturalWidth) return;
+      const halfHeight = 100 * afflatus.naturalHeight / afflatus.naturalWidth / 2;
+      characterDetailContent.querySelector(".character-detail-profile").style.setProperty("--character-afflatus-half-height", halfHeight + "px");
+    };
+    afflatus.addEventListener("load", reserveAfflatusHeight);
+    if (afflatus.complete) reserveAfflatusHeight();
+  }
   const frame = characterDetailContent.querySelector("iframe");
   frame.addEventListener("load", () => {
     try {

@@ -837,7 +837,7 @@
           "notes": "메인딜, w. 플러터 페이지"
         },
         {
-          "name": "현상에 담다",
+          "name": "현상에 남다",
           "importance": "A",
           "notes": ""
         }
@@ -2173,6 +2173,11 @@
       "portrait": "",
       "tuning": [
         {
+          "modulation": "불시의 의아함",
+          "resonance": "AzwDPBM5APQRKiQ0NTsyNFIwICZURVVEUEwQTEBIUUhh",
+          "notes": "중독, 생존"
+        },
+        {
           "modulation": "희망",
           "resonance": "ADQwNDIqUChRJAEtEUQARSD0JDhFOAUlBCtE",
           "notes": ""
@@ -2195,7 +2200,7 @@
           "notes": "추공, 단기전"
         },
         {
-          "name": "현상에 담다",
+          "name": "현상에 남다",
           "importance": "S",
           "notes": "중독"
         },
