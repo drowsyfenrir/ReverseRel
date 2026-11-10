@@ -90,6 +90,8 @@ fetch("character-data.json", { cache: "no-store" }).then((response) => {
 const characterDetailDialog = document.getElementById("characterDetailDialog");
 const characterDetailContent = document.getElementById("characterDetailContent");
 let characterDeckObserver;
+let characterReturnScroll = 0;
+let characterMobileReading = false;
 const detailImage = (folder, name, className = "") => name && String(name).trim() !== "미정"
   ? '<img class="' + className + '" src="' + guideAsset(folder, name) + '" alt="' + guideEscape(name) + '" />'
   : '<span aria-hidden="true"></span>';
@@ -104,7 +106,7 @@ function openCharacterDetail(id) {
   characterDeckObserver?.disconnect();
   const tuning = (c.tuning || []).filter((t) => t.modulation || t.resonance || t.notes);
   const wills = Array.from({ length: 4 }, (_, i) => c.wills?.[i] || {});
-  const euphoria = (c.euphoria || []).filter((v) => String(v ?? "").trim());
+  const euphoria = (c.euphoria || []).map((name, index) => ({ name, recommended: c.euphoriaEnabled?.[index] === true })).filter((item) => String(item.name ?? "").trim());
   characterDetailContent.innerHTML =
     '<div class="character-detail-overview"><div class="character-detail-profile"><div class="character-detail-profile-art">' + detailImage("profile", c.name) + (c.inspiration ? '<img class="character-detail-afflatus" src="' + guideAsset("img/character/영감", guideInspiration(c.inspiration) + "_풀") + '" alt="' + guideEscape(c.inspiration) + '" />' : '') + '</div><h3>' + guideEscape(c.name) + '</h3></div>' +
     '<section class="character-detail-section character-detail-tuning-section"><h3 class="character-detail-icon-heading"><img class="character-detail-heading-icon" src="img/character/변조/아이콘.png" alt="" />변조 / 공명</h3>' +
@@ -113,11 +115,11 @@ function openCharacterDetail(id) {
     '<section class="character-detail-section"><h3 class="character-detail-icon-heading"><img class="character-detail-heading-icon" src="img/character/의지/아이콘.png" alt="" />의지</h3><div class="character-detail-wills">' +
     wills.map((w) => '<div class="character-detail-will"><div class="character-detail-will-meta"><strong>' + guideEscape(w.importance || "") + '</strong><span>' + guideEscape(String(w.notes || "").trim() || "-") + '</span></div><div class="character-detail-will-image">' + detailImage("img/character/의지", w.name) + '</div><p>' + guideEscape(w.name === "미정" ? "" : w.name || "") + '</p></div>').join("") + '</div></section>' +
     '<section class="character-detail-section"><h3 class="character-detail-icon-heading"><img class="character-detail-heading-icon" src="img/character/광상/광상.png" alt="" />광상</h3><div class="character-detail-euphorias">' +
-    (euphoria.length ? euphoria.filter((name) => String(name).trim() !== "미정").map((name) => {
+    (euphoria.length ? euphoria.filter((item) => String(item.name).trim() !== "미정").map(({ name, recommended }) => {
       const notes = Array.from(String(name).matchAll(/[（(]([^()（）]*)[）)]/g), (match) => match[1]);
       const label = String(name).replace(/[（(][^()（）]*[）)]/g, "").trim();
       const imageBase = "img/character/광상/" + encodeURIComponent(euphoriaFileName(label));
-      return '<div><p class="character-detail-euphoria-notes">' + guideEscape(notes.join(" · ").trim() || "-") + '</p><img class="character-detail-euphoria-image" src="' + imageBase + '.webp" data-euphoria-png="' + imageBase + '.png" alt="' + guideEscape(label) + '" /><p>' + guideEscape(label) + '</p></div>';
+      return '<div><p class="character-detail-euphoria-notes">' + guideEscape(notes.join(" · ").trim() || "-") + '</p><div class="character-detail-euphoria-art"><img class="character-detail-euphoria-image" src="' + imageBase + '.webp" data-euphoria-png="' + imageBase + '.png" alt="' + guideEscape(label) + '" />' + (recommended ? '<span class="character-euphoria-ribbon">추천</span>' : '') + '</div><p>' + guideEscape(label) + '</p></div>';
     }).join("") : '') + '</div></section>' +
     '<section class="character-detail-section"><h3 class="character-detail-icon-heading"><img class="character-detail-heading-icon" src="img/character/deck.png" alt="" />관련 덱</h3><iframe class="character-detail-decks" title="' + guideEscape(c.name) + ' 관련 픽업 일정" src="pickup-schedule-embed.html?character=' + encodeURIComponent(c.name) + '"></iframe></section>';
   characterDetailContent.querySelectorAll("img").forEach((img) => img.addEventListener("error", () => {
@@ -160,7 +162,13 @@ function openCharacterDetail(id) {
       resize();
     } catch { frame.style.height = "600px"; }
   });
-  characterDetailDialog.showModal();
+  characterReturnScroll = window.scrollY;
+  characterMobileReading = window.matchMedia("(max-width: 720px)").matches;
+  if (characterMobileReading) {
+    characterDetailDialog.show();
+    document.body.classList.add("character-mobile-reading");
+    window.scrollTo(0, 0);
+  } else characterDetailDialog.showModal();
   document.documentElement.classList.add("character-detail-open");
   characterDetailContent.scrollTop = 0;
 }
@@ -183,6 +191,9 @@ characterDetailContent.addEventListener("keydown", (e) => {
 });
 document.getElementById("closeCharacterDetail").addEventListener("click", () => characterDetailDialog.close());
 characterDetailDialog.addEventListener("close", () => {
+  document.body.classList.remove("character-mobile-reading");
+  if (characterMobileReading) window.scrollTo(0, characterReturnScroll);
+  characterMobileReading = false;
   const toast = document.getElementById("characterCopyToast");
   if (toast) { toast.classList.remove("is-visible"); document.body.append(toast); }
   characterDeckObserver?.disconnect();
